@@ -20,6 +20,8 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', 'C:\wamp\www\bytbil-hemsida\wp-content\plugins\wp-super-cache/' ); //Added by WP-Cache Manager
 define('DB_NAME', 'bytbil-hemsida');
 
 /** MySQL database username */
@@ -87,6 +89,10 @@ define('PATH_CURRENT_SITE', '/');
 define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
 
+
+// Autosave and Post Revisions Fix
+define('AUTOSAVE_INTERVAL', 500);
+define('WP_POST_REVISIONS', 3);
 
 /* That's all, stop editing! Happy blogging. */
 
