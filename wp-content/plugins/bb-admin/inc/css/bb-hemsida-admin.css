@@ -87,9 +87,12 @@ html.wp-toolbar {
     color: #111;
     font-family: "Montserrat";
     height: 52px;
-    z-index: 99999;
-    background: #f7f7f7;
+    background: transparent;
 }
+#wpadminbar .quicklinks {
+    margin-left: 240px;
+}
+
 #wpadminbar * {
     font-family: "Montserrat";
     font-size: 14px;
@@ -127,7 +130,7 @@ html.wp-toolbar {
 #wpadminbar:not(.mobile)>#wp-toolbar a:focus span.ab-label,
 #wpadminbar:not(.mobile)>#wp-toolbar li:hover span.ab-label,
 #wpadminbar>#wp-toolbar li.hover span.ab-label {
-    color: #e98239;
+    color: #ff8e3e;
 }
 /* Adminbar Link Hover */
 
@@ -136,7 +139,7 @@ html.wp-toolbar {
 #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item,
 #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
     background: #fff;
-    color: #e98239;
+    color: #ff8e3e;
 }
 #wpadminbar #adminbarsearch:before,
 #wpadminbar .ab-icon:before,
@@ -159,7 +162,7 @@ html.wp-toolbar {
 #wpadminbar li:hover .ab-item:before,
 #wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus,
 #wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover {
-    color: #e98239;
+    color: #ff8e3e;
 }
 #wpadminbar .menupop .ab-sub-wrapper,
 #wpadminbar .shortlink-input {
@@ -170,8 +173,6 @@ html.wp-toolbar {
     background: #fff;
 }
 
-#wpadminbar #wp-admin-bar-new-content> {
-}
 
 
 #wpadminbar .ab-submenu {
@@ -227,6 +228,12 @@ html.wp-toolbar {
     width: 240px;
     background-color: #444;
 }
+
+#adminmenuback {
+    background: #444 url('../../img/bytbil-logo-n.png') no-repeat top center;
+    background-position: center 15px;
+}
+
 #adminmenu .wp-submenu-head,
 #adminmenu a.menu-top {
     font-size: 14px;
@@ -301,7 +308,7 @@ div.wp-menu-image:before {
 #adminmenu .wp-submenu a:hover,
 #adminmenu a:hover,
 #adminmenu li.menu-top>a:focus {
-    color: #e98239;
+    color: #ff8e3e;
 }
 
 /* Folded Left Menu */
@@ -337,6 +344,13 @@ body.wp-admin #wpwrap #qm {
     display: none;
 }
 
+
+/* Visual Composer */
+
+.vc_navbar .vc_navbar-brand {
+    display: none;
+}
+
 /* Mobile */
 @media screen and (max-width: 782px) {
     html.wp-toolbar,
@@ -348,5 +362,17 @@ body.wp-admin #wpwrap #qm {
     
     #wp-admin-bar-query-monitor {
         display: none !important;
+    }
+    
+    #wpadminbar .quicklinks {
+        margin-left: 0;
+    }
+    
+    
+    /* Visual Composer */
+    .vc_panel {
+        top: 74px;
+        width: 90%;
+        left: 5%;
     }
 }

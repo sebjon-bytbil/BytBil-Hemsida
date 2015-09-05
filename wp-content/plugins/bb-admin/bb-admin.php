@@ -13,4 +13,5 @@ include_once('inc/bb-users.php');
 include_once('inc/bb-hotfixes.php');
 include_once('inc/bb-menus.php');
 include_once('inc/bb-dashboard.php');
+include_once('inc/bb-options.php');
 
