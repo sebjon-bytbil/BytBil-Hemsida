@@ -1273,7 +1273,6 @@ function do_robots() {
  * @return bool Whether the blog is already installed.
  */
 function is_blog_installed() {
-    return true;
 	global $wpdb;
 
 	/*

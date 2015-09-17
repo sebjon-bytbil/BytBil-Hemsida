@@ -2,12 +2,21 @@
 
 /* Font Import */
 
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,300,700);
+/*@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,300,700);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700);
- body {
-    font-family: "Montserrat";
-    font-weight: 400;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700);*/
+
+@import url(../../fonts/proxima-nova/proxima-nova.css);
+
+
+body,
+#wpadminbar,
+#wpadminbar * {
+    font-family: "ProximaNova", Arial, Helvetica, sans-serif;
+}
+
+
+body {
     font-size: 1em;
 }
 
@@ -83,18 +92,22 @@ html.wp-toolbar {
     padding-top: 70px;
     box-sizing: border-box;
 }
+
+
+.push-down-admin-menu {
+    margin-top: 52px !important;
+}
+
 #wpadminbar {
     color: #111;
-    font-family: "Montserrat";
     height: 52px;
-    background: transparent;
+    background: #f7f7f7;
 }
 #wpadminbar .quicklinks {
     margin-left: 240px;
 }
 
 #wpadminbar * {
-    font-family: "Montserrat";
     font-size: 14px;
 }
 
@@ -230,7 +243,8 @@ html.wp-toolbar {
 }
 
 #adminmenuback {
-    background: #444 url('../../img/bytbil-logo-n.png') no-repeat top center;
+    /*background: #444 url('../../img/bytbil-logo-n.png') no-repeat top center;*/
+    background: #444;
     background-position: center 15px;
 }
 
