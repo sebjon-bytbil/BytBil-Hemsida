@@ -101,8 +101,13 @@ html.wp-toolbar {
 #wpadminbar {
     color: #111;
     height: 52px;
-    background: #f7f7f7;
+    background: #f7f7f7 url('../../img/bytbil-logo.png') no-repeat top left;
+    background-position-y: 6px;
+    background-position-x: 80px;
+    background-size: 75px;
+    box-shadow: rgba(0,0,0,0.3) 0px 0px 3px;
 }
+
 #wpadminbar .quicklinks {
     margin-left: 240px;
 }
@@ -122,7 +127,7 @@ html.wp-toolbar {
 #wpadminbar .menupop .ab-item,
 #wpadminbar ul li:last-child .ab-item {
     padding: 10px 15px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    box-shadow: none;
     background: #fff;
     width: auto;
 }
@@ -131,6 +136,7 @@ html.wp-toolbar {
 #wpadminbar #wp-admin-bar-site-name a.ab-item {
     text-overflow: inherit;
 }
+
 
 #wp-admin-bar-user-actions .menupop .ab-item {
     box-shadow: none;
@@ -347,7 +353,7 @@ body.wp-admin #wpwrap #qm {
 /* Hides */
 #wpadminbar #wp-admin-bar-comments,
 #wp-admin-bar-wp-logo {
-    display: none;
+    display: none !important;
 }
 
 .wp-menu-separator {
