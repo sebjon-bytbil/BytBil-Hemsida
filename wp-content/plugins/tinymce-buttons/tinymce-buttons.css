@@ -1,0 +1,363 @@
+/* Icons */
+@import url('icons/bytbil-icons.css');
+@import url('fonts/helvetica-neue.css');
+
+
+html {
+    /*overflow: hidden;*/
+    font-size: 62.5%;
+}
+
+* {
+    font-family: 'HelveticaNeueLT-Light';
+}
+
+body {
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: #333;
+    padding-top: 71px;
+    background: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x : hidden;
+}
+
+a:link,
+a:visited,
+a:focus,
+p a:link,
+p a:visited,
+p a:focus{
+    color: #eb2227;
+}
+
+a:hover {
+}
+
+
+/* Basic Elements : Typography */
+body,
+html,
+p,
+input,
+textarea,
+.light,
+* {
+    font-family: 'HelveticaNeueLT-Light';
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'HelveticaNeueLT-Bold';
+}
+
+h1 {
+    font-size: 32px;
+    font-size: 3.2rem;
+}
+h2 { font-size: 28px;
+    font-size: 2.8rem;
+}
+h3 { font-size: 22px;
+    font-size: 2.2rem;
+}
+h4 { font-size: 18px;
+    font-size: 1.8rem;
+}
+h5 { font-size: 17px;
+    font-size: 1.7rem;
+}
+
+.huge { font-size: 4em; }
+.large { font-size: 2em; }
+.medium { font-size: 1.5em; }
+.small { font-size: 0.8em; }
+.xs-small { font-size: 0.7em; }
+
+strong,
+b,
+.bold,
+label{
+    font-family: 'HelveticaNeueLT-Bold';
+    font-weight: normal;
+}
+
+
+input[name="icon-content"] {
+    margin: 0;
+    background: #fcfcfc;
+    color: #555;
+    clear: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 0;
+    outline: 0;
+    padding: 0!important;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+    height: 16px;
+    width: 40px;
+    border: 1px solid transparent;
+    height: 40px;
+}
+
+input[name="icon-content"]:checked:after, input[name="icon-content"]:focus:after {
+    color: #e98239;
+    border-color: #e98239;
+}
+
+.mce-ico.mce-i-bytbil {
+    padding: 0;
+}
+.bytbil:before
+.mce-ico.mce-i-bytbil:before {
+    font-family: "bytbil-icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+}
+
+.button {
+    border-radius: 0;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    border: none;
+    background: #f7f7f7;
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.button i,
+.button i:before{
+    font-family: "bytbil-icons";
+}
+
+.button.big {
+    padding: 10px 15px;
+    font-size: 1.1em;
+}
+
+.button.small {
+    padding: 5px 8px;
+    font-size: 0.9em;
+}
+
+.button:active {
+    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.2);
+    background: #f7f7f7;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+    text-decoration: none;
+}
+
+.button.red {
+    background: #ed1c24;
+    border-bottom: 2px solid #be161d;
+    color: #fff;
+}
+
+.button.blue {
+    background: #86a6b2;
+    border-bottom: 2px solid #6b858e;
+    color: #fff;
+}
+
+.button.black {
+    background: #444;
+    border-bottom: 2px solid #111;
+    color: #fff;
+}
+
+.button.orange {
+    background: #ff8500;
+    border-bottom: 2px solid #cc6a00;
+    color: #fff;
+}
+.button.white {
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+    color: #151515;
+}
+
+.button.green {
+    background: #58b53f;
+    border-bottom: 2px solid #458b32;
+    color: #fff;
+}
+
+.button.volvo {
+    background: #003057;
+    border-bottom: 2px solid #00192e;
+    color: #fff;
+}
+
+.button.ford {
+    background: #1351d8;
+    border-bottom: 2px solid #1043b2;
+    color: #fff;
+}
+
+.button.dacia {
+    background: #003690;
+    border-bottom: 2px solid #002a71;
+    color: #fff;
+}
+
+.button.renault {
+    background: #fdb414;
+    border-bottom: 2px solid #db990a;
+    color: #fff;
+}
+
+#dialog .input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon-preview {
+    display: table;
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1px solid #eee;
+    background: #f7f7f7;
+}
+
+span.icon-holder{
+    padding: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid transparent;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+span.icon-holder i {
+    text-align: center;
+    line-height: inerhit;
+    font-size: 1em;
+    display: table;
+}
+
+span.icon-holder i:before {
+    margin: 0;
+    width: auto;
+    font-size: inherit;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+i.icon-holder{
+    padding: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 2px solid transparent;
+    width: auto;
+    height: auto;
+    text-align: center;
+    line-height: inerhit;
+    font-size: 1em;
+    display: inline-table;
+}
+
+i.icon-holder:before {
+    margin: 0;
+    width: auto;
+    font-size: inherit;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+span.icon-holder[data-size="default"] { padding: 20px; }
+span.icon-holder[data-size="default"] i { height: 64px; width: 64px; }
+span.icon-holder[data-size="default"] i:before { font-size: 2em; }
+
+span.icon-holder[data-size="large"] { padding: 30px; }
+span.icon-holder[data-size="large"] i { height: 120px; width: 120px; }
+span.icon-holder[data-size="large"] i:before { font-size: 3em; }
+
+span.icon-holder[data-size="small"] { padding: 10px; }
+span.icon-holder[data-size="small"] i { height: 32px; width: 32px; }
+span.icon-holder[data-size="small"] i:before { font-size: 1em; }
+span.icon-holder[data-size="small"] { border-width: 1px; }
+
+i.icon-holder[data-size="default"] { padding: 0; }
+i.icon-holder[data-size="default"] { height: 64px; width: 64px; }
+i.icon-holder[data-size="default"]:before { font-size: 2em; }
+
+i.icon-holder[data-size="large"] { padding: 0; }
+i.icon-holder[data-size="large"] { height: 120px; width: 120px; }
+i.icon-holder[data-size="large"]:before { font-size: 3em; }
+
+i.icon-holder[data-size="small"] { padding: 0; }
+i.icon-holder[data-size="small"] { height: 32px; width: 32px; }
+i.icon-holder[data-size="small"]:before { font-size: 1em; }
+i.icon-holder[data-size="small"] { border-width: 1px; }
+
+.icon-holder[data-float="default"] { float: none; margin: 0;}
+.icon-holder[data-float="left"] { float: left; margin-right: 1em; }
+.icon-holder[data-float="right"] { float: right; margin-left: 1em;}
+
+
+.icon-holder[data-bgcolor="transparent"] { background-color: transparent; }
+.icon-holder[data-bgcolor="white"] { background-color: #fff; }
+.icon-holder[data-bgcolor="black"] { background-color: #444; }
+.icon-holder[data-bgcolor="red"] { background-color: #ed1c24; }
+.icon-holder[data-bgcolor="blue"] { background-color: #86a6b2; }
+.icon-holder[data-bgcolor="orange"] { background-color: #ff8500; }
+.icon-holder[data-bgcolor="green"] { background-color: #58b53f; }
+.icon-holder[data-bgcolor="volvo"] { background-color: #003057; }
+.icon-holder[data-bgcolor="dacia"] { background-color: #003690; }
+.icon-holder[data-bgcolor="ford"] { background-color: #1351d8; }
+.icon-holder[data-bgcolor="renault"] { background-color: #fdb414; }
+
+.icon-holder[data-border="transparent"] { border-color: transparent; }
+.icon-holder[data-border="white"] { border-color: #fff; }
+.icon-holder[data-border="black"] { border-color: #444; }
+.icon-holder[data-border="red"] { border-color: #ed1c24; }
+.icon-holder[data-border="blue"] { border-color: #86a6b2; }
+.icon-holder[data-border="orange"] { border-color: #ff8500; }
+.icon-holder[data-border="green"] { border-color: #58b53f; }
+.icon-holder[data-border="volvo"] { border-color: #003057; }
+.icon-holder[data-border="dacia"] { border-color: #003690; }
+.icon-holder[data-border="ford"] { border-color: #1351d8; }
+.icon-holder[data-border="renault"] { border-color: #fdb414; }
+
+.icon-holder[data-color="white"] { color: #fff; }
+.icon-holder[data-color="black"] { color: #444; }
+.icon-holder[data-color="red"] { color: #ed1c24; }
+.icon-holder[data-color="blue"] { color: #86a6b2; }
+.icon-holder[data-color="orange"] { color: #ff8500; }
+.icon-holder[data-color="green"] { color: #58b53f; }
+.icon-holder[data-color="volvo"] { color: #003057; }
+.icon-holder[data-color="dacia"] { color: #003690; }
+.icon-holder[data-color="ford"] { color: #1351d8; }
+.icon-holder[data-color="renault"] { color: #fdb414; }
+
+.icon-holder[data-bgcolor="transparent"][data-border="pop-out"] { box-shadow: 0 1px 0 1px rgba(0,0,0,0.2); }
+.icon-holder[data-bgcolor="white"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #ccc; }
+.icon-holder[data-bgcolor="black"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #111; }
+.icon-holder[data-bgcolor="red"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #be161d; }
+.icon-holder[data-bgcolor="blue"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #6b858e; }
+.icon-holder[data-bgcolor="orange"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #cc6a00; }
+.icon-holder[data-bgcolor="green"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #458b32; }
+.icon-holder[data-bgcolor="volvo"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #00192e; }
+.icon-holder[data-bgcolor="dacia"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #002a71; }
+.icon-holder[data-bgcolor="ford"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #1043b2; }
+.icon-holder[data-bgcolor="renault"][data-border="pop-out"] { box-shadow: 0 1px 0 1px #db990a; }
+
+
+

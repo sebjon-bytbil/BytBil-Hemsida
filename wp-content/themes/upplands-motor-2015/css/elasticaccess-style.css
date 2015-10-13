@@ -1,0 +1,1215 @@
+body{
+    background: #f7f7f7;
+}
+
+.form-control{
+    border: 0;
+    box-shadow: none;
+    text-align: left;
+}
+.wrapper {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+
+}
+#pageSize{
+    display:none
+}
+.filter-part {
+    width: 14.28%;
+    float: left;
+    /*padding: 0 15px;*/
+    border-left: 1px solid #ccc;
+    position: relative;
+}
+
+
+.filter-part:first-child{
+    border-left: none;
+}
+
+.filter-part .form-control {
+    height: auto;
+}
+
+.ng-scope .flexslider {
+    min-height: 430px;
+}
+
+[us-spinner]{
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    z-index: 9999999;
+}
+
+.us-spinner > span {
+    left: 0;
+    top: 115px;
+}
+
+[ng-dropdown-multiselect] .dropdown-multiselect {
+    width: 100%;
+}
+
+[ng-dropdown-multiselect] .dropdown-menu-form {
+    overflow: hidden !important;
+    width: 100%;
+}
+
+.dropdown-menu{
+    padding: 0;
+}
+
+.car-list{
+    max-width: 100%;
+}
+.car-list .car{
+
+}
+
+.car-list .car a:hover{
+    text-decoration: none;
+}
+.car-list .car .title{
+    color: #000;
+    overflow: hidden;
+    max-height: 20px;
+    display: block;
+}
+.car-list .car .price{
+    color: #F00;
+}
+.car-list .car img{
+
+}
+.car-list .car .info{
+    padding: 15px 10px;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+}
+.car-list .infinite-scroll-loading{
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+}
+
+/* temp */
+.object-view .header-slider{
+    display:none;
+}
+.object-view #vehicleinfo .wrapper {
+    margin-top: 130px;
+}
+/* End temp */
+
+.object-view .scroll-menu{
+    height: 0;
+}
+.object-view #properties,
+.object-view #equipment,
+.object-view .finance-box,
+.object-view #similar-cars,
+.object-view #vehicleinfo,
+.object-view .warranty,
+.object-view #contactForm{
+    margin-bottom: 20px;
+    padding: 30px;
+}
+.object-view #properties,
+.object-view #equipment,
+.object-view .finance-box,
+.object-view .financeInfo .box,
+.object-view #similar-cars,
+.object-view .warranty,
+.object-view #contactForm{
+    background: #fff;
+}
+.object-view .financeInfo .monthly.box{
+    text-align: center;
+    padding: 15px 0;
+}
+.object-view .financeInfo .monthlyPayment{
+    color: #ed1c24;
+    font-weight: bold;
+    font-size: 2em;
+}
+.object-view #properties,
+.object-view .finance-box,
+.object-view .financeInfo .monthly,
+.object-view #contactForm{
+    border-bottom: 1px solid #d9d9d9;
+}
+.object-view .submit-form{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.object-view #properties .price{
+    color: #F00;
+    font-weight: bold;
+}
+.object-view .flex-control-paging{
+    position: absolute;
+    z-index: 3;
+    bottom: 10px;
+    bottom: -40px;
+}
+.object-view dd, .object-view dt{
+    line-height: 2;
+}
+.object-view #properties .dl-horizontal dt{
+    text-align: left;
+}
+/*.object-view #equipment .col-xs-12.col-sm-4.ng-binding.ng-scope {*/
+    /*line-height: 30px;*/
+    /*margin: 0px 10px;*/
+    /*padding: 0px;*/
+    /*border-bottom: 1px solid #ccc;*/
+/*}*/
+.object-view #equipment .equipment-item{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    display: block;
+    line-height: 2;
+    margin-bottom: -1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.object-view #equipment .equipment-item:hover {
+    overflow: visible;
+    white-space: normal;
+}
+#similar-cars .more-similar{
+    text-align: center;
+    padding: 40px 0 20px;
+}
+.car-list .more-similar{
+    text-align: center;
+}
+
+
+/* Search Form */
+
+/* Search Form */
+#SearchForm .row{
+    margin-bottom: 20px;
+}
+#SearchForm .row.no-margin {
+    margin-bottom: 0px!important;
+}
+
+div[options*="data.city"] button,
+div[options*="data.city"] ul li,
+div[options*="data.color"] button,
+div[options*="data.color"] ul li,
+div[options*="data.fueltype"] button,
+div[options*="data.fueltype"] ul li,
+div[options*="data.bodytype"] button,
+div[options*="data.bodytype"] ul li {
+    text-transform: capitalize;
+}
+
+#range_Miltal ul.ranges ul > li:first-of-type,
+#range_Pris ul.ranges ul > li:first-of-type{
+    display: none;
+}
+
+ul[ng-model*="search.sort"] li button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #eee;
+}
+
+#SearchForm .dropdown-menu, .filter-part a{
+    cursor: pointer;
+}
+#SearchForm .dropdown-menu, .filter-part a:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+#SearchForm .bootstrap-select.btn-group .btn .caret {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: auto;
+    vertical-align: middle;
+}
+
+#SearchForm .bootstrap-select .icon-chevron-thin-down,
+.filter-part .icon-chevron-thin-down {
+    float: right;
+    font-size: 1em;
+    transition-duration: 150ms;
+    transition-property: transform;
+    
+}
+
+#SearchForm .bootstrap-select button:focus .icon-chevron-thin-down:before,
+.filter-part .open .icon-chevron-thin-down:before{
+    transform: rotate(180deg);
+}
+
+.filter-part .btn-group {
+    text-transform: capitalize;
+}
+
+/*
+.search-box .caption.box {
+    width: 100%;
+    background: #fff!important;
+    border: 0;
+    box-shadow: 1px 0 1px #ccc;
+    padding: 30px;
+}
+.search-box .caption, .caption-wrapper{
+    position: relative;
+    height: inherit;
+}
+*/
+.search-box div select,
+.search-box div .bootstrap-select,
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+    width: 100%;
+}
+.ElasticAccess #contact input[type="checkbox"] ~ span:after,
+.search-box input[type="checkbox"] ~ span:after {
+    height: 15px;
+    width: 35px;
+    background: #cccccc url(img/handle.png) no-repeat left;
+    background-size: contain;
+    transition: background-position 100ms ease;
+    float: right;
+    display: table;
+    content: "";
+    border-radius: 10px;
+}
+.ElasticAccess #contact input[type="checkbox"],
+.search-box input[type="checkbox"] {
+    display: none;
+}
+
+.ElasticAccess #contact input[type="checkbox"]:checked ~ span:after,
+.search-box input[type="checkbox"]:checked ~ span:after {
+    background-color: #5ab540;
+    background-position: right;
+}
+
+.ElasticAccess h2.count{
+    text-align: center;
+}
+
+.brand-logo {
+    width: 20px !important;
+    float: left;
+    margin-right: 15px;
+}
+.searchlist h1, .searchlist p{
+    color: #000;
+}
+.search-buttons {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.search-buttons button {
+    margin: 0 7.5px;
+}
+
+.search-box label, .filter-search label, #contactForm label {
+    font-size: 0.8em;
+    margin-bottom: 0;
+    width: 100%;
+}
+.filter-search label{
+    padding: 12px 12px 0;
+}
+
+.filter-search .affix {
+    position: static;
+}
+
+#contactForm .btn-form-white{
+    border: 0;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.bootstrap-select .btn-form-white,
+.bootstrap-select .checkbox,
+#contactForm .btn-form-white{
+    background: #fff;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0px 10px 0px;
+    transition: padding-left 150ms ease, border-bottom 150ms ease;
+    color: #666;
+    box-shadow: none;
+}
+
+#contactForm .btn-form-white:focus,
+#contactForm .btn-form-white:active,
+#contactForm .btn-form-white[aria-expanded="true"],
+.bootstrap-select .btn-form-white:focus,
+.bootstrap-select .btn-form-white:active,
+.bootstrap-select .btn-form-white[aria-expanded="true"]{
+    border: 0;
+    border-bottom: 1px solid #58b53f;
+    outline: none !important;
+    outline-offset: 0;
+    box-shadow: none;
+    color: #151515;
+    padding-left: 10px;
+}
+.bootstrap-select .checkbox:focus,
+.bootstrap-select .checkbox:active,
+.bootstrap-select .checkbox[aria-expanded="true"] {
+    border-bottom: 1px solid #58b53f;
+}
+
+.bootstrap-select .btn-form-white[aria-expanded="true"] {
+    padding-left: 10px;
+}
+
+.bootstrap-select .btn-form-white i {
+    font-size: 1.5em;
+}
+
+.bootstrap-select .btn-form-white i:before {
+    transition: content 300ms ease, transform 300ms ease;
+}
+
+.bootstrap-select.open .btn-form-white i:before {
+    content: "\274C";
+    transform: rotate(360deg);
+}
+
+.bootstrap-select .dropdown-menu {
+    font-size: 1em;
+    font-family: 'HelveticaNeueLT-Light';
+}
+
+.bootstrap-select .dropdown-menu.open {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.5);
+    margin-top: 0;
+}
+
+
+.bootstrap-select.btn-group .dropdown-menu li a.opt {
+    padding-left: 20px;
+}
+
+
+.bootstrap-select .dropdown-menu>.active>a,
+.bootstrap-select .dropdown-menu>.active>a:hover,
+.bootstrap-select .dropdown-menu>.active>a:focus {
+    background: #86a6b2;
+}
+
+.bootstrap-select .dropdown-header {
+    font-family: 'HelveticaNeueLT-Bold';
+    font-size: 0.9em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #eee;
+    color: #333;
+}
+
+.dropdown-toggle .caret {
+    float: right;
+}
+
+.dropdown-menu.ranges {
+    width: auto !important;
+    min-width: 100% !important;
+}
+
+.dropdown-menu.ranges label {
+    font-size: 1em
+}
+
+.dropdown-menu.ranges > li > div > ul > li > label {
+    font-family: 'HelveticaNeueLT-Light';
+}
+    
+
+.dropdown-menu .range-item{
+    display: block;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    border-top: 1px solid #eee;
+
+
+}
+.dropdown-menu > li > a, .dropdown-menu .filter-range, .bootstrap-select .checkbox {
+    cursor: pointer;
+    text-align: left;
+}
+.dropdown-menu .range-item.active{
+    background: #eee;
+}
+
+.dropdown-menu .range-item.disabled{
+    color: #ccc;
+}
+
+.dropdown-menu .range-item input {
+    visibility: hidden;
+}
+.dropdown-menu label{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    width: 100%;
+}
+.dropdown-menu ul.left-column{
+    margin-right: -15px;
+}
+.dropdown-menu ul.right-column{
+    margin-left: -15px;
+}
+.filter-part .btn:focus,
+.filter-part .btn:active:focus,
+.filter-part .btn.active:focus,
+.filter-part .btn.focus,
+.filter-part .btn:active.focus,
+.filter-part .btn.active.focus{
+    outline: none!important;
+}
+.filter-part .filter-range{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/*.btn-group i {
+    font-size: 1.5em;
+    display: inline-block;
+    float: right;
+    position: absolute;
+    top: 18px;
+}
+
+.btn-group i:before {
+    transition: transform 150ms ease;
+    display: inline-block;
+    transform: rotate(0deg);
+
+}
+
+.btn-group.open i.chevron-thin-down:before {
+    transform: rotate(180deg);
+}*/
+
+.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
+
+/* Vehicles */
+#vehicles .filter-search{
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#vehicles .filter-search .form-control{
+    border: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+#vehicles .filters .button {
+    background: transparent;
+}
+
+#vehicles .filters .button:active,
+#vehicles .filters .button.is-checked {
+    border-bottom: 2px solid #ed1c24;
+}
+
+#vehicles .filters .button:hover {
+}
+
+#vehicle-result {
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+
+.vehicle-item {
+    margin-bottom: 30px;
+}
+
+/*.vehicle-item {
+    width: 33%;
+    display: inline-block;
+    align-content: stretch;
+    padding: 15px 7.5px;
+}
+
+.vehicle-item:nth-of-type(3n+1){
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.vehicle-item:nth-of-type(3n+3){
+    padding-left: 15px;
+    padding-right: 0;
+}*/
+
+.vehicle-item a {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    color: #151515;
+}
+
+.vehicle-image {
+    display: inline-block;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.vehicle-image .image{
+    background-size: cover!important;
+}
+.vehicle-image .image-overlay, .image .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: transparent;
+    box-shadow: inset 0 0 0 10px rgba(255,255,255,0.5);
+    transition: box-shadow 400ms ease-out;
+}
+
+.vehicle-item:hover .image-overlay, .image:hover .image-overlay {
+    box-shadow: inset 0 0 0 10px rgba(255,255,255,0.2);
+}
+
+.vehicle-information {
+    background: #fff;
+    padding: 12px 10px 15px;
+    float: left;
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+    transition: border-bottom 400ms ease-out;
+}
+
+.vehicle-item:hover .vehicle-information {
+    border-bottom: 2px solid #ed1c24;
+}
+
+.vehicle-name {
+    color: #000;
+}
+
+.vehicle-model {
+}
+
+.vehicle-version {
+    font-family: 'HelveticaNeueLT-Light';
+    opacity: 0.75;
+}
+
+main.volvo .vehicle-version {
+    font-family: 'VolvoBroad';
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+main.renault .vehicle-version {
+    font-family: 'HelveticaNeueCondensed-Bold';
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+main.ford .vehicle-version {
+    font-family: 'FordAntennaBold';
+    font-size: 0.9em;
+}
+
+
+
+.vehicle-price {
+    font-size: 1.2em;
+    color: #ed1c24;
+}
+/* Search bar */
+/*
+#search {
+    max-width: 70px;
+    padding: 13px 6px 13px;
+}
+
+.search-header,
+.search-input {
+    display: none;
+}
+
+.search-icon {
+    font-size: 1.5em;
+}*/
+
+#FreeTextSearch{
+    background: #f7f7f7;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    width: 75%;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 1.1em;
+
+}
+
+/*#locations {
+    top: 61px;
+}
+
+.push-down-admin-menu #locations {
+    top: 131px;
+}
+.caption-contents {
+    padding: 20px;
+}
+*/
+body {
+}
+
+body.push-down-search {
+    padding-top: 68px;
+}
+
+.filter-search.affix {
+    position: fixed;
+    top: 0;
+    z-index: 12;
+    width: 100%;
+}
+
+.scroll-menu .submenu-wrapper.affix {
+    /*top: 0;*/
+}
+
+/*.submenu-wrapper > div > .item:nth-of-type(5),
+.submenu-wrapper > div > .item:nth-of-type(6) {
+    display: none;
+}*/
+
+/* For Invigning */
+#warranties{
+    height: 100px;
+}
+#warranties *{
+    display: none;
+    height: 100px;
+}
+
+#similar-cars {
+    padding-top: 30px;
+}
+
+.object-view #finance {
+    background: #f7f7f7;
+    padding-top: 30px;
+}
+
+.object-view #finance .financeInfo,
+.object-view #finance .vehicle-image {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.object-view  .ng-scope:not([class*=col-]):not([class*=form-control]):not(.input-group-btn):not(.button){
+    width: 100%;
+    float: left;
+}
+
+.object-view .car {
+    margin-bottom: 30px;
+}
+
+/* Compare view */
+.comparison_labels {
+
+}
+
+.comparison_col {
+    width: 25%;
+    display: inline-block;
+    margin-right: -4px;
+    background-color: #fff;
+    float: left;
+}
+
+.comparison_col:first-child .comparison_top {
+    /*background-image: url(../images/compare-bg.png);*/
+    background-repeat: no-repeat;
+    background-size: 107px 107px;
+    background-position: 50% 35%;
+}
+
+.comparison_cell {
+    /*border-right: 1px solid #999;*/
+    position: relative;
+}
+.comparison_cell span {
+    display: block;
+    padding: 0 8px;
+    line-height: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.comparison_top {
+    font-size: 1.08em;
+    font-weight: bold;
+}
+.comparison_top, .comparison_top span {
+    background-color: transparent !important;
+    border: 0;
+    height: 180px;
+    white-space:normal;
+    line-height: normal;
+}
+
+.comparison_top img {
+    max-width: 100%;
+    max-height: 134px;
+    margin-bottom: 4px;
+}
+
+.comparison_cell:not(:first-child):not(:last-child) {
+    /*cursor: cell;*/
+}
+
+.comparison_cell:last-child {
+    white-space: nowrap !important;
+}
+
+.comparison_cell:nth-child(even) {
+    background-color: #f6f6f7;
+}
+
+.comparison_table .hover:not(:first-child):not(:last-child) {
+    background-color: #ddd;
+}
+
+.comparison_table .marked:not(:first-child):not(:last-child), .comparison_table .marked:not(:first-child):not(:last-child) span {
+    background-color: #5b93bb;
+    color: #fff !important;
+}
+
+.accessscroll.search-box .slides > li > img {
+    min-height: 600px;
+}
+
+@media (max-width: 767px){
+    .accessscroll[name=vehicles].affix{
+        /*position: static;*/
+    }
+    .filtertoggle .glyphicon-chevron-down{
+        display:inline-block;
+    }
+    .filtertoggle .glyphicon-chevron-up{
+        display:none;
+    }
+    .filteropen .filtertoggle .glyphicon-chevron-down{
+        display: none;
+    }
+    .filteropen .filtertoggle .glyphicon-chevron-up{
+        display: inline-block;
+    }
+
+    .filteropen .filtercontroller.hidden-xs{
+        display: block!important;
+    }
+    .accessscroll.search-box .slides > li > img {
+        min-height: 0;
+    }
+
+    .accessscroll.search-box .caption,
+    .accessscroll.search-box .caption-wrapper {
+        position: static;
+    }
+
+    .accessscroll.search-box .vertical-align-wrapper {
+        position: static;
+    }
+
+    .filter-part{
+        width:50%;
+    }
+}
+
+@media (min-width: 767px) and (max-width:992px){
+
+    .caption-contents {
+        padding: 15px 30px;
+    }
+
+    .caption-contents h1 {
+        font-size: 2em;
+        margin-top: 20px;
+    }
+
+    .vertical-align-wrapper {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    #FreeTextSearch {
+        width: 100%;
+    }
+
+    .object-view #properties {
+        padding-bottom: 0;
+        padding-top: 10px;
+    }
+
+    .object-view #properties h3 {
+        margin-top: 0;
+    }
+
+    .object-view #properties h3.price {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .object-view #properties .dl-horizontal dd {
+        margin-left: auto;
+        float: left;
+        width: 30%;
+    }
+
+    .object-view #properties .dl-horizontal dt {
+        width: 20%;
+        float: left;
+        clear: none;
+    }
+
+    /*.search-buttons {
+        display: none;
+    }*/
+
+    .object-view #properties {
+        width: 100%;
+        float: left;
+        padding-bottom: 30px;
+    }
+
+    #vehicleinfo > .wrapper > .row > .col-sm-8 {
+        width: 100%;
+        padding: 0;
+    }
+}
+/* Medium devices */
+@media (min-width:993px) and (max-width:1199px) {
+
+    /* Navbar */
+    .navbar {
+        font-size: 1em;
+    }
+
+    .navbar-brand {
+        padding: 21px 20px;
+    }
+
+    .logotype {
+        max-width: 220px;
+    }
+
+    .caption-contents {
+        padding: 15px 30px;
+    }
+
+    .caption-contents h1 {
+        font-size: 2em;
+        margin-top: 20px;
+    }
+
+    .vertical-align-wrapper {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    #FreeTextSearch {
+        width: 100%;
+    }
+
+    .object-view #properties {
+        padding-bottom: 0;
+        padding-top: 10px;
+    }
+
+    .object-view #properties h3 {
+        margin-top: 0;
+    }
+
+    .object-view #properties h3.price {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .object-view #properties .dl-horizontal dd {
+        margin-left: auto;
+    }
+
+    .object-view #properties .dl-horizontal dt {
+        width: auto;
+        min-width: 100px;
+        max-width: 120px;
+    }
+
+    /* Brands */
+
+    #brands {
+        min-height: 0;
+    }
+
+    #brands > li > a {
+        padding: 21px 8px;
+    }
+
+    #brands > li > a > img {
+        max-height: 28px;
+    }
+
+    /* My parking */
+    #my-parking .parking-text {
+        display: none;
+    }
+
+    .parking-icon {
+        padding-top: 4px;
+    }
+
+    /* Search bar */
+    #search {
+        max-width: 70px;
+        padding: 19px 15px 19px;
+    }
+
+    .search-header,
+    .search-input {
+        display: none;
+    }
+
+    .search-icon {
+        font-size: 1.5em;
+    }
+
+
+
+}
+
+/* Large Devices */
+@media (min-width: 1200px) and (max-width: 1365px) {
+
+
+    /* Navbar */
+    .navbar {
+        font-size: 1em;
+    }
+
+    .navbar-brand {
+        padding: 20px 20px;
+    }
+
+    .logotype {
+        max-width: 260px;
+    }
+
+    #main-menu > ul > li > a {
+        padding: 25px 12px;
+    }
+
+    /* Brands */
+
+    #brands > li > a {
+        padding: 20px 10px;
+    }
+
+    #brands > li > a > img {
+        max-height: 30px;
+    }
+
+    /* My Parking */
+
+    .parking-icon {
+        padding: 3px;
+        font-size: 1.1em;
+    }
+
+    .parking-text {
+        line-height: 32px
+    }
+
+    /* Searchbar */
+    #search {
+        max-width: 180px;
+        padding: 13px 15px 11px;
+    }
+
+
+}
+/* Captions
+
+.caption-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.caption-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caption-wrapper.left {
+    justify-content: flex-start;
+}
+
+.caption-wrapper.right {
+    justify-content: flex-end;
+}
+
+.caption {
+    align-self: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    margin: 30px 0;
+}
+
+.caption.volvo .caption-text .title {
+    font-family: "VolvoBroad";
+    text-transform: uppercase;
+}
+
+.caption.top {
+    align-self: flex-start;
+}
+
+.caption.bottom {
+    align-self: flex-end;
+}
+
+.caption.box {
+    display: inline-block;
+    padding: 60px;
+    width: auto;
+}
+
+.caption.box.full-height {
+    height: 100%;
+}
+
+.caption.box.black {
+    background: rgba(0,0,0,0.8);
+    box-shadow: inset 0 0 0 10px rgba(0,0,0,0.5);
+}
+
+.caption.box.white {
+    background: rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 0 10px rgba(255,255,255,0.5);
+}
+
+.caption.box.gloss {
+    background: rgba(255,255,255,0.1);
+    box-shadow: inset 0 0 0 10px rgba(255,255,255,0.5);
+}
+
+.caption.box.volvo {
+    background: rgba(0, 48, 87,.9);
+    box-shadow: inset 0 0 0 10px rgba(0, 48, 87,.5);
+}
+
+.caption.box.no-border {
+    box-shadow: none !important;
+}
+
+
+
+.caption-text .white {
+    color: #f7f7f7;
+}
+
+.caption-text .black {
+    color: #151515;
+}
+
+.caption-text.left {
+    text-align: left;
+}
+
+.caption-text.right {
+    text-align: right;
+}
+
+.caption-text.center {
+    text-align: center;
+}
+
+.caption-text .title,
+.caption-text .subtext {
+    display: block;
+    width: 100%;
+}
+
+.caption-text .title {
+    font-size: 4em;
+}
+
+.caption-text .subtext.huge {
+    font-size: 2em;
+}
+
+.caption-text .subtext.large {
+    font-size: 1.5em;
+}
+
+.caption-text .subtext.medium {
+    font-size: 1.2em;
+}
+
+.caption-text .subtext.small {
+    font-size: 0.85em;
+}
+
+.caption-buttons {
+    margin-top: 30px;
+} */
+/* Finance */
+
+
+.financeInfo .item.keyvalue {
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+}
+.financeInfo .item .value {
+    float: right;
+    text-align: right;
+}
+.financeInfo .item .finance-label{
+    font-weight: bold;
+}
+
+.financeInfo .monthly-from{
+    text-decoration: underline;
+}

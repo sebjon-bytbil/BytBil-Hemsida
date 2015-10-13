@@ -1,0 +1,30 @@
+@font-face {
+font-family: "FordAntennaRegular";
+src: url("../fonts/./FordAntenna-Regular.eot");
+src: url("../fonts/./FordAntenna-Regular.eot?") format("embedded-opentype"),
+url("../fonts/./FordAntenna-Regular.woff") format("woff"),
+url("../fonts/./FordAntenna-Regular.ttf") format("truetype"),
+url('../fonts/FordAntenna-Regular.svg') format('svg');
+font-style: normal;
+font-weight: normal;
+}
+@font-face {
+font-family: "FordAntennaBold";
+src: url("../fonts/./FordAntenna-Bold.eot");
+src: url("../fonts/./FordAntenna-Bold.eot?") format("embedded-opentype"),
+url("../fonts/./FordAntenna-Bold.woff") format("woff"),
+url("../fonts/./FordAntenna-Bold.ttf") format("truetype"),
+url('../fonts/FordAntenna-Bold.svg') format('svg');
+font-style: normal;
+font-weight: bold;
+}
+@font-face {
+font-family: "FordAntennaLight";
+src: url("../fonts/./FordAntenna-Light.eot");
+src: url("../fonts/./FordAntenna-Light.eot?") format("embedded-opentype"),
+url("../fonts/./FordAntenna-Light.woff") format("woff"),
+url("../fonts/./FordAntenna-Light.ttf") format("truetype"),
+url('../fonts/FordAntenna-Light.svg') format('svg');
+font-style: normal;
+font-weight: normal;
+}

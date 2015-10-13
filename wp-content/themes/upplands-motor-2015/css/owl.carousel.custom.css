@@ -1,0 +1,43 @@
+/* OWL CAROUSEL - Object page */
+#owl-carousel .owl-buttons {
+    top: 49%;
+}
+
+#owl-carousel .owl-prev,
+#owl-carousel .owl-next {
+    font-size: 32px;
+    position: absolute;
+}
+
+#owl-carousel .owl-prev {
+    margin-left: 0 !important;
+    left: 30px;
+}
+
+#owl-carousel .owl-next {
+    margin-right: 0 !important;
+    right: 30px;
+}
+
+#owl-carousel .owl-pagination {
+    position: absolute;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    #owl-carousel .owl-pagination {
+        position: static;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+    #owl-carousel .owl-pagination {
+        bottom: 5px;
+    }
+}
+
+@media (min-width: 1101px) {
+    #owl-carousel .owl-pagination {
+        bottom: 20px;
+    }
+}

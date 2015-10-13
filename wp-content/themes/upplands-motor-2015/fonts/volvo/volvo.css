@@ -1,0 +1,38 @@
+/*==========  Volvo Broad  ==========*/
+@font-face {
+	font-family: 'Volvo Broad Small';
+	src: url("../fonts/VolvoBroadSmallWeb.eot");
+	src: url("../fonts/VolvoBroadSmallWeb.eot?#iefix") format('embedded-opentype'), url("../fonts/VolvoBroadSmallWeb.woff") format('woff'), url("../fonts/VolvoBroadSmallWeb.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Volvo Broad Medium';
+	src: url("../fonts/VolvoBroadMediumWeb.eot");
+	src: url("../fonts/VolvoBroadMediumWeb.eot?#iefix") format('embedded-opentype'), url("../fonts/VolvoBroadMediumWeb.woff") format('woff'), url("../fonts/VolvoBroadMediumWeb.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Volvo Broad';
+	src: url("../fonts/VolvoBroadWeb.eot");
+	src: url("../fonts/VolvoBroadWeb.eot?#iefix") format('embedded-opentype'), url("../fonts/VolvoBroadWeb.woff") format('woff'), url("../fonts/VolvoBroadWeb.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Volvo Sans Medium';
+	src: url("../fonts/VolvoSansWeb-Medium.eot");
+	src: url("../fonts/VolvoSansWeb-Medium.eot?#iefix") format('embedded-opentype'), url("../fonts/VolvoSansWeb-Medium.woff") format('woff'), url("../fonts/VolvoSansWeb-Medium.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Volvo Sans Regular';
+	src: url("../fonts/VolvoSansWeb-Regular.eot");
+	src: url("../fonts/VolvoSansWeb-Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/VolvoSansWeb-Regular.woff") format('woff'), url("../fonts/VolvoSansWeb-Regular.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+
+

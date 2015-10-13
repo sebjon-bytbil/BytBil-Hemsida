@@ -1,0 +1,104 @@
+/**
+ * Print CSS
+ */
+@media print {
+    html.push-down-admin-menu {
+        margin-top: 0 !important;
+    }
+
+    /* Print CSS for My Parking */
+    .mp-print * {
+        background: transparent !important;
+        border: 0 !important;
+    }
+
+    /**
+     * Congrats to the users using Opera,
+     * this just might work for them.
+     */
+    .mp-print img {
+        page-break-before: auto !important;
+        page-break-after: auto !important;
+        page-break-inside: avoid !important;
+    }
+
+    .mp-print main,
+    .mp-print footer,
+    .mp-print .navbar-header button,
+    .mp-print #locations,
+    .mp-print #main-menu,
+    .mp-print #morphsearch,
+    .mp-print .mp-top-button,
+    .mp-print a:after,
+    .mp-print #brands,
+    .mp-print #my-parking .contain,
+    .mp-print .mp-button.share,
+    .mp-print .mp-button.print,
+    .mp-print .mp-button.compare,
+    .mp-print .mp-login,
+    .mp-print ul li .choices,
+    .mp-print .mp-tabs,
+    .mp-print .mp-settings-content {
+        display: none !important;
+    }
+
+    .mp-print .col-* {
+        float: none;
+    }
+
+    .mp-print header,
+    .mp-print nav,
+    .mp-print .navbar,
+    .mp-print a,
+    .mp-print .mp-container,
+    .mp-print .mp-favorites .mobile-headline {
+        border: 0;
+        display: block;
+    }
+
+    .mp-print .mp-favorites .tab-content {
+        display: block;
+        float: none;
+    }
+
+    .mp-print ul li,
+    .mp-print .container-fluid {
+        border: 0 !important;
+    }
+
+    .mp-print .mp-favorites,
+    .mp-print .mp-favorites .wrapper {
+        float: none;
+        margin: 0;
+        width: 100%;
+        max-height: none;
+        max-width: none;
+        padding: 0;
+    }
+
+    .mp-print .mp-favorites {
+        padding: 0 20px;
+    }
+
+    .mp-print #my-parking {
+        float: none;
+        margin: 0;
+        border: 0;
+    }
+
+    .mp-print .mp-container {
+        display: block;
+        position: static;
+    }
+
+    .mp-print .mp-subscriptions-content .info,
+    .mp-print .mp-offers-content .info {
+        float: none;
+        padding: 0;
+    }
+
+    .mp-print #main-nav {
+        margin-top: 20px;
+    }
+}
+
