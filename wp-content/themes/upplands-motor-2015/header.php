@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 checkRedirect(get_the_ID());
+global $option_fields;
 ?>
 <html lang="en"
     <?php if (is_user_logged_in()) {
@@ -8,7 +9,7 @@ checkRedirect(get_the_ID());
     } ?>>
 
     <head>
-        <meta charset="<?php bloginfo('charset'); ?>">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="fragment" content="!" />
@@ -61,10 +62,6 @@ checkRedirect(get_the_ID());
         get_touch_icons();
         ?>
 
-      
-
-        
-
 
         <link href="/wp-content/themes/upplands-motor-2015/minified/css/style.min.css?ver=gQKsHz5LgumdKuze3CGz" rel="stylesheet">
     
@@ -81,8 +78,7 @@ checkRedirect(get_the_ID());
         <![endif]-->
 
         <!--Google Maps / Anläggningar -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQAh825x3dRxn8w6zRUuCvtBOu-1FdgTU"></script>
-
+        
         <?php echo get_settings_code('css'); ?>
         
 
@@ -104,11 +100,7 @@ checkRedirect(get_the_ID());
                             </button>
 
                             <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                                <img class="logotype"
-                                     src="<?php echo get_logotype('svg'); ?>"
-                                     onerror="this.onerror=null; this.src='<?php echo get_logotype('png'); ?>'"
-                                     alt="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>"
-                                     title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
+                                <img class="logotype" src="<?php echo get_logotype('png'); ?>" title="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>" alt="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>">
                             </a>
 
                             <button type="button" class="search-toggle visible-xs visible-sm" onclick="toggleSearch();">
@@ -130,10 +122,7 @@ checkRedirect(get_the_ID());
                         </div>
                         <div class="navbar-offcanvas offcanvas navmenu-fixed-left canvas-slid" style="">
                             <a class="navmenu-brand" href="<?php echo home_url(); ?>">
-                                <img src="<?php echo get_logotype('svg'); ?>"
-                                     onerror="this.onerror=null; this.src='<?php echo get_logotype('png'); ?>'"
-                                     alt="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>"
-                                     title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
+                                <img class="logotype" src="<?php echo get_logotype('png'); ?>" title="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>" alt="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>">
                             </a>
                             
                             <div id="main-menu">
@@ -232,7 +221,8 @@ checkRedirect(get_the_ID());
 
                             <ul id="brands" class="nav navbar-nav pull-right">
                             <?php
-                                $header_brands_keys = get_field('settings-brands', 'options');
+                                
+                                $header_brands_keys = $option_fields['settings-brands'];
 
                                 if ($header_brands_keys) {
                                     foreach($header_brands_keys as $key => $var){
@@ -250,8 +240,7 @@ checkRedirect(get_the_ID());
                             ?>
                             </ul>
                             <?php
-                                $contact_phone = get_field('settings-contact-phonenumber','options');
-                                /*$service_phone = get_field('settings-contact-phonenumber-service','options');*/
+                                $contact_phone = $option_fields['settings-contact-phonenumber'];
                             ?>
                             <div class="header-contact-wrapper visible-xs">
                             <a href="tel:<?php echo $contact_phone; ?>" title="Ring oss på: <?php echo $contact_phone; ?>" class="header-contact button green button-fw fullwidth"><i class="icon icon-phone"></i> Växel</a>
@@ -279,3 +268,4 @@ checkRedirect(get_the_ID());
             </div>
             
         </header>
+        <?php flush(); ?>

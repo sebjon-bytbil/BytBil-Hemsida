@@ -19,7 +19,7 @@
         </div>
         <div class="result">
             <div class="searching-overlay">
-                <img src="/wp-content/themes/upplands-motor/images/loading.gif">
+                <img src="/wp-content/themes/upplands-motor-2015/images/loading.gif">
             </div>
             <div class="row">
                 <div id="pages" class="col-xs-12 col-sm-8 no-search">

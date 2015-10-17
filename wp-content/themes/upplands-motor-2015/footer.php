@@ -1,24 +1,24 @@
 <footer class="scroll">
     <?php
-
+global $option_fields;
     ?>
     <section id="footer-blocks" >
         <div class="container-fluid wrapper">
-            <?php if(get_field("footer-show-search", "options") ){ ?>
-                <div class="col-xs-12 col-sm-<?php the_field("footer-search-content-width", "options"); ?>">
+            <?php if($option_fields["footer-show-search"] ){ ?>
+                <div class="col-xs-12 col-sm-<?php echo $option_fields["footer-search-content-width"]; ?>">
                     <div class="search block white-bg">
-                        <h4><?php the_field("footer-search-headertext", "options"); ?></h4>
-                        <p><?php the_field("footer-search-bodytext", "options"); ?></p>
+                        <h4><?php echo $option_fields["footer-search-headertext"]; ?></h4>
+                        <p><?php echo $option_fields["footer-search-bodytext"]; ?></p>
                         <form method="get" action="/">
                             <input type="text" name="s" id="footer-search">
                         </form>
                     </div>
                 </div>
             <?php } ?>
-            <?php if(get_field("footer-show-shortcuts", "options") ){ ?>
-                <div class="col-xs-12 col-sm-<?php the_field("footer-shortcuts-content-width", "options"); ?>">
+            <?php if($option_fields["footer-show-shortcuts"] ){ ?>
+                <div class="col-xs-12 col-sm-<?php echo $option_fields["footer-shortcuts-content-width"]; ?>">
                     <div class="shortcuts block white-bg">
-                        <h4><?php the_field("footer-shortcuts-headertext", "options"); ?></h4>
+                        <h4><?php echo $option_fields["footer-shortcuts-headertext"]; ?></h4>
                         <?php
                             $shortcut_menu = wp_nav_menu(array(
                                 'menu' => 'Genvägar',
@@ -34,19 +34,19 @@
                     </div>
                 </div>
             <?php } ?>
-            <?php if(get_field("footer-show-openhours", "options") ){ ?>
-                <div class="col-xs-12 col-sm-<?php the_field("footer-openhours-content-width", "options"); ?>">
+            <?php if($option_fields["footer-show-openhours"] ){ ?>
+                <div class="col-xs-12 col-sm-<?php echo $option_fields["footer-openhours-content-width"]; ?>">
                     <div class="openhours block white-bg">
-                        <h4><?php the_field("footer-openhours-headertext", "options"); ?></h4>
+                        <h4><?php echo $option_fields["footer-openhours-headertext"]; ?></h4>
                         <?php
-                        $facilities = get_field('footer-openhours-facility', 'options');
+                        $facilities = $option_fields['footer-openhours-facility'];
                         get_facility_widget(get_the_ID(), $facilities, 6);
                         ?>
                     </div>
                 </div>
             <?php } ?>
             
-            <?php if(get_field("footer-show-help", "options") ){
+            <?php if($option_fields["footer-show-help"] ){
 
 //                $facility_args = array(
 //                    'posts_per_page'    => -1,
@@ -75,12 +75,12 @@
 //                }
 
                 ?>
-                <div class="col-xs-12 col-sm-<?php the_field("footer-help-content-width", "options"); ?>">
+                <div class="col-xs-12 col-sm-<?php echo $option_fields["footer-help-content-width"]; ?>">
                     <div class="contact-form block white-bg">
-                        <h4><?php the_field("footer-help-headertext", "options"); ?></h4>
-                        <p><?php the_field("footer-help-bodytext", "options"); ?></p>
+                        <h4><?php echo $option_fields["footer-help-headertext"]; ?></h4>
+                        <p><?php echo $option_fields["footer-help-bodytext"]; ?></p>
                         <?php
-                        $footer_form = get_field('footer-form', 'options');
+                        $footer_form = $option_fields['footer-form'];
                         set_wpcf7_array($footer_form);
                         echo $footer_form;
                         ?>
@@ -88,13 +88,13 @@
                     </div>
                 </div>
             <?php } ?>
-            <?php if(get_field("footer-show-accesspackage", "options") ){
+            <?php if($option_fields["footer-show-accesspackage"] ){
                 wp_enqueue_script('elasticaccess');
                 wp_enqueue_script('elasticaccess-front');
                 wp_enqueue_style( 'elasticaccesscss');
-                $hash = get_field("field_elasticaccess-hash", "options");
-                $loadMoreType = get_field('accesspackage-load-type', "options");
-                $loadObjectPage = get_field('accesspackage-object-page', "options");
+                $hash = $option_fields["field_elasticaccess-hash"];
+                $loadMoreType = $option_fields['accesspackage-load-type'];
+                $loadObjectPage = $option_fields['accesspackage-object-page'];
                 $loadObjectUrl = get_the_permalink($loadObjectPage->ID);
                 ?>
                 <style>
@@ -106,7 +106,7 @@
                         display: none;
                     }
                 </style>
-                <div class="col-xs-12 col-sm-<?php the_field("footer-accesspackage-content-width", "options"); ?>">
+                <div class="col-xs-12 col-sm-<?php echo $option_fields["footer-accesspackage-content-width"]; ?>">
                     <div class="ElasticAccess ElasticAccess-Footer" data-app="elasticaccesspackage">
                         <div ng-controller="SetupCtrl" ng-init="init('', '', 'List', '<?php echo $loadMoreType;?>', '<?php echo $loadObjectUrl;?>', '<?php echo $hash;?>'); lock('true');">
                             <div ng-if="showSearch()">

@@ -204,7 +204,7 @@ $email = $matches[1];
 
                             <ul id="brands" class="nav navbar-nav pull-right">
                             <?php
-                                $header_brands_keys = get_field('settings-brands', 'options');
+                                $header_brands_keys = $option_fields['settings-brands'];
 
                                 if ($header_brands_keys) {
                                     foreach($header_brands_keys as $key => $var){

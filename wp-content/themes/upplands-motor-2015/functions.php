@@ -34,10 +34,12 @@ function register_upplandsmotor_scripts() {
      wp_localize_script( 'jquery', 'bbfavorites',
               array( 'ajax_url' => admin_url( 'admin-ajax.php' )) );
     wp_enqueue_script( 'jquery' );
-
-   
-
 }
+
+function set_options_test() {
+    $option_fields = get_fields('options');
+}
+add_action( 'after_theme_setup', 'test' );
 
 function um_color_picker()
 {

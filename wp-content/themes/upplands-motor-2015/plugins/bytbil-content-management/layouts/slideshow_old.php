@@ -1,9 +1,9 @@
 <?php
-$slideshow_type = $content['content-slideshow-type'];
+$slideshow_type = get_sub_field('content-slideshow-type');
 
 switch($slideshow_type){
     case 'existing':
-        $slideshow_object = $content['content-existing-slideshow'];
+        $slideshow_object = get_sub_field('content-existing-slideshow');
 
         if (function_exists("bytbil_show_slideshow")) {
             bytbil_show_slideshow($slideshow_object->ID, $row_width);

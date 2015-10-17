@@ -8,8 +8,8 @@
 <div class="mp-container">
     <div class="mp-favorites col-sm-8">
         <div class="wrapper col-sm-offset-1 col-sm-11">
-            <h2><?php the_field('favorites-headertext', 'options'); ?></h2>
-            <p><?php the_field('favorites-bodytext', 'options'); ?></p>
+            <h2><?php echo $option_fields['favorites-headertext']; ?></h2>
+            <p><?php echo $option_fields['favorites-bodytext']; ?></p>
             <div class="mp-tabs">
                 <div class="mp-vehicles mp-tab mp-button active" data-tabid="mp-vehicles">
                     <i class="icon icon-cab"></i>
@@ -59,7 +59,7 @@
                     <button type="submit" class="submit-button"><i class="icon icon-download"></i> Hämta</button>
                     <button type="submit" class="something remove-button"><i class="icon icon-trash"></i> Ta bort</button>
                     <p class="mp-loading">
-                        <img src="/wp-content/themes/upplands-motor/images/loading.gif">
+                        <img src="/wp-content/themes/upplands-motor-2015/images/loading.gif">
                     </p>
                     <div style="clear: both;"></div>
                     <p class="form-response"></p>
@@ -86,7 +86,7 @@
                     <div style="clear:both;"></div>
                 </div>
                 <p class="mp-loading">
-                    <img src="/wp-content/themes/upplands-motor/images/loading.gif">
+                    <img src="/wp-content/themes/upplands-motor-2015/images/loading.gif">
                 </p>
                 <div style="clear:both;"></div>
             </div>
@@ -102,7 +102,7 @@
                     </p>
                     <button type="submit" class="submit-button"><i class="icon icon-save"></i>Spara</button>
                     <p class="mp-loading">
-                        <img src="/wp-content/themes/upplands-motor/images/loading.gif">
+                        <img src="/wp-content/themes/upplands-motor-2015/images/loading.gif">
                     </p>
                     <div style="clear:both;"></div>
                 </form>
@@ -117,7 +117,7 @@
                     </p>
                     <button type="submit" class="submit-button"><i class="icon icon-mail"></i> Skicka</button>
                     <p class="mp-loading">
-                        <img src="/wp-content/themes/upplands-motor/images/loading.gif">
+                        <img src="/wp-content/themes/upplands-motor-2015/images/loading.gif">
                     </p>
                     <div style="clear:both;"></div>
                 </form>
@@ -127,8 +127,8 @@
     </div>
     <div class="mp-login col-sm-4">
         <div class="wrapper col-sm-9">
-            <h2><?php the_field('company-headertext', 'options'); ?></h2>
-            <p><?php the_field('company-bodytext', 'options'); ?></p>
+            <h2><?php echo $option_fields['company-headertext']; ?></h2>
+            <p><?php echo $option_fields['company-bodytext']; ?></p>
         </div>
     </div>
 </div>

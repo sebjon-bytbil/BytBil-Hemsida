@@ -1,4 +1,5 @@
 <?php
+/* Template name: Old page */
 get_header();
 ?>
 <?php
@@ -16,12 +17,11 @@ get_header();
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
-    <?php bytbil_content_loop($scroll, true); ?>
+    <?php bytbil_content_loop_old($scroll, true); ?>
 
     <?php endwhile; endif; ?>
 
 </main>
-<?php flush(); ?>
 
 <?php
 get_footer();

@@ -963,7 +963,7 @@ function show_cards($id)
         $facility_postal_address = get_field('facility-postal-address', $id);
     }
 
-    $facility_phone = get_field('settings-contact-phonenumber', 'options');
+    $facility_phone = $option_fields['settings-contact-phonenumber'];
     /*$facility_service = get_field('facility-telephone-nr-service', $id);*/
     /*$facility_email = get_field('facility-email', $id);*/
 

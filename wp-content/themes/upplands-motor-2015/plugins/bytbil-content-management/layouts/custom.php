@@ -1,3 +1,3 @@
 <?php
-    the_sub_field('content-wysiwyg');
+    echo $content['content-wysiwyg'];
 ?>

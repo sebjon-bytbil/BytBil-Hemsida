@@ -25,6 +25,14 @@ function get_sub_menu($id, $section=false)
     require "menu-loop.php";
 }
 
+function bytbil_content_loop_old($scroll, $scroll_init)
+{
+    $row_counter = 1;
+    $orig_ID = get_the_ID();
+    require "content-loop_old.php";
+}
+
+
 function bytbil_content_loop($scroll, $scroll_init)
 {
     $row_counter = 1;

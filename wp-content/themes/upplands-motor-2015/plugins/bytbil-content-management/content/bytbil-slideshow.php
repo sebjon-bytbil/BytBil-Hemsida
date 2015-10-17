@@ -757,28 +757,20 @@ function bytbil_show_slideshow($id, $row_width = 12)
 {
 
     /* General Slideshow-settings */
+    $fields = get_fields($id);
+    
     $date_today = date('Ymd');
-    $slideshow_border = get_field('slideshow-border', $id);
+    $slideshow_border = $fields['slideshow-border'];
     if ($slideshow_border) {
-        $slideshow_border_color = get_field('slideshow-border-color', $id);
+        $slideshow_border_color = $fields['slideshow-border-color'];
         $slideshow_border_style = 'border: 10px solid ' . hex2rgba($slideshow_border_color, 0.75);
     }
-    $slideshow_animation = get_field('slideshow-animation', $id);
-    $slideshow_animation_speed = get_field('slideshow-animation-speed', $id);
-    $slideshow_speed = get_field('slideshow-speed', $id) * 1000;
-    $slideshow_arrows = get_field('slideshow-arrows', $id);
-    $slideshow_controls = get_field('slideshow-controls', $id);
+    $slideshow_animation = $fields['slideshow-animation'];
+    $slideshow_animation_speed = $fields['slideshow-animation-speed'];
+    $slideshow_speed = $fields['slideshow-speed'] * 1000;
+    $slideshow_arrows = $fields['slideshow-arrows'];
+    $slideshow_controls = $fields['slideshow-controls'];
     $slideshow_thumbnail_size = '';
-
-    if ($slideshow_controls == 'thumbs') {
-        $slideshow_thumbnail_size = 150;
-        $slideshow_controls_thumbs = get_sub_field('slideshow-controls-thumbs', $id);
-        if ($slideshow_controls_thumbs == 'small') {
-            $slideshow_thumbnail_size = 75;
-        } elseif ($slideshow_controls_thumbs == 'large') {
-            $slideshow_thumbnail_size = 290;
-        }
-    }
 
     ?>
 
@@ -794,7 +786,8 @@ function bytbil_show_slideshow($id, $row_width = 12)
 
         <ul class="slides">
             <?php
-            $slides_repeater_field = get_field('slideshow-slides', $id);
+        
+            $slides_repeater_field = $fields['slideshow-slides'];
             if (is_array($slides_repeater_field)) {
 
                 foreach ($slides_repeater_field as $slide) {
@@ -825,7 +818,7 @@ function bytbil_show_slideshow($id, $row_width = 12)
                         // Check slide-link
                         if ($slideshow_link === 'internal') {
                             // Maybe have to use get_field here
-                            $internal = get_sub_field('slideshow-link-internal');
+                            $internal = $slide['slideshow-link-internal'];
                             $url = get_permalink($internal->ID);
                             $target = '_self';
                         } elseif ($slideshow_link === 'external') {
@@ -833,7 +826,7 @@ function bytbil_show_slideshow($id, $row_width = 12)
                             $target = '_blank';
                         } elseif ($slideshow_link === 'file') {
                             // Maybe have to use get_field here
-                            $file = get_sub_field('slideshow-link-file');
+                            $file = $slide['slideshow-link-file'];
                             $url = $file['url'];
                             $target = '_blank';
                         }

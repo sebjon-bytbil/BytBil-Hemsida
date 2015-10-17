@@ -83,7 +83,7 @@
 
         $('.values > .layout').each(function () {
             init_content_settings(this);
-            bootstrapAngular(this);
+            /*bootstrapAngular(this);*/
         });
 
         $('#acf-row').arrive('tr.row', function () {
@@ -104,7 +104,7 @@
                 }
                 else {
                     init_content_settings(this);
-                    bootstrapAngular(this);
+                    /*bootstrapAngular(this);*/
                     //toggle_content_settings(this);
                 }
             });
@@ -121,14 +121,14 @@
             else {
 
                 init_content_settings(this);
-                bootstrapAngular(this);
+                /*bootstrapAngular(this);*/
                 //toggle_content_settings(this);
             }
         });
 
         $('body').one('click', '[data-key="field_55198982d16b7109a"]',function(){
             var el = $("#acf_acf_sidfot");
-            bootstrapAngular(el);
+            /*bootstrapAngular(el);*/
         });
         //$("#acf-field-footer-show-accesspackage-1").change(function(){
         //    if(this.checked){
@@ -157,7 +157,7 @@
             //get clean dom
             var el = appToBe[0];
             //bootstrap angular module ElasticAccess
-            angular.bootstrap(el, ['ElasticAccess']);
+            /*angular.bootstrap(el, ['ElasticAccess']);*/
             setupListeners();
 
         }
@@ -247,7 +247,7 @@
             }
             else {
                 $(content).find('ul.acf-fc-layout-controlls')
-                    .prepend('<li><a href="#" class="layout-settings-button"><i class="fa fa-pencil"></i></a></li>');
+                    .prepend('<li><a href="#" class="layout-settings-button"><i class="dashicons-before dashicons-edit"></i></a></li>');
                 wrap_content_settings(content);
             }
             var content_settings_button = $(content).find('.layout-settings-button');

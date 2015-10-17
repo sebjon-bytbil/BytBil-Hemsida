@@ -1,5 +1,4 @@
 <?php
-
 /* Load Admin-settings for Upplands Motor */
 function add_settings_js() {
     wp_enqueue_script("um-settings-js", get_template_directory_uri() . "/plugins/upplands-motor-settings/um-settings.js", array("jquery"), null, true);
@@ -15,6 +14,9 @@ if (function_exists('acf_set_options_page_title')) {
     acf_add_options_sub_page('Min P-plats');
     acf_add_options_sub_page('Sidfot');
 }
+
+global $option_fields;
+
 
 if(function_exists("register_field_group"))
 {
@@ -1060,12 +1062,13 @@ function get_touch_icons(){
 }
 
 function get_logotype($filetype){
+    global $option_fields;
     $logotype = "";
     if ($filetype=='png') {
-        $logotype = get_field('settings-logotype-png', 'options');
+        $logotype = $option_fields['settings-logotype-png'];
     }
     elseif ($filetype=='svg') {
-        $logotype = get_field('settings-logotype-svg', 'options');
+        $logotype = $option_fields['settings-logotype-svg'];
     }
 
     $url = isset($logotype['url']) && $logotype['url'] != "" ? $logotype['url'] : ""; 
@@ -1073,19 +1076,21 @@ function get_logotype($filetype){
 }
 
 function get_favicon(){
-    $favicon = get_field('settings-favicon', 'options');
+    $favicon = $option_fields['settings-favicon'];
     return $favicon['url'];
 }
 
 function get_settings_code($type){
-    if($type=='css' && get_field('settings-css', 'options')){
-        return get_field('settings-css', 'options');
+    global $option_fields;
+
+    if($type=='css' && $option_fields['settings-css']){
+        return $option_fields['settings-css'];
     }
-    elseif($type=='js' && get_field('settings-js', 'options')){
-        return get_field('settings-js', 'options');
+    elseif($type=='js' && $option_fields['settings-js']){
+        return $option_fields['settings-js'];
     }
-    elseif($type=='html' && get_field('settings-html', 'options')){
-        return get_field('settings-html', 'options');
+    elseif($type=='html' && $option_fields['settings-html']){
+        return $option_fields['settings-html'];
     }
 }
 

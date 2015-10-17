@@ -20,7 +20,7 @@ $search_string = (isset($_GET['s'])) ? $_GET['s'] : false;
                         <div style="clear:both;"></div>
                         <div class="result">
                             <div class="searching-overlay">
-                                <img src="/wp-content/themes/upplands-motor/images/loading.gif">
+                                <img src="/wp-content/themes/upplands-motor-2015/images/loading.gif">
                             </div>
                             <div class="row">
                                 <div id="umpages" class="col-xs-12">
