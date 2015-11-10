@@ -1,0 +1,182 @@
+<?php /* Template Name: Erbjudande JSON */ get_header(); ?>
+<h1 id="HeaderMain"><?php the_field('dolh1a') ?></h1>
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			<div class="wrapper">
+
+			<?php /* The loop */ ?>
+			<?php while ( have_posts() ) : the_post(); 
+
+				if (get_field('bakgrundsbild')) {
+					?>
+				
+				<script type="text/javascript">
+
+					$('#background-container').empty();
+                    var imageUrl = '<?php echo get_field('bakgrundsbild'); ?>';
+                    $('#background-container').css('background-image', 'url(' + imageUrl + ')');
+				</script>
+				
+				<?php
+				}
+
+				?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div class="left-column offer-specific">
+						<header class="entry-header">
+							<h2 class="entry-title"><?php echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent ); ?></h2>
+						</header><!-- .entry-header -->
+					
+						<div class="side-menu-container">
+							<ul class="side-menu-large">
+								<?php
+
+
+								echo wpb_list_child_pagesparam($ids);?>
+
+
+							</ul>
+							<div class="side-menu-small">							
+							<?php
+							new_volvo_menu('bottom-buy');
+							?>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="right-column offer-json">
+							<div class="inner-wrap offer-json">
+								<?php
+									$jsonURL = get_field('json_url');
+									$query = parse_url($jsonURL, PHP_URL_QUERY);
+									$parsedQuery = array();
+									parse_str($query, $parsedQuery);
+
+									if (!isset($parsedQuery['oid']) && isset($_GET['oid'])) {
+										$jsonURL .= "?oid=" . $_GET['oid'];
+									}
+									$ch = curl_init();
+									curl_setopt_array($ch, array(
+										CURLOPT_RETURNTRANSFER => 1,
+										CURLOPT_URL => $jsonURL,
+									));
+									$result = curl_exec($ch);
+									curl_close($ch);
+									if ($result) {
+										
+										$json = json_decode($result);
+										if (json_last_error() === JSON_ERROR_NONE) {
+											if (!isset($_GET['oid']) && !isset($parsedQuery['oid'])) {
+												foreach ($json as $key => $offer) {
+													?>
+													<div class="offer_box">
+													<div class="offer_left_image_div" style="background-image: url(//dms.fbinhouse.se/assets/img/vdw_desc_bg.jpg);"><img class="offer_left_image" src="<?php echo $offer->adminvalues->listimage; ?>" /></div>
+													<div class="offer_right_box">
+														<div class="offer_brand">Volvo</div>
+														<div class="offer_title"><?php echo $offer->adminvalues->title; ?></div>
+														<div class="offer_subtitle"><?php echo $offer->adminvalues->subtitle; ?></div>
+														<div class="offer_price"><span class="offer_pricetitle"><?php echo $offer->datavalues->pricetitle; ?>&nbsp;</span><span class="offer_pricevalue"><?php echo $offer->datavalues->mainprice; ?> :-</span></div>
+														<div class="offer_readmore"><span class="offer_readmore_text"><a href="<?php echo $_SERVER['REQUEST_URI'] . "?oid=" . $offer->offervalues->offerID; ?>">Läs mer</a></span></div>
+													</div>
+
+													</div>
+													<?php
+												}
+											} else {
+												?>
+												<div class="offer_box single_offer">
+													<div class="single_offer_banner" style="background-image: url(//dms.fbinhouse.se/assets/img/vds_list_bg.jpg);">
+														<img src="<?php echo $json[0]->adminvalues->mainimage; ?>"/>
+														<span class="single_offer_absolute_title">
+															<span class="offer_brand">Volvo</span>
+															<span class="offer_title"><?php echo $json[0]->adminvalues->title; ?></span>
+															<span class="offer_subtitle"><?php echo $json[0]->adminvalues->subtitle; ?></span>
+														</span>
+														
+													</div>
+													<div class="offer_box_row">
+														<div class="single_offer_price_column">
+															<span class="offer_pricetitle"><?php echo $json[0]->datavalues->pricetitle; ?></span>
+															<span class="offer_pricevalue"><?php echo $json[0]->datavalues->mainprice; ?> :-</span>
+															<span class="offer_pricesuffix"><?php echo $json[0]->datavalues->main_price_suffix; ?></span>
+														</div>
+														<div class="single_offer_maintext"><?php echo $json[0]->adminvalues->maintext; ?></div>
+														
+													</div>
+													<div class="offer_box_row">
+														<div class="offer_tabbed_box">
+															<div class="offer_tab_title tab1 active"><?php echo $json[0]->adminvalues->tab1; ?></div>
+															<div class="offer_tab_title tab2"><?php echo $json[0]->adminvalues->tab2; ?></div>
+															<div class="offer_tab_title tab3"><?php echo $json[0]->adminvalues->tab3; ?></div>
+															<div class="offer_tab_content tab1 active"><?php echo $json[0]->adminvalues->tab1content; ?></div>
+															<div class="offer_tab_content tab2"><?php echo $json[0]->adminvalues->tab2content; ?></div>
+															<div class="offer_tab_content tab3"><?php echo $json[0]->adminvalues->tab3content; ?></div>
+														</div>
+													</div>
+												
+												</div>
+												<script>
+												($(function() {
+													$('.offer_tab_title').click(function() {
+														$('.offer_tab_title').removeClass('active');
+														$('.offer_tab_content').removeClass('active');
+														$(this).addClass('active');
+														if ($(this).hasClass('tab1')) {
+															$('.offer_tab_content.tab1').addClass('active');
+														}
+														if ($(this).hasClass('tab2')) {
+															$('.offer_tab_content.tab2').addClass('active');
+														}
+														if ($(this).hasClass('tab3')) {
+															$('.offer_tab_content.tab3').addClass('active');
+														}
+													});
+												}));
+												</script>
+
+												<?php
+												//var_dump($json);
+											}
+											
+										} else {
+											switch (json_last_error()) {
+										        case JSON_ERROR_NONE:
+										            echo ' - No errors';
+										        break;
+										        case JSON_ERROR_DEPTH:
+										            echo ' - Maximum stack depth exceeded';
+										        break;
+										        case JSON_ERROR_STATE_MISMATCH:
+										            echo ' - Underflow or the modes mismatch';
+										        break;
+										        case JSON_ERROR_CTRL_CHAR:
+										            echo ' - Unexpected control character found';
+										        break;
+										        case JSON_ERROR_SYNTAX:
+										            echo ' - Syntax error, malformed JSON';
+										        break;
+										        case JSON_ERROR_UTF8:
+										            echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+										        break;
+										        default:
+										            echo ' - Unknown error';
+										        break;
+											}
+										}
+									}
+									
+								?>
+							</div>
+					</div><!-- .entry-content -->
+
+				</article><!-- #post -->
+
+			</div>
+			<?php endwhile; ?>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

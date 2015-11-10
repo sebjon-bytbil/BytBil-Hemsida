@@ -1,0 +1,8 @@
+/* Admin Meny */
+.menu-icon-nyheter, .menu-icon-blogg {
+    display: none;
+}
+
+#postimagediv {
+    display: none !important;
+}

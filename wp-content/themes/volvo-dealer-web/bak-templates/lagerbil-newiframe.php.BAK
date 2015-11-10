@@ -1,0 +1,25 @@
+<?php /* Template Name: Fordonsurval : NEW */ get_header(); ?>
+
+<style>
+
+.primary input {
+
+	display: none;
+}
+</style>
+
+<div class="primary">
+	<h1>Test</h1>
+	<div style="z-index:99999999999; position: absolute; width: 50%; height: 75%; top: 10px; background: #f0a;">
+		<?php
+
+		$url = 'http://www.google.com';
+
+		echo file_get_contents($url);
+
+		?>
+	</div>
+
+</div>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

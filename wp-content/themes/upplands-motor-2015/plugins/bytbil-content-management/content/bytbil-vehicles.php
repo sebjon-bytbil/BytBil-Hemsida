@@ -832,6 +832,102 @@ if (function_exists("register_field_group")) {
     ));
 }
 
+function get_employee_vehicle_list_item($vehicle)
+{
+?>
+
+<div class="col-xs-12 col-sm-4">
+        <?php 
+        $models = $vehicle['Bilmodell'];
+        foreach($models as $model){
+            $id = $model->ID;
+            $title = $model->post_title;
+            $pt = $model->post_type;
+            
+            if($pt=='vehicle'){
+                $image = get_field('vehicle-image', $id);
+                $image_url = $image['url'];
+                $image_sd_url = maybe_add_preview_to_url($image_url);
+            }
+            if($pt=='modelgroup'){
+                $image = get_field('modelgroup-image', $id);
+                $image_url = $image['url'];
+                $image_sd_url = maybe_add_preview_to_url($image_url);
+            }
+        }
+    
+        ?>
+    <?php
+
+        $vehicle_link = exists($vehicle['ev-link-type']) ? $vehicle['ev-link-type'] : '';
+
+        // Check slide-link
+        if ($vehicle_link === 'internal') {
+            // Maybe have to use get_field here
+            $internal = $vehicle['ev-link-internal'];
+            $url = get_permalink($internal->ID);
+            $target = '_self';
+        } elseif ($vehicle_link === 'external') {
+            $url = $vehicle['ev-link-external'];
+            $target = '_blank';
+        } elseif ($vehicle_link === 'file') {
+            // Maybe have to use get_field here
+            $file = $vehicle['ev-link-file'];
+            $url = $file['url'];
+            $target = '_blank';
+        }    
+
+        ?>
+        <div class="vehicle-list-item block white-bg">
+            <div class="vehicle-list-image" style="padding-top: 0; padding-bottom: 0;">
+                <img src="<?php echo $image_sd_url; ?>" />
+            </div>
+            <div class="vehicle-list-information">
+                <h4><?php echo $title; ?></h4>
+                <?php if($vehicle['vehicle-description-ev']){
+                    echo '<p>' . $vehicle['vehicle-description-ev'] . '</p>';
+                }?>
+                <?php
+                $price_value = $vehicle['vehicle-price-value-ev'];
+                $price_type = $vehicle['vehicle-price-type-ev'];
+                $price_id = $price_type->ID;
+                $price_label = get_the_title($price_id);
+                ?>
+                
+                <?php if($price_type){ ?>
+                
+                <hr>
+                <span class="offer-price-label style-<?php echo get_price_style($vehicle['vehicle-price-type-ev']->ID); ?>" >
+                    <?php echo get_price_label($vehicle['vehicle-price-type-ev']->ID); ?>
+                </span>
+                <span class="offer-price-value style-<?php echo get_price_style($vehicle['vehicle-price-type-ev']->ID); ?>" style="font-size: 1.4em;">
+                    <?php echo $price_value; ?><?php
+                    if(get_price_suffix($vehicle['vehicle-price-type-ev']->ID)){ ?><span class="price-suffix"><?php echo get_price_suffix($vehicle['vehicle-price-type-ev']->ID); ?></span><?php
+                    } ?>
+                </span>
+        
+                
+                <?php } ?>
+                
+                
+                        
+
+                
+                
+            </div>
+            <?php if ($vehicle_link !== 'none') : ?>
+            <div class="vehicle-list-buttons">
+                <br>
+                <a href="<?php echo $url; ?>" target="<?php echo $target; ?>" class="button red">Läs mer</a>
+            </div>
+            <?php endif; ?>
+    </div>
+</div>
+
+<?php
+    
+}
+
 function get_vehicle_list_item($id, $type)
 {
     $image = get_field('modelgroup-image', $id);

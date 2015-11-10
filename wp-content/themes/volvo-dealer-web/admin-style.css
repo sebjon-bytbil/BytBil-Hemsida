@@ -1,0 +1,227 @@
+/* Generella */
+
+.mceToolbar {
+    display: none;
+}
+
+/* Permalänk */
+#edit-slug-box span, #edit-slug-box a {
+    display: none;
+}
+
+#edit-slug-box span#sample-permalink, #edit-slug-box span#sample-permalink span#editable-post-name {
+    display: inline-block;
+}
+
+/* Färg på Menyn */
+#acf-farg_pa_menyn {
+    display: none;
+}
+
+/* Föräldrabox */
+#pageparentdiv {
+    opacity: 0.5;
+}
+
+/* Utvald bild */
+#postimagediv {
+    opacity: 0.5;
+    display: none;
+}
+
+#postimagediv a {
+    display: none;
+}
+
+/* Ninjaforms */
+#ninja_forms_selector {
+    opacity: 0.5;
+}
+
+.has-image .hover {
+    display: none;
+}
+
+/* Startsida */
+
+/* Beskrivning */
+#acf-description {
+    opacity: 0.5;
+}
+
+/*  Beskrivning Media-knapp */
+#acf-description .wp-editor-tools {
+    display: none;
+}
+
+/* Textfärg */
+#acf-textcolor {
+    display: none;
+}
+
+/* Öppna Länk */
+#acf-open_link_in {
+    display: none;
+}
+
+/* Länktyp */
+#acf-lanktypen {
+    display: none;
+}
+
+/* Länk URL */
+#acf-internlank, #acf-externlank {
+    display: none;
+}
+
+/* Bilsida */
+
+/* Rubrik */
+#acf-rubriktexten label {
+    opacity: 0.5;
+}
+
+/*  Beskrivning Media-knapp */
+#postdivrich .wp-editor-tools {
+    display: none;
+}
+
+/* Bakgrundsbilder */
+#acf-bakgrundsbild, #acf-mobilback {
+    display: none;
+}
+
+/* Rubrik 2 ? */
+#acf-rubriktext {
+    display: none;
+}
+
+/* Dela och Bygg volvolänk */
+#acf-show_share, #acf-show_build {
+    display: none;
+}
+
+/* Bildspelsbild */
+#acf-slideshow2 {
+    display: none;
+}
+
+/* Erbjudanden länk */
+#acf-erbjudanden {
+    display: none;
+}
+
+/* Utrustning / Motorvarianter */
+/* Headerbild */
+
+#acf-bild_utrustning {
+    opacity: 0.5;
+}
+
+#acf-bild_utrustning div.hover {
+    display: none;
+}
+
+/* Rubrik */
+#acf-utrustringspaketheader {
+    display: none;
+}
+
+/* Utrustningsnivåer */
+#acf-utrustningsnivaer {
+    opacity: 0.5;
+}
+
+#acf-utrustningsnivaer #insert-media-button {
+    display: none;
+}
+
+#acf-utrustningsnivaer .acf-button-add, #acf-utrustningsnivaer .acf-button-remove, #acf-utrustningsnivaer .add-row-end {
+    display: none;
+}
+
+#delete-action {
+    display: none;
+}
+
+/* Galleri */
+#acf_acf_galleri {
+    display: none;
+}
+
+/* Personal */
+#menu-posts-personal .wp-menu-image img {
+}
+
+/* Posts */
+#menu-posts {
+    display: none;
+}
+
+/* Meny */
+#menu-posts-personal .wp-menu-image:before {
+    font: 400 20px/1 dashicons !important;
+    speak: none;
+    color: #f3f1f1 !important;
+    padding: 8px 0;
+    height: 36px;
+    width: 20px;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    content: "\f307";
+}
+
+/* Tjänster */
+#acf-bild {
+    opacity: 0.5;
+}
+
+#acf-bild .hover {
+    display: none;
+}
+
+#acf-bannertext .wp-editor-tools {
+    display: none;
+}
+
+#acf-bannertext {
+    opacity: 0.5;
+}
+
+/* Publicera */
+#minor-publishing {
+    opacity: 0.5;
+}
+
+#postimagediv {
+    display: none !important;
+}
+
+.click-blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.85);
+    display: block;
+}
+
+.click-blocker:after {
+    display: block;
+    width: 320px;
+    content: "Detta block är låst för redigering";
+    color: #666;
+    margin: 0 auto;
+    font-size: 24px;
+    margin-top: 165px;
+    text-align: center;
+    line-height: 120%;
+    padding: 20px;
+    transition: color ease 300ms;
+}
+
+.click-blocker:hover:after {
+    color: #333;
+}

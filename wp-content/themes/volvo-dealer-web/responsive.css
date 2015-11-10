@@ -1,0 +1,702 @@
+@media only screen and (max-width: 1010px) {
+    .header-logo {
+        width: 70%;
+
+    }
+
+    .left-column {
+        padding-left: 10px;
+    }
+
+    .footer-div .end-menu {
+        width: auto;
+        max-width: 50%;
+    }
+
+    .footer-div .footer-feed {
+        width: auto;
+        float: right;
+        max-width: 50%;
+    }
+
+    .nav-menu .submenu {
+        margin-left: -75%;
+    }
+
+    .right-column img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .background-container .slides li {
+        padding: 0 10px;
+    }
+
+    .home-bottom-container {
+        padding: 0 10px;
+    }
+
+    .vdw-link {
+        margin-left: 16px;
+        font-size: 9px;
+    }
+
+    .volvo-link {
+        margin-right: 8px;
+    }
+
+    .home-link {
+        margin-left: 16px;
+    }
+
+    .side-menu-large, .side-menu-small {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .flexslider-mask {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 90px;
+    }
+
+    .flex-viewport .slides li a div {
+        background-position: center top !important;
+    }
+
+    .right-column.kop-bil {
+        background-color: #fff;
+        background: rgba(255, 255, 255, 0.65);
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 320px;
+        margin-bottom: 70px;
+    }
+
+    .right-column.normal-page {
+        margin-right: 26px;
+    }
+
+    .car-uppgifter {
+        background-color: transparent;
+    }
+
+    .car-uppgifter-top .car-title {
+        float: none;
+    }
+
+    .car-uppgifter-top .carprice {
+        float: none;
+    }
+
+    .kop-bil.right-column div {
+        max-width: 290px;
+    }
+
+    .inner-wrap.kop-bil h1 {
+        font-size: 23px !important;
+        line-height: 32px !important;
+        font-family: Arial, sans-serif;
+        margin-bottom: 8px;
+        letter-spacing: -1px;
+        text-align: right;
+    }
+
+    .left-column .container {
+        top: 0;
+        left: 0;
+        height: 100% !important;
+        overflow: auto;
+    }
+
+    .left-column .container .side-menu-container * {
+        display: block;
+    }
+
+}
+
+@media (max-width:992px) {
+    .navbar {
+        bottom: 0;
+    }
+
+    #colophon {
+        display: none;
+    }
+
+    .nav-menu > li:hover > a,
+    .nav-menu > li > a:hover,
+    .nav-menu > li.current-item > a {
+        background-image: none;
+    }
+
+    .nav-menu > li:hover > ul {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #header2 {
+        font-size: inherit;
+    }
+
+    .modelinfo-top {
+        height: 311px;
+    }
+
+    .modelinfo-top-left {
+        padding-bottom: 32px;
+    }
+
+    .volvo-link {
+        max-width: 10%;
+        text-align: right;
+        padding-top: 10px;
+    }
+
+    .home-link {
+        max-width: 75%;
+    }
+
+    #utrustning.right-column {
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 60px;
+    }
+
+    .nav-menu .submenu {
+        margin-left: -25%;
+        width: 200px;
+        font-size: 11px !important;
+        line-height: 11px !important;
+        height: auto;
+    }
+
+    .nav-menu .submenu li {
+        float: none !important;
+        padding-left: 5px !important;
+        width: auto !important;
+    }
+
+    .build_car_menu_item {
+        display: none;
+    }
+
+    .footer-div {
+        display: none;
+    }
+
+    .navbar {
+        bottom: 0;
+    }
+
+    .background-readmore {
+        margin-top: 15px !important;
+        font-weight: normal !important;
+    }
+
+    .nav-menu .submenu {
+        display: none !important;
+    }
+
+
+}
+
+@media only screen and (max-width: 780px) {
+    .site-content {
+    }
+
+    .row-fluid .span-nyberg {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px !important;
+    }
+
+    .row-fluid .search-button {
+        height: 0;
+        padding-bottom: 15.5%;
+        margin-top: 10px;
+    }
+
+    .row-fluid .span-nyberg select {
+        font-size: 1em !important;
+    }
+
+    .kop-bil .search-container {
+        background-image: none !important;
+        padding-top: 32px;
+    }
+
+    .kop-bil .search-container h1:first-child {
+        display: none;
+    }
+
+    .row-fluid {
+        border-bottom: none;
+    }
+
+    .no-responsive {
+        display: none !important;
+    }
+
+    .row-fluid .search-button {
+        border-top: 1px solid #82858D;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        height: 39px !important;
+        padding-bottom: 0 !important;
+        background: linear-gradient(to bottom, rgba(87, 91, 96, 0.9) 0%, rgba(40, 45, 53, 0.9) 50%, rgba(26, 31, 37, 0.9) 51%, rgba(35, 41, 49, 0.9) 100%);
+    }
+
+    .paginationn .total {
+        float: right;
+        margin-left: 5px;
+        margin-top: -4px;
+        vertical-align: middle;
+    }
+
+    .responsive-table-row {
+        display: block !important;
+        -webkit-border-radius: 5px;
+        height: 87px;
+        background-color: rgba(255, 255, 255, 0.8);
+        margin: 4px 0;
+        overflow: hidden;
+    }
+
+    .nyberg-car-container {
+        background: none;
+        padding: none;
+        height: auto !important;
+    }
+
+    .nybreg-car-text {
+        display: inline-block !important;
+        width: auto !important;
+    }
+
+    .nyberg-car-image {
+        height: 75px;
+        width: 100px;
+        float: left;
+        margin: 6px !important;
+        padding: 0 !important;
+    }
+
+    .nyberg-car-title {
+        font-size: 12px !important;
+        font-weight: bold !important;
+        font-family: Verdana, Helvetica, sans-serif;
+        background-image: none !important;
+    }
+
+    .nyberg-car-left {
+        display: none !important;
+    }
+
+    .nyberg-car-right {
+        text-align: left !important;
+        width: 100% !important;
+        padding-top: 0 !important;
+    }
+
+    .nyberg-car-right .responsive-miles {
+        display: block !important;
+        font-size: 12px;
+        font-weight: normal !important;
+
+    }
+
+    .nyberg-car-right br {
+        display: none;
+    }
+
+    .nyberg-car-right span {
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 10px !important;
+        font-weight: bold !important;
+    }
+
+    .flex-direction-nav {
+        display: none !important;
+    }
+
+    .car-equipment {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 780px) {
+    .row-fluid .search-button {
+        text-indent: -9999px;
+        font-size: 0;
+        display: block;
+        line-height: 0
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .left-column {
+        position: fixed;
+        height: 100%;
+        left: 0;
+        width: 0;
+        top: 0;
+        display: block;
+        background-color: #151515;
+        border-right-color: rgb(165, 165, 165);
+        border-right-style: solid;
+        border-right-width: 0;
+        z-index: 99999;
+        overflow: hidden;
+        padding-left: 0;
+    }
+
+    .left-column .side-menu-container.side-menu-old {
+        display: none;
+    }
+
+    .left-column .container {
+        overflow-y: scroll !important;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch; /* allow touch scrolling in webkit browsers */
+    }
+    
+
+
+    #colophon {
+        display: none;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    .responsive-menu-button {
+        display: block;
+    }
+
+    #mobileMenu {
+        display: block;
+    }
+
+    .entry-header {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        margin-top: 0 !important;
+    }
+
+    .kopbil .right-column div {
+        max-width: 100%;
+    }
+    
+        
+    .kopbil .right-column {
+        max-width: 100%;
+    }
+
+    .page-template-single-bilar-php .right-column {
+        background-color: #fff;
+        background: rgba(255, 255, 255, 0.65);
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin-top: 15px;
+        text-align: center;
+        width: 96%;
+        padding: 10px;
+        margin-right: 2%;;
+    }
+
+    .background-container .slides li .background-content {
+        max-width: 100%;
+        min-width: 0 !important;
+    }
+
+    .background-title-div a {
+        font-size: 22px !important;
+        line-height: 22px !important;
+    }
+
+    .background-description-div a {
+        font-size: 15px !important;
+        line-height: 17px !important;
+    }
+
+    .home-bottom-links a {
+        font-size: 17px;
+    }
+
+    .car-gallery-link {
+        display: inline-block;
+        width: 45%;
+        min-width: 140px;
+    }
+
+    .gallery-span {
+        width: 100%;
+        height: 0;
+        padding-bottom: 64.48%;
+    }
+
+    .background-slider-controls {
+        text-align: left !important;
+        padding-left: 10px !important;
+    }
+
+    .background-slider-nav {
+        top: auto;
+        bottom: 70px;
+    }
+
+    .home-bottom-container {
+        bottom: 100px !important;
+    }
+
+    @-viewport {
+        width: device-width;
+        initial-scale: 1;
+        maximum-scale: 1;
+        user-scalable: no;
+    }
+
+    .utforska-nav-container div a span img {
+        height: 44px;
+    }
+
+    .contacts-form {
+        margin-left: 0px;
+    }
+
+    .finance-column {
+        margin-left: 0px;
+    }
+
+    .car-equipment {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+    .gallery-next, .gallery-prev {
+        width: 42px !important;
+        height: 42px !important;
+        top: 0px !important;
+    }
+
+}
+
+@media only screen and (max-width: 570px) {
+    .nav-menu > li {
+        height: 44px !important;
+
+    }
+
+    .nav-menu > li > a {
+        padding: 0 18px !important;
+        font-size: 12px !important;
+        line-height: 44px !important;
+    }
+
+    .site-content {
+        padding-top: 0 !important;
+    }
+
+    .type-bilar .right-column {
+        background-color: #fff;
+        background: rgba(255, 255, 255, 0.65);
+        width: 96% !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        float: none;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin-top: 15px;
+    }
+
+    .type-bilar .right-column div {
+        max-width: 100% !important;
+    }
+
+    .type-bilar .right-column h2 {
+        font-size: 19px !important;
+        line-height: 27px !important;
+        letter-spacing: -1px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .type-bilar .right-column p {
+        margin: 0 !important;
+    }
+
+    .build-car-div {
+        display: none;
+    }
+
+    .inner-wrap.kop-bil p {
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer-div {
+        font-size: 10px !important;
+    }
+
+    .footer-div .end-menu {
+        max-width: 100%;
+    }
+
+    .footer-div .footer-feed {
+        display: none;
+    }
+
+    .footer-inside {
+        background-image: none;
+        background-color: #000;
+    }
+
+    .right-column h2 {
+        font-size: 20px;
+    }
+
+    .right-column h3 {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .right-column div > p {
+        font-size: 11px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    /*
+    .nav-menu > li {
+        height: 20px;
+    }
+    .nav-menu > li > a {
+        height: auto;
+        line-height: normal;
+        font-size: 11px;
+        padding: 0 5px;
+        height: 100%;
+        display: inline;
+        height: 100%;
+    }
+    .nav-menu > li > ul {
+        bottom: 20px;
+    } */
+
+}
+
+@media only screen and (max-width: 430px) {
+    .build-car-div {
+        font-size: 11px !important;
+
+    }
+
+    .build-car-div a span {
+        padding: 2px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    /*.right-column {
+        min-width: 100%;
+    } */
+}
+
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 768px)
+and (orientation: landscape) {
+
+    .header-logo {
+        width: auto !important;
+        height: auto !important;
+        max-width: 300px !important;
+        margin-top: 32px;
+        padding-bottom: 8px;
+    }
+
+    .volvo-link {
+        padding-top: 16px;
+    }
+
+    .site-header,
+    .background-container .background-title-div {
+        padding-top: 0 !important;
+    }
+
+    .home-bottom-container {
+        position: relative;
+        width: auto;
+        right: 0;
+        top: 165px !important;
+        float: right;
+    }
+
+    .background-container ul li .background-content {
+        margin-top: 82px;
+    }
+
+    a.background-readmore {
+        margin-top: 0 !important;
+    }
+
+    .home-bottom-links > ul li {
+        float: left;
+    }
+
+    .home-bottom-links a {
+        font-size: 16px;
+        margin-left: 8px;
+    }
+
+    .background-slider-nav {
+        bottom: 56px;
+    }
+
+    .background-slider-nav ul li {
+        margin: 0 2px;
+    }
+
+    .background-slider-nav ul li a {
+        min-width: 12px !important;
+        min-height: 12px !important;
+        background-size: contain !important;
+    }
+
+}
+
+@media (max-width: 1010px) and (min-width: 768px) {
+    .right-column {
+        width: 100%;
+        max-width: auto;
+        padding: 15px;
+}

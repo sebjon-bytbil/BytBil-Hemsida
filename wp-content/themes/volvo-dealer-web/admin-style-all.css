@@ -1,0 +1,55 @@
+#menu-posts-assortment,
+#menu-posts-bildspel,
+#wds-wds-meta-box,
+#toplevel_page_edit-post_type-acf,
+#toplevel_page_acf-options-header {
+    display: none;
+
+}
+
+a[href$="globala-installningar"] {
+    display: none;
+}
+
+#nav-menus-frame li.add-category,
+#nav-menu-header,
+#nav-menus-frame .menu-settings,
+.nav-menus-php h2.nav-tab-wrapper a:last-of-type,
+.manage-menus span.add-new-menu-action {
+    display: none;
+}
+
+#nav-menu-header {
+    display: block;
+}
+
+#adminmenu #menu-posts-personal .wp-menu-image {
+}
+
+#adminmenu #menu-posts-personal .wp-menu-image:before {
+    font: 400 20px/1 dashicons !important;
+    speak: none;
+    color: #f3f1f1 !important;
+    padding: 8px 0;
+    height: 36px;
+    width: 20px;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    content: "\f307" !important;
+}
+
+#adminmenu .menu-icon-generic div.wp-menu-image:before {
+    content: "\f333" !important;
+}
+
+#menu-posts {
+    display: none !important;
+}
+
+.inside {
+    padding: 10px !important;
+}
+
+html {
+    margin-top: 0 !important;
+}

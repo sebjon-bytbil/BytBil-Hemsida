@@ -80,6 +80,7 @@ $table_prefix  = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
+
 define('WP_ALLOW_MULTISITE', true);
 
 define('MULTISITE', true);

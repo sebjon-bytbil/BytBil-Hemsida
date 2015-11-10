@@ -16,12 +16,14 @@
 
         <div class="submenu-wrapper">
             <div class="submenu-title">
+                              
                 <h1>
                     <?php if($prevPage) { ?>
                         <a class="back-link light" href="<?php echo $prevPageLink; ?>" >
                             <i class="icon icon-chevron-thin-left"></i><span class="back-link-title"><?php echo $prevPageTitle; ?></span>
                         </a>
                     <?php } ?>
+                    
                     <?php echo get_the_title($id); ?>
                 </h1>
                 <div class="submenu-mobile visible-xs">

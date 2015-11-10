@@ -1463,6 +1463,7 @@ if (function_exists("register_field_group")) {
                                             'header' => 'Headerbild med beskrivning',
                                             'equipment' => 'Utrustning',
                                             'gallery' => 'Fotogalleri',
+                                            'personalbilar' => 'Personalbilar'
                                         ),
                                         'default_value' => 'info',
                                         'allow_null' => 0,
@@ -1474,11 +1475,56 @@ if (function_exists("register_field_group")) {
                                         'name' => 'content-vehicle-model',
                                         'type' => 'relationship',
                                         'instructions' => 'Välj den bilmodell du vill visa information från.',
+                                        'conditional_logic' => array(
+                                            'status' => 1,
+                                            'rules' => array(
+                                                array(
+                                                    'field' => 'field_553dbfd3446b8',
+                                                    'operator' => '!=',
+                                                    'value' => 'personalbilar',
+                                                ),
+                                            ),
+                                            'allorany' => 'all',
+                                        ),
                                         'column_width' => '',
                                         'return_format' => 'object',
                                         'post_type' => array(
                                             0 => 'vehicle',
                                             1 => 'modelgroup',
+                                        ),
+                                        'taxonomy' => array(
+                                            0 => 'all',
+                                        ),
+                                        'filters' => array(
+                                            0 => 'search',
+                                        ),
+                                        'result_elements' => array(
+                                            0 => 'post_type',
+                                            1 => 'post_title',
+                                        ),
+                                        'max' => '',
+                                    ),
+                                    array(
+                                        'key' => 'field_553dc04f446b9employees',
+                                        'label' => 'Personalbilar',
+                                        'name' => 'content-vehicle-employees',
+                                        'type' => 'relationship',
+                                        'instructions' => 'Välj den billista du vill visa.',
+                                        'conditional_logic' => array(
+                                            'status' => 1,
+                                            'rules' => array(
+                                                array(
+                                                    'field' => 'field_553dbfd3446b8',
+                                                    'operator' => '==',
+                                                    'value' => 'personalbilar',
+                                                ),
+                                            ),
+                                            'allorany' => 'all',
+                                        ),
+                                        'column_width' => '',
+                                        'return_format' => 'object',
+                                        'post_type' => array(
+                                            0 => 'employee_car_list',
                                         ),
                                         'taxonomy' => array(
                                             0 => 'all',
@@ -2644,9 +2690,9 @@ if (function_exists("register_field_group")) {
                 array(
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'offer',
+                    'value' => 'company_page',
                     'order_no' => 0,
-                    'group_no' => 1,
+                    'group_no' => 3,
                 ),
             ),
         ),
@@ -2849,6 +2895,15 @@ if (function_exists("register_field_group")) {
                     'value' => 'offer',
                     'order_no' => 0,
                     'group_no' => 1,
+                ),
+            ),
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'company_page',
+                    'order_no' => 0,
+                    'group_no' => 2,
                 ),
             ), 
         ),

@@ -1,0 +1,122 @@
+
+/* Reset */
+body,
+html,
+header,
+main,
+footer,
+section {
+    float: left;
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Elements */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6em;
+    font-weight: 300;
+    padding-top: 80px;
+}
+
+a:link,
+a:visited {
+}
+
+a:hover {
+}
+
+a:focus {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.wrapper {
+    max-width: 1170px;
+}
+
+/* Bootstrap Corrections */
+
+.navbar-form {
+    margin: 0;
+}
+
+input,
+textarea,
+button,
+.form-control {
+    border-radius: 0;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    z-index: 100;
+}
+
+
+/* XX-Small Devices */
+
+@media (max-width: 459px){
+    .col-xxs-12 {
+      width: 100%;
+    }
+    .col-xxs-11 {
+      width: 91.66666667%;
+    }
+    .col-xxs-10 {
+      width: 83.33333333%;
+    }
+    .col-xxs-9 {
+      width: 75%;
+    }
+    .col-xxs-8 {
+      width: 66.66666667%;
+    }
+    .col-xxs-7 {
+      width: 58.33333333%;
+    }
+    .col-xxs-6 {
+      width: 50%;
+    }
+    .col-xxs-5 {
+      width: 41.66666667%;
+    }
+    .col-xxs-4 {
+      width: 33.33333333%;
+    }
+    .col-xxs-3 {
+      width: 25%;
+    }
+    .col-xxs-2 {
+      width: 16.66666667%;
+    }
+    .col-xxs-1 {
+      width: 8.33333333%;
+    }    
+}
+/* X-Small devices*/
+@media (max-width:767px) {
+}
+
+/* Small devices */
+@media (max-width:992px) {
+}
+
+/* Medium devices */
+@media (max-width:1199px) {
+}
+
+/* Large Devices */
+@media (min-width: 1200px) {
+}
+

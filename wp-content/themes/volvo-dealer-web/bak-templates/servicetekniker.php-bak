@@ -1,0 +1,104 @@
+<?php /* Template Name: Servicetekniker : iFrame */ get_header(); 
+		$post_meta = get_post_meta(get_the_ID());
+		
+
+		$masterPost = bytbil_get_master_post(get_the_ID());
+
+		while (have_posts()) : the_post(); ?>
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			<div class="wrapper">
+
+			<?php /* The loop */ ?>
+			<?php //while ( have_posts() ) : the_post(); 
+
+				if (get_field('bakgrundsbild')) {
+					?>
+				
+				<script type="text/javascript">
+
+					$('#background-container').empty();
+                    var imageUrl = '<?php echo get_field("bakgrundsbild"); ?>';
+                    $('#background-container').css('background-image', 'url(' + imageUrl + ')');
+				</script>
+				
+				<?php
+				}
+
+				?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div class="left-column black-page">
+
+						<header class="entry-header">
+							<h1 class="entry-title"><?php echo empty( $post->post_parent ) ? get_the_title( $post->ID ) : get_the_title( $post->post_parent ); ?></h1>
+						</header><!-- .entry-header -->
+					
+						<div class="side-menu-container">
+							<?php 
+							new_volvo_menu('bottom-services', true, 'side-menu-large');
+							
+							?>
+						</div>
+
+					</div>
+
+					<div class="right-column block-page" style="text-align: left;">
+						<div class="single-block" style="padding: 10px; margin-top: 30px;">
+							<style>
+							.single-block p {
+								font-weight: normal !important;
+							}
+							</style>
+							
+							<?php
+							
+							echo apply_filters('the_content', $masterPost->post_content);
+							
+
+							//endwhile;
+					
+					 
+							 ?>
+                             
+                        <script type="text/javascript">
+					
+							function iframeLoaded() {
+									jQuery("#services-iframe").load(function () {
+										var frame = $('#services-iframe', window.parent.document);
+										var width = 718;
+										var height = jQuery("body").height();
+										frame.width(width + 30);
+										frame.height(height + 150);
+										frame.css('overflow-y', 'hidden');
+									});
+								}
+								
+						</script>
+	 
+						</div>
+						<div class="single-block">
+                            <div class="page-content-banner" style="position: relative;">
+                                <div style="padding: 0 5px; background-color: #fff; width: 718px; margin-bottom: 85px;">
+                                      <iframe id="services-iframe" style="border: 0 !important; overflow-y: hidden" scrolling="no" width="100%" height="100%" src="<?php the_field('iframe_url'); ?>"></iframe>
+                                </div>
+                            </div>
+						</div>
+					</div><!-- .entry-content -->
+                    
+                    <script>
+						iframeLoaded();
+					</script>
+                    
+                    
+
+				</article><!-- #post -->
+
+			</div>
+			<?php endwhile; ?>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

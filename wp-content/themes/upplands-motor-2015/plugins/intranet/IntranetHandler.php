@@ -9,9 +9,6 @@ Author URI: http://www.bytbil.com
 class IntranetHandler{
     function __construct(){
 
-        //Adds submenus
-        add_action('admin_menu', array($this, 'add_sub_menus'));
-
         add_action('wp_login', array($this, 'user_login'), 10, 2);
         //Creates user from registration form on the company-page
         add_action('admin_post_company_user_create', array($this, 'create_user'));
@@ -26,13 +23,48 @@ class IntranetHandler{
         add_action('manage_users_custom_column', array($this, 'add_users_custom_column'), 10, 3);
         //Scripts
         add_action('admin_enqueue_scripts', array($this, 'intranet_scripts'), 0);
-
+        
+        // Sebbe Additions
+        add_action('show_user_profile', array($this, 'add_company_field_edit_user'),10, 1);
+        add_action('edit_user_profile', array($this, 'add_company_field_edit_user'),10, 1);
+        add_action('profile_update', array($this, 'save_company_on_user_edit'), 10, 2);
 
     }
-    function add_sub_menus(){
-        $services_submenu = add_submenu_page('edit.php?post_type=company_page', "Tjänster", "Tjänster", 'edit_posts', '/edit.php?post_type=services', '');
-        $add_services_submenu = add_submenu_page('edit.php?post_type=company_page', "Lägg till tjänst", "Lägg till tjänst", 'edit_posts', '/post-new.php?post_type=services', '');
+    
+    function add_company_field_edit_user($user) {
+        ?>       
+        <table class="form-table">
+        <tr>
+            <th>
+                <label for="adduser-company"><?php _e('Företag'); ?></label>
+            </th>
+            <td>
+                <select name="company" id="adduser-companylist">
+                    <?php
+                    $current_user_meta = get_user_meta($user->ID, null, true);
+                    $current_company = $current_user_meta["company"][0];   
+                    foreach($this->get_companies() as $company){ ?>
+                        <option <?php if($current_company==$company){ echo 'selected="selected"'; } ?> value="<?php echo $company;?>"><?php echo $company;?></option>
+                    <?php }
+                    ?>
+                </select>               
+            </td>
+        </tr>
+        </table>
+        <?php
     }
+    
+    //Save company as usermeta on registration
+    function save_company_on_user_edit( $user_id ) {
+        //Check if company is set and role is some kind of company user.
+        if (isset($_POST['company']) &&
+            !empty($_POST['company']) &&
+            $_POST['role'] == "foretagsadmin" ||
+            $_POST['role'] == "foretagsanvandare"){
+            $updated = update_user_meta($user_id, 'company', $_POST['company']);
+        }
+    }    
+       
 
     function user_login($user_login, $user) {
         $redirect_to = $_POST['redirect_to'];
@@ -114,7 +146,7 @@ class IntranetHandler{
             "read",
         );
         add_role("foretagsanvandare", "Företagsanvändare");
-
+        
         $foretagsanvandare = get_role("foretagsanvandare");
         foreach ($company_caps as $cap) {
             $foretagsanvandare->add_cap($cap);
@@ -147,23 +179,39 @@ class IntranetHandler{
 
         $current_user_meta = get_user_meta($current_user_id, null, true);
         $company = $current_user_meta["company"][0];
+        
+        $post_type = get_post_type(get_the_ID());
+        $post = get_post(get_the_ID());
+        $post_name = $post->post_name;
+
+        if($company=='null' && $post_name != ''){
+            $company = $post_name;
+            $company_post = true;
+        }
+        
         $posts = get_posts(
             array(
                 "post_type" => "company_page",
                 "post_title" => $company,
             )
         );
-
-        $company_post = array_filter($posts, function($post) use ($company){
-            return $post->post_title == $company;
-        });
-        if(count($company_post) == 0){
-            return;
+        
+        if($company_post != true){
+            $company_post = array_filter($posts, function($post) use ($company){
+                return $post->post_title == $company;
+            });
+            if(count($company_post) == 0){
+                return;
+            }
+            
+            $company_post = array_values($company_post);
         }
+        else {
+            $company_post = array_values($posts);
+        }
+        
         //Hide wp-admin-bar
-        add_filter('show_admin_bar', '__return_false');
-
-        $company_post = array_values($company_post);
+        //add_filter('show_admin_bar', '__return_false');
 
         return $company_post[0];
     }

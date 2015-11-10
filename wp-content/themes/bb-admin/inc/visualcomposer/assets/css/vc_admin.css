@@ -1,0 +1,14 @@
+.vc_properties-list input[type="radio"] {
+    width: auto;
+    margin-left: 5px;
+    margin-right: 2px;
+    display: inline-block;
+}
+
+.vc_checkbox-label.displayblock{
+    display: block;
+}
+
+.vc_panel {
+    z-index: 1000;
+}

@@ -1,0 +1,42 @@
+/* Finans */
+
+.sliderbar {
+    padding: 0 40pt 0 40pt;
+    position: relative;
+}
+
+.sliderbar div.ui-slider {
+    margin: 0 !important;
+    width: 100%;
+    height: 10pt;
+    top: 8pt;
+
+    background-color: #F1F1F1;
+    -moz-box-shadow: inset 0px 1px 5px #7C7A7A;
+    -webkit-box-shadow: inset 0px 1px 5px #7C7A7A;
+    box-shadow: inset 0px 1px 5px #7C7A7A; /*Inner elements should not cover inner shadows*/
+    /*IE 7 AND 8 DO NOT SUPPORT INSET SHADOWS*/;
+}
+
+.sliderbar input[type="number"] {
+    display: none;
+}
+
+.ui-loader {
+    display: none
+}
+
+.sliderDivider {
+    margin-bottom: 44px;
+}
+
+.financeBottomLink {
+    text-align: right;
+    width: 100%;
+    display: block;
+}
+
+.layout-slider {
+    position: relative;
+}
+   

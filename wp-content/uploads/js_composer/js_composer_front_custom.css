@@ -2987,7 +2987,7 @@ option.wpb_video {
   border: 1px solid transparent;
   display: block;
   overflow: hidden;
-  margin: 0 0 21.73913043px 0;
+  margin: 0 0 18.63354037px 0;
   padding: 1em 1em 1em 4em;
   position: relative;
   font-size: 1em;
@@ -3908,7 +3908,7 @@ option.wpb_video {
 ul.wpb_thumbnails-fluid > li,
 .last_toggle_el_margin,
 .wpb_button {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .fb_like,
 .twitter-share-button,
@@ -3918,7 +3918,7 @@ ul.wpb_thumbnails-fluid > li,
 .wpb_tab .wpb_content_element,
 .wpb_accordion .wpb_content_element,
 .wpb_toggle_content {
-  margin-bottom: 21.73913043px;
+  margin-bottom: 18.63354037px;
 }
 .wpb_column > .wpb_wrapper > *:last-child {
   margin-bottom: 0;
@@ -4014,12 +4014,12 @@ iframe.twitter-share-button {
 }
 .vc_toggle {
   display: block;
-  margin: 0 0 21.73913043px 0;
+  margin: 0 0 18.63354037px 0;
   padding: 0;
   font-size: 1em;
 }
 .vc_toggle:last-of-type {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .vc_toggle_title {
   cursor: pointer;
@@ -4043,7 +4043,7 @@ iframe.twitter-share-button {
 }
 .vc_toggle_content {
   display: none;
-  margin-bottom: 21.73913043px;
+  margin-bottom: 18.63354037px;
   margin-top: 1em;
   overflow: hidden;
   padding: 0;
@@ -6739,7 +6739,7 @@ a.wpb_button_a:hover {
 .vc_btn3-container {
   display: block;
   line-height: 1;
-  margin-bottom: 21.73913043px;
+  margin-bottom: 18.63354037px;
   max-width: 100%;
 }
 .vc_btn3-container.vc_btn3-inline {
@@ -9480,7 +9480,7 @@ a.wpb_button_a:hover {
   position: relative;
   background-color: #ff8e3e;
   padding: 20px;
-  padding: 35px;
+  padding: 30px;
   border: 1px solid #ff7f24;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -9521,7 +9521,7 @@ a.wpb_button_a:hover {
 }
 .cta_align_bottom .wpb_button {
   position: static;
-  margin-top: 21.73913043px;
+  margin-top: 18.63354037px;
   display: inline-block;
 }
 .cta_no_button .wpb_call_text {
@@ -9549,7 +9549,7 @@ a.wpb_button_a:hover {
 /* Call to action 3
 ---------------------------------------------------------- */
 .vc_cta3-container {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -10533,11 +10533,11 @@ a.wpb_button_a:hover {
   border: none;
   float: left;
   width: 68.33333333%;
-  padding: 0 0 0 21.73913043px;
+  padding: 0 0 0 18.63354037px;
 }
 .wpb_tour_next_prev_nav {
   margin-left: 31.66666667%;
-  padding-left: 21.73913043px;
+  padding-left: 18.63354037px;
   font-size: 80%;
 }
 .wpb_tour_next_prev_nav a {
@@ -10886,7 +10886,7 @@ body .wpb_gallery_slides ul li,
 .vc_progress_bar .vc_single_bar {
   background: #ff8e3e;
   position: relative;
-  margin-bottom: 11.66666667px;
+  margin-bottom: 10px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
   -webkit-border-radius: 3px;
@@ -11665,7 +11665,7 @@ body .wpb_gallery_slides ul li,
 .vc_icon_element {
   line-height: 0;
   font-size: 14px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .vc_icon_element.vc_icon_element-outer {
   box-sizing: border-box;
