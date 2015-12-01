@@ -622,7 +622,7 @@ div.nav-menu > ul {
 #mobileMenu .mobile-logo > img {
     display: inline-block;
     margin: 15px 0px;
-    max-width: 75px;
+    max-height: 75px;
 }
 
 #mobileMenu .accordion-header {
@@ -654,21 +654,6 @@ div.nav-menu > ul {
 
 #mobileMenu ul.accordion > li > a {
     color: #fff !important;
-}
-
-#mobileMenu .page-menu {
-    margin-bottom: 20px;
-}
-#mobileMenu .page-menu h4 {
-    font-size: 1.1em;
-    font-weight: bold;
-    padding-left: 20px;
-}
-#mobileMenu .page-menu li a {
-    color: #fff !important;
-    font-size: 0.9em;
-    padding: 7.5px 20px;
-    text-align: left;
 }
 
 .white-menu ul li {

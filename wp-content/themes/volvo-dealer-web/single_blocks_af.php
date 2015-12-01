@@ -129,7 +129,7 @@ $post_meta = get_post_meta(get_the_ID());
         <!-- #content -->
     </div><!-- #primary -->
 
-<?php site_url(); ?>
+<?php echo site_url(); ?>
     <script>
 
         var imgTags = $(".blocks-block").find("img");
