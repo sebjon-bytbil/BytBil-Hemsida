@@ -72,9 +72,11 @@ if ($masterPost):
                         $pris = get_field('pris');
                         $id = get_the_ID();
                         $af_text = get_field('af-sidor', 'options');
-                        foreach($af_text as $text){
-                            if($text['af-sida']->ID==$id){
-                                $pris = $text['af-text'];
+                        if($af_text){
+                            foreach($af_text as $text){
+                                if($text['af-sida']->ID==$id){
+                                    $pris = $text['af-text'];
+                                }
                             }
                         }
                         $post_meta = get_post_meta(get_the_ID());

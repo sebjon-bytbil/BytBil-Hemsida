@@ -1,11 +1,18 @@
 <div id="mobileMenu" class="side-menu-container">
-   
+    
    
     <div class="mobile-logo">
         <!--<img src="<?php bloginfo('template_url'); ?>/images/volvo-logo-new.png"/> -->
         <img class="header-logo"
-             style="height:<?php the_field('logo_height', 'options'); ?>; width:<?php the_field('logo_width', 'options'); ?>;"
+             style="max-height:<?php the_field('logo_height', 'options'); ?>; max-width:<?php the_field('logo_width', 'options'); ?>;"
              src="<?php the_field('logo', 'options'); ?>"/>
+    </div>
+    
+    
+    <div class="page-menu">
+        <h4><?php the_title(); ?></h4>
+        <?php echo wpb_list_child_pages(true); ?>
+        <?php new_volvo_menu('bilmeny', true, '', false); ?>
     </div>
 
     <?php

@@ -16,8 +16,7 @@ $siteUrl = get_site_url();
 
                     $args = array(
                         'post_type' => 'page',
-                        'post_parent' => $page->ID,
-                        'posts_per_page'   => -1,
+                        'post_parent' => $page->ID
                     );
 
                     $posts = get_posts($args);

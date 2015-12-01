@@ -1900,30 +1900,32 @@ function custom_mobile_menu($menus = array(), $print = false)
         $volvo_menu = new_volvo_menu($slug, false);
         $items = '';
 
-        foreach ($volvo_menu as $key => $menu_item) {
-            if (strtolower($menu_item->title) === strtolower($current_post_title))
-                $open = true;
+        if($volvo_menu){
+            foreach ($volvo_menu as $key => $menu_item) {
+                if (strtolower($menu_item->title) === strtolower($current_post_title))
+                    $open = true;
 
-            $title = $menu_item->title;
-            if ($menu_item->type !== 'custom')
-                $url = get_local_permalink($menu_item);
-            else
-                $url = $menu_item->url;
+                $title = $menu_item->title;
+                if ($menu_item->type !== 'custom')
+                    $url = get_local_permalink($menu_item);
+                else
+                    $url = $menu_item->url;
 
-            $class = '';
-            if ($menu_item->open_in_lightbox == 'yes')
-                $class = 'lytebox';
+                $class = '';
+                if ($menu_item->open_in_lightbox == 'yes')
+                    $class = 'lytebox';
 
-            $target = '';
-            if ($menu_item->target)
-                $target = $menu_item->target;
+                $target = '';
+                if ($menu_item->target)
+                    $target = $menu_item->target;
 
-            $items .= '<li><a href="' . $url . '" class="' . $class . '" target="' . $target . '">' . $title . '</a></li>';
+                $items .= '<li><a href="' . $url . '" class="' . $class . '" target="' . $target . '">' . $title . '</a></li>';
+            }
+
+            $html .= '<ul class="accordion accordion-' . $slug . ($open ? ' accordion-open' : '') . '">';
+            $html .= $items;
+            $html .= '</ul>';
         }
-
-        $html .= '<ul class="accordion accordion-' . $slug . ($open ? ' accordion-open' : '') . '">';
-        $html .= $items;
-        $html .= '</ul>';
     }
 
     $html .= '</div>';
