@@ -94,7 +94,7 @@ $masterPost = bytbil_get_master_post(get_the_ID());
                 </div>
 
                 <div class="right-column block-page" style="text-align: left;">
-                    <div style="position:absolute; padding-bottom: 100px;">
+                    <div style="padding-bottom: 100px;">
 
 
                         <?php

@@ -17,7 +17,10 @@ restore_from_master();
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
+<html lang="en"
+    <?php if (is_user_logged_in()) {
+    echo 'class="push-down-admin-menu"';
+    } ?>>
 <!--<![endif]-->
 <head>
     <?php wp_head(); ?>
@@ -79,10 +82,11 @@ restore_from_master();
     } else {
         $bg = false;
         $uid = get_post_meta($post->ID, "pushed_original_id", true);
+    
         if ($uid) {
             switch_to_master();
             $bg = get_field("bakgrundsbild", $uid);
-            restore_current_blog();
+            restore_from_master();
         }
 
         if (!$bg) {

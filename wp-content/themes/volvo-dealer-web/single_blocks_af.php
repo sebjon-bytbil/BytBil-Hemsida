@@ -81,7 +81,7 @@ $post_meta = get_post_meta(get_the_ID());
                     </div>
 
                     <div class="right-column block-page" style="text-align: left;">
-                        <div style="position:absolute; padding-bottom: 100px;">
+                        <div style="">
 
 
                             <?php

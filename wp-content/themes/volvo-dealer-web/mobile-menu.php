@@ -8,7 +8,8 @@
              src="<?php the_field('logo', 'options'); ?>"/>
     </div>
     
-    <?php 
+    <?php
+
     if($page_menu==true){
         ?>
     
@@ -30,4 +31,6 @@
         );
         custom_mobile_menu($menus, true);
     ?>
+        <hr>
+        <a class="btn button lytebox" style="width: 80%; margin-left: 10%; marign-right: 10%; padding: 15px; text-align: center; font-size: 1.1em; background: transparent;" href='<?php echo preg_replace('/http:\/\/.*?(?=\/)/', 'http://' . $_SERVER['HTTP_HOST'], home_url('/')); ?>bygg-din-volvo/'>Bygg din Volvo</a>
 </div>

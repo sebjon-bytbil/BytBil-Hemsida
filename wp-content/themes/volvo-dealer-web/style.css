@@ -622,7 +622,7 @@ div.nav-menu > ul {
 #mobileMenu .mobile-logo > img {
     display: inline-block;
     margin: 15px 0px;
-    max-width: 75px;
+    max-height: 75px;
 }
 
 

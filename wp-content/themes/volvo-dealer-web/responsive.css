@@ -405,6 +405,32 @@
     .site-header {
         z-index: 0;
     }
+    
+    #content .right-column {
+        width: 100% !important;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    
+    #content .right-column div {
+        max-width: none !important;
+        width: 100%;
+    }
+    
+    #content .inner-wrap h1 {
+        text-align: center;
+    }
+    
+    #mobileMenu .mobile-logo > img {
+        max-width: 180px !Important;
+        height: auto !important;
+    }
+    
+    .blocks-block:not(:first-of-type) {
+        padding: 30px !important;
+    }
+    
 }
 
 @media only screen and (max-width: 600px) {
@@ -592,8 +618,10 @@
     }
 
     .right-column div > p {
-        font-size: 11px;
+        
     }
+    
+    
 
 }
 

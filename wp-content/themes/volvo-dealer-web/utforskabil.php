@@ -1,6 +1,7 @@
 <?php /* Template Name: Grundsida : Utforska bil */
 get_header();
 $siteUrl = get_site_url();
+$orignal_ID = get_the_ID();
 ?>
     <article cid="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div style="text-align: center; position: fixed; width: 100%; height: 100%; display: table; z-index: 100; left: 0; top: 0;">
@@ -12,7 +13,7 @@ $siteUrl = get_site_url();
                     <?php
                     switch_to_master();
 
-                    $page = get_page_by_title('Utforska Bil');
+                    $page = get_page_by_title('Utforska bil');
 
                     $args = array(
                         'post_type' => 'page',
@@ -70,13 +71,7 @@ $siteUrl = get_site_url();
     </div>    
     <div class="left-column black-page kop-bil">
         <header class="entry-header" style="width: 100%;">
-            <h2 class="entry-title" style="width: 100%; text-align: center;">
-                <?php
-                $masterPost = bytbil_get_master_post(get_the_ID());
-                switch_to_master();
-                echo empty($masterPost->post_parent) ? get_the_title($masterPost->ID) : get_the_title($masterPost->post_parent);
-                restore_from_master();
-                ?></h2>
+            <h2 class="entry-title" style="width: 100%; text-align: center;"><?php echo get_the_title($orignal_ID); ?></h2>
         </header>
         <!-- .entry-header -->
         <?php include 'mobile-menu.php'; ?>
