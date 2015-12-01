@@ -625,6 +625,9 @@ div.nav-menu > ul {
     max-width: 75px;
 }
 
+
+
+
 #mobileMenu .accordion-header {
     color: #fff !important;
     cursor: pointer;
@@ -658,17 +661,47 @@ div.nav-menu > ul {
 
 #mobileMenu .page-menu {
     margin-bottom: 20px;
+    padding-top: 1px;
+    padding-bottom: 15px;
+    background: rgb(0,48,87);
 }
 #mobileMenu .page-menu h4 {
     font-size: 1.1em;
     font-weight: bold;
     padding-left: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    text-align: center
 }
 #mobileMenu .page-menu li a {
     color: #fff !important;
     font-size: 0.9em;
     padding: 7.5px 20px;
-    text-align: left;
+    text-align: center;
+}
+
+#mobileMenu .accordion:before {
+    content: '\f431';
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 15px;
+    margin-top: -40px;
+    background: transparent;
+    -webkit-font-smoothing: antialiased;
+    font-size: 20px;
+    line-height: 1;
+    font-family: 'Genericons';
+    text-decoration: inherit;
+    font-weight: normal;
+    font-style: normal;
+    vertical-align: top;
+}
+
+#mobileMenu .accordion-open:before {
+    content: '\f432';
 }
 
 .white-menu ul li {

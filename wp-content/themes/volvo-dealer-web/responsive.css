@@ -397,6 +397,14 @@
     .entry-header {
         display: none;
     }
+    
+    .volvo-link {
+        margin-right: 15px;
+    }
+    
+    .site-header {
+        z-index: 0;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -652,6 +660,8 @@ and (orientation: landscape) {
     .background-container .background-title-div {
         padding-top: 0 !important;
     }
+    
+    
 
     .home-bottom-container {
         position: relative;

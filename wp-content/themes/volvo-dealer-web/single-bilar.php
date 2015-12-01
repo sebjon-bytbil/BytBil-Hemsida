@@ -51,7 +51,10 @@ if ($masterPost):
                             <?php restore_from_master(); ?>
                         </header>
                         <!-- .entry-header -->
-
+                        
+                        <?php
+                        $page_menu = true;
+                        ?>
                         <?php include 'mobile-menu.php'; ?>
 
                         <div class="side-menu-container side-menu-old">

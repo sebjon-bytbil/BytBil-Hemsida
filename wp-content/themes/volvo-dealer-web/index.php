@@ -189,8 +189,11 @@
                     </div>
                 </div>
     <div class="left-column black-page kop-bil">
-
-        <?php include 'mobile-menu.php'; ?>
+        
+        <?php
+            $page_menu = false;
+            include 'mobile-menu.php';
+        ?>
 
     </div>
 
