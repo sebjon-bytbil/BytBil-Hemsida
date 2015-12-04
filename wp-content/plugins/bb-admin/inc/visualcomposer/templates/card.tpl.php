@@ -1,4 +1,4 @@
-<div class="card white-bg">
+<div class="card white-bg <?php echo $css_classes; ?>">
     <div class="card-header">
         <span class="card-icon">
             <?php if ($use_picture == "0"): ?>
@@ -13,10 +13,9 @@
     <div class="card-body">
         <?php echo apply_filters( 'the_content', $blockcontent ); ?>
         <ul class="card-list">
-            <li><a href="#">Boka service online</a></li>
-            <li><a href="#">Skadeverkstad</a></li>
-            <li><a href="#">Personlig Servicetekniker</a></li>
-            <li><a href="#">Stenskott och glas</a></li>
+            <?php foreach($links as $link) { ?>
+                <li><a href="<?php echo $link['href']; ?>"><?php echo $link['text']; ?></a></li>
+            <?php } ?>
         </ul>
     </div>
 </div>

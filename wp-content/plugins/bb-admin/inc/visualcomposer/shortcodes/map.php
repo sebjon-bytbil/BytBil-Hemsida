@@ -1,11 +1,11 @@
 <?php
-require_once("shortcode.base.php");
+require_once('shortcode.base.php');
+
 /**
-*
-*/
+ * Karta
+ */
 class MapShortcode extends ShortcodeBase
 {
-
     function __construct($vcMap)
     {
         parent::__construct($vcMap);
@@ -64,75 +64,80 @@ class MapShortcode extends ShortcodeBase
     }
 }
 
-
-
-$map = array(
-    "name" => "Karta",
-    "base" => "map",
-    "description" => "Karta",
-    "class" => "",
-    "show_settings_on_create" => true,
-    "weight" => 10,
-    "category" => "Innehåll",
-    'front_enqueue_js' => array(
-        VCADMINURL . 'assets/js/editor/map_editor.js'
-    ),
-    "params" => array(
-        array(
-            'type' => 'dropdown',
-            'heading' => 'Välj från anläggning eller hitta plats på kartan',
-            'param_name' => 'map_type',
-            'value' => array(
-                'Anläggning' => 'facility',
-                'Karta' => 'map'
+function bb_init_map_shortcode()
+{
+    // Map array
+    $map = array(
+        'name' => 'Karta',
+        'base' => 'map',
+        'description' => 'Karta',
+        'class' => '',
+        'show_settings_on_create' => true,
+        'weight' => 10,
+        'category' => 'Innehåll',
+        'front_enqueue_js' => array(
+            VCADMINURL . 'assets/js/editor/map_editor.js'
+        ),
+        'params' => array(
+            array(
+                'type' => 'dropdown',
+                'heading' => 'Välj från anläggning eller hitta plats på kartan',
+                'param_name' => 'map_type',
+                'value' => array(
+                    'Anläggning' => 'facility',
+                    'Karta' => 'map'
+                ),
+                'description' => 'Välj om du vill visa en karta från en existerande anläggning eller on du vill hitta en plats på kartan.'
             ),
-            'description' => 'Välj om du vill visa en karta från en existerande anläggning eller on du vill hitta en plats på kartan.'
-        ),
-        array(
-            'type' => 'cpt',
-            'post_type' => 'facility',
-            'heading' => 'Välj anläggning',
-            'param_name' => 'coordinates_facility',
-            'placeholder' => 'Välj anläggning',
-            'value' => '',
-            'description' => 'Välj en existerande anläggning.'
-        ),
-        array(
-            'type' => 'map',
-            'heading' => 'Karta',
-            'param_name' => 'coordinates_map',
-            'value' => '',
-            'description' => 'Sök efter den plats som du vill visa på kartan.'
-        ),
-        array(
-            'type' => 'checkbox',
-            'heading' => 'Förhindra scroll',
-            'param_name' => 'preventscroll',
-            'description' => 'Bocka i om du inte vill att man ska kunna scrolla på kartan.',
-            'value' => array(
-                'Ja' => '1'
+            array(
+                'type' => 'cpt',
+                'post_type' => 'facility',
+                'heading' => 'Välj anläggning',
+                'param_name' => 'coordinates_facility',
+                'placeholder' => 'Välj anläggning',
+                'value' => '',
+                'description' => 'Välj en existerande anläggning.'
+            ),
+            array(
+                'type' => 'map',
+                'heading' => 'Karta',
+                'param_name' => 'coordinates_map',
+                'value' => '',
+                'description' => 'Sök efter den plats som du vill visa på kartan.'
+            ),
+            array(
+                'type' => 'checkbox',
+                'heading' => 'Förhindra scroll',
+                'param_name' => 'preventscroll',
+                'description' => 'Bocka i om du inte vill att man ska kunna scrolla på kartan.',
+                'value' => array(
+                    'Ja' => '1'
+                )
+            ),
+            array(
+                'type' => 'checkbox',
+                'heading' => 'Kontroller',
+                'param_name' => 'controls',
+                'description' => 'Bocka i om du vill visa kontroller på kartan.',
+                'value' => array(
+                    'Ja' => '1'
+                )
+            ),
+            array(
+                'type' => 'textfield',
+                'heading' => 'Höjd',
+                'param_name' => 'height',
+                'description' => 'Ange höjden i pixlar.',
+                'value' => ''
             )
-        ),
-        array(
-            'type' => 'checkbox',
-            'heading' => 'Kontroller',
-            'param_name' => 'controls',
-            'description' => 'Bocka i om du vill visa kontroller på kartan.',
-            'value' => array(
-                'Ja' => '1'
-            )
-        ),
-        array(
-            'type' => 'textfield',
-            'heading' => 'Höjd',
-            'param_name' => 'height',
-            'description' => 'Ange höjden i pixlar.',
-            'value' => ''
         )
-    )
+    );
 
-);
+    // Alter params filter
+    $map['params'] = apply_filters('bb_alter_map_params', $map['params']);
 
-$vcMap = new MapShortcode($map);
+    $vcMap = new MapShortcode($map);
+}
+add_action('after_setup_theme', 'bb_init_map_shortcode');
 
 ?>

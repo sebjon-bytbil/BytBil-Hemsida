@@ -1,7 +1,8 @@
 <?php
 require_once('shortcode.base.php');
+
 /**
- *
+ * Anläggningskort
  */
 class FacilityCardShortcode extends ShortcodeBase
 {
@@ -50,62 +51,70 @@ class FacilityCardShortcode extends ShortcodeBase
     }
 }
 
-$map = array(
-    'name' => 'Anläggningskort',
-    'base' => 'facilitycard',
-    'description' => 'Anläggningskort - Header',
-    'class' => '',
-    'show_settings_on_create' => true,
-    'weight' => 10,
-    'category' => 'Innehåll',
-    'params' => array(
-        array(
-            'type' => 'cpt',
-            'post_type' => 'facility',
-            'heading' => 'Välj anläggning',
-            'param_name' => 'facility',
-            'placeholder' => 'Välj anläggning',
-            'value' => '',
-            'description' => 'Välj en existerande anläggning.'
-        ),
-        array(
-            'type' => 'wysiwyg',
-            'value' => '',
-            'heading' => 'Innehåll',
-            'param_name' => 'facility_content',
-            'description' => 'Skriv i innehållet som du vill visa i anläggningskortet.'
-        ),
-        array(
-            'type' => 'param_group',
-            'heading' => 'Knappar',
-            'param_name' => 'facility_buttons',
-            'params' => array(
-                array(
-                    'type' => 'textfield',
-                    'heading' => 'Knapptext',
-                    'param_name' => 'button_text',
-                    'value' => ''
-                ),
-                array(
-                    'type' => 'dropdown',
-                    'heading' => 'Färg',
-                    'param_name' => 'color',
-                    'value' => array(
-                        'Blå' => 'blue',
-                        'Vit' => 'white'
+function bb_init_facilitycard_shortcode()
+{
+    // Map array
+    $map = array(
+        'name' => 'Anläggningskort',
+        'base' => 'facilitycard',
+        'description' => 'Anläggningskort - Header',
+        'class' => '',
+        'show_settings_on_create' => true,
+        'weight' => 10,
+        'category' => 'Innehåll',
+        'params' => array(
+            array(
+                'type' => 'cpt',
+                'post_type' => 'facility',
+                'heading' => 'Välj anläggning',
+                'param_name' => 'facility',
+                'placeholder' => 'Välj anläggning',
+                'value' => '',
+                'description' => 'Välj en existerande anläggning.'
+            ),
+            array(
+                'type' => 'wysiwyg',
+                'value' => '',
+                'heading' => 'Innehåll',
+                'param_name' => 'facility_content',
+                'description' => 'Skriv i innehållet som du vill visa i anläggningskortet.'
+            ),
+            array(
+                'type' => 'param_group',
+                'heading' => 'Knappar',
+                'param_name' => 'facility_buttons',
+                'params' => array(
+                    array(
+                        'type' => 'textfield',
+                        'heading' => 'Knapptext',
+                        'param_name' => 'button_text',
+                        'value' => ''
+                    ),
+                    array(
+                        'type' => 'dropdown',
+                        'heading' => 'Färg',
+                        'param_name' => 'color',
+                        'value' => array(
+                            'Blå' => 'blue',
+                            'Vit' => 'white'
+                        )
+                    ),
+                    array(
+                        'type' => 'href',
+                        'heading' => 'Länka till',
+                        'param_name' => 'link_to',
+                        'value' => ''
                     )
-                ),
-                array(
-                    'type' => 'href',
-                    'heading' => 'Länka till',
-                    'param_name' => 'link_to',
-                    'value' => ''
                 )
             )
         )
-    )
-);
+    );
 
-$vcFacilityCard = new FacilityCardShortcode($map);
+    // Alter params filter
+    $map['params'] = apply_filters('bb_alter_facilitycard_params', $map['params']);
+
+    $vcFacilityCard = new FacilityCardShortcode($map);
+}
+add_action('after_setup_theme', 'bb_init_facilitycard_shortcode');
 
 ?>

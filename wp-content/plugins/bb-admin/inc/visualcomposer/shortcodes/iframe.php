@@ -1,7 +1,8 @@
 <?php
-require_once("shortcode.base.php");
+require_once('shortcode.base.php');
+
 /**
- *
+ * Iframe
  */
 class IFrameShortcode extends ShortcodeBase
 {
@@ -23,41 +24,49 @@ class IFrameShortcode extends ShortcodeBase
     }
 }
 
-$map = array(
-    "name" => "Iframe",
-    "base" => "iframe",
-    "description" => "Lägg till en iframe",
-    "class" => "",
-    "show_settings_on_create" => true,
-    "weight" => 10,
-    "category" => "Innehåll",
-    "params" => array(
-        array(
-            'type' => 'textfield',
-            'heading' => 'URL',
-            'param_name' => 'url',
-            'value' => '',
-            'description' => 'Skriv in URLen som du vill ha i din iframe.'
-        ),
-        array(
-            'type' => 'textfield',
-            'heading' => 'Höjd',
-            'param_name' => 'height',
-            'value' => '300',
-            'description' => 'Skriv in höjden (i pixlar) för din iframe.'
-        ),
-        array(
-            'type' => 'checkbox',
-            'heading' => 'Kantram',
-            'param_name' => 'border',
-            'description' => 'Bocka i om du vill ha en kantram.',
-            'value' => array(
-                'Ja' => '1'
+function bb_init_iframe_shortcode()
+{
+    // Map array
+    $map = array(
+        'name' => 'Iframe',
+        'base' => 'iframe',
+        'description' => 'Lägg till en iframe',
+        'class' => '',
+        'show_settings_on_create' => true,
+        'weight' => 10,
+        'category' => 'Innehåll',
+        'params' => array(
+            array(
+                'type' => 'textfield',
+                'heading' => 'URL',
+                'param_name' => 'url',
+                'value' => '',
+                'description' => 'Skriv in URLen som du vill ha i din iframe.'
+            ),
+            array(
+                'type' => 'textfield',
+                'heading' => 'Höjd',
+                'param_name' => 'height',
+                'value' => '300',
+                'description' => 'Skriv in höjden (i pixlar) för din iframe.'
+            ),
+            array(
+                'type' => 'checkbox',
+                'heading' => 'Kantram',
+                'param_name' => 'border',
+                'description' => 'Bocka i om du vill ha en kantram.',
+                'value' => array(
+                    'Ja' => '1'
+                )
             )
         )
-    )
-);
+    );
 
-$vcIframe = new IFrameShortcode($map);
+    // Alter params filter
+    $map['params'] = apply_filters('bb_alter_iframe_params', $map['params']);
+
+    $vcIframe = new IFrameShortcode($map);
+}
+add_action('after_setup_theme', 'bb_init_iframe_shortcode');
 
 ?>

@@ -1,3 +1,3 @@
-<div class="bb-text" style="color: <?php echo $color; ?>">
+<div class="bb-text <?php echo $css_classes; ?>">
     <?php echo $the_content; ?>
 </div>

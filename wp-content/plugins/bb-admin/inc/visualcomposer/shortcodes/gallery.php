@@ -1,11 +1,11 @@
 <?php
-require_once("shortcode.base.php");
+require_once('shortcode.base.php');
+
 /**
-*
-*/
+ * Galleri
+ */
 class GalleryShortcode extends ShortcodeBase
 {
-
     function __construct($vcMap)
     {
         parent::__construct($vcMap);
@@ -62,53 +62,60 @@ class GalleryShortcode extends ShortcodeBase
     }
 }
 
-$map = array(
-    'name' => 'Galleri',
-    'base' => 'gallery',
-    'description' => 'Innehåll',
-    'class' => '',
-    'show_settings_on_create' => true,
-    'weight' => 10,
-    'category' => 'Innehåll',
-    'params' => array(
-        array(
-            'type' => 'param_group',
-            'value' => '',
-            'param_name' => 'gallery_items',
-            'save_always' => 'true',
-            'params' => array(
-                array(
-                    'type' => 'textfield',
-                    'value' => '',
-                    'heading' => 'Rubrik',
-                    'param_name' => 'headline'
-                ),
-                array(
-                    'type' => 'attach_image',
-                    'value' => '',
-                    'heading' => 'Bild',
-                    'param_name' => 'image'
-                ),
-                array(
-                    'type' => 'textfield',
-                    'value' => '',
-                    'heading' => 'Bildtext',
-                    'param_name' => 'text',
-                    'description' => 'Skriv in en beskrivande text för bilden.'
+function bb_init_gallery_shortcode()
+{
+    // Map array
+    $map = array(
+        'name' => 'Galleri',
+        'base' => 'gallery',
+        'description' => 'Innehåll',
+        'class' => '',
+        'show_settings_on_create' => true,
+        'weight' => 10,
+        'category' => 'Innehåll',
+        'params' => array(
+            array(
+                'type' => 'param_group',
+                'value' => '',
+                'param_name' => 'gallery_items',
+                'save_always' => 'true',
+                'params' => array(
+                    array(
+                        'type' => 'textfield',
+                        'value' => '',
+                        'heading' => 'Rubrik',
+                        'param_name' => 'headline'
+                    ),
+                    array(
+                        'type' => 'attach_image',
+                        'value' => '',
+                        'heading' => 'Bild',
+                        'param_name' => 'image'
+                    ),
+                    array(
+                        'type' => 'textfield',
+                        'value' => '',
+                        'heading' => 'Bildtext',
+                        'param_name' => 'text',
+                        'description' => 'Skriv in en beskrivande text för bilden.'
+                    )
                 )
+            ),
+            array(
+                'type' => 'textfield',
+                'group' => 'Inställningar',
+                'heading' => '',
+                'param_name' => 'gallery_row_amount',
+                'description' => 'Antal bilder per rad.'
             )
-        ),
-        array(
-            'type' => 'textfield',
-            'group' => 'Inställningar',
-            'heading' => '',
-            'param_name' => 'gallery_row_amount',
-            'description' => 'Antal bilder per rad.'
         )
-    )
+    );
 
-);
+    // Alter params filter
+    $map['params'] = apply_filters('bb_alter_gallery_params', $map['params']);
 
-$vcGallery = new GalleryShortcode($map);
+    $vcGallery = new GalleryShortcode($map);
+}
+add_action('after_setup_theme', 'bb_init_gallery_shortcode');
 
 ?>
