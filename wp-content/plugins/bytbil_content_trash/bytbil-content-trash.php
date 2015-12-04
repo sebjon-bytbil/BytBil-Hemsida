@@ -48,8 +48,6 @@ function delete_child_pages()
 // Get child blogs id from wp_blogs
     global $wpdb;
     $blogs = $wpdb->get_results($wpdb->prepare("SELECT blog_id FROM $wpdb->blogs WHERE site_id = $site_id AND blog_id != $blog_id"), ARRAY_A);
-    // HÄR BUGGAR DEN NÄR MAN REDIGERAR MENYER
-    if($blogs){
     foreach ($blogs as $blog) {
         switch_to_blog($blog['blog_id']);
         $child_post_id = $wpdb->get_row($wpdb->prepare("SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'pushed_original_id' AND meta_value = '$post_id'"), ARRAY_A);
@@ -58,7 +56,6 @@ function delete_child_pages()
             wp_delete_post($child_post_id['post_id']);
         }
         restore_current_blog();
-    }
     }
 }
 

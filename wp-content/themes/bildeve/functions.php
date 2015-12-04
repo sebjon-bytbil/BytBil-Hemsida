@@ -6,6 +6,12 @@ include_once('wp_bootstrap_navwalker.php');
 //require_once('plugins/anlaggningar.php');
 include_once('plugins/bildeve-settings.php');
 
+/* BytBil */
+require_once(plugin_dir_path(__FILE__) . "includes/iconspicker.php");
+require_once(plugin_dir_path(__FILE__) . '../../plugins/bb-admin/bb-admin.php');
+require_once(plugin_dir_path(__FILE__) . 'vc_params/vc_params.php');
+
+
 
 /* Custom plugins */
 if (!function_exists('bytbil_brands')) {

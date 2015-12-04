@@ -1,0 +1,36 @@
+/* HIDES SITESETTINGS FROM NORMAL USERS (NOT-ADMIN) */
+/*TABS*/
+a[data-key="field_5424b2013e060"],
+a[data-key="field_5424b2293e061"],
+a[data-key="field_5424b24c3e063"],
+a[data-key="field_5424asdgfg33423062"]
+{
+    display: none!important;
+}
+/*FIELDS*/
+#acf-sitesettings-edit-background,
+#acf-sitesettings-wrapper-width,
+#acf-sitesetting-edit-type,
+#acf-sitesetting-edit-links,
+#acf-sitesetting-edit-accesspackage,
+#acf-sitesetting-accesspackage-custom-css,
+#acf-sitesetting-edit-menus,
+#acf-sitesetting-edit-sidebar-menus,
+#acf-sitesetting-header-bgcolor,
+#acf-sitesetting-footer-bgcolor,
+#acf-,
+div[id*="acf-sitesetting-background"],
+div[id*="acf-sitesetting-font"],
+div[id*="acf-sitesetting-link"],
+div[id*="acf-sitesetting-wrapper"],
+div[id*="acf-sitesetting-border-radius"],
+div[id*="acf-sitesetting-account"],
+div[id*="acf-sitesetting-menus"],
+div[id*="acf-sitesetting-menu"],
+div[id*="acf-sitesetting-submenu"],
+div[id*="acf-sitesetting-sidebarmenus"],
+div[id*="acf-sitesetting-custom"],
+div[id*="acf-sitesettings-forms"]
+{
+    display: none!important;
+}
