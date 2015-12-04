@@ -7,16 +7,16 @@ include_once('wp_bootstrap_navwalker.php');
 include_once('plugins/bildeve-settings.php');
 
 
-/* Custom plugins 
+/* Custom plugins */
 if (!function_exists('bytbil_brands')) {
     include_once('plugins/bildeve-marken/bildeve-marken.php');
 }
-*/
-/*
 if (!function_exists('bytbil_show_facility_all')) {
     include_once('plugins/bildeve-anlaggning/bildeve-anlaggning.php');
-}*/
-
+}
+if (!function_exists('bytbil_show_assortment')) {
+    include_once('plugins/bildeve-fordonsurval/bildeve-fordonsurval.php');
+}
 
 /* Settings */
 if (function_exists('acf_set_options_page_title')) {
@@ -28,8 +28,8 @@ if (function_exists('acf_set_options_page_title')) {
 
 function register_theme_menu() {
     register_nav_menus( array(
-        'primary' => __( 'Huvudmeny', 'bildeve' ),
-        'footer' => __( 'Sidfot', 'bildeve' ),
+        'primary' => __( 'Huvudmeny', 'ahlberg-bil' ),
+        'footer' => __( 'Sidfot', 'ahlberg-bil' ),
     ) );
 }
 
@@ -51,7 +51,22 @@ function get_ID_by_slug($page_slug)
     }
 }
 
-/*add_action('init', 'highlight_init_jquery');*/
-/*add_action('wp_print_scripts', 'highlight_set_query');*/
+/*add_action('init', 'highlight_init_jquery');
+add_action('wp_print_scripts', 'highlight_set_query');*/
+
+function new_custom_css_classes_for_vc_row_and_vc_column($class_string, $tag)
+{
+    if (!is_admin()) {
+        if ($tag == 'vc_row' || $tag == 'vc_row_inner') {
+            $class_string = str_replace('vc_row-fluid', 'row', $class_string);
+        }
+        if ($tag == 'vc_column' || $tag == 'vc_column_inner') {
+            $class_string = preg_replace('/vc_(col-\w{1,2}-\d{1,2})/', '$1', $class_string);
+        }
+    }
+
+    return $class_string; // Important: you should always return modified or original $class_string
+}
+add_filter('vc_shortcodes_css_class', 'new_custom_css_classes_for_vc_row_and_vc_column', 10, 2);
 
 ?>

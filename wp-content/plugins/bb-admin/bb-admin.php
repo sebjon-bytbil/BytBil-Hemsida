@@ -15,4 +15,4 @@ include_once('inc/bb-menus.php');
 include_once('inc/bb-dashboard.php');
 include_once('inc/bb-options.php');
 
-//include_once('inc/visualcomposer/vc.php');
+include_once('inc/visualcomposer/vc.php');

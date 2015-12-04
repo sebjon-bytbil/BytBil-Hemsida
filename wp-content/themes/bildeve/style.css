@@ -4,7 +4,7 @@
  Description: Bildeve template
  Author: Tobias Franzén : BytBil Nordic AB
  Author URI: http://www.bytbil.com
- Version: 1.0.0
+ Version: 2.0.0
 */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
@@ -145,12 +145,15 @@ h6 {
 	}
 }
 
+.wpb_row {
+	margin-bottom: 0 !important;
+}
+
 
 /* Header */
 /************************************/
 header {
 	background-color: #fff;
-    padding: 30px 0;
 }
 
 #header-compact {
@@ -294,6 +297,64 @@ header {
 
 }
 
+/* Sub menu */
+
+.bb-menu {
+	background-color: #fff;
+}
+.bb-menu ul {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.bb-submenu .menu-item {
+	display: none;
+}
+.bb-submenu .current-menu-ancestor, .bb-submenu .current-menu-ancestor .menu-item {
+	display: block;
+}
+.bb-submenu .current-menu-ancestor a {
+	display: block;
+	padding: 16px 24px;
+	border-bottom: 1px solid #f7f7f7;
+}
+.bb-submenu .current-menu-ancestor > a {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.1em;
+	color: #333;
+	text-decoration: none !important;
+}
+.bb-submenu .current-menu-ancestor .menu-item-has-children {
+	border-left: 3px solid #2c4fa0;
+	padding-bottom: 10px;
+}
+
+.theme-renault .bb-submenu .current-menu-ancestor .menu-item-has-children {
+	border-color: #feb415;
+}
+
+.bb-submenu .current-menu-ancestor .menu-item-has-children > a {
+	padding-bottom: 7px;
+}
+.bb-submenu .current-menu-ancestor .menu-item-has-children a {
+	border: 0 !important;
+	color: #333;
+	text-transform: none;
+}
+.bb-submenu .current-menu-ancestor .menu-item-has-children .sub-menu {
+	padding-left: 10px;
+}
+.bb-submenu .current-menu-ancestor .menu-item-has-children .sub-menu a {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	font-size: 0.95em;
+}
+.bb-submenu .current-menu-item > a {
+	font-weight: 600;
+}
+
 #header-second {
 	float: right;
 }
@@ -328,6 +389,10 @@ main {
 	background-color: #f7f7f7;
 }
 
+.bb-text {
+	margin-bottom: 15px;
+}
+
 
 /* Wrappers */
 /************************************/
@@ -343,13 +408,13 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
 	max-width: 1170px;
 	position: relative;
 	margin: 0 auto;
-    /*
 	padding: 36px 0 36px 0;
-    */
+	float: none !important;
 }
 
 .wrapper-narrow {
-	max-width: 1110px !important;
+	/*max-width: 1110px !important;*/
+	max-width: 1170px !important;
 }
 
 .marked {
@@ -374,44 +439,100 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
 
 .box-simple {
 	background-color: #fff;
-	margin: 13px 0 13px 0;
+	margin-top: 13px !important;
+	margin-bottom: 13px !important;
+}
+
+.card {
+	text-align: center;
+}
+.card .btn {
+	display: block;
+}
+
+.card-car {
+	text-align: left;
+	border-bottom: 2px solid #aaaaaa;
+}
+.card-car .card-icon {
+	padding: 17px 17px 0 17px;
+}
+.card-car .card-title h4 {
+	margin-bottom: 10px;
+	padding: 0 17px 5px 17px;
+}
+.card-car .card-description {
+	padding: 0 17px 10px 17px;
+}
+.card-car .card-description .btn {
+	display: inline-block;
 }
 
 .box h2, .box-second h2 {
 	font-size: 1.5em;
 }
 
+.bb-offers .row {
+	display: none;
+}
+
 .box-offer {
 	padding: 2px;
+	margin: 13px 0;
 	border-bottom: 2px solid #aaa;
 	background-color: #fff;
 	font-size: 0;
+	position: relative;
+	left: -9999px;
 }
-.box-offer img {
+.box-offer-inner {
+	overflow: hidden;
+}
+.box-offer-image {
+	position: relative;
 	width: 100%;
+}
+.box-offer-lower {
+	position: relative;
+	background-color: #fff;
 }
 .box-offer-header {
 	padding: 3.5% 4.4%;
 	font-weight: 600;
 	font-size: 18px;
 	display: inline-block;
-	width: 86%;
+	/*width: 86%;*/
+	width: 80%;
 	vertical-align: middle;
+	position: relative;
+	z-index: 100;
 }
 .box-offer-logo {
 	display: inline-block;
 	padding: 3.3%;
-	width: 14%;
+	/*width: 14%;*/
+	width: auto;
 	height: 100%;
 	vertical-align: middle;
 	text-align: right;
+	float: right;
 
 }
 .box-offer-logo img {
-	width: 100%;
-	max-width: 40px;
+	/*width: 100%;
+	min-width: 30px;*/
+	max-height: 30px;
+	min-height: 30px;
 	margin-bottom: -3px;
 	margin-left: -3px;
+}
+.box-offer-more {
+	font-size: 15px;
+	padding: 0 4.4% 3.5% 4.4%;
+	position: relative;
+}
+.box-offer-more .btn {
+	font-size: 0.85em;
 }
 
 .plug {
@@ -429,15 +550,25 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
     max-height: 68px;
 }
 
-/*.icon {
-	padding: 24px;
+.vc_control-btn .icon {
+    padding: 0 !important;
 }
-.icon-title h4 {
+
+.card-icon {
+	padding: 22px;
+}
+.card-icon img {
+	max-width: 100%;
+}
+.card-title h4 {
 	margin-bottom: 10px;
 }
-.icon-description {
-	padding: 0 24px 24px 24px;
-}*/
+.card-description {
+	padding: 0 22px 22px 22px;
+}
+.card-description p {
+	margin-bottom: 20px;
+}
 
 
 /* Padding */
@@ -532,10 +663,19 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
 		opacity: 1;
 	}
 }
+
 .slideshow img {
 	width: 100%;
 }
 
+.flexslider ol, .flexslider ul {
+	padding: 0;
+	margin: 0;
+}
+
+.flexslider img {
+	width: 100%;
+}
 
 .flexslider {
     border: none !important;
@@ -752,6 +892,7 @@ footer {
 	min-height: 100px;
 	text-align: center;
 	color: #fff;
+	font-size: 0.9em;
 }
 footer a {
 	color: #fff !important;
@@ -767,7 +908,8 @@ footer .phonenumber {
 	font-size: 1.6em;
 }
 
-body:not(.home) footer #footer-menu {
+/*body:not(.home) footer #footer-menu {*/
+footer #footer-menu {
 	margin: 20px 0 35px 0;
 }
 
@@ -805,17 +947,14 @@ footer #footer-menu ul li {
 }
 
 footer #bildeve-seal {
-	max-width: 320px;
-    max-height: 320px;
-    padding-top: 30px;
-    padding-bottom: 15px;    
+	width: 94px;
+	height: 94px;
 }
 
 footer .footer-search .input-group {
 	height: 3.8em;
 	width: 100%;
 }
-
 @media(max-width: 480px) {
 	footer .footer-search .input-group {
 		height: 48px;
@@ -865,6 +1004,136 @@ footer .footer-search button span {
 	}
 }
 
+
+/* FLEXSLIDER CAPTION */
+/************************************/
+
+.caption,
+.caption-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    -webkit-transition: all ease-in 500ms;
+            transition: all ease-in 500ms;
+}
+
+.wrapper .caption-wrapper {
+    overflow: hidden;
+}
+
+.caption[data-animation="fade"]{
+    opacity: 0;
+}
+.caption[data-animation="left"]{
+    left: -100%;
+}
+.caption[data-animation="right"]{
+    left: 200%;
+}
+
+.flex-control-paging {
+    /*padding: 15px 0 5px;*/
+    position: relative;
+    bottom: 0;
+}
+
+.full .flex-control-paging {
+    position: absolute;
+    z-index: 2;
+    bottom: 15px;
+}
+
+.flex-control-paging li a {
+    width: 8px;
+    height: 8px;
+    background: rgba(255,255,255,0.6);
+}
+
+.flex-control-paging li a:hover {
+    background: rgba(255,255,255,0.9);
+}
+
+.flex-control-paging li a.flex-active {
+    background: #fff;
+    background: rgba(255,255,255,1);
+}
+
+.no-paging .flex-control-paging {
+    display: none;
+}
+
+.vertical-align-wrapper {
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 15px 60px;
+}
+
+.vertical-align {
+    display: table-cell;
+}
+
+.vertical-align.top,
+.vertical-align.top-left,
+.vertical-align.top-right {
+    vertical-align: top;
+}
+
+.vertical-align.bottom,
+.vertical-align.bottom-left,
+.vertical-align.bottom-right {
+    vertical-align: bottom;
+}
+
+.vertical-align.center,
+.vertical-align.left,
+.vertical-align.right {
+    vertical-align: middle;
+}
+
+.horizontal-align {
+    float: none;
+    display: table;
+}
+
+.vertical-align.left .horizontal-align,
+.vertical-align.top-left .horizontal-align,
+.vertical-align.bottom-left .horizontal-align {
+    float: left;
+}
+
+.vertical-align.right .horizontal-align,
+.vertical-align.top-right .horizontal-align,
+.vertical-align.bottom-right .horizontal-align {
+    float: right;
+}
+
+.vertical-align.top .horizontal-align,
+.vertical-align.center .horizontal-align,
+.vertical-align.bottom .horizontal-align {
+    float: none;
+    margin: 0 auto;
+    display: table;
+}
+
+.caption-contents {
+    padding: 45px;
+}
+
+.caption-contents h1 {
+    margin: 0.3em 0;
+    font-size: 3em;
+}
+
+.caption-contents .caption-text {
+    margin: 15px 0;
+}
 
 /* Miscellaneous */
 /************************************/

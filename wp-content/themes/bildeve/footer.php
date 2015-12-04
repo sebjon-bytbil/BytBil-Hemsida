@@ -1,15 +1,17 @@
 <?php
+    global $frontpageID;
+    $dir = get_template_directory_uri();
 
-$dir = get_template_directory_uri();
+    $menu = new wp_bootstrap_navwalker();
 
-$menu_string = wp_nav_menu(array(
-        'menu' => 'Sidfot',
-        'echo' => false,
-        'depth' => 1,
-        'container' => false
-    )
-);
-
+    $menu_string = wp_nav_menu(array(
+            'menu' => 'Sidfot',
+            'echo' => false,
+            'depth' => 3,
+            'container' => false,
+            'walker' => $menu
+        )
+    );
 ?>
 
             <footer class="side-padding">
@@ -28,7 +30,7 @@ $menu_string = wp_nav_menu(array(
                     </div>
 
                     <div class="footer-row footer-facilities">
-                        <!-- Add Facility Function -->
+                        <?php get_facilities_footer(); ?>
                     </div>
 
                     <div class="footer-row" id="footer-menu">
