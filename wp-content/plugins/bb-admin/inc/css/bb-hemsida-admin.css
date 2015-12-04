@@ -367,79 +367,15 @@ body.wp-admin #wpwrap #qm {
 
 /* Visual Composer */
 
-.wp-admin .vc_navbar .vc_navbar-brand {
+.vc_navbar .vc_navbar-brand {
     display: none;
 }
 
-.wp-admin .vc_license-activation-notice {
-    display: none;
-}
-
-.wp-admin .composer-switch .logo-icon {
-    display: none;
-}
-
-.wp-admin .vc_panel {
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    width: 90%;
-    position: fixed;
-    z-index: 100000;
-    top: 74px;
-    left: 5%;
-    height: auto !important;
-    min-height: 150px;
-    display: none;
-    border-color: #DDDDDD;
-}
-
-.wp-admin .vc_panel-footer {
-    padding-bottom: 30px;
-}
-
-.wp-admin .vc_panel-tabs > .vc_edit-form-tab.vc_active {
+.vc_panel-tabs > .vc_edit-form-tab.vc_active {
     display: block;
-    width: 100%;
     float: left;
-    padding-bottom: 40px;
-}
-
-.vc_no-content-helper, .vc_welcome .icon {
-    background: transparent;
-}
-
-.vc_empty-placeholder {
-    margin: 0 !important;
-}
-
-.bytbil-logo {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.vc_welcome.vc_not-empty .bytbil-logo {
-    display: none;
-}
-
-.wp-admin .composer-switch a,
-.wp-admin .composer-switch a:visited {
-    text-decoration: none;
-    cursor: pointer;
-    color: #ffffff;
-    display: inline-block;
-    line-height: 28px;
-    height: 28px;
-    padding: 4px 10px;
-    background-color: #0666a5;
-    border-radius: 0 !important;
-}
-
-.wp-admin #vc_teaser {
-    display: none;
+    width: 100%;
+    padding-top: 60px;
 }
 
 /* Mobile */
