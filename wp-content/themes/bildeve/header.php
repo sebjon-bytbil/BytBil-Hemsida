@@ -122,6 +122,8 @@ $brands = get_field('settings-brands','options');
                 ?>
                 <div id="header-second">
 
+                    <?php get_brands(); ?>
+
                     <?php
                         foreach($brands as $brand){
                             ?>
