@@ -51,16 +51,20 @@ $ids = get_post_ancestors($post);
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <div class="left-column offer-specific black-page">
                     <header class="entry-header">
+                            <?php
+                            $masterPost = bytbil_get_master_post(get_the_ID());
+                            switch_to_master();
+                            $parentIds = get_post_ancestors($masterPost->ID);
 
-                        <?php
-                        $masterPost = bytbil_get_master_post(get_the_ID());
-                        switch_to_master(); ?>
-                        <h2 class="entry-title"><?php echo parse_model_name(get_the_title($post->post_parent)); ?></h2>
-                        <?php restore_from_master(); ?>
-
+                            ?>
+                            <h2 class="entry-title"><?php echo parse_model_name(get_the_title($parentIds[0])); ?></h2>
+                            <?php restore_from_master(); ?>
                     </header>
                     <!-- .entry-header -->
-
+                    
+                    <?php
+                    $parent_menu = true;
+                    ?>
                     <?php include 'mobile-menu.php'; ?>
 
                     <div class="side-menu-container side-menu-old">
@@ -68,7 +72,7 @@ $ids = get_post_ancestors($post);
                             <?php
                             echo wpb_list_child_pagesparam(true); ?>
                         </ul>
-                        <?php new_volvo_menu('bilmeny', true, 'side-menu-large', false); ?>
+                        <?php new_volvo_menu('bilmeny', true, 'side-menu-small', false); ?>
                     </div>
 
                 </div>

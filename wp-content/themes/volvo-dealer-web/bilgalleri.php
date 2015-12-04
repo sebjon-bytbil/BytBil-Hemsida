@@ -68,24 +68,21 @@ $the_query->the_post();
                     </header>
                     <!-- .entry-header -->
 
+                    <?php $parent_menu = true; ?>
                     <?php include 'mobile-menu.php'; ?>
 
                     <div class="side-menu-container side-menu-old">
                         <ul class="side-menu-large">
                             <?php
-
-
                             echo wpb_list_child_pagesparam($ids);?>
-
-
                         </ul>
-                        <?php new_volvo_menu('bilmeny', true, 'side-menu-large', false); ?>
+                        <?php new_volvo_menu('bilmeny', true, 'side-menu-small', false); ?>
 
                     </div>
 
                 </div>
 
-                <div class="right-column" style="text-align: left; width: 100%;">
+                <div class="right-column" style="text-align: left;">
                     <?php
                     switch_to_master();
                     $gallery = get_field('galleri', $post->ID);

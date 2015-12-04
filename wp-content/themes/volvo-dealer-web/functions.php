@@ -1680,10 +1680,15 @@ function oppettider($atts)
 add_shortcode('oppettider', 'oppettider');
 
 
-function wpb_list_child_pages($includeBuildCar = false, $carTitle = null)
+function wpb_list_child_pages($includeBuildCar = false, $carTitle = null, $parent = false)
 {
 
     global $post;
+    $id = $post->ID;
+    
+    if($parent) {
+        $id = $parent->ID;
+    }
 
 
     $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0&exv');
@@ -1713,16 +1718,18 @@ function wpb_list_child_pages($includeBuildCar = false, $carTitle = null)
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 
-function wpb_list_child_pagesparam($ids)
+function wpb_list_child_pagesparam($ids, $childpages=true)
 {
 
     global $post;
 
 
-    $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $ids[0] . '&echo=0&exv');
-
-    if ($childpages) {
+    if($childpages){
+        $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $ids[0] . '&echo=0&exv');
         $string = '<ul>' . $childpages . '</ul>';
+    }
+    else {
+        wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $ids[0] . '&echo=0&exv');
     }
 
     return $string;

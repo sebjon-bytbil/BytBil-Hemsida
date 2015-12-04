@@ -82,7 +82,8 @@ if ($masterPost):
                         </header>
                         <!-- .entry-header -->
 
-                        <?php include 'mobile-menu.php'; ?>
+                        <?php $parent_menu = true; ?>
+                         <?php include 'mobile-menu.php'; ?>
 
                         <div class="side-menu-container side-menu-old">
                             <ul class="side-menu-large">
@@ -93,7 +94,7 @@ if ($masterPost):
 
 
                             </ul>
-                            <?php new_volvo_menu('bilmeny', true, 'side-menu-large', false); ?>
+                            <?php new_volvo_menu('bilmeny', true, 'side-menu-small', false); ?>
 
                         </div>
 

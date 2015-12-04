@@ -23,13 +23,14 @@ restore_from_master();
     } ?>>
 <!--<![endif]-->
 <head>
+    <title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('description'); ?></title>
     <?php wp_head(); ?>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/flexslider.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/responsive.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/lytebox/lytebox.css">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" style=""></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider-min.js"
-            style=""></script>
+    <!--<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.1.min.js"></script>-->
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/lytebox/lytebox.js" style=""></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jslider.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/responsive.js"></script>
@@ -67,6 +68,7 @@ restore_from_master();
     }
     restore_from_master();
     ?>
+    
 
 </head>
 
@@ -86,7 +88,7 @@ restore_from_master();
         if ($uid) {
             switch_to_master();
             $bg = get_field("bakgrundsbild", $uid);
-            restore_from_master();
+            restore_current_blog();
         }
 
         if (!$bg) {

@@ -371,6 +371,13 @@ body.wp-admin #wpwrap #qm {
     display: none;
 }
 
+.vc_panel-tabs > .vc_edit-form-tab.vc_active {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 60px;
+}
+
 /* Mobile */
 @media screen and (max-width: 782px) {
     html.wp-toolbar,

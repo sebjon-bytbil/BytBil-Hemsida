@@ -46,23 +46,32 @@ the_post();
                 <div class="left-column">
 
                     <header class="entry-header">
-                        <h1 class="entry-title"><?php echo empty($post->post_parent) ? get_the_title($post->ID) : get_the_title($post->post_parent); ?></h1>
-                    </header>
-                    <!-- .entry-header -->
+                            <?php
+                            $masterPost = bytbil_get_master_post(get_the_ID());
+                            switch_to_master();
+                            $parentIds = get_post_ancestors($masterPost->ID);
 
-                    <?php include 'mobile-menu.php'; ?>
+                            ?>
+                            <h2 class="entry-title"><?php echo parse_model_name(get_the_title($parentIds[0])); ?></h2>
+                            <?php restore_from_master(); ?>
+                        </header>
+                        <!-- .entry-header -->
 
-                    <div class="side-menu-container side-menu-old">
-                        <ul class="side-menu-large">
+                        <?php $parent_menu = true; ?>
+                        <?php include 'mobile-menu.php'; ?>
 
-                            <?php new_volvo_menu('bottom-buy'); ?>
+                        <div class="side-menu-container side-menu-old">
+                            <ul class="side-menu-large">
+                                <?php
 
-                        </ul>
-                        <!--<?php //echo volvo_get_custom_menu('Bilmeny', 'side-menu-small'); ?>-->
-                        <!--<ul class="side-menu-small">
-								<?php //new_volvo_menu('bilmeny'); ?>
-							</ul>-->
-                    </div>
+
+                                echo wpb_list_child_pagesparam($ids, true);?>
+
+
+                            </ul>
+                            <?php new_volvo_menu('bilmeny', true, 'side-menu-small', false); ?>
+
+                        </div>
 
                 </div>
 

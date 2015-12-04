@@ -62,7 +62,7 @@ if ($masterPost):
                                 <?php echo wpb_list_child_pages(true); ?>
 
                             </ul>
-                            <?php new_volvo_menu('bilmeny', true, 'side-menu-large', false); ?>
+                            <?php new_volvo_menu('bilmeny', true, 'side-menu-small', false); ?>
 
                         </div>
 
@@ -88,6 +88,7 @@ if ($masterPost):
                         $the_query = new WP_Query($args);
 
                         while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                            <img class="single-bilar-slideshow-image" src="<?php echo get_field('slideshow2'); ?>">
                             <h2><?php echo get_field('rubriktexten'); ?> </h2>
                             <?php the_content(); ?>
                             <h3><?php echo $pris; ?></h3>

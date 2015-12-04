@@ -27,8 +27,18 @@ if ($post_object):
 <div id="primary" class="content-area">
     <div id="content" class="site-content" role="main">
         <div class="wrapper">
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="margin-bottom: 200px;">
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="">
+                <div class="left-column kop-bil-column black-page" style="padding: 0 !important;">
+                    <?php
+                    $specific_menu = true;
+                    $specific = 'bottom-buy';
+                    ?>
+                     <?php include 'mobile-menu.php'; ?>
+                </div>
+
+                    <div id="utrustning" class="right-column">
                 <iframe scrolling="no" frameborder="0" id="iframeDiv" style="background-color: #fff"></iframe>
+                </div>
             </article>
             <!-- #post -->
 
