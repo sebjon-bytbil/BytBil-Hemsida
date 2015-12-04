@@ -744,7 +744,7 @@ array("ion ion-xbox" => "ion-xbox")
 }
 add_action( 'vc_base_register_admin_css', 'register_fonts_to_vc_editor' );
 function register_fonts_to_vc_editor(){
-    wp_register_style( 'icon_bytbil', get_stylesheet_directory_uri() . '/public/css/ionicons.min.css', false, "1.0.0", 'screen' );
+    wp_register_style( 'icon_bytbil', get_stylesheet_directory_uri() . '/css/ionicons.min.css', false, "1.0.0", 'screen' );
 }
 
 // @see Vc_Backend_Editor::printScriptsMessages (wp-content/plugins/js_composer/include/classes/editors/class-vc-backend-editor.php),
