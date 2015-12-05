@@ -367,15 +367,216 @@ body.wp-admin #wpwrap #qm {
 
 /* Visual Composer */
 
-.vc_navbar .vc_navbar-brand {
+
+.vc_col-sm-4 > .col-sm-4 {
+    width: 100%;
+}
+
+
+.vc_col-sm-6 > .col-sm-6 {
+    width: 100%;
+}
+
+.vc_col-sm-9 > .col-sm-9 {
+    width: 100%;
+}
+.vc_col-sm-3 > .col-sm-3 {
+    width: 100%;
+}
+/* IConsFor Elements */
+
+/* Accesspaket */
+.wpb-content-layouts .vc_element-icon {
+    background: url('../../img/ionicons/ios7-photos.png');
+    background-size: contain !important;
+}
+
+/* Accesspaket */
+.wpb-content-layouts #accesspackage .vc_element-icon {
+    background: url('../../img/ionicons/model-s.png');
+}
+
+
+/* Erbjudanden */
+.wpb-content-layouts #offers .vc_element-icon {
+    background: url('../../img/ionicons/ios7-pricetags.png');
+}
+
+/* Personal */
+.wpb-content-layouts #staff .vc_element-icon {
+    background: url('../../img/ionicons/person-stalker.png');
+}
+
+/* Galleri */
+.wpb-content-layouts #gallery .vc_element-icon {
+    background: url('../../img/ionicons/grid.png');
+}
+
+/* Accordion */
+.wpb-content-layouts #accordion .vc_element-icon {
+    background: url('../../img/ionicons/ios7-drag.png');
+}
+
+/* Menu */
+.wpb-content-layouts #menu .vc_element-icon {
+    background: url('../../img/ionicons/navicon.png');
+}
+
+/* Bildspel */
+.wpb-content-layouts #imageslider .vc_element-icon {
+    background: url('../../img/ionicons/ios7-albums-outline.png');
+}
+
+/* Kort */
+.wpb-content-layouts #card .vc_element-icon {
+    background: url('../../img/ionicons/ios7-browsers-outline.png');
+}
+
+/* Karta */
+.wpb-content-layouts #map .vc_element-icon {
+    background: url('../../img/ionicons/map.png');
+}
+
+/* Tabbar */
+.wpb-content-layouts #tabs .vc_element-icon {
+    background: url('../../img/ionicons/ios7-folder.png');
+}
+
+/* Ikoner */
+.wpb-content-layouts #icons .vc_element-icon {
+    background: url('../../img/ionicons/ios7-circle-filled.png');
+}
+
+/* Textblock */
+.wpb-content-layouts #text .vc_element-icon {
+    background: url('../../img/ionicons/ios7-compose-outline.png');
+}
+
+/* iFrame */
+.wpb-content-layouts #iframe .vc_element-icon {
+    background: url('../../img/ionicons/ios7-barcode-outline.png');
+}
+
+/* Knappar */
+.wpb-content-layouts #buttons .vc_element-icon {
+    background: url('../../img/ionicons/ios7-plus-outline.png');
+}
+
+
+/* Sociala */
+.wpb-content-layouts #social .vc_element-icon {
+    background: url('../../img/ionicons/android-social.png');
+}
+
+.wpb-elements-list-modal .wpb-content-layouts .vc_visible[data-element="reserve"]{
     display: none;
 }
 
-.vc_panel-tabs > .vc_edit-form-tab.vc_active {
+
+/* Anläggningskort */
+.wpb-content-layouts #facilitycard .vc_element-icon {
+    background: url('../../img/ionicons/ios7-home.png');
+}
+
+
+/* Anläggningar */
+.wpb-content-layouts #facilities .vc_element-icon {
+    background: url('../../img/ionicons/ios7-location.png');
+}
+
+
+/* Nyheter */
+.wpb-content-layouts #news .vc_element-icon {
+    background: url('../../img/ionicons/ios7-paper.png');
+}
+
+/* Video */
+.wpb-content-layouts #video .vc_element-icon {
+    background: url('../../img/ionicons/ios7-film.png');
+}
+
+/* Breadcrumbs */
+.wpb-content-layouts #breadcrumbs .vc_element-icon {
+    background: url('../../img/ionicons/ios7-eye.png');
+}
+
+.wp-admin .vc_navbar .vc_navbar-brand {
+    display: none;
+}
+
+.wp-admin .vc_license-activation-notice {
+    display: none;
+}
+
+.wp-admin .composer-switch .logo-icon {
+    display: none;
+}
+
+.wp-admin .vc_properties-list {
+    padding-bottom: 40px;
+}
+
+.wp-admin .vc_panel {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    width: 90%;
+    position: fixed;
+    z-index: 100000;
+    top: 74px;
+    left: 5%;
+    height: auto !important;
+    min-height: 150px;
+    display: none;
+    border-color: #DDDDDD;
+}
+
+.wp-admin .vc_panel-footer {
+    padding-bottom: 30px;
+}
+
+.wp-admin .vc_panel-tabs > .vc_edit-form-tab.vc_active {
     display: block;
-    float: left;
     width: 100%;
-    padding-top: 60px;
+    float: left;
+    padding-bottom: 40px;
+}
+
+.vc_no-content-helper, .vc_welcome .icon {
+    background: transparent;
+}
+
+.vc_empty-placeholder {
+    margin: 0 !important;
+}
+
+.bytbil-logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.vc_welcome.vc_not-empty .bytbil-logo {
+    display: none;
+}
+
+.wp-admin .composer-switch a,
+.wp-admin .composer-switch a:visited {
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 28px;
+    height: 28px;
+    padding: 4px 10px;
+    background-color: #0666a5;
+    border-radius: 0 !important;
+}
+
+.wp-admin #vc_teaser {
+    display: none;
 }
 
 /* Mobile */

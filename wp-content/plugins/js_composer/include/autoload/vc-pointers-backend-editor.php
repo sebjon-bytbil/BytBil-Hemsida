@@ -33,8 +33,8 @@ function vc_backend_editor_register_pointer( $p ) {
 					'target' => '#vc_templates-editor-button, #vc-templatera-editor-button',
 					'options' => array(
 						'content' => sprintf( '<h3> %s </h3> <p> %s </p>',
-							__( 'Add Elements', 'js_composer' ),
-							__( 'Add new element or start with a template.', 'js_composer' )
+							__( 'Lägg till element', 'js_composer' ),
+							__( 'Lägg till element eller börja med en sidmall.', 'js_composer' )
 						),
 						'position' => array(
 							'edge' => 'left',

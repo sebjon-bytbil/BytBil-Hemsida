@@ -33,6 +33,6 @@
 		<button type="button" class="vc_btn vc_btn-default"
 		        data-dismiss="panel"><?php _e( 'Close', 'js_composer' ) ?></button>
 		<button type="button" class="vc_btn vc_btn-primary"
-		        data-save="true"><?php _e( 'Save Changes', 'js_composer' ) ?></button>
+		        data-save="true"><?php _e( 'Spara ändringar', 'js_composer' ) ?></button>
 	</div>
 </div>

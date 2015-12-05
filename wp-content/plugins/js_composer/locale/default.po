@@ -4091,15 +4091,15 @@ msgid "Settings"
 msgstr ""
 
 #: include/./classes/core/class-vc-base.php:639
-msgid "BACKEND EDITOR"
+msgid "Backend Redigering"
 msgstr ""
 
 #: include/./classes/core/class-vc-base.php:640
-msgid "FRONTEND EDITOR"
+msgid "Live Redigering"
 msgstr ""
 
 #: include/./classes/core/class-vc-base.php:641
-msgid "CLASSIC MODE"
+msgid "Gammalt Läge"
 msgstr ""
 
 #: include/./classes/core/class-vc-base.php:642
@@ -4633,7 +4633,7 @@ msgstr ""
 #: include/./templates/editors/popups/panel_post_settings.tpl.php:35
 #: include/./templates/editors/popups/panel_shortcode_edit_form.tpl.php:17
 #: include/./templates/pages/vc-settings/tab.php:31
-msgid "Save Changes"
+msgid "Spara ändringar"
 msgstr ""
 
 #: include/./classes/settings/class-vc-automapper.php:336

@@ -9,7 +9,7 @@
 				       placeholder="<?php esc_attr_e( 'Search element by title', 'js_composer' ); ?>"/>
 
 				<h3 class="vc_modal-title"
-				    id="vc_add-element-dialog-title"><?php _e( 'Add Element', 'js_composer' ) ?></h3>
+				    id="vc_add-element-dialog-title"><?php _e( 'Lägg till element', 'js_composer' ) ?></h3>
 			</div>
 			<div class="vc_modal-body wpb-elements-list">
 				<ul class="wpb-content-layouts-container" style="position: relative;">

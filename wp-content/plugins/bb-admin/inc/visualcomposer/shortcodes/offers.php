@@ -129,6 +129,8 @@ class OffersShortcode extends ShortcodeBase
 
                     // Headline
                     $items[$i]['headline'] = get_the_title();
+            
+                    $items[$i]['permalink'] = get_the_permalink();
 
                     // Ingress
                     $items[$i]['ingress'] = get_field('offer-subheader');

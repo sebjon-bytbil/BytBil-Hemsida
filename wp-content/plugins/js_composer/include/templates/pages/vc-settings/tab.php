@@ -30,7 +30,7 @@ $css = $tab == 'color' && $use_custom ? ' color_enabled' : '';
 	if ( $tab === 'updater' && ! empty( $license_activation_key ) ) $submit_button_attributes['disabled'] = 'true'
 	?>
 	<?php if ( $tab !== 'updater' ): ?>
-		<?php submit_button( __( 'Save Changes', 'js_composer' ), 'primary', 'submit_btn', true, $submit_button_attributes ); ?>
+		<?php submit_button( __( 'Spara ändringar', 'js_composer' ), 'primary', 'submit_btn', true, $submit_button_attributes ); ?>
 	<?php endif; ?>
 	<input type="hidden" name="vc_action" value="vc_action-<?php echo $tab; ?>"
 	       id="vc_settings-<?php echo $tab; ?>-action"/>

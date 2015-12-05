@@ -8,6 +8,8 @@
 */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import url('wp-content/themes/bildeve/css/ionicons.min.css');
+
 
 
 .navbar-default,
@@ -297,6 +299,22 @@ header {
 
 }
 
+/* Visual Composer REmovals */
+
+.wpb-elements-list-modal .wpb-content-layouts .vc_visible[data-element="reserve"]{
+    display: none;
+}
+
+
+.vc_row[data-vc-full-width="true"]{
+    width: 100%;
+    max-width: none;
+}
+
+.vc_row {
+    max-width: 1170px;
+    margin: 0 auto;
+}
 /* Sub menu */
 
 .bb-menu {
@@ -404,12 +422,20 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#B8000000, endColorstr=#B8000000);
 }
 
+
+main .wrapper {
+    padding-top: 0;
+}
 .wrapper {
 	max-width: 1170px;
 	position: relative;
 	margin: 0 auto;
 	padding: 36px 0 36px 0;
 	float: none !important;
+}
+
+main .wrapper {
+    padding-top: 0;
 }
 
 .wrapper-narrow {
@@ -445,9 +471,22 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
 
 .card {
 	text-align: center;
+    width: 100%;
+    padding: 30px 15px;
+    background: #fff;
+    border-top: 2px solid #636363;
+
 }
 .card .btn {
 	display: block;
+}
+
+.card-header {
+    font-size: 42px;
+}
+
+.card-header h5 {
+    font-size: 24px;
 }
 
 .card-car {
@@ -473,7 +512,7 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
 }
 
 .bb-offers .row {
-	display: none;
+	display: block;;
 }
 
 .box-offer {
@@ -483,10 +522,10 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
 	background-color: #fff;
 	font-size: 0;
 	position: relative;
-	left: -9999px;
 }
 .box-offer-inner {
 	overflow: hidden;
+    background: #fff;
 }
 .box-offer-image {
 	position: relative;
@@ -507,6 +546,12 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
 	position: relative;
 	z-index: 100;
 }
+
+.box-offer-header h2 {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
 .box-offer-logo {
 	display: inline-block;
 	padding: 3.3%;
@@ -554,6 +599,13 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
     padding: 0 !important;
 }
 
+.owl-item.active,
+.owl-stage {
+    width: 100% !important;
+}
+.vc_row.vc_row-no-padding .wpb_column{
+    width: 100% !important;
+}
 .card-icon {
 	padding: 22px;
 }
@@ -713,12 +765,14 @@ html.ie7 .wrapper-all, html.ie8 .wrapper-all {
 	font-size: 0.9em;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-black {
 	background-color: #2c4fa0 !important;
 	border: 1px solid #2c4fa0;
 	color: #fff !important;
 }
-.btn-primary-inverted {
+.btn-primary-inverted,
+.btn-black{
 	background-color: transparent;
 	border: 1px solid #2c4fa0;
 	color: #2c4fa0;

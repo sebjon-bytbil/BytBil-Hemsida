@@ -6,3 +6,13 @@
 .vc_row[data-rowslider="true"]{
     width: 100.3%;
 }
+
+..vc_row.vc_inner {
+    max-width: 1170px;
+    margin: 0 auto;
+    float: none;
+}
+
+.wpb_column.vc_empty-element {
+    width: 100%;
+}

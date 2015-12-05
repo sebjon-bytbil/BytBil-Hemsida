@@ -2,10 +2,9 @@
 
 include_once('breadcrumbs.php');
 include_once('wp_bootstrap_navwalker.php');
-//require_once('wp-simple-301-redirects.php');
-//require_once('plugins/anlaggningar.php');
 include_once('plugins/bildeve-settings.php');
 
+require_once(plugin_dir_path(__FILE__) . "inc/iconspicker.php");
 
 /* Custom plugins */
 if (!function_exists('bytbil_brands')) {
@@ -28,8 +27,8 @@ if (function_exists('acf_set_options_page_title')) {
 
 function register_theme_menu() {
     register_nav_menus( array(
-        'primary' => __( 'Huvudmeny', 'ahlberg-bil' ),
-        'footer' => __( 'Sidfot', 'ahlberg-bil' ),
+        'primary' => __( 'Huvudmeny', 'bildeve' ),
+        'footer' => __( 'Sidfot', 'bildeve' ),
     ) );
 }
 
@@ -49,6 +48,11 @@ function get_ID_by_slug($page_slug)
     } else {
         return null;
     }
+}
+
+add_filter( 'vc_load_default_templates', 'my_custom_template_modify_array' ); // Hook in
+function my_custom_template_modify_array( $data ) {
+    return array(); // This will remove all default templates. Basically you should use native PHP functions to modify existing array and then return it.
 }
 
 /*add_action('init', 'highlight_init_jquery');

@@ -53,13 +53,13 @@ Class Vc_Templates_Panel_Editor implements Vc_Render {
 		if ( 'my_templates' == $category['category'] ) {
 			$category['output'] = '
 				<div class="vc_column vc_col-sm-12">
-					<div class="vc_element_label">' . esc_html( 'Save current layout as a template', 'js_composer' ) . '</div>
+					<div class="vc_element_label">' . esc_html( 'Spara nuvarande sida som en mall.', 'js_composer' ) . '</div>
 					<div class="vc_input-group">
 						<input name="padding" class="vc_form-control wpb-textinput vc_panel-templates-name" type="text" value=""
 						       placeholder="' . esc_attr( 'Template name', 'js_composer' ) . '">
 						<span class="vc_input-group-btn"> <button class="vc_btn vc_btn-primary vc_btn-sm vc_template-save-btn">' . esc_html( 'Save Template', 'js_composer' ) . '</button></span>
 					</div>
-					<span class="vc_description">' . esc_html( 'Save layout and reuse it on different sections of this site.', 'js_composer' ) . '</span>
+					<span class="vc_description">' . esc_html( 'Spara nuvarande sida och använd den i olika sektioner på siten.', 'js_composer' ) . '</span>
 				</div>';
 			$category['output'] .= '<div class="vc_column vc_col-sm-12">';
 			if ( isset( $category['category_name'] ) ) {
@@ -360,8 +360,8 @@ Class Vc_Templates_Panel_Editor implements Vc_Render {
 			// this has only 'name' and 'template' key  and index 'key' is template id.
 			$arr_category = array(
 				'category' => 'my_templates',
-				'category_name' => __( 'My Templates', 'js_composer' ),
-				'category_description' => __( 'Append previously saved template to the current layout.', 'js_composer' ),
+				'category_name' => __( 'Mina Sidmallar', 'js_composer' ),
+				'category_description' => __( 'Lägg till tidigare sparade mallar på denna sida.', 'js_composer' ),
 				'category_weight' => 10,
 			);
 			$category_templates = array();
@@ -384,8 +384,8 @@ Class Vc_Templates_Panel_Editor implements Vc_Render {
 		if ( ! empty( $default_templates ) ) {
 			$arr_category = array(
 				'category' => 'default_templates',
-				'category_name' => __( 'Default Templates', 'js_composer' ),
-				'category_description' => __( 'Append default template to the current layout.', 'js_composer' ),
+				'category_name' => __( 'Standard mallar', 'js_composer' ),
+				'category_description' => __( 'Lägg till en standardmall på denna sida..', 'js_composer' ),
 				'category_weight' => 11,
 			);
 			$category_templates = array();
