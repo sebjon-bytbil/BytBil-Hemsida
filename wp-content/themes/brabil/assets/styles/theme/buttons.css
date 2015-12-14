@@ -1,0 +1,88 @@
+/* Buttons */
+
+.btn {
+    font-size: inherit;
+    border-radius: 0;
+    padding: 10px 16px;
+    background: transparent;
+    border: 0;
+}
+.btn:active {
+    outline: none !important;
+}
+.btn:focus {
+    outline: none !important;
+}
+.btn.big {
+    font-size: 1.1em;
+    padding: 12px 20px;
+}
+.btn.big:active {
+}
+.btn.small {
+    font-size: 0.9em;
+    padding: 7px 12px;
+}
+.btn.small:active {
+}
+.btn-blue {
+    background: #003057;
+    color: #fff;
+}
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue:active {
+    background: #003d6f;
+    color: #eee;
+}
+.btn-blue:active {
+    background: #003057;
+    -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+.btn-white {
+    background: #fff;
+    color: #003057;
+}
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active {
+    background: #eee;
+    color: #003d6f;
+}
+.btn-white:active {
+    background: #fff;
+    -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+.btn-outline-blue {
+    border: 1px solid #003057;
+    color: #003d6f;
+}
+.btn-outline-blue:hover,
+.btn-outline-blue:focus,
+.btn-outline-blue:active {
+    border-color: #003d6f;
+    color: #003d6f;
+}
+.btn-outline-white {
+    border: 1px solid #fff;
+    color: #fff;
+}
+.btn-outline-white:hover,
+.btn-outline-white:focus,
+.btn-outline-white:active {
+    border-color: #eee;
+    color: #eee;
+}
+.btn-ghost {
+    background: transparent;
+    border: 1px solid;
+}
+.btn-ghost:active,
+.btn-ghost:hover,
+.btn-ghost:focus {
+    opacity: 0.9;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
