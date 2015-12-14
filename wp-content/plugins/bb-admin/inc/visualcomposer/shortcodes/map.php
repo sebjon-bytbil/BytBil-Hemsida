@@ -27,11 +27,22 @@ class MapShortcode extends ShortcodeBase
         if ($map_type === 'facility') {
             $id = self::Exists($atts['coordinates_facility'], '');
             if ($id !== '') {
-                $coordinates = get_field('facility-visiting-address', $id);
+                $facility_list = explode(",", $atts['coordinates_facility']);
+                $coordinates = array();
+
+                $i = 0;
+                foreach($facility_list as $facility) {
+                    if($facility_list[$i] !== "0") { // Temporary solution to a weird bug related to a hex value
+                        array_push($coordinates, get_field('facility-visiting-address', $facility_list[$i]));
+                    }
+                    $i++;
+                }
+                //$coordinates = get_field('facility-visiting-address', $id);
             }
 
-            $atts['coordinates'] = $coordinates;
+            $atts['coordinates_list'] = $coordinates;
             $atts['zoom'] = 14;
+
         } else if ($map_type === 'map') {
             $coordinates = self::Exists($atts['coordinates_map'], '');
             if ($coordinates !== '') {
@@ -90,7 +101,7 @@ function bb_init_map_shortcode()
                 'description' => 'Välj om du vill visa en karta från en existerande anläggning eller on du vill hitta en plats på kartan.'
             ),
             array(
-                'type' => 'cpt',
+                'type' => 'cptlist',
                 'post_type' => 'facility',
                 'heading' => 'Välj anläggning',
                 'param_name' => 'coordinates_facility',

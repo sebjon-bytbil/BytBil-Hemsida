@@ -12,7 +12,9 @@ include('shortcodes/facilities.php'); # Anläggningar
 include('shortcodes/facilitycard.php'); # Anläggningskort
 include('shortcodes/imageslider.php'); # Bildspel
 include('shortcodes/reserve.php'); # Boka provkörning
+include('shortcodes/breadcrumbs.php'); # Breadcrumbs
 include('shortcodes/offers.php'); # Erbjudanden
+include('shortcodes/form.php'); # Formulär
 include('shortcodes/gallery.php'); # Galleri
 include('shortcodes/iframe.php'); # IFrame
 include('shortcodes/icons.php'); # Ikoner
@@ -27,7 +29,6 @@ include('shortcodes/social.php'); # Sociala länkar
 include('shortcodes/tabs.php'); # Tabbar
 include('shortcodes/text.php'); # Text block
 include('shortcodes/video.php'); # Video
-include('shortcodes/breadcrumbs.php'); # Breadcrumbs
 
 // Custom params
 include('params/integer.php');
@@ -72,6 +73,13 @@ function enqueue_and_register_owl_slider_scripts()
         'md' => apply_filters('owl-carousel-md', 992),
         'lg' => apply_filters('owl-carousel-lg', 1200)
     ));
+}
+
+add_action('admin_enqueue_scripts', 'vc_load_custom_admin_js');
+function vc_load_custom_admin_js()
+{
+    wp_register_script('vc_general', VCADMINURL . 'assets/js/general.js', array(), '1.0.0', true);
+    wp_enqueue_script('vc_general');
 }
 
 add_action('admin_enqueue_scripts', 'vc_load_custom_admin_css');
@@ -129,6 +137,7 @@ function visualcomposeraddrowparams($sd)
         'weight' => 1
     );
     vc_add_param('vc_column', $displayascard);
+    vc_add_param('vc_column_inner', $displayascard);
 
     $cardicon = array(
         'type' => 'iconpicker',
@@ -146,6 +155,7 @@ function visualcomposeraddrowparams($sd)
         'weight' => 1
     );
     vc_add_param('vc_column', $cardicon);
+    vc_add_param('vc_column_inner', $cardicon);
 
     $cardheader = array(
         'type' => 'textfield',
@@ -160,6 +170,7 @@ function visualcomposeraddrowparams($sd)
         )
     );
     vc_add_param('vc_column', $cardheader);
+    vc_add_param('vc_column_inner', $cardheader);
 }
 
 /**

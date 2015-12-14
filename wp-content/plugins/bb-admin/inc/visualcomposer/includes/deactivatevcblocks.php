@@ -6,6 +6,7 @@ add_action( "init", "removeStandardVCElements", 1, 1 );
 function removeStandardVCElements(){
       if (function_exists("vc_remove_element")) {
             vc_remove_element( "layerslider_vc" );
+            vc_remove_element( "ninja_forms_dislay_form" ); # Not working as intended
             vc_remove_element( "rev_slider_vc" );
             vc_remove_element( "vc_facebook" );
             vc_remove_element( "vc_accordion" );

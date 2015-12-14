@@ -78,34 +78,6 @@ function bb_init_facilitycard_shortcode()
                 'heading' => 'Innehåll',
                 'param_name' => 'facility_content',
                 'description' => 'Skriv i innehållet som du vill visa i anläggningskortet.'
-            ),
-            array(
-                'type' => 'param_group',
-                'heading' => 'Knappar',
-                'param_name' => 'facility_buttons',
-                'params' => array(
-                    array(
-                        'type' => 'textfield',
-                        'heading' => 'Knapptext',
-                        'param_name' => 'button_text',
-                        'value' => ''
-                    ),
-                    array(
-                        'type' => 'dropdown',
-                        'heading' => 'Färg',
-                        'param_name' => 'color',
-                        'value' => array(
-                            'Blå' => 'blue',
-                            'Vit' => 'white'
-                        )
-                    ),
-                    array(
-                        'type' => 'href',
-                        'heading' => 'Länka till',
-                        'param_name' => 'link_to',
-                        'value' => ''
-                    )
-                )
             )
         )
     );

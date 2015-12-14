@@ -33,8 +33,9 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/public/images/iconsapple-touch-icon-152x152.png">
     <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/public/images/iconsapple-touch-icon-180x180.png">
 
-    <link href="<?php echo get_stylesheet_directory_uri(); ?>/public/css/style.min.css" rel="stylesheet">
     <?php wp_head(); ?>
+
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" rel="stylesheet">
 
     <!-- Modernizer -->
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/public/js/modernizr.custom.js"></script>

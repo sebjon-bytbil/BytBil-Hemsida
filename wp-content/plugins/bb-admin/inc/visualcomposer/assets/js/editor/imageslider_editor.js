@@ -1,5 +1,6 @@
 (function($) {
     'use strict';
+
     $(function() {
         $('body').on('vcPanel.shown', '#vc_properties-panel', function() {
             $('body').trigger('init.imageslider.settings');
@@ -10,6 +11,13 @@
             $('body').trigger('init.imageslider');
         });
     });
+
+    function toggleHidden($el, prefix) {
+        var v = $el.val();
+
+        $el.parents('[data-param_name^=' + prefix + ']').addClass('vc_dependent-hidden');
+        $el.parents('[data-param_name=' + prefix + v + ']').removeClass('vc_dependent-hidden');
+    }
 
     $('body').on('init.imageslider.settings', function() {
         if (!$('[data-param_name=slider_border] input').is(':checked')) {
@@ -25,20 +33,38 @@
 
     $('body').on('init.imageslider.params', function() {
         $('[data-param_name=slider_images_link_type] select').each(function() {
-            var $this = $(this);
-            var value = $this.val();
+            toggleHidden($(this), 'slider_images_link_');
+        });
 
-            $this.parents('[data-param_name=slider_images_link_type]').siblings('[data-param_name^=slider_images_link_]').addClass('vc_dependent-hidden');
-            $this.parents('[data-param_name=slider_images_link_type]').siblings('[data-param_name=slider_images_link_' + value + ']').removeClass('vc_dependent-hidden');
+        $('select[name=slider_type]').each(function() {
+            toggleHidden($(this), 'dep_');
+        });
+
+        $('select[name=dep_both_type]').each(function() {
+            var $t = $(this);
+            var v = $t.val();
+
+            $t.parents('[data-param_name=dep_both_type]').siblings('[data-param_name^=dep_both_]').addClass('vc_dependent-hidden');
+            $t.removeClass('vc_dependent-hidden');
+            $t.parents('[data-param_name=dep_both_type]').siblings('[data-param_name^=dep_both_' + v + ']').removeClass('vc_dependent-hidden');
         });
     });
 
     $('body').on('change', 'select[name=slider_images_link_type]', function() {
-        var $this = $(this);
-        var value = $this.val();
+        toggleHidden($(this), 'slider_images_link_');
+    });
 
-        $this.parents('[data-param_name=slider_images_link_type]').siblings('[data-param_name^=slider_images_link_]').addClass('vc_dependent-hidden');
-        $this.parents('[data-param_name=slider_images_link_type]').siblings('[data-param_name=slider_images_link_' + value + ']').removeClass('vc_dependent-hidden');
+    $('body').on('change', 'select[name=slider_type]', function() {
+        toggleHidden($(this), 'dep_');
+    });
+
+    $('body').on('change', 'select[name=dep_both_type]', function() {
+        var $t = $(this);
+        var v = $t.val();
+
+        $t.parents('[data-param_name=dep_both_type]').siblings('[data-param_name^=dep_both_]').addClass('vc_dependent-hidden');
+        $t.removeClass('vc_dependent-hidden');
+        $t.parents('[data-param_name=dep_both_type]').siblings('[data-param_name^=dep_both_' + v + ']').removeClass('vc_dependent-hidden');
     });
 
     $('body').on('change', 'input[name=slider_border]', function() {

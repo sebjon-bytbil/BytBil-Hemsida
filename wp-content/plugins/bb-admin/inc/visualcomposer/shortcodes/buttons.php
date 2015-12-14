@@ -33,6 +33,15 @@ function bb_init_buttons_shortcode()
         'category' => 'Innehåll',
         'params' => array(
             array(
+                'type' => 'textfield',
+                'holder' => '',
+                'class' => '',
+                'heading' => 'Extra CSS-klasser för knappar',
+                'param_name' => 'extra_css',
+                'value' => '',
+                'description' => 'Dessa klasser läggs till på alla knappar i gruppen'
+            ),
+            array(
                 'type' => 'param_group',
                 'heading' => 'Knappar',
                 'param_name' => 'the_buttons',
@@ -42,15 +51,6 @@ function bb_init_buttons_shortcode()
                         'heading' => 'Knapptext',
                         'param_name' => 'button_text',
                         'value' => ''
-                    ),
-                    array(
-                        'type' => 'dropdown',
-                        'heading' => 'Färg',
-                        'param_name' => 'color',
-                        'value' => array(
-                            'Blå' => 'blue',
-                            'Vit' => 'white'
-                        )
                     ),
                     array(
                         'type' => 'dropdown',

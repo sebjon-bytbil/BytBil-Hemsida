@@ -38,23 +38,21 @@ class NewsShortcode extends ShortcodeBase
             $taxonomy_terms = array();
 
             if($atts['news_categories']) {
-                var_dump( $atts['news_categories'] );
 
                 $categories = explode(",", $atts['news_categories']);
 
                 foreach($categories as $category) {
                     array_push(
                         $taxonomy_terms,
-                        array(
-                            $category
-                        )
+                        $category
                     );
                 }
 
                 $taxonomy_query = array(
                     'taxonomy'	=> 'news_categories',
-                    'field'		=> 'slug',
-                    'terms'		=> $taxonomy_terms
+                    'field'		=> 'term_id',
+                    'terms'		=> $taxonomy_terms,
+                    'operator'  => 'IN',
                 );
             }
 
@@ -66,7 +64,9 @@ class NewsShortcode extends ShortcodeBase
                 'order'             => 'DESC',
                 'paged'             => $paged,
                 'post_type'         => 'news',
-                $taxonomy_query,
+                'tax_query'         => array(
+                    $taxonomy_query
+                ),
             );
 
             //echo "<pre>"; print_r($args); echo "</pre>"; // Useful for viewing the arguments in their entirety
@@ -160,11 +160,10 @@ function bb_init_news_shortcode()
                 )
             ),
             array(
-                'type' => 'multiselect',
-                'taxonomy' => 'news_categories',
+                'type' => 'checkbox',
                 'heading' => 'Filtrera på kategori',
                 'param_name' => 'news_categories',
-                //'value' => get_tax_terms('news_categories')
+                'value' => get_tax_terms('news_categories'),
                 'dependency' => array(
                     'element' => 'news_choice',
                     'value' => 'all'
@@ -219,10 +218,22 @@ function bb_init_news_shortcode()
 
     $vcNews = new NewsShortcode($map);
 }
-add_action('after_setup_theme', 'bb_init_news_shortcode');
 
 function get_tax_terms($taxonomy) {
+    $args = array(
+        'hide_empty' => 0
+    );
+    $terms = get_terms($taxonomy, $args);
 
+    $terms_array = array();
+
+    foreach($terms as $term) {
+        $terms_array[$term->name] = $term->term_id;
+    }
+
+    return $terms_array;
 }
+
+add_action('after_setup_theme', 'bb_init_news_shortcode',10);
 
 ?>
