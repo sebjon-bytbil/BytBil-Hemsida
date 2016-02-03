@@ -3,9 +3,11 @@
 define('VCADMINPATH', plugin_dir_path( __FILE__));
 define('VCADMINURL', plugin_dir_url(__FILE__));
 
-include('includes/deactivatevcblocks.php');
+include_once('includes/deactivate-vcblocks.php');
+/*
 
 // Shortcodes
+
 include('shortcodes/accesspackage.php'); # Accesspaket
 include('shortcodes/accordion.php'); # Accordion
 include('shortcodes/facilities.php'); # Anläggningar
@@ -123,7 +125,7 @@ function visualcomposeraddrowparams($sd)
         'weight' => 1
     );
     vc_add_param('vc_row', $overlaycolor);
-    
+    */
     /*$dottedoverlay = array(
         'type' => 'checkbox',
         'heading' => 'Prickig overlay',
@@ -137,7 +139,7 @@ function visualcomposeraddrowparams($sd)
     
     vc_add_param('vc_row', $dottedoverlay);
     */
-
+    /*
     $displayascard = array(
         'type' => 'dropdown',
         'heading' => 'Visa som kort',
@@ -188,12 +190,16 @@ function visualcomposeraddrowparams($sd)
     vc_add_param('vc_column_inner', $cardheader);
 }
 
+*/
+
 /**
  * Removes items from array, based on param_name.
  *
  * @param name string||array - the param_name to remove.
  * @param params array - map array
  */
+
+/*
 function bb_remove_item_from_params($name, &$params)
 {
     $is_array = false;
@@ -237,3 +243,5 @@ function fix_array_keys($array) {
     }
     return array_values($array);
 }
+
+*/

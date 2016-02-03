@@ -46,7 +46,6 @@ a:hover {
     border-radius: 0px;
 }
 
-
 .wp-core-ui .button-primary {
     background: #0666a5;
     border-color: #0666a5;
@@ -76,6 +75,7 @@ a:hover {
     background: #00a0d2;
     color: #fff;
 }
+
 #screen-meta-links .show-settings {
     border: 0;
     background: 0 0;
@@ -390,14 +390,15 @@ body.wp-admin #wpwrap #qm {
 div.wpb_row {
     margin-bottom: 0;
 }
+
 /* IConsFor Elements */
 
-/* Accesspaket */
+/* Accesspaket
 .wpb-content-layouts .vc_element-icon {
     background: url('../../img/ionicons/ios7-photos.png');
     background-size: contain !important;
 }
-
+ */
 /* Accesspaket */
 .wpb-content-layouts #accesspackage .vc_element-icon {
     background: url('../../img/ionicons/model-s.png');
@@ -468,7 +469,6 @@ div.wpb_row {
 .wpb-content-layouts #buttons .vc_element-icon {
     background: url('../../img/ionicons/ios7-plus-outline.png');
 }
-
 
 /* Sociala */
 .wpb-content-layouts #social .vc_element-icon {

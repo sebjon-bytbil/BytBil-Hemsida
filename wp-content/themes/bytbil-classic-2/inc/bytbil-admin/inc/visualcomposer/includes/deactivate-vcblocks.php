@@ -11,12 +11,12 @@ function removeStandardVCElements(){
             vc_remove_element( "vc_facebook" );
             vc_remove_element( "vc_accordion" );
             vc_remove_element( "vc_basic_grid" );
-            vc_remove_element( "vc_btn" );
+            //vc_remove_element( "vc_btn" );
             vc_remove_element( "vc_button" );
             vc_remove_element( "vc_button2" );
             vc_remove_element( "vc_carousel" );
             // vc_remove_element( "vc_columninner" );
-            vc_remove_element( "vc_column_text" );
+            //vc_remove_element( "vc_column_text" );
             // vc_remove_element( "vc_column" );
             vc_remove_element( "vc_cta_button" );
             vc_remove_element( "vc_cta_button2" );
@@ -68,8 +68,8 @@ function removeStandardVCElements(){
             // vc_remove_element( "vc_row" );
             vc_remove_element( "vc_separator" );
             vc_remove_element( "vc_single_image" );
-            vc_remove_element( "vc_tab" );
-            vc_remove_element( "vc_tabs" );
+            //vc_remove_element( "vc_tab" );
+            //vc_remove_element( "vc_tabs" );
             vc_remove_element( "vc_teaser_grid" );
             vc_remove_element( "vc_text_separator" );
             vc_remove_element( "vc_toggle" );

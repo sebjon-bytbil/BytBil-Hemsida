@@ -21,14 +21,24 @@ function my_theme_register_js_composer_plugins() {
         // This is an example of how to include a plugin pre-packaged with a theme
         array(
             'name'          => 'WPBakery Visual Composer', // The plugin name
+            'slug'          => 'wp-media-folder', // The plugin slug (typically the folder name)
+            'source'            => get_stylesheet_directory() . '/inc/wp-media-folder.zip', // The plugin source
+            'required'          => true, // If false, the plugin is only 'recommended' instead of required
+            'version'           => '3.0.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+            'force_activation'      => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+            'force_deactivation'    => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+            'external_url'      => '', // If set, overrides default API URL and points to an external URL
+        ),
+        array(
+            'name'          => 'WP Media folder', // The plugin name
             'slug'          => 'js_composer', // The plugin slug (typically the folder name)
             'source'            => get_stylesheet_directory() . '/inc/js_composer.zip', // The plugin source
             'required'          => true, // If false, the plugin is only 'recommended' instead of required
             'version'           => '3.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-            'force_activation'      => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+            'force_activation'      => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
             'force_deactivation'    => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
             'external_url'      => '', // If set, overrides default API URL and points to an external URL
-        )
+        ),
     );
   
     // Change this to your theme text domain, used for internationalising strings
