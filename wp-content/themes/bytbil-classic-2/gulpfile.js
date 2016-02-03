@@ -39,7 +39,7 @@ var jsFiles = [
 ];
 
 var jsFilesVendor = [
-    paths.jsVendorPath + '/jquery-1.11.1.min.js',
+    paths.jsVendorPath + '/jquery-1.11.3.min.js',
     paths.jsVendorPath + '/bootstrap.min.js',
     paths.jsVendorPath + '/jquery.flexslider-min.js',
     paths.jsVendorPath + '/bootstrap.offcanvas.min.js',
