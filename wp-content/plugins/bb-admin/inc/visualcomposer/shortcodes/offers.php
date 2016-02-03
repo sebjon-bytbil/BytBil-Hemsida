@@ -11,19 +11,26 @@ class OffersShortcode extends ShortcodeBase
         parent::__construct($vcMap);
     }
 
-    function RegisterScripts()
-    {
-        wp_register_script('multiselect', VCADMINURL . 'assets/js/multiselect.js', array(), '1.0.0', true);
-    }
-    function EnqueueScripts()
-    {
-        wp_enqueue_script('multiselect');
-    }
-
     function processData($atts)
     {
+        $brand_dropdown = (self::Exists($atts['brand_dropdown']) == '1') ? true : false;
+        $atts['brand_dropdown'] = $brand_dropdown;
 
         if ($atts['offers_choice'] == 'all') {
+
+            $show_as_slideshow = (self::Exists($atts['show_as_slideshow']) == '1') ? true : false;
+            $atts['show_as_slideshow'] = $show_as_slideshow;
+
+            if ($show_as_slideshow) {
+                if (!wp_script_is('flexslider') && !wp_script_is('imageslider_functionality') && !wp_script_is('imageslider')) {
+                    wp_register_script('flexslider', VCADMINURL . 'assets/js/vendor/jquery.flexslider-min.js', array(), '1.0.0', true);
+                    wp_register_script('imageslider_functionality', VCADMINURL . 'assets/js/imageslider_functionality.js', array(), '1.0.0', true);
+                    wp_register_script('imageslider', VCADMINURL . 'assets/js/imageslider.js', array(), '1.0.0', true);
+                    wp_enqueue_script('flexslider');
+                    wp_enqueue_script('imageslider_functionality');
+                    wp_enqueue_script('imageslider');
+                }
+            }
 
             $columns = $atts['columns'];
 
@@ -122,12 +129,14 @@ class OffersShortcode extends ShortcodeBase
 
             if ( $offers->have_posts() ) :
 
+                $brands = array();
                 $items = array();
                 $i = 0;
 
                 while ( $offers->have_posts() ) : $offers->the_post();
 
                     // Headline
+                    $items[$i]['id'] = get_the_ID();
                     $items[$i]['headline'] = get_the_title();
             
                     $items[$i]['permalink'] = get_the_permalink();
@@ -138,14 +147,47 @@ class OffersShortcode extends ShortcodeBase
                     // Image
                     $offer_image = get_field('offer-image');
                     $items[$i]['image'] = $offer_image['url'];
+                    $items[$i]['image_medium'] = $offer_image['sizes']['slideshow-medium'];
+                    $items[$i]['image_full'] = $offer_image['sizes']['slideshow-full'];
 
                     // Brands
                     $offer_brands = get_field('offer-brands');
                     $brands_list = array();
                     foreach($offer_brands as $offer_brand) {
+                        if ($brand_dropdown) {
+                            array_push($brands, $offer_brand->post_title);
+                        }
                         array_push($brands_list, $offer_brand->post_title);
                     }
                     $items[$i]['brands'] = $brands_list;
+
+                    $links = get_field('offer-links');
+                    $links_list = array();
+                    foreach($links as $link) {
+                        $link_url = "";
+                        if ($link['offer-link-external'] != null) {
+                            $link_url = $link['offer-link-external'];
+                        } else if ($link['offer-link-internal'] != null) {
+                            $link_url = $link['offer-link-internal'];
+                        } else if ($link['offer-link-file'] != null) {
+                            $link_url = $link['offer-link-file']['url'];
+                        }
+
+                        $link_target = $link['offer-link-target'];
+                        if($link_target == "") {
+                            $link_target = "_self";
+                        }
+
+                        array_push(
+                            $links_list,
+                            array(
+                                'text' => $link['offer-link-text'],
+                                'url' => $link_url,
+                                'target' => $link_target
+                            )
+                        );
+                    }
+                    $items[$i]['links'] = $links_list;
 
                     $i++;
                 endwhile;
@@ -164,13 +206,31 @@ class OffersShortcode extends ShortcodeBase
 
             $id = self::Exists($atts['offer'], false);
             if ($id) {
+                $atts['id'] = $id;
                 $image = get_field('offer-image', $id);
                 $atts['image_url'] = $image['url'];
 
-                $title = get_field('offer-title', $id);
+                $title = get_the_title($id);
                 $atts['title'] = $title;
+
+                $ingress = get_field('offer-subheader', $id);
+                $atts['ingress'] = $ingress;
+
+                $permalink = get_the_permalink($id);
+                $atts['permalink'] = $permalink;
             }
 
+        }
+
+        if ($brand_dropdown && !empty($brands)) {
+            // Register and enqueue jQuery shuffle and BBShuffle
+            wp_register_script('jquery-shuffle', VCADMINURL . 'assets/js/vendor/jquery.shuffle.min.js', array(), '1.0.0', true);
+            wp_register_script('BBShuffle', VCADMINURL . 'assets/js/BBShuffle.js', array(), '1.0.0', true);
+            wp_enqueue_script('jquery-shuffle');
+            wp_enqueue_script('BBShuffle');
+
+            $brands = array_unique($brands);
+            $atts['brands'] = $brands;
         }
 
         return $atts;
@@ -232,6 +292,18 @@ function bb_init_offers_shortcode()
                 )
             ),
             array(
+                'type' => 'checkbox',
+                'heading' => 'Visa som bildspel',
+                'param_name' => 'show_as_slideshow',
+                'value' => array(
+                    'Ja' => '1'
+                ),
+                'dependency' => array(
+                    'element' => 'offers_choice',
+                    'value' => 'all'
+                )
+            ),
+            array(
                 'type' => 'dropdown',
                 'heading' => 'Kolumner per rad',
                 'param_name' => 'columns',
@@ -272,6 +344,15 @@ function bb_init_offers_shortcode()
                     'value' => 'all'
                 )
             ),
+            array(
+                'type' => 'checkbox',
+                'heading' => 'Visa märkes-dropdown',
+                'param_name' => 'brand_dropdown',
+                'description' => 'Bocka i om du vill kunna välja märken i vyn.',
+                'value' => array(
+                    'Ja' => '1'
+                )
+            )
         )
     );
 

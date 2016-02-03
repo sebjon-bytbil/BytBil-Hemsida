@@ -253,5 +253,11 @@ function bootstrapAngular($el){
     });
     
 
-    
+    $("body").on('submit', "form.wpcf7-form", function(){
+        $(this).find('input[type="submit"], .submit').prop("disabled", "disabled");
+    });
+
+    $(document).on('mailsent.wpcf7 spam.wpcf7 invalid.wpcf7', function(){
+        $('form.wpcf7-form').find('input[type="submit"], .submit').prop('disabled', false);
+    });
 })(jQuery);

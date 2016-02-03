@@ -44,19 +44,19 @@ $masterPost = bytbil_get_master_post(get_the_ID());
                 $menu_color = bytbil_get_field('menu_color');
             ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                
+                <div class="left-column black-page <?php if ($menu == 'bottom-services' && $menu_color == null) {
+                    echo 'white-menu ';
+                }
+                if($menu_color) {
+                    echo 'menu_color-'.$menu_color;
+                }
+                ?>">
                     <?php
 
 
                     if ($menu != 'none') {
                         ?>
-                        <div class="left-column black-page <?php if ($menu == 'bottom-services' && $menu_color == null) {
-                            echo 'white-menu ';
-                        }
-                        if($menu_color) {
-                            echo 'menu_color-'.$menu_color;
-                        }
-                        ?>">
+
                         <header class="entry-header">
                             <h1 class="entry-title">
                                 <?php
@@ -74,26 +74,26 @@ $masterPost = bytbil_get_master_post(get_the_ID());
                                 ?>
                             </h1>
                         </header><!-- .entry-header -->
-                    
-                        <?php include 'mobile-menu.php'; ?>
 
-                        <div class="side-menu-container side-menu-old">
+
+                        <div class="side-menu-container">
                             <ul class="side-menu-large">
                                 <?php
                                 new_volvo_menu($menu);
                                 ?>
                             </ul>
                         </div>
-                    </div>
-                
+
                     <?php
                     } else {
                     }
 
                     ?>
 
-                <div class="right-column <?php if($menu == 'none') { echo 'full-width'; } ?> block-page" style="text-align: left;">
-                    <div style="padding-bottom: 100px;">
+                </div>
+
+                <div class="right-column block-page" style="text-align: left;">
+                    <div style="position:absolute; padding-bottom: 100px;">
 
 
                         <?php

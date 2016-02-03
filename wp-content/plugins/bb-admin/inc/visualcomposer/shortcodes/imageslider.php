@@ -108,9 +108,10 @@ class ImageSliderShortcode extends ShortcodeBase
     private function build_offer_array($item, $prefix = '')
     {
         $offer = array();
+        $id = $item[$prefix . 'offer'];
+        $offer['id'] = $id;
         $offer['type'] = 'offer';
 
-        $id = $item[$prefix . 'offer'];
         $offer['url'] = get_permalink($id);
         $offer['slider_link'] = 'internal';
         $offer['target'] = '_self';
@@ -328,7 +329,7 @@ function bb_init_imageslider_shortcode()
                     array(
                         'type' => 'colorpicker',
                         'value' => '',
-                        'heading' => 'Overlay backgrundsfärg',
+                        'heading' => 'Overlay bakgrundsfärg',
                         'param_name' => 'dpt_overlay_color',
                         'description' => 'Välj vilken färg samt styrka som overlay skall ha.'
                     ),

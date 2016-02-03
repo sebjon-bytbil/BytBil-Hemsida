@@ -109,7 +109,7 @@ if (function_exists("register_field_group")) {
 					),
                     array (
 						'key' => 'field_5562ad5e877aaev-descr',
-						'label' => 'Pris',
+						'label' => 'Beskrivning',
 						'name' => 'vehicle-description-ev',
 						'type' => 'text',
 						'instructions' => 'Fyll i en mindre beskrivning.',
@@ -230,7 +230,7 @@ if (function_exists("register_field_group")) {
                             'status' => 1,
                             'rules' => array(
                                 array(
-                                    'field' => 'field_5523fcb86aa33',
+                                    'field' => 'field_5523fcb86aa33ev',
                                     'operator' => '==',
                                     'value' => 'file',
                                 ),
@@ -246,28 +246,7 @@ if (function_exists("register_field_group")) {
 						'label' => 'Knapptext',
 						'name' => 'vehicle-more-text',
 						'type' => 'text',
-						'instructions' => 'Fyll i Läsmer knapp.',
-                        'conditional_logic' => array(
-                            'status' => 1,
-                            'rules' => array(
-                                array(
-                                    'field' => 'field_5523fcb86aa33',
-                                    'operator' => '==',
-                                    'value' => 'file',
-                                ),
-                                array(
-                                    'field' => 'field_5523fcb86aa33',
-                                    'operator' => '==',
-                                    'value' => 'external',
-                                ),
-                                array(
-                                    'field' => 'field_5523fcb86aa33',
-                                    'operator' => '==',
-                                    'value' => 'internal',
-                                ),
-                            ),
-                            'allorany' => 'all',
-                        ),
+						'instructions' => 'Fyll i text för knapp..',
 						'column_width' => 50,
 						'default_value' => '',
 						'placeholder' => '',
@@ -275,6 +254,7 @@ if (function_exists("register_field_group")) {
 						'append' => '',
 						'formatting' => 'none',
 						'maxlength' => '',
+					
 					),
 				),
 				'row_min' => '',
@@ -317,6 +297,7 @@ if (function_exists("register_field_group")) {
         'menu_order' => 2,
     ));
 }
+
 
 
 if (function_exists("register_field_group")) {
@@ -369,6 +350,7 @@ if (function_exists("register_field_group")) {
         'menu_order' => 1,
     ));
 }
+            
 
 /*
 if (function_exists("register_field_group")) {

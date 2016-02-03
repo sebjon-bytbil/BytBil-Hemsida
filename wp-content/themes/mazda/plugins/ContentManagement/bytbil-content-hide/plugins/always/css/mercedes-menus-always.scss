@@ -1,0 +1,74 @@
+// Is child site
+body.is_child_site {
+  #menu-posts-model,
+  #acf-af_can_hide,
+  #acf-af_can_edit {
+    display: none !important;
+  }
+}
+
+// Child site, pushed post
+body.is_child_site.pushed_post {
+  // Menyer
+  #acf-menu-items .add-row-end,
+  .field_key-field_affardolja0y0hq0f8heq,
+  .field_key-field_affardoljasub0y0hq0f8heq,
+  td.remove,
+  .field_key-field_544512a421fb6,
+  .field_key-field_5445154b21fba,
+  .field_key-field_5445174561a04,
+  .field_key-field_54460ee433881,
+  .field_key-field_54460f2d33884,
+  #acf-mb-slideshow_image-text,
+  #acf-mb-slideshow_buttons,
+  #acf_acf_menyinstallningar > .inside > .acf-tab-wrap,
+  #acf-redirect_custom-text,
+  #acf-mb-slideshow_image div.has-image > div,
+  #acf-offer_date-start,
+  #acf-offer_date-stop,
+  #acf-offer_date-facility,
+  #acf-offer_links,
+  #acf-offer_image ul.bl
+    #acf-offer_image ul.bl {
+    display: none !important;
+  }
+}
+
+// Child site, local post
+body.is_child_site:not(.pushed_post) {
+  // Menyer
+  .field_key-field_affardoljasub0y0hq0f8heq,
+  .field_key-field_afhardoltsub0asdh08an0f8g,
+  .field_key-field_affardolja0y0hq0f8heq,
+  .field_key-field_afhardolt0asdh08an0f8g,
+  #acf-menu-items-af,
+  #acf_acf_menyinstallningar > .inside > .acf-tab-wrap,
+  #acf_acf_ga-installningar {
+    display: none !important;
+  }
+}
+
+// Child site, ÅF cannot hide
+body.is_child_site:not(.hideable_post) {
+  #acf_acf_ga-installningar {
+    display: none !important;
+  }
+}
+
+// Child site, pushed post, ÅF can edit
+body.is_child_site.pushed_post.editable_post {
+  #acf-redirect_custom-text {
+    display: block !important;
+
+  }
+}
+
+// Master site
+body.bbcms_master_site {
+  // Menyer
+  .field_key-field_afhardoltsub0asdh08an0f8g,
+  .field_key-field_afhardolt0asdh08an0f8g,
+  #acf-menu-items-af {
+    display: none !important;
+  }
+}

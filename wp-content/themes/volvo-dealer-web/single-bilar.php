@@ -51,18 +51,13 @@ if ($masterPost):
                             <?php restore_from_master(); ?>
                         </header>
                         <!-- .entry-header -->
-                        
-                        <?php
-                        $page_menu = true;
-                        ?>
-                        <?php include 'mobile-menu.php'; ?>
 
-                        <div class="side-menu-container side-menu-old">
+                        <div class="side-menu-container">
                             <ul class="side-menu-large">
                                 <?php echo wpb_list_child_pages(true); ?>
 
                             </ul>
-                            <?php new_volvo_menu('bilmeny', true, 'side-menu-small', false); ?>
+                            <?php new_volvo_menu('bilmeny', true, 'side-menu-large', false); ?>
 
                         </div>
 
@@ -75,11 +70,9 @@ if ($masterPost):
                         $pris = get_field('pris');
                         $id = get_the_ID();
                         $af_text = get_field('af-sidor', 'options');
-                        if($af_text){
-                            foreach($af_text as $text){
-                                if($text['af-sida']->ID==$id){
-                                    $pris = $text['af-text'];
-                                }
+                        foreach($af_text as $text){
+                            if($text['af-sida']->ID==$id){
+                                $pris = $text['af-text'];
                             }
                         }
                         $post_meta = get_post_meta(get_the_ID());
@@ -88,7 +81,6 @@ if ($masterPost):
                         $the_query = new WP_Query($args);
 
                         while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                            <img class="single-bilar-slideshow-image" src="<?php echo get_field('slideshow2'); ?>">
                             <h2><?php echo get_field('rubriktexten'); ?> </h2>
                             <?php the_content(); ?>
                             <h3><?php echo $pris; ?></h3>
@@ -158,9 +150,7 @@ if ($masterPost):
                             <h2 class="entry-title"><?php echo get_the_title($post->ID); ?></h2>
                         </header>
 
-                        <?php include 'mobile-menu.php'; ?>
-
-                        <div class="side-menu-container side-menu-old">
+                        <div class="side-menu-container">
                             <ul class="side-menu-large">
                                 <?php echo wpb_list_child_pages(true); ?>
                             </ul>

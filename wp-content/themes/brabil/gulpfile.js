@@ -31,6 +31,7 @@ var cssFilesVendor = [
     paths.cssVendorPath + "/bootstrap.offcanvas.min.css",
     paths.cssVendorPath + "/bootstrap-select.min.css",
     paths.cssVendorPath + "/normalize.css",
+    paths.cssVendorPath + "/din.css",
     paths.cssVendorPath + "/ionicons.min.css"
 ];
 
@@ -107,9 +108,6 @@ gulp.task('themejs', function(){
     return stream;
 });
 
-
-
-
 gulp.task('vendorjs', function(){
     console.log(jsFilesVendor);
     var stream = gulp.src(jsFilesVendor)
@@ -135,7 +133,7 @@ gulp.task('watch', function(){
 
 gulp.task('css', ['themeCss', 'vendorCss', "concatCss", "copycss", "images", "fonts"]);
 
-gulp.task('js', ['themejs', 'vendorjs', "concatjs", "copyjs"]);
+gulp.task('js', ['vendorjs', 'themejs', "concatjs", "copyjs"]);
 
 gulp.task('build', ['css', "js"]);
 

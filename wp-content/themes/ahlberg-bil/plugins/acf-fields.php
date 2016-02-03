@@ -1,5 +1,4 @@
 <?php
-
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
@@ -155,7 +154,7 @@ if(function_exists("register_field_group"))
 						'row_min' => '',
 						'row_limit' => '',
 						'layout' => 'table',
-						'button_label' => 'Add Row',
+						'button_label' => 'Lägg till tid',
 					),
 				),
 				'row_min' => '',
@@ -224,17 +223,6 @@ if(function_exists("register_field_group"))
 				'multiple' => 0,
 			),
 			array (
-				'key' => 'field_56026b8d043d1',
-				'label' => 'Personalsida',
-				'name' => 'facility-employee-page',
-				'type' => 'page_link',
-				'post_type' => array (
-					0 => 'page',
-				),
-				'allow_null' => 0,
-				'multiple' => 0,
-			),
-			array (
 				'key' => 'field_56027655b8f2f',
 				'label' => 'Kontaktformulär',
 				'name' => 'facility-contact-form',
@@ -261,19 +249,18 @@ if(function_exists("register_field_group"))
 			'position' => 'normal',
 			'layout' => 'default',
 			'hide_on_screen' => array (
-				0 => 'the_content',
-				1 => 'excerpt',
-				2 => 'custom_fields',
-				3 => 'discussion',
-				4 => 'comments',
-				5 => 'revisions',
-				6 => 'slug',
-				7 => 'author',
-				8 => 'format',
-				9 => 'featured_image',
-				10 => 'categories',
-				11 => 'tags',
-				12 => 'send-trackbacks',
+				0 => 'excerpt',
+				1 => 'custom_fields',
+				2 => 'discussion',
+				3 => 'comments',
+				4 => 'revisions',
+				5 => 'slug',
+				6 => 'author',
+				7 => 'format',
+				8 => 'featured_image',
+				9 => 'categories',
+				10 => 'tags',
+				11 => 'send-trackbacks',
 			),
 		),
 		'menu_order' => 0,
@@ -513,6 +500,319 @@ if(function_exists("register_field_group"))
 			'position' => 'normal',
 			'layout' => 'default',
 			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_personal',
+		'title' => 'Personal',
+		'fields' => array (
+			array (
+				'key' => 'field_5603cdaba5221',
+				'label' => 'Bild',
+				'name' => 'employee-image',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_5603cd99a5220',
+				'label' => 'Titel',
+				'name' => 'employee-title',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5603cdbca5222',
+				'label' => 'Telefon',
+				'name' => 'employee-phone',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5603cdc7a5223',
+				'label' => 'E-post',
+				'name' => 'employee-email',
+				'type' => 'email',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+			),
+			array (
+				'key' => 'field_5603cdfda5224',
+				'label' => 'Anläggning',
+				'name' => 'employee-facility',
+				'type' => 'relationship',
+				'return_format' => 'object',
+				'post_type' => array (
+					0 => 'facility',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'post_title',
+				),
+				'max' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'employee',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+				1 => 'excerpt',
+				2 => 'custom_fields',
+				3 => 'discussion',
+				4 => 'comments',
+				5 => 'revisions',
+				6 => 'slug',
+				7 => 'author',
+				8 => 'format',
+				9 => 'featured_image',
+				10 => 'categories',
+				11 => 'tags',
+				12 => 'send-trackbacks',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_personallista',
+		'title' => 'Personallista',
+		'fields' => array (
+			array (
+				'key' => 'field_5603cf5eea891',
+				'label' => 'Rubrik',
+				'name' => 'employee-list-header',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5603cf8dea892',
+				'label' => 'Personal',
+				'name' => 'employee-list-employees',
+				'type' => 'relationship',
+				'return_format' => 'object',
+				'post_type' => array (
+					0 => 'employee',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'post_title',
+				),
+				'max' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'employee-list',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'the_content',
+				1 => 'excerpt',
+				2 => 'custom_fields',
+				3 => 'discussion',
+				4 => 'comments',
+				5 => 'revisions',
+				6 => 'slug',
+				7 => 'author',
+				8 => 'format',
+				9 => 'featured_image',
+				10 => 'categories',
+				11 => 'tags',
+				12 => 'send-trackbacks',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array (
+		'id' => 'acf_personalval',
+		'title' => 'Personalval',
+		'fields' => array (
+			array (
+				'key' => 'field_5603d01d04173',
+				'label' => 'Visa personal',
+				'name' => 'employee-choice',
+				'type' => 'select',
+				'choices' => array (
+					'employee-list' => 'Personallista',
+					'employees' => 'Välj personal',
+				),
+				'default_value' => 'employee-list',
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+			array (
+				'key' => 'field_5603d63763f2a',
+				'label' => 'Personallista',
+				'name' => 'employee-list_2',
+				'type' => 'relationship',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5603d01d04173',
+							'operator' => '==',
+							'value' => 'employee-list',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'return_format' => 'object',
+				'post_type' => array (
+					0 => 'employee-list',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'post_title',
+				),
+				'max' => '',
+			),
+            array(
+                'key' => 'field_5603d63763f2b',
+                'label' => 'Visa listans rubrik',
+                'name' => 'employee-list-show-header',
+                'type' => 'true_false',
+                'message' => '',
+                'default_value' => 0,
+                'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5603d01d04173',
+							'operator' => '==',
+							'value' => 'employee-list',
+						),
+					),
+					'allorany' => 'all',
+				),
+            ),
+			array (
+				'key' => 'field_5603d0b404175',
+				'label' => 'Välj personal',
+				'name' => 'employee-employees',
+				'type' => 'relationship',
+				'conditional_logic' => array (
+					'status' => 1,
+					'rules' => array (
+						array (
+							'field' => 'field_5603d01d04173',
+							'operator' => '==',
+							'value' => 'employees',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'return_format' => 'object',
+				'post_type' => array (
+					0 => 'employee',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'filters' => array (
+					0 => 'search',
+				),
+				'result_elements' => array (
+					0 => 'post_title',
+				),
+				'max' => '',
+			),
+			array (
+				'key' => 'field_5603d10fcdb95',
+				'label' => 'Visa anläggningsinformation',
+				'name' => 'employee-facilities',
+				'type' => 'post_object',
+				'post_type' => array (
+					0 => 'facility',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'allow_null' => 1,
+				'multiple' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'employees-page.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+				0 => 'excerpt',
+				1 => 'custom_fields',
+				2 => 'discussion',
+				3 => 'comments',
+				4 => 'revisions',
+				5 => 'slug',
+				6 => 'author',
+				7 => 'format',
+				8 => 'featured_image',
+				9 => 'categories',
+				10 => 'tags',
+				11 => 'send-trackbacks',
 			),
 		),
 		'menu_order' => 0,
@@ -1937,5 +2237,60 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_blogg-och-inlagg',
+		'title' => 'Blogg och inlägg',
+		'fields' => array (
+			array (
+				'key' => 'field_560545c932335',
+				'label' => 'Antal per sida',
+				'name' => 'blog-page-size',
+				'type' => 'number',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'min' => '',
+				'max' => '',
+				'step' => '',
+			),
+			array (
+				'key' => 'field_56054b175a6e2',
+				'label' => 'Från år',
+				'name' => 'blog-from-year',
+				'type' => 'number',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'min' => '',
+				'max' => '',
+				'step' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'blog-page.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
 
 ?>

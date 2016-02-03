@@ -25,16 +25,12 @@ get_header(); ?>
                 ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <div class="left-column">
-
-                        <?php include 'mobile-menu.php'; ?>
-                        
                         <header class="entry-header">
                             <h2 class="entry-title"><?php echo empty($post->post_parent) ? get_the_title($post->ID) : get_the_title($post->post_parent); ?></h2>
                         </header>
                         <!-- .entry-header -->
 
-
-                        <div class="side-menu-container side-menu-old">
+                        <div class="side-menu-container">
                             <ul class="side-menu-large">
                                 <?php
                                 new_volvo_menu('bottom-buy');

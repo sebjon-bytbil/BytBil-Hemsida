@@ -43,23 +43,42 @@
                     entity_encoding: 'raw',
                     theme: "modern",
                     plugins: 'textcolor colorpicker hr media wplink wordpress',
-                    toolbar: 'bold,italic,strikethrough,bullist,numlist,hr,blockquote,alignleft,aligncenter,alignright,link,unlink,forecolor,backcolor,formatselect,icon-button',
+                    toolbar: 'bold,italic,strikethrough,bullist,numlist,hr,blockquote,alignleft,aligncenter,alignright,addimage,icon-button,link,unlink,forecolor,backcolor,formatselect',
                     menubar: false,
                     selector: '#' + id,
                     setup: function(editor, url) {
                         editor.on('change', function() {
                             refresh_values(id, editor.getContent());
                         });
+                        editor.addButton('addimage', {
+                            icon: 'wp-media-library',
+                            tooltip: 'Bild',
+                            cmd: 'addimage-command'
+                        });
+                        editor.addCommand('addimage-command', function() {
+                            if (this.window === undefined) {
+                                this.window = wp.media({
+                                    title: 'Lägg till bild',
+                                    library: {type: 'image'},
+                                    multiple: false,
+                                    button: {text: 'Lägg till'}
+                                });
+
+                                var self = this;
+                                this.window.on('select', function() {
+                                    var first = self.window.state().get('selection').first().toJSON();
+                                    var img = '<img src="' + first.url + '" alt="' + first.alt + '" title="' + first.title + '">';
+                                    editor.insertContent(img);
+                                });
+                            }
+
+                            this.window.open();
+                            return false;
+                        });
                         editor.addButton('icon-button', {
-                            icon: 'hr',
+                            icon: 'charmap',
                             tooltip: 'Ikon',
                             cmd: 'add-button'
-                        });
-                        editor.addMenuItem('icon-button', {
-                            icon: 'hr',
-                            text: 'Ikon',
-                            cmd: 'add-button',
-                            context: 'insert'
                         });
                         editor.addCommand('add-button', function() {
                             editor.windowManager.open({

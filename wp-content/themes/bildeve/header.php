@@ -24,8 +24,11 @@ $dir = get_template_directory_uri();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--
+    REMOVE FOR YOAST SEO
     <meta name="description" content="<?php echo get_bloginfo('description'); ?>" />
-
+    -->
+    
     <link rel="favicon" href="<?php echo $dir; ?>/favicon.ico" />
     <!-- Shortcut Icons -->
     <link rel="shortcut icon" href="<?php echo $dir; ?>/favicon.ico">
@@ -38,6 +41,8 @@ $dir = get_template_directory_uri();
         <?php wp_title( '|', true, 'right'); ?>
         <?php bloginfo( 'description'); ?>
     </title>
+
+    <meta name="google-site-verification" content="JtZCq7TkufaSC1kcStzynNclUhilM2HLJnYmgp3Kfz4" />
     
     <?php wp_head(); ?>
 

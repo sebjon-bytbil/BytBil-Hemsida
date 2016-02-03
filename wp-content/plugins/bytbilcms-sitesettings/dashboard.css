@@ -1,0 +1,79 @@
+#welcome-panel {
+    max-width: 1200px;
+}
+
+#bytbil-welcome-panel {
+    padding: 20px;
+
+}
+
+#bytbil-welcome-panel .button {
+    font-size: 1.1em;
+    height: auto;
+    color: #999 !important;
+    width: 19%;
+    padding: 1% 2%;
+    margin-top: 8px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+#bytbil-welcome-panel .button:hover {
+    color: #333 !important;
+}
+
+#bytbil-welcome-panel .button i.fa {
+    font-size: 28px;
+}
+
+/*#bytbil-welcome-panel .button:before {
+width: 32px;
+height: 28px;
+content: "\e018";
+font-size: 28px;
+font-family: "FontAwesome";
+display: block;
+float: left;
+text-align: center;
+margin-right: 5px;
+}*/
+
+/*#bytbil-welcome-panel .button.edit-front-page:before { content: "\f022"; }*/
+#bytbil-welcome-panel .button.add-page:before {
+    content: "\f044";
+}
+
+#bytbil-welcome-panel .button.add-slideshow:before {
+    content: "\f03e";
+}
+
+#bytbil-welcome-panel .button.add-offer:before {
+    content: "\f02b";
+}
+
+#bytbil-welcome-panel .button.add-news:before {
+    content: "\f1ea";
+}
+
+#bytbil-welcome-panel .button.upload:before {
+    content: "\f030";
+}
+
+#bytbil-welcome-panel .button.employee:before {
+    content: "\f183  \f182";
+    margin-right: 15px;
+}
+
+#bytbil-welcome-panel .button.facility:before {
+    content: "\f1ad";
+}
+
+#bytbil-welcome-panel .button.menus:before {
+    content: "\f0c9";
+}
+
+.index-php #wpbody-content #postbox-container-1, #ga-dash-widget {
+    width: 100% !important;
+    float: left;
+    max-width: 1200px !Important;
+}

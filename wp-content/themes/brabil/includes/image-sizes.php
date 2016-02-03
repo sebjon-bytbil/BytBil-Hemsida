@@ -6,5 +6,9 @@ if (function_exists('add_image_size')) {
     add_image_size('slideshow-medium', 800, 325);
 
     // Employee - 2:3
-    add_image_size('employee', 120, 180);
+    add_image_size('employee', 80, 120);
+
+    // Offer
+    add_image_size('offer', 960, 390);
+    add_image_size('offer-thumbnail', 320, 130);
 }

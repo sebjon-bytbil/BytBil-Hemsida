@@ -9,6 +9,7 @@ include('includes/deactivatevcblocks.php');
 include('shortcodes/accesspackage.php'); # Accesspaket
 include('shortcodes/accordion.php'); # Accordion
 include('shortcodes/facilities.php'); # Anläggningar
+include('shortcodes/facility.php'); # Anläggning
 include('shortcodes/facilitycard.php'); # Anläggningskort
 include('shortcodes/imageslider.php'); # Bildspel
 include('shortcodes/reserve.php'); # Boka provkörning
@@ -29,6 +30,8 @@ include('shortcodes/social.php'); # Sociala länkar
 include('shortcodes/tabs.php'); # Tabbar
 include('shortcodes/text.php'); # Text block
 include('shortcodes/video.php'); # Video
+include('shortcodes/openhours.php'); # Öppettider
+include('shortcodes/vehicles.php'); # Bilmodeller
 
 // Custom params
 include('params/integer.php');
@@ -110,8 +113,18 @@ function visualcomposeraddrowparams($sd)
         'weight' => 1
     );
     vc_add_param('vc_row', $showrowasslideshow);
-
-    $dottedoverlay = array(
+    
+    $overlaycolor = array(
+        'type' => 'colorpicker',
+        'value' => '',
+        'heading' => 'Overlay backgrundsfärg',
+        'param_name' => 'overlaycolor',
+        'description' => 'Välj vilken färg samt styrka som overlay skall ha.',
+        'weight' => 1
+    );
+    vc_add_param('vc_row', $overlaycolor);
+    
+    /*$dottedoverlay = array(
         'type' => 'checkbox',
         'heading' => 'Prickig overlay',
         'param_name' => 'dotted_overlay',
@@ -121,7 +134,9 @@ function visualcomposeraddrowparams($sd)
         'description' => 'Bocka i om du vill visa en prickig overlay.',
         'weight' => 1
     );
+    
     vc_add_param('vc_row', $dottedoverlay);
+    */
 
     $displayascard = array(
         'type' => 'dropdown',

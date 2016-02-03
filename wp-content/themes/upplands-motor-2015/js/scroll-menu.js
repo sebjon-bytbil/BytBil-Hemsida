@@ -5,7 +5,14 @@
       if (this.length < 1){ return this; }
       var settings = $.extend( {}, $.fn.scrollMenu.defaults, options );
 
-
+        $(window).resize(function() {
+            if (this.resizeTO) {
+                clearTimeout(this.resizeTO);
+            }
+            this.resizeTO = setTimeout(function() {
+                $(this).trigger('resizeEnd');
+            }, 500);
+        });
 
       var scrollMenu = this;
       var wrapper = scrollMenu.find(".submenu-wrapper");
@@ -13,9 +20,9 @@
       // run this on start
       calculateAndSetWidths();
       //also run this in event RECALCULATE! EXTERMINATE!
-     $(window).on('resize', function(){
-        calculateAndSetWidths();
-     });
+      $(window).on('resizeEnd', function() {
+          calculateAndSetWidths();
+      });
 
       //var slider_height = null;
 
@@ -24,6 +31,7 @@
       var clone = $('<div id="menuclone" />').insertBefore(wrapper);
 
       function calculateAndSetWidths(){
+
         var width = wrapper.width();
       
         //var menu_items = scrollMenu.find(".item").length - 2;
@@ -34,7 +42,7 @@
           //this means that this works with negative margin 
           var margT = ($(this).outerWidth(true) - $(this).outerWidth()) / 2;
           item_width = $(this).innerWidth() + margT;
-            
+
           menu_width = menu_width + item_width;
         });
         var new_width = ((width - menu_width) / 2);

@@ -12,6 +12,9 @@ get_header();
                 ?>
                 <div class="main-content">
                     <section class="grey-bg">
+                        <div class="col-xs-12">
+                            <a href="#" onClick="history.go(-1)" class="btn btn-blue">Gå tillbaka</a>
+                        </div>
                         <div class="main-content">
                             <div class="col-xs-12 col-sm-8">
                                 <div class="col-container white-bg border-bottom-blue outer-shadow">

@@ -1,0 +1,239 @@
+﻿{	"items":[		{			"title":"Höjdpunkter",			"description":"",			"items":[				{					"title":"Premiumkvalitet ",
+					"alt":"mazda2 2015 instrumentpanel klimatanläggning interiör",
+					"description":"<p>En sportig interiör med smart koordinerade kvalitetsmaterial från pianosvart, högglans och kolfiberliknande ytor till sidenblänkande accenter och kontrasterande sömmar. Det är en känslomiljö som du trivs i.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/highlights/mazda2-dashboard.jpg",
+					"id":"1001"
+				},
+				{
+					"title":"MZD Connect",
+					"alt":"mazda2 2015 connect dashboard screen",
+					"description":"<p> För de valda modellerna ger systemet MZD Connect integrerad satellitnavigering av senaste version, inklusive beräkning av alternativa färdvägar, utökade sökfunktioner och gratis kartuppdateringar under tre år (navigation finns för modellerna SE-L Nav och Sport Nav).</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/highlights/mazda-2-sat-nav-screen.jpg",
+					"id":"1002"
+				},
+				{
+					"title":"Dynamiska, sportiga lättmetallfälgar",
+					"alt":"mazda2 fälg däck lättmetall",
+					"description":"<p> 16-tums lättmetallfälgar skapar en kontrast med sin glänsande metallyta med mörk kanonbronsfärg på ekrarna och förstärker känslan av styrka och kraft som kompletterar helt nya Mazda2s kraftfulla byggnad och dynamiska stil (standard på modellerna Sport/Sport Nav).</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/highlights/mazda-2-2015-wheel.jpg",
+					"id":"1003"
+				},
+				{
+					"title":"LED-strålkastare",
+					"alt":"mazda2 2015 grill front strålkastare",
+					"description":"<p>Fokuserade och klara för handling. De genomträngande LED-strålkastarna med låg ljuskägla liknar ögonen på ett djur som just ska till att anfalla (standard på modellerna 115 hk Sport Nav).</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/highlights/mazda2-2015-front-red.jpg",
+					"id":"1004"
+				},
+				{
+					"title":"Fantastisk från alla håll",
+					"alt":"mazda2 2015 kompakt röd stadsbil",
+					"description":"<p>Elegant, ledig profil och en kraftfull design som utstrålar dynamisk rörelse i varje detalj. </p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/highlights/mazda2-2015-city-car.jpg",
+					"id":"1005"
+				},
+				{
+					"title":"Active Driving Display",
+					"alt":"nya mazda2 2015 instrumentpanel ratt",
+					"description":"<p>Hjälper dig att hela tiden vara fokuserad på vägen. Viktig information som hastighet, navigeringsinformation och varningar för farliga situationer projiceras på en genomskinlig skärm i din synlinje.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/highlights/mazda-2-dashboard.jpg",
+					"id":"1006"
+				}
+			],
+			"type":"GalleryPageVm",
+			"id":"1"
+		},
+		{
+			"title":"Design",
+			"description":"",
+			"items":[
+				{
+					"title":"Säten med kvalitetsdesign",
+					"alt":"mazda2 2015 interiör säten",
+					"description":"<p>Designade med bättre grepp, högre ryggstöd och speciellt vibrationsdämpande material. Med helt nya Mazda2s moderna säten åker du säkert och komfortabelt.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/sv-SE/GalleryOverlay/images/LHD/design/mazda-2-2015-interior.jpg",
+					"id":"2001"
+				},
+				{
+					"title":"Mittkonsol och bakre konsol",
+					"alt":"mazda2 2015 mittkonsol och bakre konsol",
+					"description":"<p>En ny optimal layout, inklusive en centralt placerad Drive Selection-väljare, ger mer utrymme för tillbehör som brickor och kopphållare.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/design/mazda2-2015-centre-rear-console.jpg",
+					"id":"2002"
+				},
+				{
+					"title":"Klimatanläggningens öppningar",
+					"alt":"mazda2 2015 klimatanläggning öppningar röd",
+					"description":"<p>De runda öppningarna i klimatanläggningen är utformade för att likna en jetmotor som kompletterar interiörens sportiga designsignaler.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/sv-SE/GalleryOverlay/images/LHD/design/mazda2-air-conditioning.jpg",
+					"id":"2003"
+				},
+				{
+					"title":"Förarcentrerad kupé",
+					"alt":"mazda2 instrumentpanel satellitnavigering interiör",
+					"description":"<p>Helt nya Mazda2 är byggd med föraren i centrum med ergonomiska reglage och displayer som skapar en känsla av att du och bilen är en enhet.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/design/mazda2-dashboard.jpg",
+					"id":"2004"
+				},
+				{
+					"title":"Mätaruppsättning",
+					"alt":"mazda2 2015 mätaruppsättning ratt",
+					"description":"<p>En sportig instrumentuppsättning med en tredimensionell analog mätare omgiven av ett par vingformade digitala displayer infattade i en metallring.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/design/new-mazda-2-meter-cluster.jpg",
+					"id":"2005"
+				},
+				{
+					"title":"Modern bakdesign",
+					"alt":"mazda2 2015 röd baklucka fönster kaross",
+					"description":"<p>Bakljusen har en unik U-formad signaturdesign och är placerade i linje med de karaktärsskapande linjerna som sveper högt tvärs över bakpartiet och skapar ett kraftfullt utseende som markerar den energi som finns inuti. </p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/design/mazda2-red-back-boot.jpg",
+					"id":"2006"
+				},
+				{
+					"title":"Karakteristisk frontdesign",
+					"alt":"mazda2 röd karakteristisk expressiv frontgrill",
+					"description":"<p>Kan omedelbart identifieras som en Mazda. Helt nya Mazda2 har de karakteristiska kromade signaturvingarna, en tvådelad frontgrill och blänkande, lågt sittande strålkastare.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/design/mazda2-2015-red.jpg",
+					"id":"2007"
+				},
+				{
+					"title":"Kraftfull, massiv utstrålning",
+					"alt":"mazda2 2015 kompakt röd stadsbil",
+					"description":"<p>Liksom en sprinter i startblocken har helt nya Mazda2 en samlad, kraftfull hållning och en framåtlutad ställning för ett språng framåt.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/design/mazda-2-red-compact-car.jpg",
+					"id":"2008"
+				},
+				{
+					"title":"Sportig takspoiler",
+					"alt":"mazda2 2015 röd spoiler bak",
+					"description":"<p>Alla bilar i serien har den bakre takspoilern som kombinerar en sportig stil med förbättrade aerodynamiska egenskaper.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/design/mazda2-2015-spoiler-red.jpg",
+					"id":"2009"
+				},
+				{
+					"title":"Elegant dörrdesign",
+					"alt":"mazda2 2015 5-dörrars stadsbil",
+					"description":"<p>Linjer som strålar från dörrklädseln till strömbrytarpaneler, förvaringsfack och högtalare, ger bilden av luft som strömmar från en jetmotor.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/sv-SE/GalleryOverlay/images/LHD/design/mazda2-dashboard.jpg",
+					"id":"2010"
+				}
+			],
+			"type":"GalleryPageVm",
+			"id":"2"
+		},
+		{
+			"title":"Säkerhet",
+			"description":"",
+			"items":[
+				{
+					"title":"SKYACTIV-Drive",
+					"alt":"mazda2 2015 front grill slingrande vägar",
+					"description":"<p>Bättre bränsleekonomi, mer direkt kraft och så mycket körglädje att den nästan känns som en manuell växellåda – helt nya Mazda2s minsta automatlåda är optimal.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda2-2015-engine-skyactiv.jpg",
+					"id":"3001"
+				},
+				{
+					"title":"SKYACTIV-kaross och SKYACTIV-chassi",
+					"alt":"mazda2 2015 motor skyactiv",
+					"description":"<p>Från snabb, lätt manövrering i de trångaste utrymmen till trygg kursstabilitet och åkkomfort på landsvägen, det är ett nöje att köra helt nya Mazda2.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/468x318_skyactivbody.jpg",
+					"id":"3002"
+				},
+				{
+					"title":"Smart City Brake Support (SCBS)",
+					"alt":"mazda2 2015 röd smart city brake support",
+					"description":"<p>Upptäcker om det finns risk för en kollision i låg hastighet och utlöser i så fall ett nödstopp eller bromsar automatiskt för att förhindra eller minska skadorna av en kollision (standard från modellerna 90 hk SE-L).</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda2-2015-safety.jpg",
+					"id":"3003"
+				},
+				{
+					"title":"System för filbytesvarning (LDWS)",
+					"alt":"mazda2 2015 teknik för varningssystem filbyte",
+					"description":"<p>Beredd på det oväntade. Kameror övervakar när bilen oavsiktligt håller på att lämna sin fil och varnar då föraren med ljud- och ljusvarningar (standard från modellerna 90 hk SE-L).</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda2-2015-lane-departure.jpg",
+					"id":"3004"
+				},
+				{
+					"title":"Automatisk avbländningsfunktion för helljus (HBC)",
+					"alt":"mazda2 automatisk avbländningsfunktion för helljus ",
+					"description":"<p> Se vägen tydligare utan att blända andra förare tack vare att strålkastarna automatiskt växlar mellan hel- och halvljus beroende på trafikförhållandena (del av tillvalet Safety Pack för modellerna 115 hk Sport Nav).</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda2-2015-high-beam-control-system.jpg",
+					"id":"3005"
+				},
+				{
+					"title":"System för övervakning av döda vinkeln (BSM) och Rear Cross Traffic Alert (RCTA) ",
+					"alt":"mazda2 2015 döda vinkeln teknik",
+					"description":"<p>När du byter fil undersöker systemet för övervakning av döda vinkeln dina döda vinklar och varnar dig om ett fordon närmar sig i en intilliggande fil inom 45 meters avstånd. När du backar varnar dig Rear Cross Traffic Alert för hinder i döda vinklar. (Del av tillvalet Safety Pack för modellerna 115 hk Sport Nav).</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda-2-2015-blind-spot-technology.jpg",
+					"id":"3006"
+				},
+				{
+					"title":"Enastående skydd ",
+					"alt":"mazda2 2015 chassi skal ram med enastående skydd",
+					"description":"<p>Ett fullständigt komplement till krockkuddarna och krockgardinerna fram och på sidorna som dämpar stöten vid en kollision, samtidigt som helt nya Mazda2s anmärkningsvärt starka kaross tar upp och fördelar kraften.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda2-2015-frame-shell.jpg",
+					"id":"3007"
+				},
+				{
+					"title":"i-stop",
+					"alt":"mazda2 2015” “mazda2 prestanda i-stop",
+					"description":"<p>Spara bränsle och minska dina utsläpp. När du står stilla i tät trafik eller vid trafikljus stänger i-stop-tekniken automatiskt av motorn för att sedan omedelbart starta den när du ska fortsätta att köra.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda2-2015-performance-istop.jpg",
+					"id":"3008"
+				},
+				{
+					"title":"Motorns start/stopp-knapp",
+					"alt":"mazda2 2015 stopp/start-knapp teknik",
+					"description":"<p>Med motorstartknappen på helt nya Mazda2 är du redo att köra i väg med en knapptryckning. </p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda2-2015-stop-start-button.jpg",
+					"id":"3009"
+				},
+				{
+					"title":"Förbättrad aerodynamik",
+					"alt":"mazda2 2015 aerodynamik",
+					"description":"<p>Genom att strömlinjeforma luftflödet runt exteriören och optimera form och design av stötfångare, dörrspeglar och bakljus för att minimera motståndet har helt nya Mazda2 en förbättrad aerodynamik.  Resultatet är bättre bränsleekonomi och minskat inträngande ljud.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda2-2015-aerodynamics.jpg",
+					"id":"3010"
+				},
+				{
+					"title":"SKYACTIV-motorer",
+					"alt":"mazda2 2015 skyactiv dieselmotor",
+					"description":"<p>Bättre prestanda men med lägre utsläpp och upp till 19 % bättre bränsleekonomi ger dig det bästa av två världar.</p>",
+					"type":"GalleryItemPageVm",
+					"image":"http://www.mazda.se/Canvas/showroom_2015/l10n/master/GalleryOverlay/images/LHD/performance/mazda-2-2015-engine-skyactiv.jpg",
+					"id":"3011"
+				}
+			],
+			"type":"GalleryPageVm",
+			"id":"3"
+		}
+	],
+	"type":"GalleryGroupPageVm",
+	"id":"99"
+}

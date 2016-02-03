@@ -1,87 +1,114 @@
 <?php /* Template Name: Grundsida : Utforska bil */
 get_header();
-$siteUrl = get_site_url();
-$orignal_ID = get_the_ID();
-?>
-    <article cid="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+$post_meta = get_post_meta(get_the_ID());
+switch_to_master();
+
+$args = array('page_id' => $post_meta['orig_id'][0]);
+$the_query = new WP_Query($args);
+
+while ($the_query->have_posts()) : $the_query->the_post(); ?>
+    <h1 id="HeaderMain"><?php the_field('dolh1a'); ?></h1>
+    <div id="primary" class="content-area">
+    <div id="content" class="site-content" role="main">
+    <div class="wrapper">
+
+    <?php
+
+    if (get_field('bakgrundsbild')) {
+        ?>
+        <script type="text/javascript">
+            $('#flex-slider').flexslider({
+                animation: 'fade',
+                animationLoop: true,
+                prevText: '<',
+                nextText: '>',
+                slideshow: false,
+                directionNav: true
+            });
+
+            $('#background-container').empty();
+            var imageUrl = '<?php echo get_field('bakgrundsbild'); ?>';
+            $('#background-container').css('background-image', 'url(' + imageUrl + ')');
+
+        </script>
+
+
+    <?php
+
+    }
+    ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div style="text-align: center; position: fixed; width: 100%; height: 100%; display: table; z-index: 100; left: 0; top: 0;">
-        <div style="z-index: 999999; left: 0; top: 0; display: table-cell; vertical-align: middle; text-align: center;">
+    <div style="z-index: 999999; left: 0; top: 0; display: table-cell; vertical-align: middle; text-align: center;">
 
-            <div class="flexslider-mask" style="max-width: 948px; margin: 0 auto;">
-                <div id="flexslider-bil" style="max-width: 575px; margin: 0 auto;">
-                    <ul class="slides">
-                    <?php
-                    switch_to_master();
+    <div class="flexslider-mask" style="max-width: 948px; margin: 0 auto;">
+    <div id="flexslider-bil" style="max-width: 575px; margin: 0 auto;">
+    <ul class="slides">
+    <?php
 
-                    $page = get_page_by_title('Utforska bil');
+    $page = get_page_by_title('Utforska Bil');
+    $args = array(
+        'post_type' => 'page',
+        'post_parent' => $page->ID
+    );
+    $wp_query = new WP_Query($args);
+    while (have_posts()) : the_post();
+        $slideImage = get_field('slideshow2');
 
-                    $args = array(
-                        'post_type' => 'page',
-                        'post_parent' => $page->ID,
-                        'posts_per_page'   => -1,                        
-                    );
+        restore_from_master();
+        $siteUrl = get_site_url();
+        switch_to_master();
+        $url_endpoint = get_permalink($page->ID);
+        $url_endpoint = parse_url($url_endpoint);
+        $url_endpoint = $url_endpoint['path'];
+        $url = $siteUrl . $url_endpoint;
 
-                    $posts = get_posts($args);
+        ?>
+        <li style="display: none; height: 100%">
+            <a style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="<?php echo $url; ?>">
+                <div
+                    style="-webkit-user-select: none; -webkit-tap-highlight-color: transparent; background-image: url(<?php echo $slideImage; ?>); background-size: contain; background-position: center center; background-repeat: no-repeat; ">
+                    <img style="width: 100%; height: 100%"
+                         src="<?php bloginfo('template_url'); ?>/images/transparent.png"/></div>
+            </a>
+        </li>
+    <?php endwhile;
+    restore_from_master();
 
+endwhile;
+wp_reset_query();
+?>
 
-                    foreach($posts as $post){
-                    $fields = get_fields($post->ID);
-                        ?>
-                        <li>
-                            <?php
-                            
-                            
-                            $slideImage = $fields['slideshow2'];
-                            $url_endpoint = get_permalink($post->ID);
-                            $url_endpoint = parse_url($url_endpoint);
-                            $url_endpoint = $url_endpoint['path'];
-                            $url = $siteUrl . $url_endpoint;
-                                                
-                            ?>
-                            
-                            <a style="-webkit-tap-highlight-color: rgba(255, 255, 255, 0);" href="<?php echo $url; ?>">
-                                <div
-                                    style="-webkit-user-select: none; -webkit-tap-highlight-color: transparent; background-image: url(<?php echo $slideImage; ?>); background-size: contain; background-position: center center; background-repeat: no-repeat; ">
-                                    <img style="width: 100%; height: 100%"
-                                         src="<?php bloginfo('template_url'); ?>/images/transparent.png"/>
-                                </div>
-                            </a>
-                        </li>                
-                    <?php
-                    } 
-                        
-                    restore_from_master();
-
-                    ?>   
-                                        
-                    </ul>
-                </div>
-            </div>
-        <div class="utforska-nav-container" style="position: absolute; width: 100%; left: 0; top: 55%;">
-            <div style="max-width: 948px; margin: 0 auto; position: relative;">
-                <a href="#" onclick="javascript:flexBilPrev();return false;"><span style="position: absolute; left: 0;"><img
-                            src="<?php bloginfo('template_url'); ?>/images/gallery-previous.png"/></span></a>
-                <a href="#" onclick="javascript:flexBilNext();return false;"><span
-                        style="position: absolute; right: 0;"><img
-                            src="<?php bloginfo('template_url'); ?>/images/gallery-next.png"/></span></a>
-            </div>
+    </ul>
+    </div>
+    </div>
+    <div class="utforska-nav-container" style="position: absolute; width: 100%; left: 0; top: 55%;">
+        <div style="max-width: 948px; margin: 0 auto; position: relative;">
+            <a href="#" onclick="javascript:flexBilPrev();return false;"><span style="position: absolute; left: 0;"><img
+                        src="<?php bloginfo('template_url'); ?>/images/gallery-previous.png"/></span></a>
+            <a href="#" onclick="javascript:flexBilNext();return false;"><span
+                    style="position: absolute; right: 0;"><img
+                        src="<?php bloginfo('template_url'); ?>/images/gallery-next.png"/></span></a>
         </div>
+    </div>
 
-        </div>
-    </div>    
+    </div>
+    </div>
     <div class="left-column black-page kop-bil">
-        <header class="entry-header" style="width: 100%;">
-            <h2 class="entry-title" style="width: 100%; text-align: center;"><?php echo get_the_title($orignal_ID); ?></h2>
+        <header class="entry-header">
+            <h2 class="entry-title"><?php
+                $masterPost = bytbil_get_master_post(get_the_ID());
+                switch_to_master();
+                echo empty($masterPost->post_parent) ? get_the_title($masterPost->ID) : get_the_title($masterPost->post_parent);
+                restore_from_master();
+                ?></h2>
         </header>
         <!-- .entry-header -->
-        <?php include 'mobile-menu.php'; ?>
-        
+
         <div class="side-menu-container">
             <?php
-            /*            echo volvo_get_custom_menu('Köp bil', 'side-menu-large');
-            new_volvo_menu('bottom-explore');
-            
-            */
+            //echo volvo_get_custom_menu('Köp bil', 'side-menu-large');
+            //new_volvo_menu('bottom-explore');
             ?>
         </div>
     </div>
@@ -89,31 +116,6 @@ $orignal_ID = get_the_ID();
     <!-- .entry-content -->
     </article><!-- #post -->
     </div>
-<style>
-    @media (min-width: 768px){
-        .page-template-utforskabil .left-column,
-        .page-template-utforskabil .container,
-        .entry-header{
-            width: 100%;
-            display: inline-block;
-            float: left;
-
-        }
-        .entry-header {
-            text-align: centeR;
-        }
-         .page-template-utforskabil h2.entry-title {
-          font-size: 48px !important
-        }  
-
-    }
-    
-    @media only screen and (max-width: 1010px) {}
-        .page-template-utforskabil .slides li a div {
-            background-position: 50% 50% !important;
-        }
-    }
-</style>
 <?php // endwhile; ?>
 
     </div><!-- #content -->

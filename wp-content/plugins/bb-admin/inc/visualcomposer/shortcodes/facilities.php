@@ -13,11 +13,18 @@ class FacilitiesShortcode extends ShortcodeBase
 
     function processData($atts) {
 
+        if($atts['facilities'] != null) {
+            $facilities_list = explode(",", $atts['facilities']);
+        } else {
+            $facilities_list = "";
+        }
+
         $args = array(
             'posts_per_page'    => -1,
             'orderby'           => 'date',
             'order'             => 'DESC',
             'post_type'         => 'facility',
+            'post__in'          => $facilities_list
         );
 
         //echo "<pre>"; print_r($args); echo "</pre>"; // Useful for viewing the arguments in their entirety
@@ -89,6 +96,19 @@ function bb_init_facilities_shortcode()
                 'param_name' => 'headline',
                 'value' => '',
                 'description' => 'skriv in en rubrik'
+            ),
+            array(
+                'type' => 'multiselect',
+                'post_type' => 'facility',
+                'heading' => 'Anläggningar',
+                'param_name' => 'facilities',
+                'description' => 'Välj specifika anläggningar (lämna tom för att visa alla)',
+            ),
+            array(
+                'type' => 'textfield',
+                'heading' => 'Extra CSS-klasser',
+                'param_name' => 'css_classes',
+                'value' => '',
             )
         )
     );

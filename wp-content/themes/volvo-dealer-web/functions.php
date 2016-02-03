@@ -1680,15 +1680,10 @@ function oppettider($atts)
 add_shortcode('oppettider', 'oppettider');
 
 
-function wpb_list_child_pages($includeBuildCar = false, $carTitle = null, $parent = false)
+function wpb_list_child_pages($includeBuildCar = false, $carTitle = null)
 {
 
     global $post;
-    $id = $post->ID;
-    
-    if($parent) {
-        $id = $parent->ID;
-    }
 
 
     $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0&exv');
@@ -1718,18 +1713,16 @@ function wpb_list_child_pages($includeBuildCar = false, $carTitle = null, $paren
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 
-function wpb_list_child_pagesparam($ids, $childpages=true)
+function wpb_list_child_pagesparam($ids)
 {
 
     global $post;
 
 
-    if($childpages){
-        $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $ids[0] . '&echo=0&exv');
+    $childpages = wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $ids[0] . '&echo=0&exv');
+
+    if ($childpages) {
         $string = '<ul>' . $childpages . '</ul>';
-    }
-    else {
-        wp_list_pages('sort_column=menu_order&title_li=&child_of=' . $ids[0] . '&echo=0&exv');
     }
 
     return $string;
@@ -1889,60 +1882,6 @@ function new_volvo_menu($menu_name = 'main', $echoHtml = true, $ulclass = '', $i
 
 }
 
-function custom_mobile_menu($menus = array(), $print = false)
-{
-    if (!is_array($menus) && !empty($menus))
-        return;
-
-    $current_post = get_post(get_the_ID());
-    $current_post_title = $current_post->post_title;
-    $html = '<div>';
-
-    foreach ($menus as $slug => $title) {
-        $open = false;
-        if (strtolower($title) === strtolower($current_post_title))
-            $open = true;
-
-        $html .= '<h2 class="accordion-header" data-target="accordion-' . $slug .'">' . $title . '</h2>';
-        $volvo_menu = new_volvo_menu($slug, false);
-        $items = '';
-
-        if($volvo_menu){
-            foreach ($volvo_menu as $key => $menu_item) {
-                if (strtolower($menu_item->title) === strtolower($current_post_title))
-                    $open = true;
-
-                $title = $menu_item->title;
-                if ($menu_item->type !== 'custom')
-                    $url = get_local_permalink($menu_item);
-                else
-                    $url = $menu_item->url;
-
-                $class = '';
-                if ($menu_item->open_in_lightbox == 'yes')
-                    $class = 'lytebox';
-
-                $target = '';
-                if ($menu_item->target)
-                    $target = $menu_item->target;
-
-                $items .= '<li><a href="' . $url . '" class="' . $class . '" target="' . $target . '">' . $title . '</a></li>';
-            }
-
-            $html .= '<ul class="accordion accordion-' . $slug . ($open ? ' accordion-open' : '') . '">';
-            $html .= $items;
-            $html .= '</ul>';
-        }
-    }
-
-    $html .= '</div>';
-
-    if ($print)
-        echo $html;
-    else
-        return $html;
-}
-
 function get_local_permalink($upstreamPost)
 {
     return preg_replace('/^http:\/\/.*?(?=\/)/i', "http://" . $_SERVER['HTTP_HOST'], $upstreamPost->url);
@@ -1966,24 +1905,24 @@ function provkor_form_ajax()
 {
     $data = array();
     parse_str($_POST['data'], $data);
-    $headers = 'From: ' . sanitize_text_field($data['fornamn']) . " " . sanitize_text_field($data['efternamn']) . ' <' . sanitize_text_field($data['email']) . '>' . "\nContent-Type: text/html; charset=UTF-8" . PHP_EOL;
-    $message = "Namn: " . sanitize_text_field($data['fornamn']) . " " . sanitize_text_field($data['efternamn']) . "<br>";
-    $message .= "Tel: " . sanitize_text_field($data['telefon']) . "<br>";
-    $message .= "E-mail: " . sanitize_email($data['email']) . "<br>";
-    $message .= "RegNr: " . sanitize_text_field($data['regnr']) . "<br>";
+    $headers = 'From: ' . $data['fornamn'] . " " . $data['efternamn'] . ' <' . $data['email'] . '>' . "\nContent-Type: text/html; charset=UTF-8" . PHP_EOL;
+    $message = "Namn: " . $data['fornamn'] . " " . $data['efternamn'] . "<br>";
+    $message .= "Tel: " . $data['telefon'] . "<br>";
+    $message .= "E-mail: " . $data['email'] . "<br>";
+    $message .= "RegNr: " . $data['regnr'] . "<br>";
     $message .= "<br><br>";
     $message .= "Bil(ar): <br>";
     foreach ($data['checkedCar'] as $car) {
-        $message .= "&nbsp;&nbsp;&nbsp;" . sanitize_text_field($car) . "<br>";
+        $message .= "&nbsp;&nbsp;&nbsp;" . $car . "<br>";
     }
     $message .= "Kontakttid: <br>";
     foreach ($data['contactWhen'] as $when) {
-        $message .= "&nbsp;&nbsp;&nbsp;" . sanitize_text_field($when) . "<br>";
+        $message .= "&nbsp;&nbsp;&nbsp;" . $when . "<br>";
     }
     $message .= "Vill ha nyheter via e-post: ";
     $message .= isset($data['contact_me']) ? "Ja" : "Nej";
 
-    $success = wp_mail(sanitize_email($data['targetMail']), 'Provkörning', $message, $headers);
+    $success = wp_mail($data['targetMail'], 'Provkörning', $message, $headers);
     if (!$success) {
         global $ts_mail_errors;
         global $phpmailer;
@@ -2153,50 +2092,4 @@ function parse_model_name($name) {
     $find = array('Cross Country', 'Classic Summum', 'Classic');
     $replace = array('<small>Cross<br />Country</small>', '<small>Classic<br />Summum</small>', '<small>Classic</small>');
     return str_replace($find, $replace, $name);
-}
-
-function print_seo_meta($id)
-{
-    $seo_settings = get_field('options-seo', 'option');
-    $meta = false;
-    $found_match = false;
-    $match = false;
-
-    if ($seo_settings) {
-        foreach ($seo_settings as $page) {
-            if ($found_match)
-                break;
-
-            if ($page['options-seo-page']->ID === $id)
-                $match = true;
-
-            if (!$match)
-                continue;
-
-            $meta = array(
-                'title' => $page['options-seo-title'],
-                'keywords' => $page['options-seo-keywords'],
-                'description' => $page['options-seo-description']
-            );
-
-            $found_match = true;
-        }
-
-        if ($meta) {
-            extract($meta);
-            if ($title) : ?>
-                <title><?php echo $title; ?></title>
-            <?php else : ?>
-            <title><?php if (!is_home()) {
-                    echo the_title() . " - ";
-                } ?><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
-            <?php endif;
-            if ($keywords) : ?>
-                <meta name="keywords" content="<?php echo $keywords; ?>" />
-            <?php endif;
-            if ($description) : ?>
-                <meta name="description" content="<?php echo $description; ?>" />
-            <?php endif;
-        }
-    }
 }

@@ -28,6 +28,59 @@ class MapShortcode extends ShortcodeBase
             $id = self::Exists($atts['coordinates_facility'], '');
             if ($id !== '') {
                 $facility_list = explode(",", $atts['coordinates_facility']);
+
+                $facilities = array();
+
+                $args = array(
+                    'posts_per_page'    => -1,
+                    'orderby'           => 'title',
+                    'order'             => 'ASC',
+                    'post_type'         => 'facility',
+                );
+
+                $facility_query = new WP_Query( $args );
+
+                if ( $facility_query->have_posts() ) :
+
+                    $i = 0;
+
+                    while ( $facility_query->have_posts() ) : $facility_query->the_post();
+
+                        $facilities[$i]['slug'] = $facility_query->post->post_name;
+
+                        // Facility/location name
+                        $facilities[$i]['name'] = get_the_title();
+
+                        // Permalink
+                        $facilities[$i]['permalink'] = get_the_permalink();
+
+                        // Visiting address
+                        $visiting_address = get_field('facility-visiting-address');
+                        $visiting_address = explode(",", $visiting_address['address']);
+                        $facilities[$i]['visiting_address_street'] = $visiting_address[0];
+                        $facilities[$i]['visiting_address_zip_postal'] = $visiting_address[1];
+
+                        // Postal address
+                        $facilities[$i]['use_postal'] = get_field('facility-use-postal-adress');
+                        $facilities[$i]['postal_address'] = get_field('facility-other-adress');
+
+                        // Phone numbers
+                        $facilities[$i]['phonenumbers'] = get_field('facility-phonenumbers');
+
+                        // E-mail addresses
+                        $facilities[$i]['emails'] = get_field('facility-emails');
+
+                        // Departments
+                        $facilities[$i]['departments'] = get_field('facility-departments');
+
+                        $i++;
+
+                    endwhile;
+
+                endif;
+
+                wp_reset_query();
+
                 $coordinates = array();
 
                 $i = 0;
@@ -37,9 +90,9 @@ class MapShortcode extends ShortcodeBase
                     }
                     $i++;
                 }
-                //$coordinates = get_field('facility-visiting-address', $id);
             }
 
+            $atts['facilities'] = $facilities;
             $atts['coordinates_list'] = $coordinates;
             $atts['zoom'] = 14;
 
@@ -130,6 +183,15 @@ function bb_init_map_shortcode()
                 'heading' => 'Kontroller',
                 'param_name' => 'controls',
                 'description' => 'Bocka i om du vill visa kontroller på kartan.',
+                'value' => array(
+                    'Ja' => '1'
+                )
+            ),
+            array(
+                'type' => 'checkbox',
+                'heading' => 'Anläggningskort',
+                'param_name' => 'map_departments',
+                'description' => 'Bocka i om du vill visa anläggningskort ovanpå kartan.',
                 'value' => array(
                     'Ja' => '1'
                 )

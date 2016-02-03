@@ -41,6 +41,6 @@ function bb_init_contactform_shortcode()
 
     $vcContact = new ContactShortcode($map);
 }
-add_action('after_setup_theme', 'bb_init_tabs_shortcode');
+add_action('after_setup_theme', 'bb_init_contactform_shortcode');
 
 ?>

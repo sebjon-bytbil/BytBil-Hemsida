@@ -1,0 +1,659 @@
+/*
+
+ Theme Name: Roslags Bil
+
+ Theme URI: themes/roslags-bil
+
+ Author: Sebastian Jonsson : BytBil Nordic AB
+
+ Author URI: http://bytbil.com
+
+ Version: 1.0.0
+
+ Tags: awesome
+
+ Text Domain: roslags-bil
+
+*/
+
+/*General Elements */
+html {
+    height: auto;
+    margin-bottom: 1px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+body {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.1em;
+    font-weight: normal;
+    margin: 0.2em 0 0.2em 0;
+}
+
+h2 {
+    font-size: 1.9em;
+    font-weight: normal;
+    margin: 0.3em 0 0.2em 0;
+}
+
+p {
+    text-align: justify;
+    font-size: 16px;
+}
+
+/* Body */
+#backdrop {
+    background-image: url(grafik/backdrop-new.jpg);
+    background-position: top center;
+    position: absolute;
+    top: 0;
+    z-index: -100;
+    height: 640px;
+    width: 100%;
+    background-size: cover;
+}
+
+#backdrop-covering {
+    position: absolute;
+    background-color: #fff;
+    top: 594px;
+    z-index: 0;
+    height: 600px;
+    width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 984px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Header */
+#top {
+    background-color: #fff;
+    padding: 0 0 15px 0;
+}
+
+.logo, .brands {
+    padding: 15px 0px 16px 0px;
+}
+
+.logo img {
+    max-height: 35px;
+    margin-top: 3px;
+}
+
+.brands {
+    text-align: right;
+    margin-left: 0px;
+}
+
+.brands a {
+    margin-left: 10px;
+}
+
+.brands a img {
+    max-height: 42px;
+}
+
+/* Header - Navbar */
+
+#menu {
+    background: #666;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    min-height: inherit !important;
+    font-size: 16px;
+}
+
+/*.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .current_page_item, .navbar-inverse .current-page-ancestor, .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+	background-color: #72b1ef;
+}*/
+
+.navbar-collapse {
+    background: #fff;
+    max-height: none !important;
+    webkit-overflow-scrolling: touch;
+}
+
+#menu .container-fluid {
+    padding: 0;
+}
+
+/* Slides */
+#slides-area {
+    /*background-image: url(../images/backdrop.jpg);
+    background-position: top center;*/
+    padding: 15px 0;
+}
+
+/* Puffar / Quicklinks */
+#quicklinks {
+    background-color: #fff;
+    padding: 22px 0;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.page-with-submenu #quicklinks {
+    border: 0;
+}
+
+.page-with-submenu .puff {
+    margin: 15px 0px;
+}
+
+.puff {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.puff a {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: auto;
+    color: #666;
+/ / font-size : 14 em;
+}
+
+.col-xs-3 .puff a img {
+    max-width: 128px;
+    width: 100%;
+}
+
+.puff a:hover {
+    color: #72b1ef;
+}
+
+.puff a img {
+    padding: 12.5%;
+    background: #666;
+    border-radius: 50%;
+}
+
+.puff a:hover img {
+    background: #72b1ef;
+}
+
+.puff h3 {
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+/*.search { background-image: url(grafik/search.png); }
+.search:hover { background-image: url(grafik/search-hover.png); }
+
+/*.service { background-image: url(grafik/service.png); }
+.service:hover { background-image: url(grafik/service-hover.png); }
+
+/*.campaigns { background-image: url(grafik/campaigns.png); }
+.campaigns:hover { background-image: url(grafik/campaigns-hover.png); }
+
+/*.contact { background-image: url(grafik/contact.png); }
+.contact:hover { background-image: url(grafik/contact-hover.png); }
+*/
+
+/* Nyinkommet */
+#new-cars {
+    background-color: #e5ecf4;
+    padding: 20px 0;
+    position: relative;
+}
+
+#new-cars #iframeDiv {
+    min-height: 300px;
+    margin: 15px 0 5px 0;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+#new-cars #iframeDiv iframe {
+    min-height: 265px !important;
+}
+
+/* Text och Öppettider */
+
+#intro-texts {
+    padding: 15px 0;
+    font-size: 16px;
+    line-height: 1.50em;
+    background-color: #fff;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+h3.slogan {
+    font-size: 18px;
+    color: #3f63a1;
+    font-style: italic;
+}
+
+#oppettider h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#oppettider p {
+    margin-bottom: 0px;
+}
+
+#content {
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+/* Sidomeny */
+#submenu {
+    background-color: #e5ecf4;
+    padding: 10px 0 10px 20px;
+}
+
+#submenu .menu ul li.page_item {
+    display: none;
+}
+
+#submenu ul {
+    padding-left: 0px;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+#submenu ul li {
+    list-style-type: circle !important;
+}
+
+#submenu .menu ul a {
+    color: #000;
+}
+
+#submenu .menu ul a:hover {
+    opacity: 0.8;
+}
+
+#submenu .menu .current_page_item a, #submenu .menu ul .current_page_ancestor ul.children li.current_page_item a, #submenu .menu ul li ul.children li.current_page_parent a {
+    font-weight: bold;
+}
+
+#submenu .menu .current_page_item ul.children a, #submenu .menu ul .current_page_ancestor ul.children a, #submenu .menu ul .current_page_ancestor ul.children li.current_page_item ul.children a {
+    font-weight: normal;
+}
+
+#submenu .menu ul li.current_page_item, #submenu .menu ul li.current_page_ancestor, #submenu .menu ul li.current_page_item *, #submenu .menu ul li.current_page_ancestor * {
+    display: block;
+    padding: 2px 0px;
+    margin: 0;
+}
+
+#submenu .menu ul li ul li {
+    padding: 8px 0px;
+    margin: 4px 0px !important;
+}
+
+#submenu .menu ul li ul li ul li {
+    padding: 0px !important;
+    margin: 0px 0px !important;
+
+}
+
+#submenu .menu ul li ul.children li ul.children {
+    display: none;
+}
+
+#submenu .menu ul li ul.children li.current_page_item ul.children, #submenu .menu ul li ul.children li.current_page_parent ul.children {
+    display: block;
+    font-size: 13px;
+}
+
+#submenu .menu ul li ul.children li.current_page_item ul.children a, #submenu .menu ul li ul.children li.current_page_parent ul.children a {
+    font-weight: normal;
+    padding-left: 5px;
+}
+
+#submenu .menu ul li ul.children li.current_page_parent ul.children .current_page_item a {
+    font-weight: bold;
+}
+
+/* Blogg och Nyheter */
+
+.blogg p img {
+    width: 100%;
+    height: auto;
+}
+
+/* Kontakt */
+
+.contact .container-fluid {
+    padding: 0;
+}
+
+.contact .contact-row {
+    margin: 0px 0px 15px;
+}
+
+.contact .contactcard {
+    width: 154px;
+    float: left;
+    margin: 10px;
+}
+
+.contact .contactcard .imagediv {
+    height: 216px;
+}
+
+.contact .contactcard .imagediv img {
+    width: auto;
+    height: 100%;
+}
+
+.contact .contactcard .contactcardinfo h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact .contactcard .contactcardinfo .value:last-of-type a {
+    color: #428bca !important;
+}
+
+.contact .nyberg-kontakt-avdelning {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact .avdelningar-row {
+    padding: 10px 15px;
+    background: #666;
+}
+
+.contact .avdelningar-row a {
+    padding: 10px 10px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.contact .avdelningar-row a:hover {
+    background: #72b1ef;
+}
+
+#submenu a.avdelningar-link {
+    display: block;
+    width: 100%;
+    floaT: left;
+    padding: 2px 0px;
+    margin: 0;
+}
+
+/* Banners */
+
+#banners {
+    background-color: #e5ecf4;
+    position: relative;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+#banners .wrapper {
+    padding: 20px 0 45px 0;
+}
+
+#banners img {
+    width: 100%;
+}
+
+/* Footer */
+
+#footer {
+    background-color: #fff;
+    padding: 30px 0;
+    color: #666666;
+    font-size: 16px;
+}
+
+#footer .right {
+    text-align: right;
+}
+
+#footer .left {
+    text-align: left;
+}
+
+#footer .center {
+    text-align: center;
+}
+
+#footer .contactinfo a {
+    padding: 8px 0px 8px 38px;
+    background-size: 32px 32px !important;
+    margin-left: 12px;
+    color: #666;
+}
+
+#footer .contactinfo a:hover {
+    color: #72b1ef;
+}
+
+#footer .telephone a {
+    background: url(./grafik/icon-phone.png) no-repeat top left;
+}
+
+#footer .email a {
+    background: url(./grafik/icon-email.png) no-repeat top left;
+}
+
+#footer .facebook a {
+    background: url(./grafik/icon-facebook.png) no-repeat top left;
+}
+
+#toTop {
+    background-color: #666666;
+    color: #fff;
+    padding: 8px 12px 6px 12px;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+/* Mixed Classes */
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.page-with-submenu {
+    padding-left: 0px;
+}
+
+.page-with-submenu .col-sm-9 p img.size-full {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.page-with-submenu .col-sm-3 {
+    padding-left: 0px;
+}
+
+.align-right, .alignright {
+    text-align: right;
+}
+
+.align-center, .aligncenter {
+    text-align: center;
+}
+
+.floatright {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.date {
+    color: #72b1ef;
+    text-align: right;
+}
+
+.btn-default {
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+/* Mobile/Tablet */
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        color: #fff;
+        padding: 15px 20px;
+
+    }
+
+    .navbar-nav > li > a:hover {
+        background: #72b1ef;
+    }
+
+    .navbar {
+        border: 0;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .brands, .logo {
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 270px;
+        margin-top: 15px;
+    }
+
+    .puffar .col-xs-3 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .puffar .puff h3 {
+        font-size: 16px;
+    }
+
+    #footer .right {
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+    #footer .contactinfo span {
+        margin: 10px 0px;
+    }
+
+    .banner {
+        margin-top: 15px;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    h1 {
+        margin-top: 15px;
+        text-align: center;
+
+    }
+
+    .date {
+        text-align: center;
+        margin: 5px 0 15px;
+    }
+
+    .permalink {
+        text-align: center;
+    }
+
+    .contact .contactcard .contactcardinfo {
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        background: #fff;
+        max-height: none !important;
+        webkit-overflow-scrolling: touch;
+
+    }
+
+    #menu {
+        background: #fff;
+    }
+
+    #menu .wrapper .container-fluid {
+        padding: 0;
+    }
+
+    .navbar-header {
+        background: #666;
+        padding: 0 15px;
+    }
+
+    .navbar-brand {
+        height: 35px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .icon-bar {
+        background: #fff;
+    }
+
+    .navbar-toggle {
+        border: 1px solid #fff;
+    }
+
+}
+
+@media (max-width: 479px) {
+
+    .puffar .puff h3 {
+        font-size: 14px !important;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 21px;
+    }
+
+    #oppettider {
+        padding: 20px 0px;
+    }
+
+    #oppettider h3 {
+        text-align: left;
+    }
+
+}

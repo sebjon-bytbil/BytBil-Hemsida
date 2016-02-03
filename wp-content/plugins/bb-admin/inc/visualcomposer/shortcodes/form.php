@@ -30,12 +30,30 @@ function bb_init_form_shortcode()
         'category' => 'Innehåll',
         'params' => array(
             array(
+                'type' => 'textfield',
+                'holder' => '',
+                'class' => '',
+                'heading' => 'Rubrik',
+                'param_name' => 'headline',
+                'value' => '',
+                'description' => 'Skriv in en rubrik som ska visas i formuläret'
+            ),
+            array(
+                'type' => 'textarea_html',
+                'holder' => 'div',
+                'class' => 'formcontent',
+                'heading' => 'Text',
+                'param_name' => 'formcontent',
+                'value' => '',
+                'description' => 'Skriv in text som ska visas i formuläret'
+            ),
+            array(
                 'type' => 'dropdown',
                 'heading' => 'Välj formulär',
                 'param_name' => 'form_id',
                 'description' => 'Välj ett existerande formulär i listan.',
                 'value' => populate_form_values()
-            )
+            ),
         )
     );
 

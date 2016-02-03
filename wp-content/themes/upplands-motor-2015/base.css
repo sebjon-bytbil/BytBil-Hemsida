@@ -387,3 +387,59 @@ h4.panel-title {
 @media (min-width: 1200px) {
 }
 
+
+
+.myparking-close {
+    width: 36px;
+    height: 36px;
+    position: fixed;
+    right: 1em;
+    top: 95px;
+    z-index:10000;
+    overflow: hidden;
+    text-indent: 100%;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform: scale3d(0,0,1);
+    transform: scale3d(0,0,1);
+}
+
+.myparking-close {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.myparking-close::before,
+.myparking-close::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    border-radius: 3px;
+    opacity: 0.2;
+    background: #000;
+}
+
+.myparking-close:hover.myparking-close::before,
+.myparking-close:hover.myparking-close::after {
+    opacity: 1;
+}
+
+.myparking-close::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.myparking-close::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}

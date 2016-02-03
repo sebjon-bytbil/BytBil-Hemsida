@@ -1472,7 +1472,7 @@ function get_offer_equipment_package($page_id, $model_equipment_package){
     <?php
 }
 
-function get_offer_meta_data($id) {
+function get_offer_meta_data($id, $image = false) {
     if (get_field('pagesettings-title-tag', $id)) : ?>
         <meta property="og:title" content="<?php the_field('pagesettings-title-tag'); ?>" />
     <?php else : ?>
@@ -1491,6 +1491,15 @@ function get_offer_meta_data($id) {
             <?php endif;
             $skip = true;
         }
+    endif;
+
+    if ($image) :
+        $image_object = get_field('offer-image', $id);
+        if ($image_object) :
+            $image_url = maybe_add_preview_to_url($image_object['url']);
+            $image_url = str_replace('customcms.bytbil.com', 'upplandsmotor.se', $image_url); ?>
+            <meta property="og:image" content="<?php echo $image_url; ?>" />
+        <?php endif;
     endif;
 
     if (get_field('pagesettings-meta-keywords')) : ?>

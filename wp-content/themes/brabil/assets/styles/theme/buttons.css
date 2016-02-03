@@ -5,7 +5,7 @@
     border-radius: 0;
     padding: 10px 16px;
     background: transparent;
-    border: 0;
+    border: 1px solid transparent;
 }
 .btn:active {
     outline: none !important;
@@ -28,6 +28,7 @@
 .btn-blue {
     background: #003057;
     color: #fff;
+    border-color: #003057;
 }
 .btn-blue:hover,
 .btn-blue:focus,
@@ -43,6 +44,7 @@
 .btn-white {
     background: #fff;
     color: #003057;
+    border: 1px solid #003057;
 }
 .btn-white:hover,
 .btn-white:focus,
@@ -59,6 +61,7 @@
     border: 1px solid #003057;
     color: #003d6f;
 }
+
 .btn-outline-blue:hover,
 .btn-outline-blue:focus,
 .btn-outline-blue:active {

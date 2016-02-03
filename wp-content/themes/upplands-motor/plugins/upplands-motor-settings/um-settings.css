@@ -1,0 +1,19 @@
+/* Color Picker */
+
+.wp-picker-container {
+    width: 100%;
+}
+
+.wp-picker-container .iris-picker {
+    margin-top: 35px;
+    position: absolute;
+}
+
+.wp-picker-container .wp-color-result {
+    float: left;
+}
+
+.wp-picker-open + .wp-picker-input-wrap {
+    padding: 0;
+    margin-left: 15px;
+}

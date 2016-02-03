@@ -13,12 +13,6 @@
                     Volvosite.</a></p>
             </div>
 
-            <div class="left-column">
-
-                <?php include 'mobile-menu.php'; ?>
-
-            </div>
-
         </div>
     </div>
 </div>

@@ -90,5 +90,32 @@ switch ($vehicle_contents) {
 
     <?php
     break;
+        
+    case 'personalbilar' :
+        $employee_car_list = get_sub_field('content-vehicle-employees');
+        ?>
+        <div class="vehicle-<?php echo $vehicle_contents; ?>">
+            <div class="row row-flex row-flex-wrap">
+                
+            <?php
+            foreach($employee_car_list as $list)
+            {
+                $list_fields = get_fields($list->ID);
+                $employee_vehicles = $list_fields['employee_vehicles'];
+                foreach($employee_vehicles as $vehicle){
+                    get_employee_vehicle_list_item($vehicle);
+                }
+                ?>
+
+
+
+                <?php
+            }
+            ?>
+                
+            </div>
+        </div>
+    <?php
+    break;
 }
 ?>

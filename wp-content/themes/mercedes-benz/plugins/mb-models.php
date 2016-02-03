@@ -1,0 +1,210 @@
+<?php
+
+add_action('init', 'cptui_register_my_cpt_model');
+function cptui_register_my_cpt_model()
+{
+    register_post_type('model', array(
+        'label' => 'Modeller',
+        'description' => '',
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'capability_type' => 'post',
+        'map_meta_cap' => true,
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'model', 'with_front' => true),
+        'query_var' => true,
+        'supports' => array('title', 'revisions'),
+        'labels' => array(
+            'name' => 'Modeller',
+            'singular_name' => 'Modell',
+            'menu_name' => 'Modeller',
+            'add_new' => 'Lägg till',
+            'add_new_item' => 'Lägg till ny Modell',
+            'edit' => 'Redigera',
+            'edit_item' => 'Redigera Modell',
+            'new_item' => 'Ny Modell',
+            'view' => 'Visa Modell',
+            'view_item' => 'Visa Modell',
+            'search_items' => 'Sök Modell',
+            'not_found' => 'Inga Modeller hittade',
+            'not_found_in_trash' => 'Inga Modeller i papperskorgen',
+            'parent' => 'Modellens förälder',
+        )
+    ));
+}
+
+if (function_exists("register_field_group")) {
+    register_field_group(array(
+        'id' => 'acf_modell',
+        'title' => 'Modell',
+        'fields' => array(
+            array (
+                'key' => 'field_55141c1884e14',
+                'label' => 'Modell och kaross',
+                'name' => 'model_body',
+                'type' => 'repeater',
+                'sub_fields' => array (
+                    array(
+                        'key' => 'field_54152edcbe513',
+                        'label' => 'Karossnamn',
+                        'name' => 'model_body_name',
+                        'type' => 'text',
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'formatting' => 'none',
+                        'maxlength' => '',
+                    ),
+                    array(
+                        'key' => 'field_5415248c6ee98',
+                        'label' => 'Modellbild',
+                        'name' => 'model_image',
+                        'type' => 'image',
+                        'save_format' => 'object',
+                        'preview_size' => 'thumbnail',
+                        'library' => 'all',
+                    ),
+                    array(
+                        'key' => 'field_5415268a6ee9d',
+                        'label' => 'Modellbeskrivning',
+                        'name' => 'model_description',
+                        'type' => 'textarea',
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'maxlength' => '',
+                        'formatting' => 'br',
+                        'rows' => '2',
+                    ),
+
+                    array(
+                        'key' => 'field_54152ea1bf018',
+                        'label' => 'Upplev',
+                        'name' => 'model_shortlinks-experience',
+                        'type' => 'text',
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'formatting' => 'none',
+                        'maxlength' => '',
+                    ),
+                    array(
+                        'key' => 'field_54152eccbf019',
+                        'label' => 'Tekniska data',
+                        'name' => 'model_shortlinks-data',
+                        'type' => 'text',
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'formatting' => 'none',
+                        'maxlength' => '',
+                    ),
+                    array(
+                        'key' => 'field_54152ef0bf01a',
+                        'label' => 'Broschyr',
+                        'name' => 'model_shortlinks-brochure',
+                        'type' => 'text',
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'formatting' => 'none',
+                        'maxlength' => '',
+                    ),
+                    array(
+                        'key' => 'field_54152f0bbf01b',
+                        'label' => 'Konfigurator',
+                        'name' => 'model_shortlinks-configurator',
+                        'type' => 'text',
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'formatting' => 'none',
+                        'maxlength' => '',
+                    ),
+
+                    array(
+                        'key' => 'field_54490b71c1caa',
+                        'label' => 'Fordonsurval',
+                        'name' => 'model_assortment-object',
+                        'type' => 'post_object',
+                        'column_width' => '',
+                        'post_type' => array(
+                            0 => 'assortment',
+                        ),
+                        'taxonomy' => array(
+                            0 => 'all',
+                        ),
+                        'allow_null' => 0,
+                        'multiple' => 0,
+                    ),
+                ),
+                'row_min' => '',
+                'row_limit' => '',
+                'layout' => 'row',
+                'button_label' => 'Lägg till karosstyp',
+            ),
+            array(
+                'key' => 'field_54087sdf9ugh23f97ywege1df7c',
+                'label' => 'Visa för återförsäljare',
+                'name' => 'model_show_for',
+                'type' => 'checkbox',
+                'choices' => array(
+                    'pb' => 'Personbilar',
+                    'tb' => 'Transportbilar',
+                    'lb' => 'Lastbilar',
+                    'hb' => 'Hyrbilar',
+                ),
+                'default_value' => 'pb',
+                'layout' => 'horizontal',
+            ),
+            array(
+                'key' => 'field_54152f45bf01c',
+                'label' => 'Sök begagnad',
+                'name' => 'model_shortlinks-find',
+                'type' => 'page_link',
+                'post_type' => array(
+                    0 => 'page',
+                ),
+                'allow_null' => 0,
+                'multiple' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'model',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array(
+            'position' => 'acf_after_title',
+            'layout' => 'default',
+            'hide_on_screen' => array(
+                0 => 'the_content',
+                1 => 'excerpt',
+                2 => 'custom_fields',
+                3 => 'discussion',
+                4 => 'comments',
+                5 => 'slug',
+                6 => 'author',
+                7 => 'format',
+                8 => 'featured_image',
+                9 => 'categories',
+                10 => 'tags',
+                11 => 'send-trackbacks',
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+}
+
+?>

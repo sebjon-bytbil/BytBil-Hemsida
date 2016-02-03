@@ -74,12 +74,7 @@
                     <?php
                     }else{ ?>
                         <script type="text/javascript">
-                            var w = window.innerWidth;
-                            if(w>=768){
-                                $('a[href="<?php echo get_site_url() . '/boka-service/' ?>"]').addClass('lytebox');
-                            } else {
-                                $('a[href="<?php echo get_site_url() . '/boka-service/' ?>"]').attr('target','_blank');
-                            }                            
+                            $('a[href="<?php echo get_site_url() . '/boka-service/' ?>"]').addClass('lytebox');
                         </script>
                     <?php
                     } ?>
@@ -88,13 +83,7 @@
                         /* MENU FIX - Current Item bold and Lytebox on Bygg Din Volvo*/
 
                         $('.side-menu-large a[href="' + pathname + '"]').css('font-weight', 'bold');
-                        var w = window.innerWidth;
-                        
-                        if(w>=768){
                         $('a[href="<?php echo get_site_url() . '/bygg-din-volvo/' ?>"]').addClass('lytebox');
-                        } else {
-                            $('a[href="<?php echo get_site_url() . '/bygg-din-volvo/' ?>"]').attr('target','_blank');
-                        }
 
                         var feedTimer = setInterval(function () {
                             $('#newsticker .ticker-item:first').slideUp(function () {

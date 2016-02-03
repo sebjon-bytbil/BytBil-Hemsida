@@ -1,5 +1,5 @@
 <footer>
-    <section class="white-bg">
+    <section class="white-bg default-padding">
         <div class="container-fluid wrapper">
             <div class="row">
                 <div class="col-xs-12 col-sm-8">
@@ -53,15 +53,12 @@
                 </div>
                 <div class="col-xs-12 col-sm-4">
                     <span class="footer-header">Sök på brabil.se</span>
-                    <p>Har du inte hittat det du letar efter? Prova gärna vår sökfunktion eller <a href="#">Kontakta oss</a> så hjälper vi dig.</a></p>
-                    <div class="footer-search-wrapper">
-                        <input type="text" class="footer-search" placeholder="Vad letar du efter?">
-                        <button class="btn btn-blue footer-search-button form-control">Sök</button>
-                    </div>
+                    <?php echo get_field('search-box','options'); ?>
+                    <?php get_search_form(); ?>
                 </div>
                 <div class="col-xs-12 col-sm-4">
                     <span class="footer-header">Följ oss i sociala medier</span>
-                    <p>Kom ihåg att följa oss i våra kanaler för att aldrig missa nyheter och erbjudanden.</p>
+                    <?php echo get_field('social-media-box','options'); ?>
                     <ul class="footer-social-list">
                         <li><a href="#"><i class="ion ion-social-facebook"></i> Facebook</a></li>
                         <li><a href="#"><i class="ion ion-social-instagram-outline"></i> Instagram</a></li>
@@ -74,7 +71,19 @@
     <section class="blue-bg small-padding">
         <div class="container-fluid wrapper align-center">
             <div class="col-xs-12">
-                <p>
+                <?php
+                    wp_nav_menu( array(
+                        'menu'              => 'footer-menu',
+                        'theme_location'    => 'footer-menu',
+                        'depth'             => 3,
+                        'container'         => 'div',
+                        'container_class'   => '',
+                        'container_id'      => '',
+                        'menu_class'        => 'nav footer-nav'
+                        )
+                    );
+                ?>                
+                <!--<p>
                     <a href="#">Om oss</a> &nbsp;&nbsp;
                     <a href="#">Cookies</a> &nbsp;&nbsp;
                     <a href="#">Kontakta oss</a> &nbsp;&nbsp;
@@ -82,6 +91,7 @@
                     <a href="#">Press och arkiv</a> &nbsp;&nbsp;
                     <a href="#">Lämna synpunkter</a> &nbsp;&nbsp;
                 </p>
+                -->
             </div>
         </div>
     </section>

@@ -76,7 +76,7 @@ function wpcf7_select_facility_footer_shortcode_handler($tag)
     $atts['aria-invalid'] = $validation_error ? 'true' : 'false';
 
     $html = '<option data-brand="" value="0" selected="selected" data-constant="true">Välj anläggning</option>';
-    $emails = $option_fields['settings-emails'];
+    $emails = get_field('settings-emails', 'options');
     $brands = get_terms('brand', array('parent' => 0));
 
     $email_settings = array();
@@ -163,7 +163,7 @@ function wpcf7_select_facility_shortcode_handler($tag)
 
     $html = '<option data-brand="" value="0" selected="selected" data-constant="true">Välj anläggning</option>';
     $facilities = get_posts($args);
-    $emails = $option_fields['settings-emails'];
+    $emails = get_field('settings-emails', 'options');
 
     if (!empty($facilities)) {
         foreach ($facilities as $facility) {
@@ -211,7 +211,7 @@ add_action('wp_ajax_get_footer_options', 'get_footer_options');
 add_action('wp_ajax_nopriv_get_footer_options', 'get_footer_options');
 function get_footer_options()
 {
-    $emails = $option_fields['settings-emails'];
+    $emails = get_field('settings-emails', 'options');
     $select = sanitize_text_field($_GET['select']);
     $department = sanitize_text_field($_GET['department']);
     $facility = sanitize_text_field($_GET['facility']);
@@ -407,7 +407,7 @@ function wpcf7_select_department_footer_shortcode_handler($tag)
         $atts['aria-required'] = 'true';
 
     $html = '<option data-brand="" value="0" selected="selected" data-constant="true">Välj avdelning</option>';
-    $emails = $option_fields['settings-emails'];
+    $emails = get_field('settings-emails', 'options');
     $brands = get_terms('brand', array('parent' => 0));
 
     $email_settings = array();
@@ -493,7 +493,7 @@ function wpcf7_select_department_shortcode_handler($tag)
         'hide_empty' => '0',
     ));
 
-    $emails = $option_fields['settings-emails'];
+    $emails = get_field('settings-emails', 'options');
 
     foreach ($terms as $term) {
         $data_facilities = array();
@@ -541,7 +541,7 @@ function wpcf7_select_brand_footer_shortcode_handler($tag)
         $atts['aria-required'] = 'true';
 
     $html = '<option value="0" selected="selected" data-constant="true">Välj ett märke</option>';
-    $emails = $option_fields['settings-emails'];
+    $emails = get_field('settings-emails', 'options');
     $brands = get_terms('brand', array('parent' => 0));
 
     $email_settings = array();
@@ -746,7 +746,7 @@ function um_before_send_mail($cf7)
     ));
     $skip_brand_model = false;
 
-    $emails = $option_fields['settings-emails'];
+    $emails = get_field('settings-emails', 'options');
 
     // Don't process if there is no email addresses
     if (!$emails) {

@@ -1,4 +1,5 @@
 <?php
+
 /* Load Admin-settings for Upplands Motor */
 function add_settings_js() {
     wp_enqueue_script("um-settings-js", get_template_directory_uri() . "/plugins/upplands-motor-settings/um-settings.js", array("jquery"), null, true);
@@ -14,9 +15,6 @@ if (function_exists('acf_set_options_page_title')) {
     acf_add_options_sub_page('Min P-plats');
     acf_add_options_sub_page('Sidfot');
 }
-
-global $option_fields;
-
 
 if(function_exists("register_field_group"))
 {
@@ -1062,13 +1060,12 @@ function get_touch_icons(){
 }
 
 function get_logotype($filetype){
-    global $option_fields;
     $logotype = "";
     if ($filetype=='png') {
-        $logotype = $option_fields['settings-logotype-png'];
+        $logotype = get_field('settings-logotype-png', 'options');
     }
     elseif ($filetype=='svg') {
-        $logotype = $option_fields['settings-logotype-svg'];
+        $logotype = get_field('settings-logotype-svg', 'options');
     }
 
     $url = isset($logotype['url']) && $logotype['url'] != "" ? $logotype['url'] : ""; 
@@ -1076,21 +1073,19 @@ function get_logotype($filetype){
 }
 
 function get_favicon(){
-    $favicon = $option_fields['settings-favicon'];
+    $favicon = get_field('settings-favicon', 'options');
     return $favicon['url'];
 }
 
 function get_settings_code($type){
-    global $option_fields;
-
-    if($type=='css' && $option_fields['settings-css']){
-        return $option_fields['settings-css'];
+    if($type=='css' && get_field('settings-css', 'options')){
+        return get_field('settings-css', 'options');
     }
-    elseif($type=='js' && $option_fields['settings-js']){
-        return $option_fields['settings-js'];
+    elseif($type=='js' && get_field('settings-js', 'options')){
+        return get_field('settings-js', 'options');
     }
-    elseif($type=='html' && $option_fields['settings-html']){
-        return $option_fields['settings-html'];
+    elseif($type=='html' && get_field('settings-html', 'options')){
+        return get_field('settings-html', 'options');
     }
 }
 

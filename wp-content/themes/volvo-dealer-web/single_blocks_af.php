@@ -62,9 +62,8 @@ $post_meta = get_post_meta(get_the_ID());
                                 </h1>
                             </header><!-- .entry-header -->
 
-                            <?php include 'mobile-menu.php'; ?>
 
-                            <div class="side-menu-container side-menu-old">
+                            <div class="side-menu-container">
                                 <ul class="side-menu-large">
                                     <?php
                                     new_volvo_menu($menu);
@@ -81,7 +80,7 @@ $post_meta = get_post_meta(get_the_ID());
                     </div>
 
                     <div class="right-column block-page" style="text-align: left;">
-                        <div style="">
+                        <div style="position:absolute; padding-bottom: 100px;">
 
 
                             <?php
@@ -129,7 +128,7 @@ $post_meta = get_post_meta(get_the_ID());
         <!-- #content -->
     </div><!-- #primary -->
 
-<?php site_url(); ?>
+<?php echo site_url(); ?>
     <script>
 
         var imgTags = $(".blocks-block").find("img");

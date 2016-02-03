@@ -3,6 +3,7 @@
 include_once('breadcrumbs.php');
 include_once('wp_bootstrap_navwalker.php');
 include_once('plugins/bildeve-settings.php');
+include_once('vc_params/vc_params.php');
 
 require_once(plugin_dir_path(__FILE__) . "inc/iconspicker.php");
 
@@ -33,7 +34,6 @@ function register_theme_menu() {
 }
 
 add_action('init', 'register_theme_menu');
-
 
 function custom_excerpt_length($length) {
     return 18;

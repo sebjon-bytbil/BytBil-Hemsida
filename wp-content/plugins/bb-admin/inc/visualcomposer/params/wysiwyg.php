@@ -6,7 +6,12 @@ function bb_add_wysiwyg()
         add_shortcode_param('wysiwyg', 'bb_param_wysiwyg');
     }
 
-    wp_register_script('wysiwyg_editor', VCADMINURL . 'assets/js/editor/wysiwyg_editor.js', array(), '1.0.0', true);
+    if (file_exists(get_stylesheet_directory() . '/vc_params/js/wysiwyg_editor.js')) {
+        wp_register_script('wysiwyg_editor', get_stylesheet_directory_uri() . '/vc_params/js/wysiwyg_editor.js', array(), '1.0.0', true);
+    } else {
+        wp_register_script('wysiwyg_editor', VCADMINURL . 'assets/js/editor/wysiwyg_editor.js', array(), '1.0.0', true);
+    }
+
     wp_localize_script('wysiwyg_editor', 'bb_wysiwyg_css', bb_get_wysiwyg_styles());
     wp_localize_script('wysiwyg_editor', 'bb_wysiwyg_buttons', bb_get_wysiwyg_buttons());
     wp_localize_script('wysiwyg_editor', 'bb_wysiwyg_icons', bb_get_wysiwyg_icons());

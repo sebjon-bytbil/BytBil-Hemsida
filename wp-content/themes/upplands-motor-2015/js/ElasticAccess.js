@@ -4381,7 +4381,7 @@ angular.module("ElasticAccess").controller("ContactController", ["$scope", "$htt
         var obj = angular.fromJson(json);
         var car = $scope.$parent.$parent.car;
 
-        contactform.url = car.
+        contactform.url = car.carUrl;
         contactform.regNr = car.regNr;
         contactform.carInfo = car.brand + " " + car.model + " " + car.modeldescription;
         contactform.sendTo = car.email;

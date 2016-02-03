@@ -30,9 +30,7 @@ get_header(); ?>
                     </header>
                     <!-- .entry-header -->
 
-                    <?php include 'mobile-menu.php'; ?>
-
-                    <div class="side-menu-container side-menu-old">
+                    <div class="side-menu-container">
                         <?php
                         echo volvo_get_custom_menu('Huvudmeny', 'side-menu-large', 2);
                         ?>

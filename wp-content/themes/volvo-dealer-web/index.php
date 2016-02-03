@@ -188,15 +188,6 @@
 
                     </div>
                 </div>
-    <div class="left-column black-page kop-bil">
-        
-        <?php
-            $page_menu = false;
-            include 'mobile-menu.php';
-        ?>
-
-    </div>
-
             </div>
         </div>
         <!-- #content -->

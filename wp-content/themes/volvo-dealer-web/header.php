@@ -17,20 +17,16 @@ restore_from_master();
 <html class="ie ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html lang="en"
-    <?php if (is_user_logged_in()) {
-    echo 'class="push-down-admin-menu"';
-    } ?>>
+<html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-    <title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('description'); ?></title>
     <?php wp_head(); ?>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/flexslider.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/responsive.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/lytebox/lytebox.css">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" style=""></script>
-    <!--<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.1.min.js"></script>-->
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider-min.js"
+            style=""></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/lytebox/lytebox.js" style=""></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jslider.js"></script>
     <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/responsive.js"></script>
@@ -38,7 +34,21 @@ restore_from_master();
 
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <?php print_seo_meta(get_the_ID()); ?>
+    <?php if (get_field('seo_desc')) : ?>
+        <meta name="description" content="<?php the_field('seo_desc') ?>">
+    <?php endif; ?>
+    <?php if (get_field('seo_keywords')) : ?>
+        <meta name="keywords" content="<?php the_field('seo_keywords') ?>">
+    <?php endif; ?>
+
+    <?php if (get_field('seo_title')) : ?>
+        <title><?php the_field('seo_title'); ?></title>
+    <?php else: ?>
+        <title><?php if (!is_home()) {
+                echo the_title() . " - ";
+            } ?> <?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
+    <?php endif; ?>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
@@ -68,7 +78,6 @@ restore_from_master();
     }
     restore_from_master();
     ?>
-    
 
 </head>
 
@@ -84,7 +93,6 @@ restore_from_master();
     } else {
         $bg = false;
         $uid = get_post_meta($post->ID, "pushed_original_id", true);
-    
         if ($uid) {
             switch_to_master();
             $bg = get_field("bakgrundsbild", $uid);
@@ -92,10 +100,9 @@ restore_from_master();
         }
 
         if (!$bg) {
-            switch_to_master();
-            $bg = get_field('general_backgroundimage', 'options');
-            restore_current_blog();
+            $bg = get_bloginfo("template_url") . "/images/dealer-web-xc60.jpg";
         }
+
 
         ?>
         <div id="background-container" class="background-container" style="background-image: url(<?php echo $bg; ?>);">
@@ -122,7 +129,7 @@ restore_from_master();
            href="<?php echo preg_replace("/http:\/\/.*?(?=\/)/", "http://" . $_SERVER['HTTP_HOST'], esc_url(home_url('/'))); ?>"
            title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
             <img class="header-logo"
-                 style="max-height:<?php the_field('logo_height', 'options'); ?>; max-width:<?php the_field('logo_width', 'options'); ?>; height: auto; width: auto;"
+                 style="height:<?php the_field('logo_height', 'options'); ?>; width:<?php the_field('logo_width', 'options'); ?>;"
                  src="<?php the_field('logo', 'options'); ?>"/>
         </a>
         <a class="volvo-link" href="http://www.volvocars.se" target="_blank" title="Volvo">

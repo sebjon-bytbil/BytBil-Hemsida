@@ -2015,13 +2015,13 @@ form input.button {
     display: block;
     float: left;
     /*text-align: center;*/
-    height: 120px;
-    margin-bottom: 30px;
+    /*height: 120px;*/
+    /*margin-bottom: 30px;*/
 }
 
 .scroll-menu .submenu-wrapper {
     text-align: center;
-    position: absolute;
+    position: static;
     width: inherit;
     border-top: 1px solid #ddd;
     border-bottom: 2px solid #ddd;
@@ -2627,6 +2627,10 @@ main.volvo .scroll-menu .submenu-wrapper.affix h1 {
 
 .row .col-sm-4:nth-of-type(4n+0){
     clear: both;
+}
+
+.vehicle-gallery-panel .row .col-sm-4:nth-of-type(4n+0) {
+    clear: initial;
 }
 
 .vehicle [class^="volvo"] .accordion a:hover,
@@ -6389,6 +6393,11 @@ footer .search input {
         margin: 0 auto;
     }
 
+    .scroll-menu .submenu-wrapper .item a,
+    .scroll-menu .submenu-wrapper.affix .item a {
+        padding: 10px 15px;
+    }
+
     /* Footer form */
     #footer-form .bootstrap-select,
     #footer-form #phone,
@@ -6401,6 +6410,24 @@ footer .search input {
         margin-bottom: 10px;
     }
 
+    .offer-page [data-tabs="tabs"] {
+        position: static;
+        float: right;
+    }
+
+    .offer-page div[id^=offer-information-content].tab-content {
+        clear: both;
+    }
+
+    .offer-price-value {
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+    .offer-price-value {
+        font-size: 1.8em;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1365) {

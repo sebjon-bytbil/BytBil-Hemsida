@@ -77,20 +77,21 @@
     }
 
     // Toggle My Parking
-    body.on('click', '.my-parking', function() {
+    body.on('click', '.my-parking, .myparking-close', function() {
+        var $this = $(this).hasClass('myparking-close') ? $(this).parents('.my-parking').first() : $(this);
         var windowH = window.innerHeight;
-        var height = windowH - 160;
+        var height = windowH - 90;
 
         $('.mp-container').css({'min-height': height + 'px', 'max-height': height + 'px'});
         $('.mp-container .mp-favorites').css({'min-height': (height - 2) + 'px', 'max-height': (height - 2) + 'px'});
 
-        if (!$(this).hasClass('open')) {
+        if (!$this.hasClass('open')) {
             reRenderLists();
-            $(this).addClass('open');
+            $this.addClass('open');
             overlay.addClass('open');
             body.addClass('mp-open');
         } else {
-            $(this).removeClass('open');
+            $this.removeClass('open');
             overlay.removeClass('open');
             body.removeClass('mp-open');
         }

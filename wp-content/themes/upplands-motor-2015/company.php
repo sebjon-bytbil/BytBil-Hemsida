@@ -75,14 +75,13 @@ else {
     if($company_post) {
         ?>
 
-        <?php if($user_role == 'foretagsadmin' || 'foretagsanvandare' ||  'administrator'){ 
+        <?php if($user_role == 'foretagsadmin' || $user_role == 'foretagsanvandare' || $user_role == 'administrator'){ 
             
         global $post;
         $post = $company_post;
         setup_postdata($post);
-            
         ?>
-        <?php bytbil_content_loop_old($scroll, true); ?>
+        <?php bytbil_content_loop($scroll, true); ?>
 
         <?php wp_reset_postdata();
         }
@@ -116,6 +115,7 @@ else {
             </section>
             <?php } ?>
         <?php }
+    //If user is not company user, show 404
     }   
 }
 
@@ -147,7 +147,7 @@ else {
     }
     
     .scroll-menu {
-        margin-bottom: 150px;
+    /*    margin-bottom: 150px;*/
     
     }
     .scroll-menu .submenu-wrapper.affix .company-logo-wrapper {

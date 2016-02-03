@@ -14,7 +14,8 @@ extract( shortcode_atts( array(
     'parallax_image' => false,
     'css' => '',
     'el_id' => '',
-    "showrowasslideshow" => ''
+    'showrowasslideshow' => '',
+    'overlaycolor' => ''
 ), $atts ) );
 $parallax_image_id = '';
 $parallax_image_src = '';
@@ -71,9 +72,32 @@ if ($showrowasslideshow) {
     wp_enqueue_script('owl-carousel' );
     wp_enqueue_script('row-carousel');
 }
+         
+if ($overlaycolor) {
+    
+    echo '
+                data-overlay="true" data-overlay-class="'.vc_shortcode_custom_css_class( $css, ' ' ).'"
+            ';
+}
 ?>
 <?php echo $style; ?>><?php
 echo wpb_js_remove_wpautop( $content );
+?><?php
+if ($overlaycolor) {
+    
+    $overlay_background_color = $overlaycolor;
+    
+    $explode_overlay = explode(',', $overlay_background_color);
+    if ($explode_overlay[3] === '0.01);') {
+        $overlay_background_color = 'transparent';
+    }
+    
+    echo '<style>
+        .vc_row[data-overlay-class="'.vc_shortcode_custom_css_class( $css, ' ' ).'"]:before{
+        background: '.$overlay_background_color.';
+    }
+    </style>';
+}
 ?></div><?php echo $this->endBlockComment( 'row' );
 if ( ! empty( $full_width ) ) {
     echo '<div class="vc_row-full-width"></div>';

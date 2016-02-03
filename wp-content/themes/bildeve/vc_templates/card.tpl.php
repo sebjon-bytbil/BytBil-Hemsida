@@ -1,26 +1,28 @@
-<div class="card white-bg <?php echo $css_classes; ?>">
-    <div class="card-header">
-        <span class="card-icon">
-            <?php if ($use_picture == "0"): ?>
-                <i class="<?php echo $icon_bytbil ?>"></i>
-            <?php else: ?>
-                <img src="<?php echo wp_get_attachment_url($icon_image) ?>">
-            <?php endif ?>
-            
-        </span>
-        <h5 class="card-title"><?php echo $headline ?></h5>
+<div class="box-simple card <?php echo $css_classes; ?>">
+    <div class="card-icon">
+        <?php if ($use_picture == "0"): ?>
+            <i class="<?php echo $icon_bytbil ?>"></i>
+        <?php else: ?>
+            <img src="<?php echo wp_get_attachment_url($icon_image) ?>">
+        <?php endif ?>
     </div>
-    <div class="card-body">
+    <div class="card-title"><h4><?php echo $headline ?></h4></div>
+    <div class="card-description">
         <?php echo apply_filters( 'the_content', $blockcontent ); ?>
-        <ul class="card-list">
+
+        <div class="card-links">
+        <?php foreach($links as $link) { ?>
 
             <?php
-            if($links) {
-                foreach($links as $link) { ?>
-                <li><a href="<?php echo $link['href']; ?>"><?php echo $link['text']; ?></a></li>
-            <?php
-                                         } 
-            }?>
-        </ul>
+            $external = false;
+            if(strpos($link['href'], "http") !== false) {
+                $external = true;
+            }
+            ?>
+
+            <a href="<?php echo $link['href']; ?>" class="btn btn-primary <?php echo $external == true ? 'external' : ''; ?>"><?php echo $link['text']; ?></a>
+        <?php } ?>
+        </div>
+
     </div>
 </div>

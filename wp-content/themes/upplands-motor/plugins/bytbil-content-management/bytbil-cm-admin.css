@@ -1,0 +1,981 @@
+@import url('./content/icons/bytbil-icons.css');
+
+
+/* Postbox-fixes */
+.acf_postbox:after {
+    content: "";
+    display: block;
+    clear: both;
+    padding-bottom: 15px;
+}
+
+/* Image Crop */
+
+.acf-image-crop-overlay {
+    display: none !important;
+}
+
+/* ACF POPUP */
+
+.acf-fc-popup {
+    position: absolute;
+
+    border-radius: 0;
+    background: #444;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+    min-width: 300px;
+    z-index: 99999;
+}
+
+.acf-fc-popup .bit {
+    position: absolute;
+
+    left: 50%;
+    margin: 0 0 0 -10px;
+
+    width: 0;
+    height: 0;
+
+    border: transparent solid 10px;
+    border-top-color: #333739;
+
+    z-index: 2;
+}
+
+.acf-fc-popup .bit.top {
+    display: none;
+}
+
+.acf-fc-popup ul,
+.acf-fc-popup ul li {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.acf-fc-popup ul li {
+    position: relative;
+    float: none;
+    float: left;
+    width: 50%;
+    display: inline-block;
+    border-top: #2B2F31 solid 1px;
+}
+
+.acf-fc-popup ul li:first-child {
+    margin: 0;
+    border-top: 0 none;
+}
+
+.acf-fc-popup ul li a {
+    color: #F9F9F9;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 11px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+.acf-fc-popup ul li a:hover {
+    color: #fff;
+    background: #e98239;
+    text-shadow: none;
+}
+
+.acf-fc-popup ul li a .status {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 14px;
+    width: 14px;
+    border-radius: 8px;
+    font-size: 8px;
+    line-height: 15px;
+    border: #e98239 solid 1px;
+    text-align: center;
+    color: #DFDFDF;
+    display: none;
+}
+
+.acf-fc-popup ul li a .status.warning {
+    border-color: #e86740;
+}
+
+.acf-fc-popup ul li a:hover .status {
+    border-color: #fff;
+    color: #fff;
+}
+
+.acf-fc-popup ul li:first-child a,
+.acf-fc-popup ul li:last-child a,
+.acf-fc-popup ul li:only-child a {
+    border-radius: 0;
+}
+
+
+
+/* Taxonomy choice Fixes */
+
+tr[data-field_name="content-slideshow-brand"],
+tr[data-field_name="content-slideshow-facility"],
+tr[data-field_name="content-slideshow-offer-type"],
+tr[data-field_name="content-offer-brands"],
+tr[data-field_name="content-offer-facility"],
+tr[data-field_name="content-offer-type"]
+{
+    /*width: 31%;
+    float: left !important;
+    margin-right: 2%;*/
+}
+
+table.acf-input-table > tbody > tr > td:last-child {
+    padding-bottom: 30px;
+}
+
+.acf-taxonomy-field .categorychecklist-holder {
+    border: none;
+    border-top: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
+    margin-bottom: 15px;
+}
+
+/* Color Picker FIxes */
+
+.iris-picker .iris-palette {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: inset 0 0 2px 0 rgba(0,0,0,0.15) !important;
+    border: 1px solid #fff;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+/* General Content-fixes */
+
+table.acf-input-table {
+    background: transparent !important;
+}
+
+table.acf-input-table > tbody > tr.row {
+    background: transparent;
+    border-bottom: 30px solid transparent;
+    display: inline-table;
+    float: left;
+    width: 100%;
+}
+
+.wp-picker-container {
+    position: relative !important;
+}
+
+.wp-picker-container {
+    width: 100%;
+}
+
+.wp-picker-container .iris-picker {
+    margin-top: 35px;
+    position: absolute;
+}
+
+.wp-picker-container .wp-color-result {
+    float: left;
+}
+
+.wp-picker-open + .wp-picker-input-wrap {
+    padding: 0 !important;
+    margin-left: 15px;
+    width: auto !important;
+}
+
+.wp-picker-container .wp-picker-input-wrap input {
+    padding: 0;
+}
+
+
+#acf-row p.label {
+    display: none;
+}
+
+/* Remove excess repeater stuff */
+
+.repeater-button-cell {
+    display: none;
+}
+
+#acf_acf_erbjudande-3 .repeater-button-cell {
+    display: inline-block;
+}
+
+tr[data-field_name="row-content"] button.field-repeater-toggle {
+    width: 31px;
+    height: 31px;
+    overflow: hidden;
+    margin-right: 36px !important;
+    float: right;
+    padding-left: 5px;
+    display: none;
+}
+
+/* Admin Overlay */
+.admin-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 1125;
+}
+
+.close-admin-overlay,
+.close-icon-overlay {
+    position: relative;
+    float: right;
+    display: block;
+    padding: 15px;
+    font-size: 1.5em;
+    background: #fff;
+    border: 1px solid #eee;
+    font-weight: 700;
+}
+
+.close-admin-overlay:hover,
+.close-icon-overlay:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.close-admin-overlay:focus,
+.close-admin-overlay:active,
+.close-icon-overlay:focus,
+.close-icon-overlay:active {
+    box-shadow: inset 0 2px 2px 0 rgba(0,0,0,0.15);
+}
+
+
+
+/* Hide labels for Flexible COntent Field */
+tr[data-field_name="row-content"] td.label,
+tr[data-field_name="row-settings"] td.label,
+tr[data-field_name="row-settings"] label input{
+    display: none;
+}
+
+.field.field_type-repeater tr[data-field_name="row-settings"].field,
+tr[data-field_name="row-settings"].field {
+    display: block;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: -45px;
+    z-index: 2;
+}
+
+/* Settings-icon for row */
+.field.field_type-repeater tr[data-field_name="row-settings"].field td,
+tr[data-field_name="row-settings"].field td {
+    padding: 5px 10px;
+}
+
+tr[data-field_name="row-settings"] label:after {
+    height: 20px;
+    width: 20px;
+    font-size: 1.2em;
+    padding: 6px 5px 4px;
+    /*background: #fff;*/
+    display: block;
+    color: #666;
+    content: "\f013";
+    font-family: "FontAwesome";
+    opacity: 1;
+    float: right;
+    text-align: center;
+    /*border: 1px solid #eee;*/
+}
+
+tr[data-field_name="row-settings"] label:hover:after {
+    color: #33b8ff;
+}
+
+tr[data-field_name="row-settings"] label:active:after,
+tr[data-field_name="row-settings"] label:focus:after {
+    box-shadow: inset 0 2px 2px 0 rgba(0,0,0,0.15);
+}
+
+
+/* Delete & Add-icon for row */
+#acf-row .acf-button-add,
+#acf-row .acf-button-remove,
+#acf-slideshow-slides .acf-button-add,
+#acf-slideshow-slides .acf-button-remove{
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: right;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    text-decoration: none !important;
+}
+
+#acf-row .acf-button-add {
+    margin-top: 45px;
+}
+
+#acf-row .acf-fc-layout-controlls .acf-button-add,
+#acf-slideshow-slides .acf-fc-layout-controlls .acf-button-add{
+    margin-top: 0;
+}
+
+#acf-row .acf-button-add:before,
+#acf-row .acf-button-remove:before,
+#acf-slideshow-slides .acf-button-add:before,
+#acf-slideshow-slides .acf-button-remove:before{
+    display: block !important;
+    content: "\f1f8";
+    font-family: "FontAwesome";
+    color: #666;
+    background: transparent !important;
+    border-radius: 0 !important;
+    line-height: normal;
+}
+
+#acf-row .acf-button-add:before,
+#acf-slideshow-slides .acf-button-add:before{
+    content: "\f067";
+}
+
+#acf-row .acf-button-remove:hover:before,
+#acf-slideshow-slides .acf-button-remove:hover:before{
+    color: #c10;
+}
+
+#acf-row .acf-button-add:hover:before,
+#acf-slideshow-slides .acf-button-add:hover:before{
+    color: #e98239;
+}
+
+/* Flex-Content Styling */
+
+.acf-flexible-content {
+    float: left;
+    width: 100%;
+}
+
+.field_type-flexible_content .layout {
+    padding-left: 0;
+}
+
+#acf-row .acf-flexible-content table.acf_input tbody tr td {
+    padding: 0;
+}
+
+/* Settings Wrapper */
+.settings-wrapper {
+    height: 80%;
+    position: fixed;
+    display: block;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    background: #fff;
+    z-index: 1126;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.8);
+    overflow-y: auto;
+}
+
+/* Hide the Settingswrapper */
+.hidden,
+.settings-wrapper.hidden {
+    display: none;
+}
+
+/* Hide rows in settingswrapper */
+tr[data-field_name^="row-settings-"],
+.settings-wrapper.hidden tr[data-field_name^="row-settings-"],
+.settings-wrapper tr[data-field_name^="row-settings-"].acf-conditional_logic-hide {
+    display: none;
+}
+
+.settings-wrapper tr[data-field_name^="row-settings-"] {
+    display: table-row;
+}
+
+/* Settingswrapper */
+.settings-header {
+    width: 100%;
+    float: left;
+}
+
+.settings-title {
+    float: left;
+    font-size: 1.9em;
+    font-weight: 700;
+}
+
+.settings-wrapper .settings-table tbody tr td.label label {
+    font-size: 15px;
+}
+
+.settings-wrapper .settings-table input[type="text"],
+.settings-wrapper .settings-table input[type="number"],
+.settings-wrapper .settings-table select,
+.settings-wrapper .settings-table textarea{
+    padding: 9px 7px;
+    height: auto;
+    font-size: 14px;
+}
+
+.settings-table {
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    z-index: 1127;
+    background: #fff;
+}
+
+.acf_input .settings-wrapper .settings-table > tbody > tr {
+    padding: 10px 0;
+    border-bottom: 1px dotted #eee;
+    width: 100%;
+    float: left;
+}
+
+.settings-table td {
+    float: left;
+    display: inline-block;
+    width: 75%;
+    padding: 9px 0 !Important;
+}
+
+.acf_input .settings-table tbody tr td {
+    border: 0;
+}
+
+.acf_input .settings-table tbody tr td.label {
+    width: 24%;
+    background: transparent;
+    border: 0;
+    padding-bottom: 0 !important;
+}
+
+/* Content Blocks */
+
+tr[data-field_name="row-content"] .values.ui-sortable {
+    width: 100%;
+    float: left;
+    clear: both;
+}
+
+.acf-flexible-content .flexible-footer.clearfix {
+    float: right;
+    width: 100%;
+    text-align: left;
+}
+
+.acf-flexible-content .layout {
+    width: 100%;
+    float: left;
+    margin: 0;
+}
+
+/* Content Blocks Fields */
+.acf-flexible-content .layout .acf-fc-layout-controlls {
+    visibility: visible;
+}
+/* Controls */
+.layout-settings-button {
+    font-family: "FontAwesome";
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  display: block;
+  color: #666;
+  font-size: 1.3em;
+  position: absolute;
+  right: 50px;
+  top: 6px;
+  z-index: 210;
+}
+
+.layout-settings-button:hover {
+    cursor: pointer;
+    color: #33b8ff;
+}
+.repeater .repeater .acf_input-wrap {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.acf-fc-layout-title{
+      position: absolute;
+  top: 8px;
+  left: 24px;
+}
+/* Content table */
+.acf-flexible-content .layout > .acf-input-table {
+    display: none;
+}
+
+.content-wrapper {
+    height: 80%;
+    position: fixed;
+    display: block;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    background: #fff;
+    z-index: 1126;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.8);
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.content-wrapper.hidden {
+    display: none;
+}
+
+.content-header {
+    width: 100%;
+    float: left;
+}
+
+.content-title {
+    float: left;
+    font-size: 1.9em;
+    font-weight: 700;
+}
+
+.content-wrapper table tbody tr td table td.label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    float: left;
+    width: 100%;
+    background: transparent;
+    border: 0;
+}
+
+.content-wrapper table tbody tr td table td.label label {
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.content-wrapper table tbody tr td table td {
+    display: block;
+    float: left;
+    width: 100%;
+    border-top: 0 !important;
+}
+
+
+/* Content Size styling */
+
+tr[data-field_name="content-width"] ul.radio.horizontal {
+    float: left;
+    overflow: visible;
+    margin-bottom: 15px;
+}
+
+tr[data-field_name="content-width"] ul.radio li label {
+    display: block;
+    width: 90px;
+    height: 60px;
+    background: #eeeeee; /* Old browsers */
+    background: linear-gradient(to right,  #f7f7f7 0%, #f7f7f7 24%, #ffffff 24%, #ffffff 26%, #f7f7f7 26%, #f7f7f7 49%, #ffffff 49%, #ffffff 51%, #f7f7f7 51%, #f7f7f7 74%, #ffffff 74%, #ffffff 76%, #f7f7f7 76%, #f7f7f7 100%); /* W3C */
+    border: none;
+    text-align: center;
+    line-height: 2em;
+}
+
+tr[data-field_name="content-width"] ul.radio li label input {
+    display: block;
+    width: 100% !important;
+    background: #f7f7f7;
+    border-radius: 0;
+    background: #ddd;
+    height: 60px !important;
+    border: none;
+}
+
+tr[data-field_name="content-width"] ul.radio li label input:before {
+    border-radius: 0;
+    background: #ddd;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+}
+
+tr[data-field_name="content-width"] ul.radio li label input:focus,
+tr[data-field_name="content-width"] ul.radio li label input:checked:before {
+    background: #e98239;
+}
+
+tr[data-field_name="content-width"] ul.radio li label input[value="25"] {
+    width: 25% !important;
+}
+tr[data-field_name="content-width"] ul.radio li label input[value="33"] {
+    width: 33% !important;
+}
+tr[data-field_name="content-width"] ul.radio li label input[value="50"] {
+    width: 50% !important;
+}
+tr[data-field_name="content-width"] ul.radio li label input[value="66"] {
+    width: 66% !important;
+}
+tr[data-field_name="content-width"] ul.radio li label input[value="75"] {
+    width: 75% !important;
+}
+tr[data-field_name="content-width"] ul.radio li label input[value="100"] {
+    width: 100% !important;
+}
+
+/* Slideshow Styling */
+
+div#acf-slideshow-slides:after {
+    clear: both;
+    display: block;
+    width: 100%;
+    content: '';
+}
+
+#acf-slideshow-slides .content-wrapper {
+    padding: 30px;
+}
+
+#acf-slideshow-slides .content-wrapper tr td {
+    padding: 0;
+}
+
+#acf-slideshow-slides .acf-conditional_logic-hide {
+    display: none !important;
+}
+
+tr[data-field_name="slideshow-caption-content"],
+div[data-field_name="slideshow-caption-content"],
+div[data-field_name="vehicle-header-caption"]{
+    width: 70%;
+    float: left;
+    margin-right: 2.5%;
+}
+
+tr[data-field_name="slideshow-caption-color"],
+div[data-field_name="slideshow-caption-color"]{
+    margin-top: 2.5%;
+}
+
+tr[data-field_name="slideshow-caption-color"],
+tr[data-field_name="slideshow-caption-opacity"],
+tr[data-field_name="slideshow-caption-border"],
+tr[data-field_name="slideshow-caption-animation"] {
+    width: 25%;
+    float: left;
+}
+
+div[data-field_name="slideshow-caption-color"],
+div[data-field_name="slideshow-caption-opacity"],
+div[data-field_name="slideshow-caption-border"],
+div[data-field_name="slideshow-caption-animation"]{
+    width: 25%;
+    float: right;
+    padding: 0 !important;
+}
+
+tr[data-field_name="slideshow-date-start"],
+tr[data-field_name="slideshow-date-stop"] {
+    width: 45%;
+    float: left;
+    margin-right: 2.5%;
+}
+
+div[data-field_name="slideshow-caption-position"],
+div[data-field_name="vehicle-header-caption-position"] {
+    float: left;
+    width: 100%;
+}
+
+
+/* Caption-position */
+
+[data-field_name*="-caption-position"] ul.radio.horizontal {
+    float: left;
+    overflow: visible;
+    margin-bottom: 15px;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label {
+    display: block;
+    width: 100px;
+    height: 60px;
+    background: #eeeeee; /* Old browsers */
+    border: none;
+    text-align: center;
+    line-height: 2em;
+    color: #fff;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label input {
+    display: block;
+    width: 100% !important;
+    background: #f7f7f7;
+    border-radius: 0;
+    background: #ddd;
+    border: none;
+    float: left;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label input:before {
+    border-radius: 0;
+    background: #ddd;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label input:focus,
+[data-field_name*="-caption-position"] ul.radio li label input:checked:before {
+    background: #e98239;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label input[value="center"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="left"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="right"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="top-center"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="top-left"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="top-right"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="bottom-center"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="bottom-left"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="bottom-right"]
+{
+    width: 50% !important;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 30px !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label input[value="left"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="top-left"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="bottom-left"]{
+    margin-left: 0;
+    margin-right: 50%;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label input[value="right"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="top-right"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="bottom-right"]{
+    margin-left: 50%;
+    margin-right: 0%;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label input[value="top-left"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="top-right"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="top-center"]{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label input[value="bottom-left"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="bottom-right"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="bottom-center"]{
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+[data-field_name*="-caption-position"] ul.radio li label input[value="top-center"],
+[data-field_name*="-caption-position"] ul.radio li label input[value="bottom-center"] {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* Byt Bil Puff */
+
+[data-field_name="bytbil-icon"],
+[data-field_name="content-icon-position"],
+[data-field_name="content-block-icon-background"],
+[data-field_name="content-block-icon-color"],
+[data-field_name="content-block-icon-border"] {
+    width: 20%;
+    float: left !important;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .layout table {
+        border: none;
+    }
+
+    .settings-table td {
+        width: 100%;
+    }
+
+    .acf_input .settings-table tbody tr td.label {
+        width: 100%;
+    }
+
+    .layout {
+        width: 100% !important;
+    }
+
+    .content-wrapper {
+        height: 95%;
+        left: 2.5%;
+        right: 2.5%;
+        top: 2.5%;
+    }
+
+    #acf-slideshow-slides .content-wrapper {
+        padding: 30px 15px;
+    }
+
+    tr[data-field_name="slideshow-caption-content"],
+    tr[data-field_name="slideshow-caption-color"],
+    tr[data-field_name="slideshow-caption-opacity"],
+    tr[data-field_name="slideshow-caption-border"],
+    tr[data-field_name="slideshow-caption-animation"]{
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+    [data-field_name*="-caption-position"] ul.acf-radio-list.horizontal li {
+        margin-right: 6px;
+    }
+}
+
+/* Upplands Motor Icons */
+
+#adminmenu #menu-posts-vehicle div.wp-menu-image:before {
+    content: '\f1b9';
+}
+
+#adminmenu #menu-posts-equipment div.wp-menu-image:before {
+    content: '\f085';
+}
+
+#adminmenu #menu-posts-accessory div.wp-menu-image:before {
+    content: '\f16b';
+}
+
+#adminmenu #menu-posts-section div.wp-menu-image:before {
+    content: '\f12e';
+}
+
+#adminmenu #menu-posts-testimonial div.wp-menu-image:before {
+    content: '\f075';
+}
+
+#adminmenu #toplevel_page_analytify-dashboard div img {
+    display: none;
+}
+
+#adminmenu #toplevel_page_analytify-dashboard div.wp-menu-image:before {
+    content: '\f1fe';
+}
+
+#adminmenu #toplevel_page_jetpack div.wp-menu-image:before {
+    content: '\f0eb';
+}
+
+#adminmenu #toplevel_page_analytify-dashboard .wp-submenu li:nth-of-type(3) {
+    display: none;
+}
+
+[data-field_name="content-employees-specific"] .relationship_list,
+[data-field_name="content-employees-specific"] .relationship_right .relationship_list,
+[data-field_name="content-employees-specific"] .relationship_left .relationship_list,
+#acf-employee-list-employee .acf_relationship .relationship_list,
+#acf-modelgroup-models .acf_relationship .relationship_list{
+    height: 450px;
+}
+
+.relationship-image {
+    max-height: 75px;
+    max-width: 75px;
+    margin-right: 15px;
+}
+
+/*New styles*/
+
+#acf-row .repeater .repeater table {
+    border: none;
+}
+#acf-row .repeater .repeater table tr{
+    position: relative;
+    height: 40px;
+}
+
+#acf-row .repeater .repeater table tr td{
+    border: none;
+    background-color:transparent;
+}
+
+#acf-row .repeater .repeater table tr td.order.ui-sortable-handle{
+      width: auto !important;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 200;
+  text-align: left !important;
+}
+
+#acf-row .repeater .repeater table tr td.remove{
+    position: absolute;
+    right: 0;
+}
+#acf-row .repeater .repeater table tr td.remove a{
+      margin: 0px;
+  float: left;
+  position: absolute;
+  right: 0px;
+  z-index:210;
+}
+
+#acf-row .repeater .repeater table tr td.remove a.acf-button-add.add-row-before{
+    right:25px;
+}
+
+#poststuff .repeater .repeater table{
+    display: none;
+}
+#poststuff.loaded .repeater .repeater table{
+    display: table;
+}
+
+#poststuff .repeater .repeater table{
+    table-layout: fixed;
+}
+.repeater .repeater td,
+.repeater .repeater th{
+    width: 75%;
+}
+.repeater .repeater td.acf_input-wrap{
+    width:100%;
+}
+.repeater .repeater td.label
+{
+    width: 25%;
+    display: table-cell;
+}
+
+#acf-row .acf_relationship .acf-button-add{
+    margin-top: 0px;
+}
+
+#acf-row .relationship_right .acf-button-add{
+    display: none;
+}

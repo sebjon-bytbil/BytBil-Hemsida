@@ -13,7 +13,6 @@ get_header();
 
 <main id="post-<?php the_ID(); ?>" class="<?php echo $brand_slug ?>">
 
-
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
     <?php bytbil_content_loop($scroll, true); ?>
@@ -21,7 +20,6 @@ get_header();
     <?php endwhile; endif; ?>
 
 </main>
-<?php flush(); ?>
 
 <?php
 get_footer();

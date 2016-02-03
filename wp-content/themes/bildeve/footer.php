@@ -47,5 +47,11 @@
 
         <?php wp_footer(); ?>
 
+        <script>
+            $(function() {
+                $(".checkbox-wrap input[type=checkbox]").wrap("<div class='custom-checkbox'></div>").after("<span></span>");
+            });
+        </script>
+
     </body>
 </html>

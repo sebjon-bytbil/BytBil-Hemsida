@@ -28,6 +28,10 @@ class FacilityCardShortcode extends ShortcodeBase
             $title = get_the_title($id);
             $atts['title'] = $title;
 
+            $content = htmlspecialchars($atts['facility_content']);
+            $content = preg_replace('/\`{2}/', '"', $content);
+            $atts['facility_content'] = htmlspecialchars_decode($content);
+
             $coordinates = get_field('facility-visiting-address', $id);
             if ($coordinates) {
                 $atts['coordinates'] = $coordinates;

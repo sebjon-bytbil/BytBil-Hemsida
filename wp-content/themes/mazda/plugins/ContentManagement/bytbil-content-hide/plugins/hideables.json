@@ -1,0 +1,77 @@
+{
+    "default": {
+        "hide": [
+            "#acf-af_can_hide",
+            "#acf-af_can_edit",
+            "#edit-slug-box",
+            "#preview-action",
+            "#delete-action",
+            "a[href=\"#post_status\"]",
+            "a[href=\"#visibility\"]",
+            "a[href=\"#edit_timestamp\"]",
+            ".misc-pub-section .misc-pub-revisions a"
+        ],
+        "disable": []
+    },
+    "menus": {
+        "hide": [],
+        "disable": [
+            "#acf-menu-items input",
+            "#acf-menu-items select",
+            "#acf-menu-settings-show input"
+        ],
+        "nots": [
+            ".field_key-field_afhardolt0asdh08an0f8g input",
+            ".field_key-field_afhardoltsub0asdh08an0f8g input"
+        ],
+        "hideable": {
+            "hide": [],
+            "disable": [],
+            "nots": []
+        },
+        "editable": {
+            "hide": [],
+            "disable": [],
+            "nots": [
+                ".misc-pub-section .misc-pub-revisions a"
+            ]
+        }
+    },
+    "mb_slideshow": {
+        "hide": [],
+        "disable": [
+            "#titlediv input",
+            "#acf-mb-slideshow_type select",
+            "#acf-mb-slideshow_datecontrol input",
+            "#acf-mb-slideshow_date-start input",
+            "#acf-mb-slideshow_date-stop input",
+            "#acf-mb-slideshow_show-for input"
+        ],
+        "hideable": {
+            "hide": [],
+            "disable": [],
+            "nots": []
+        },
+        "editable": {
+            "hide": [],
+            "disable": [],
+            "nots": [
+                ".misc-pub-section .misc-pub-revisions a"
+            ]
+        }
+    },
+    "page": {
+        "disable": [
+            "#acf-redirect_link-url input",
+            "#acf-redirect_link-mobile input",
+            "#acf-redirect_link-tablet input",
+            "#acf-redirect_timer input"
+        ]
+    },
+    "offer": {
+        "disable": [
+            "#acf-offer_description textarea",
+            "#title"
+        ]
+    }
+}

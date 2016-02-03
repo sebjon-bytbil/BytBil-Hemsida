@@ -1,0 +1,12 @@
+<wpml-config>
+    <admin-texts>
+        <key name="MAGNIUM_PANEL">
+            <key name="header_info_editor" />
+            <key name="header_info_2_editor" />
+            <key name="footer_copyright_editor" />
+            <key name="shop_product_page_promo_content" />
+            <key name="shop_product_custom_tab_title" />
+            <key name="shop_product_custom_tab_text" />
+        </key>
+    </admin-texts>
+</wpml-config>

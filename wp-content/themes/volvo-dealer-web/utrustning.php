@@ -82,10 +82,7 @@ if ($masterPost):
                         </header>
                         <!-- .entry-header -->
 
-                        <?php $parent_menu = true; ?>
-                         <?php include 'mobile-menu.php'; ?>
-
-                        <div class="side-menu-container side-menu-old">
+                        <div class="side-menu-container">
                             <ul class="side-menu-large">
                                 <?php
 
@@ -94,7 +91,7 @@ if ($masterPost):
 
 
                             </ul>
-                            <?php new_volvo_menu('bilmeny', true, 'side-menu-small', false); ?>
+                            <?php new_volvo_menu('bilmeny', true, 'side-menu-large', false); ?>
 
                         </div>
 
@@ -225,9 +222,7 @@ else:
                             <h2 class="entry-title"><?php echo get_the_title($parentIds[0]); ?></h2>
                         </header>
 
-                        <?php include 'mobile-menu.php'; ?>
-
-                        <div class="side-menu-container side-menu-old">
+                        <div class="side-menu-container">
                             <ul class="side-menu-large">
                                 <?php echo wpb_list_child_pagesparam($ids, true);?>
                             </ul>

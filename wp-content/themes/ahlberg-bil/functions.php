@@ -1,4 +1,16 @@
 <?php
+
+/* Vendor */
+include plugin_dir_path(__FILE__) . '../../mu-plugins/acf-repeater-collapser/acf_repeater_collapser.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/advanced-custom-fields/acf.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/acf-repeater/acf-repeater.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/advanced-custom-fields-code-area-field/acf-code_area.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/advanced-custom-fields-font-awesome/acf-font-awesome.php';
+//include plugin_dir_path(__FILE__) . '../../mu-plugins/google-analytics-dashboard-for-wp/gadwp.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/mce-table-buttons/mce_table_buttons.php';
+/* BytBil */
+include plugin_dir_path(__FILE__) . '../../mu-plugins/bytbilcms-admin/bytbilcms-admin.php';
+require_once(plugin_dir_path(__FILE__) . "../../mu-plugins/BBCore/BBCore.php");
 /* Functions for Ahlberg BIl */
 
 
@@ -8,8 +20,13 @@ register_nav_menus( array(
     'primary' => __( 'Huvudmeny', 'ahlberg-bil' ),
 ) );
 
+require_once('plugins/post-types.php');
+require_once('plugins/acf-fields.php');
 require_once('plugins/assortment.php');
+/*
 require_once('plugins/advanced-custom-fields-font-awesome/acf-font-awesome.php');
+
+*/
 
 
 

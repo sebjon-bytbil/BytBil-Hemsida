@@ -33,7 +33,7 @@ Class Vc_Navbar_Frontend extends Vc_Navbar {
 		return '<li class="vc_pull-right">'
 		       . '<button id="vc_guides-toggle-button" class="vc_btn vc_btn-primary vc_btn-sm vc_navbar-btn"'
 		       . ' title="' . __( "Toggle editor's guides", 'js_composer' ) . '">'
-		       . __( 'Guider PÅ', 'js_composer' )
+		       . __( 'Guides ON', 'js_composer' )
 		       . '</button>'
 		       . '</li>';
 	}
@@ -105,12 +105,12 @@ Class Vc_Navbar_Frontend extends Vc_Navbar {
 		<li class="vc_show-mobile vc_pull-right">
 			<button data-url="<?php esc_attr_e( get_edit_post_link( $post->ID ) . '&wpb_vc_js_status=true' ) ?>"
 			        class="vc_btn vc_btn-default vc_btn-sm vc_navbar-btn vc_btn-backend-editor" id="vc_button-cancel"
-			        title="<?php _e( "Cancel all changes and return to WP dashboard", 'js_composer' ) ?>"><?php _e( 'Backend Redigering', 'js_composer' ) ?></button>
+			        title="<?php _e( "Cancel all changes and return to WP dashboard", 'js_composer' ) ?>"><?php _e( 'Backend Editor', 'js_composer' ) ?></button>
 			<?php if ( ! in_array( $post->post_status, array( 'publish', 'future', 'private' ) ) ): ?>
 				<?php if ( $post->post_status === 'draft' ): ?>
 					<button type="button" class="vc_btn vc_btn-default vc_btn-sm vc_navbar-btn vc_btn-save-draft"
 					        id="vc_button-save-draft"
-					        title="<?php esc_attr_e( "Save Draft", 'js_composer' ) ?>"><?php _e( 'Spara utkast', 'js_composer' ) ?></button>
+					        title="<?php esc_attr_e( "Save Draft", 'js_composer' ) ?>"><?php _e( 'Save Draft', 'js_composer' ) ?></button>
 				<?php elseif ( $post->post_status === 'pending' && $can_publish ): ?>
 					<button type="button" class="vc_btn vc_btn-primary vc_btn-sm vc_navbar-btn vc_btn-save"
 					        id="vc_button-save-as-pending"
@@ -118,8 +118,8 @@ Class Vc_Navbar_Frontend extends Vc_Navbar {
 				<?php endif; ?>
 				<?php if ( $can_publish ) : ?>
 					<button type="button" class="vc_btn vc_btn-primary vc_btn-sm vc_navbar-btn vc_btn-save"
-					        id="vc_button-update" title="<?php esc_attr_e( "Publicera sida", 'js_composer' ) ?>"
-					        data-change-status="publish"><?php _e( 'Publicera sida', 'js_composer' ) ?></button>
+					        id="vc_button-update" title="<?php esc_attr_e( "Publish", 'js_composer' ) ?>"
+					        data-change-status="publish"><?php _e( 'Publish', 'js_composer' ) ?></button>
 				<?php else: ?>
 					<button type="button" class="vc_btn vc_btn-primary vc_btn-sm vc_navbar-btn vc_btn-save"
 					        id="vc_button-update" title="<?php esc_attr_e( "Submit for Review", 'js_composer' ) ?>"
@@ -128,7 +128,7 @@ Class Vc_Navbar_Frontend extends Vc_Navbar {
 			<?php else: ?>
 				<button type="button" class="vc_btn vc_btn-primary vc_btn-sm vc_navbar-btn vc_btn-save"
 				        id="vc_button-update"
-				        title="<?php esc_attr_e( "Update", 'js_composer' ) ?>"><?php _e( 'Uppdatera', 'js_composer' ) ?></button>
+				        title="<?php esc_attr_e( "Update", 'js_composer' ) ?>"><?php _e( 'Update', 'js_composer' ) ?></button>
 			<?php endif; ?>
 		</li>
 		<?php
@@ -144,7 +144,7 @@ Class Vc_Navbar_Frontend extends Vc_Navbar {
 	public function getControlViewPost() {
 		return '<li class="vc_pull-right">'
 		       . '<a href="' . esc_attr( get_permalink( $this->post() ) ) . '" class="vc_icon-btn vc_back-button"'
-		       . ' title="' . esc_attr__( "Stäng Sidredigering", 'js_composer' ) . '"></a>'
+		       . ' title="' . esc_attr__( "Exit Visual Composer edit mode", 'js_composer' ) . '"></a>'
 		       . '</li>';
 	}
 }

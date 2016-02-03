@@ -1,0 +1,177 @@
+{    
+    "l10n" : {        
+        "galleryTrigger" : "Visa galleri"
+    },
+    "Desktop" : [
+            {
+                "Title" : "H&ouml;jdpunkter",
+                "TabId" : "1",
+            "Images" : [
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/highlights/960x424.jpg",
+                    "Alt" : "mazda2 2015 kompakt röd stadsbil",
+                    "OverlayId" : "1005"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/highlights/468x318_ledlights.jpg",
+                    "Alt" : "mazda2 2015 grill front strålkastare",
+                    "OverlayId" : "1004"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/highlights/468x318_activedrivingdisplay.jpg",
+                    "Alt" : "nya mazda2 2015 instrumentpanel ratt",
+                    "OverlayId" : "1006"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/highlights/304x318_wheel.jpg",
+                    "Alt" : "mazda2 fälg däck lättmetall",
+                    "OverlayId" : "1003"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/highlights/304x318_mzd_connect.jpg",
+                    "Alt" : "mazda2 2015 uppkoppling instrumentpanel skärm",
+                    "OverlayId" : "1002"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/highlights/304x318_craftmanship.jpg",
+                    "Alt" : "mazda2 2015 instrumentpanel klimatanläggning interiör",
+                    "OverlayId" : "1001"
+                }
+            ]
+        },
+        {
+            "Title" : "Design",
+            "TabId" : "2",
+            "Images" : [
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/design/960x424_powerful_solid_stance.jpg",
+                    "Alt" : "mazda2 2015 massiv ställning",
+                    "OverlayId" : "2008"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/design/468x318_spoiler.jpg",
+                    "Alt" : "mazda2 2015 röd spoiler bak",
+                    "OverlayId" : "2009"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/design/468x318_reardesign.jpg",
+                    "Alt" : "mazda2 2015 röd baklucka fönster kaross",
+                    "OverlayId" : "2006"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/sv-SE/Gallery/images/LHD/desktop/design/468x318_qualityseating.jpg",
+                    "Alt" : "mazda2 2015 interiör säten",
+                    "OverlayId" : "2001"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/design/468x318_metercluster.jpg",
+                    "Alt" : "mazda2 2015 mätaruppsättning ratt",
+                    "OverlayId" : "2005"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/design/960x424_cockpit.jpg",
+                    "Alt" : "mazda2 instrumentpanel satellitnavigering interiör",
+                    "OverlayId" : "2004"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/sv-SE/Gallery/images/LHD/desktop/design/304x318_flowing_door_design.jpg",
+                    "Alt" : "mazda2 elegant dörrdesign",
+                    "OverlayId" : "2010"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/design/304x318_floorconsole.jpg",
+                    "Alt" : "mazda2 2015 mittkonsol och bakre konsol",
+                    "OverlayId" : "2002"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/sv-SE/Gallery/images/LHD/desktop/design/304x318_airconditioningvents.jpg",
+                    "Alt" : "mazda2 2015 klimatanläggning öppningar röd",
+                    "OverlayId" : "2003"
+                }
+            ]
+        },
+        {
+            "Title" : "Teknik",
+            "TabId" : "3",
+            "Images" : [
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/960_424_frontalshot.jpg",
+                    "Alt" : "mazda2 2015 front grill slingrande vägar",
+                    "OverlayId" : "3001"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/468x318_smartcity.jpg",
+                    "Alt" : "mazda2 2015 röd smart city brake support",
+                    "OverlayId" : "3003"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/468x318_skyactivbody.jpg",
+                    "Alt" : "mazda2 2015 front grill slingrande vägar",
+                    "OverlayId" : "3002"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/468x318_lane_departure.jpg",
+                    "Alt" : "mazda2 2015 teknik för varningssystem filbyte",
+                    "OverlayId" : "3004"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/468x318_highbeamcontrol.jpg",
+                    "Alt" : "mazda2 automatisk avbländningsfunktion för helljus ",
+                    "OverlayId" : "3005"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/304x318_start_stop.jpg",
+                    "Alt" : "mazda2 2015 stopp/start-knapp teknik",
+                    "OverlayId" : "3009"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/304x318_skyactiv.jpg",
+                    "Alt" : "mazda2 2015” “mazda2 prestanda i-stop",
+                    "OverlayId" : "3011"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/304x318_istop.jpg",
+                    "Alt" : "mazda2 2015” “mazda2 prestanda i-stop",
+                    "OverlayId" : "3008"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/304x318_blind_spot.jpg",
+                    "Alt" : "mazda2 2015 döda vinkeln teknik",
+                    "OverlayId" : "3006"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/304x318_airbags.jpg",
+                    "Alt" : "mazda2 2015 motor skyactiv",
+                    "OverlayId" : "3007"
+                },
+                {
+                    "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/desktop/performance/304x318_aerodynamics.jpg",
+                    "Alt" : "mazda2 2015 aerodynamik",
+                    "OverlayId" : "3010"
+                }
+            ]
+        }
+    ],
+    "Mobile" : [
+        { 
+            "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/mobile/300x100_sideprofile.jpg",
+            "Alt" : "mazda2 2015 sidoprofil"
+        },
+        { 
+            "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/mobile/150x100_wheel.jpg",
+            "Alt" : "mazda2 fälg däck lättmetall"
+        },
+        { 
+            "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/mobile/150x100_mzdconnect.jpg",
+            "Alt" : "mazda2 2015 uppkoppling instrumentpanel skärm"
+        },
+        { 
+            "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/mobile/150x100_led.jpg",
+            "Alt" : "mazda2 2015 grill front strålkastare"
+        },
+        { 
+            "Src" : "/Canvas/showroom_2015/l10n/master/Gallery/images/LHD/mobile/150x100_craftmanship.jpg",
+            "Alt" : "mazda2 2015 instrumentpanel klimatanläggning interiör"
+        }
+    ]
+}

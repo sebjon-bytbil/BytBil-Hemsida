@@ -10,7 +10,6 @@ if (function_exists("register_field_group")) {
         acf_add_options_sub_page('Avancerat');
         acf_add_options_sub_page('Globala Inställningar');
     }
-    acf_add_options_sub_page('SEO');
 
     register_field_group(array(
         'id' => 'acf_alla-sidor',
@@ -1774,16 +1773,6 @@ if (function_exists("register_field_group")) {
                 'theme' => 'solarized'
             ),
             array(
-                'key' => 'field_54cdfsdsa24a437c22',
-                'label' => 'Generell Bakgrundsbild',
-                'name' => 'general_backgroundimage',
-                'type' => 'image',
-                'save_format' => 'url',
-                'preview_size' => 'thumbnail',
-                'library' => 'all',
-                'instructions' => 'Välj en bakgrundsgbild som skall visas på de sidor som ej har angivet en egen bakgrund.',
-            ),
-            array(
                 "key" => "field_huodaf8790dfijhkw4rt9y8wefnjo23f4y787",
                 "label" => "Boka Provkörning E-post",
                 "name" => "new_car_email_rows",
@@ -1829,103 +1818,6 @@ if (function_exists("register_field_group")) {
             'position' => 'normal',
             'layout' => 'no_box',
             'hide_on_screen' => array(),
-        ),
-        'menu_order' => 0,
-    ));
-}
-
-if(function_exists("register_field_group"))
-{
-    register_field_group(array (
-        'id' => 'acf_seo',
-        'title' => 'SEO Inställningar',
-        'fields' => array (
-            array (
-                'key' => 'field_5603ede1e64e1',
-                'label' => 'SEO',
-                'name' => 'options-seo',
-                'type' => 'repeater',
-                'instructions' => '<a id="mtoMigrate" class="hidden button button-primary" href="#" onclick="migrateToOptions();" style="min-width:50px;min-height:30px;text-align:center;">Hämta SEO-data från sidor</a>',
-                'sub_fields' => array (
-                    array (
-                        'key' => 'field_5603f28be64e2',
-                        'label' => 'Sida',
-                        'name' => 'options-seo-page',
-                        'type' => 'post_object',
-                        'column_width' => '',
-                        'post_type' => array (
-                            0 => 'page',
-                        ),
-                        'taxonomy' => array (
-                            0 => 'all',
-                        ),
-                        'allow_null' => 0,
-                        'multiple' => 0,
-                    ),
-                    array (
-                        'key' => 'field_5603f35ce64e3',
-                        'label' => 'Titel',
-                        'name' => 'options-seo-title',
-                        'type' => 'text',
-                        'instructions' => 'Ange en unik titel för sidan. Max 60 tecken.',
-                        'column_width' => '',
-                        'default_value' => '',
-                        'placeholder' => '',
-                        'prepend' => '',
-                        'append' => '',
-                        'formatting' => 'none',
-                        'maxlength' => 60,
-                    ),
-                    array (
-                        'key' => 'field_5603f378e64e4',
-                        'label' => 'Meta keywords',
-                        'name' => 'options-seo-keywords',
-                        'type' => 'text',
-                        'instructions' => 'Ange ett antal nyckelord som beskriver sidan.',
-                        'column_width' => '',
-                        'default_value' => '',
-                        'placeholder' => '',
-                        'prepend' => '',
-                        'append' => '',
-                        'formatting' => 'none',
-                        'maxlength' => '',
-                    ),
-                    array (
-                        'key' => 'field_5603f39de64e5',
-                        'label' => 'Meta description',
-                        'name' => 'options-seo-description',
-                        'type' => 'textarea',
-                        'instructions' => 'Ange en beskrivning av sidan och vad besökaren kan göra. Max 160 tecken.',
-                        'column_width' => '',
-                        'default_value' => '',
-                        'placeholder' => '',
-                        'maxlength' => 160,
-                        'rows' => '',
-                        'formatting' => 'none',
-                    ),
-                ),
-                'row_min' => '',
-                'row_limit' => '',
-                'layout' => 'table',
-                'button_label' => 'Lägg till',
-            ),
-        ),
-        'location' => array (
-            array (
-                array (
-                    'param' => 'options_page',
-                    'operator' => '==',
-                    'value' => 'acf-options-seo',
-                    'order_no' => 0,
-                    'group_no' => 0,
-                ),
-            ),
-        ),
-        'options' => array (
-            'position' => 'normal',
-            'layout' => 'no_box',
-            'hide_on_screen' => array (
-            ),
         ),
         'menu_order' => 0,
     ));

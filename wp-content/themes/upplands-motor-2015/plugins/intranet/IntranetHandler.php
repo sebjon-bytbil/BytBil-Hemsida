@@ -244,8 +244,3 @@ class IntranetHandler{
 }
 
 new IntranetHandler();
-
-
-
-
-

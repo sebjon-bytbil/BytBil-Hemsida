@@ -4,14 +4,6 @@
 
     }
 
-    .left-column {
-        padding-left: 10px;
-    }
-    
-    .responsive-menu-button {
-        display: none;
-    }
-
     .footer-div .end-menu {
         width: auto;
         max-width: 50%;
@@ -29,11 +21,7 @@
 
     .right-column img {
         max-width: 100%;
-        height: auto;.left-column
-    }
-    
-    .right-column img.single-bilar-slideshow-image {
-        max-width: 33%;
+        height: auto;
     }
 
     .background-container .slides li {
@@ -55,6 +43,75 @@
 
     .home-link {
         margin-left: 16px;
+    }
+
+    .left-column {
+        position: fixed;
+        height: 100%;
+        left: 0;
+        width: 0;
+        top: 0;
+        display: block;
+        background-color: rgb(102, 104, 106);
+        border-right-color: rgb(165, 165, 165);
+        border-right-style: solid;
+        border-right-width: 0;
+        z-index: 99999;
+        overflow: hidden;
+    }
+
+    .left-column .container {
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch; /* allow touch scrolling in webkit browsers */
+    }
+
+    .responsive-menu-button {
+        display: block;
+    }
+
+    .entry-title {
+        background-image: url(images/submenu-title.png);
+        background-position: 50% 0%;
+        background-repeat: repeat-x;
+        font-size: 20px !important;
+        font-weight: bold !important;
+        font-family: Arial, Helvetica, sans-serif !important;
+        color: rgb(62, 59, 56) !important;
+        height: 40px;
+        line-height: 44px !important;
+        letter-spacing: -1px !important;
+        margin: 0;
+        padding: 0 0 0 8px;
+        width: 100%;
+    }
+
+    .side-menu-container ul {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .side-menu-container ul li, .side-menu-container div ul li {
+        background-image: url(images/submenu-item.png);
+        background-repeat: repeat-y;
+        background-size: 258px 44px;
+        height: 44px;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+
+    }
+
+    .side-menu-container ul li a, .side-menu-container div ul li a {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        background-image: none !important;
+        font-size: 12px !important;
+        font-weight: normal;
+        height: 44px;
+        line-height: 44px !important;
+        padding: 0 15px !important;
+        margin: 0 !important;
     }
 
     .side-menu-large, .side-menu-small {
@@ -91,7 +148,7 @@
     }
 
     .car-uppgifter {
-        background-color: transparent;
+        background-color:;
     }
 
     .car-uppgifter-top .car-title {
@@ -122,33 +179,18 @@
         overflow: auto;
     }
 
+    .left-column .container .side-menu-container {
+        height: 100%;
+        overflow-y: auto !important;
+    }
+
     .left-column .container .side-menu-container * {
         display: block;
     }
-    
+
 }
 
-@media (max-width:992px) {
-    .navbar {
-        bottom: 0;
-    }
-
-    #colophon {
-        display: none;
-    }
-
-    .nav-menu > li:hover > a,
-    .nav-menu > li > a:hover,
-    .nav-menu > li.current-item > a {
-        background-image: none;
-    }
-
-    .nav-menu > li:hover > ul {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1009px) {
+@media only screen and (max-width: 800px) {
     #header2 {
         font-size: inherit;
     }
@@ -169,14 +211,6 @@
 
     .home-link {
         max-width: 75%;
-    }
-    
-    .page-template-bestall_broschyr iframe {
-        min-height: 1000 !important;
-    }
-    
-    .gallery-span {
-        height: 160px;
     }
 
     #utrustning.right-column {
@@ -219,26 +253,13 @@
     .nav-menu .submenu {
         display: none !important;
     }
-    
-        .page-template-bilgalleri #content .right-column {
-        background: transparent;
-            padding: 0;
-    }
-    
-    #content {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 
+    .
 
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 780px) {
     .site-content {
-    }
-    
-        .page-template-bilgalleri #content .right-column {
-        background: transparent;
     }
 
     .row-fluid .span-nyberg {
@@ -378,169 +399,12 @@
     }
 }
 
-@media (max-width: 767px) {
-    
-    .left-column {
-        position: fixed;
-        height: 100%;
-        left: 0;
-        width: 0;
-        top: 0;
-        display: block;
-        background-color: #151515;
-        border: none;
-        z-index: 99999;
-        overflow: hidden;
-        padding-left: 0;
-        padding: 0;
-    }
-    
-    .right-column p {
-        font-size: 16px;
-    }
-    
-    .right-column h2 {
-        font-size: 26px;
-    }
-
-    .left-column .side-menu-container.side-menu-old {
-        display: none;
-    }
-
-    .left-column .container {
-        overflow-y: scroll !important;
-        overflow: hidden;
-        -webkit-overflow-scrolling: touch; /* allow touch scrolling in webkit browsers */
-    }
-    
-    .header-logo {
-        max-width: 80% !important;
-        padding-left: 20px;
-    }
-    
-    #mobileMenu .header-logo {
-        max-width: 100%;
-        padding: 0;
-    }
-    
-    .volvo-link,
-    .home-link {
-        margin: 0 !important;
-        padding: 0;
-        float: left;
-    }
-    
-    .home-link {
-        width: 80%;
-    }
-    
-    .volvo-link {
-        width: 20%;
-    }
-    
-    .volvo-link .volvo-logo {
-        padding-right: 20px;
-    }
-    
-
-    #colophon {
-        display: none;
-    }
-
-    #navbar {
-        display: none;
-    }
-
-    .responsive-menu-button {
-        display: block;
-    }
-
-    #mobileMenu {
-        display: block;
-    }
-
-    .entry-header {
-        display: none;
-    }
-    
-    .volvo-link {
-        margin-right: 15px;
-    }
-    
-    .site-header {
-        z-index: 0;
-    }
-    
-    .single-bilar-slideshow-image {
-        display: inline-block;
-    }
-    
-    #content .right-column {
-        width: 100% !important;
-        padding: 20px 15px;
-        text-align: center;
-        margin: 0;
-        border-radius: 0;
-        margin-top: 20px;
-        max-width: 100%;
-        background: #fff;
-    }
-    
-    #content .right-column div {
-        max-width: none !important;
-        width: 100%;
-    }
-    
-    #content .inner-wrap h1 {
-        text-align: center;
-    }
-    
-    #mobileMenu .mobile-logo > img {
-        max-width: 180px !Important;
-        height: auto !important;
-    }
-    
-    .blocks-block {
-        width: 100% !important;
-    }
-    
-    .blocks-block:not(:first-of-type) {
-        padding: 30px !important;
-    }
-    
-    .right-column table,
-    .right-column table tr,
-    .right-column table tr td {
-        width: 100%;
-        display: block;
-        float: left;
-    }
-    
-    
-    /* Startsidor */
-    
-    .background-container .slides li .background-content {
-        max-width: none !important;
-        width: 100%;
-        float: left;
-    }
-    
-    .background-container .slides li .background-content > div {
-        width: 100%;
-        display: block;
-        float: left;
-    }
-    
+@media only screen and (max-width: 600px) {
     html {
         margin-top: 0 !important;
     }
 
-    .kopbil .right-column div {
-        max-width: 100%;
-    }
-    
-        
-    .kopbil .right-column {
+    .right-column div {
         max-width: 100%;
     }
 
@@ -556,14 +420,10 @@
         padding: 10px;
         margin-right: 2%;;
     }
-    
-    .page-template-bestall_broschyr iframe {
-        min-height: 1900px !important;
-    }
 
-    #lbMain {
-        position: absolute !important;
-        z-index: 999999 !important;
+    .background-container .slides li .background-content {
+        max-width: 100%;
+        min-width: 0 !important;
     }
 
     .background-title-div a {
@@ -575,100 +435,6 @@
         font-size: 15px !important;
         line-height: 17px !important;
     }
-    
-    /* uTRUSTNINGSNIVÅ */
-    
-    
-    .modelinfo-top {
-     background: transparent; 
-        padding: 0;
-    }
-    
-    .modelinfo-top-left {
-        font-size: 24px;
-        padding: 0;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    
-    .modelinfo-top-left h2#header2 {
-        margin-bottom: 5px;
-    }
-    
-    .modelinfo-top-left .model {
-        text-align: center;
-    }
-    
-    .expandable {
-        background-color: #fff;
-        border-top: 1px solid #ccc;
-        border-bottom: 0;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .expandable > span {
-        color: #000;
-        font-weight: normal;
-        font-size: 16px;
-        text-transform: uppercase;
-        background-image: url(images/icon-downarrow.png);
-        background-repeat: no-repeat;
-        background-position: right center;
-        display: block;
-        padding-left: 0;
-        cursor: pointer;
-        text-align: left;
-        padding: 10px 15px 10px 0;
-
-    }
-    
-    .expandablediv {
-        display: none;
-        overflow: hidden;
-        height: auto;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 0px;
-        padding-bottom: 32px;
-        text-align: left;
-        font-size: 13px;
-        line-height: 18px;
-    }
-    
-    .right-column#utrustning .expandablediv {
-        line-height: 1.4em;
-    }
-    
-    .expandablediv ul {
-        padding-left: 15px;
-    }
-    
-    .expandablediv ul li {
-        margin-bottom: 5px;
-    }
-    
-    
-    #expand_all, #close_all, #printeq {
-        background: none;
-        background-repeat: no-repeat;
-        background-position: right center;
-        padding-right: 22px;
-        margin-left: 0;
-        margin: 0;
-        cursor: pointer;
-        width: 50%;
-        float: right;
-        padding: 15px 20px;
-        bordeR: 1px solid #ccc;
-        text-align: center;
-    }
-    
-    #printeq {
-        display: none;
-    }
-    
-    
 
     .home-bottom-links a {
         font-size: 17px;
@@ -676,19 +442,14 @@
 
     .car-gallery-link {
         display: inline-block;
-        width: 100%;
-        min-width: 100%;
+        width: 45%;
+        min-width: 140px;
     }
-
-    
 
     .gallery-span {
         width: 100%;
         height: 0;
         padding-bottom: 64.48%;
-        box-shadow: none;
-        border: 1px solid #fff;
-        margin-bottom: 15px;
     }
 
     .background-slider-controls {
@@ -702,9 +463,16 @@
     }
 
     .home-bottom-container {
-        bottom: 15px !important;
+        bottom: 100px !important;
     }
-    
+
+    @-viewport {
+        width: device-width;
+        initial-scale: 1;
+        maximum-scale: 1;
+        user-scalable: no;
+    }
+
     .utforska-nav-container div a span img {
         height: 44px;
     }
@@ -728,7 +496,10 @@
         height: 42px !important;
         top: 0px !important;
     }
-    
+
+}
+
+@media only screen and (max-width: 570px) {
     .nav-menu > li {
         height: 44px !important;
 
@@ -778,7 +549,9 @@
 
     .inner-wrap.kop-bil p {
     }
+}
 
+@media only screen and (max-width: 500px) {
     .footer-div {
         font-size: 10px !important;
     }
@@ -795,8 +568,21 @@
         background-image: none;
         background-color: #000;
     }
-}
 
+    .right-column h2 {
+        font-size: 20px;
+    }
+
+    .right-column h3 {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .right-column div > p {
+        font-size: 11px;
+    }
+
+}
 
 @media only screen and (max-width: 480px) {
     /*
@@ -830,6 +616,11 @@
 
 }
 
+@media only screen and (max-width: 400px) {
+    /*.right-column {
+        min-width: 100%;
+    } */
+}
 
 html {
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
@@ -851,20 +642,11 @@ and (orientation: landscape) {
     .volvo-link {
         padding-top: 16px;
     }
-    
-    .volvo-logo {
-        max-width: 100px;
-    }
 
     .site-header,
     .background-container .background-title-div {
         padding-top: 0 !important;
     }
-    
-    .single-bilar-slideshow-image {
-        max-width: 33%;
-    }
-    
 
     .home-bottom-container {
         position: relative;

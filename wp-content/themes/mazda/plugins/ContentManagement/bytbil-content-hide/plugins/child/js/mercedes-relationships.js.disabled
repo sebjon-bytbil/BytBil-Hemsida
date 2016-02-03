@@ -1,0 +1,50 @@
+/**
+ * Created by ranbogmord on 2015-01-30.
+ */
+jQuery(function ($) {
+    $(document).on("acf/setup_fields", function (e, $el) {
+        var relationships = $el.find(".relationship_right");
+        relationships.each(function () {
+            var root = this;
+            $(this).children("ul").append("<li class='load-more-right'><div class='acf-loading'></div></li>");
+            var items = $(this).find(".relationship_list li").not(".load-more-right");
+            items.hide();
+            var ajaxCalls = 0;
+
+            $(this).children("ul").sortable("option", "items", "li:not(.hide)");
+
+            items.each(function () {
+                var id = $("a", $(this)).data("post_id");
+                var self = this;
+                ajaxCalls += 1;
+
+                $.ajax({
+                    url: ajaxurl,
+                    method: "get",
+                    dataType: "json",
+                    data: {
+                        action: "getMasterStatus",
+                        pid: id
+                    },
+                    success: function (result) {
+                        ajaxCalls -= 1;
+                        if (ajaxCalls < 1) {
+                            $(".load-more-right", root).remove();
+                        }
+
+                        $(self).show();
+                        if (!result.pushed) {
+                            return;
+                        }
+                        if (!result.af_can_hide || result.hide) {
+                            $(self).addClass("hide");
+                            $(self).html($(self).html().replace(/<a.*?(?=>)>(.*)<\/a>/g, "<span>$1</span>"));
+                            $(".acf-button-remove", self).remove();
+                            $(self).parent(".ui-sortable").sortable("option", "cancel", ".hide");
+                        }
+                    }
+                });
+            });
+        });
+    });
+});

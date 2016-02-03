@@ -1,0 +1,1526 @@
+
+/*
+
+Stylesheet Mazda Retailer Sites
+
+Author: Byt Bil Nordic AB
+
+Main Colors
+-----------
+Black: #050606
+White: #fff
+Blue: #0099fe
+Dark Gray: #202428
+Medium Gray: #627586
+Regular Gray: #989a9b;
+Light Gray: #fefeff
+
+*/
+
+/* Font Import */
+@import url('../fonts/InterstateMazda.css');
+
+
+/* Main Elements */
+html {
+    background: #f7f7f7;
+}
+body {
+    font-size: 16px;
+    font: normal 16px 'InterstateMazda-Light';
+    background: #f0f0f0;
+}
+
+section {
+    /*padding: 15px 0 20px;*/
+}
+
+fieldset {
+    border: 0;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+    text-shadow: none;
+}
+
+/* Section-classes */
+
+section.darkgray {
+    background: #202428;
+    color: #fff;
+}
+
+section.white {
+    background: #f7f7f7;
+    color: #050606;
+}
+
+main .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* General Font */
+body,
+p,
+input,
+textarea,
+span,
+a {
+    font: normal 13.5px 'DefaultLight', 'InterstateMazda-Light', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Main Heading */
+h1, h2, h3, h4, h5 {
+    font-family: 'DefaultRegular', 'InterstateMazda-Regular', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Bold */
+strong,
+b,
+.bold {
+    font-family: 'DefaultRegular', 'InterstateMazda-Regular', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Menu */
+
+.navbar {
+    background: #1d2224;
+    border-radius: 0;
+    margin-bottom: 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+.navbar-toggle {
+    color: #fefeff;
+}
+
+.navbar-brand {
+    height: auto;
+    padding: 15px 7.5px;
+}
+
+.navbar-brand img {
+    max-height: 60px;
+}
+
+#mazda-menu {
+    float: right;
+    border: none;
+    margin: 10px 0;
+    border: 0;
+}
+
+#mazda-menu.in {
+    background: #202428;
+    margin: 0;
+    box-shadow: -10px 0 4px rgba(0,0,0,0.8);
+}
+
+.overlay {
+    height: 0;
+    width: 0;
+    display: block;
+    opacity: 0;
+    position: relative;
+    transition: opacity 500ms ease;
+    z-index: 11;
+}
+
+.canvas-slid .overlay,
+.canvas-sliding .overlay {
+    display: block;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+
+.nav>li>a:link,
+.nav>li>a:visited {
+    border: none;
+    text-shadow: none;
+    color: #eee;
+    font-size: 1.3em;
+}
+.nav>li>a:hover,
+.nav>li>a:focus {
+    background: transparent;
+    border: none;
+    color: #fefeff;
+    text-shadow: none;
+}
+
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus,
+.nav>.open.dropdown>a:after{
+    background: transparent;
+    border: none;
+    color: #fefeff;
+}
+
+.nav>.active>a:l {
+    color: #fefeff;
+    font-family: 'InterstateMazda-Regular';
+}
+
+.nav>.dropdown:last-of-type.open>.dropdown-menu {
+    left: -50%;
+}
+
+.nav>.dropdown>a:after {
+    display: inline-block;
+    margin-left: 6px;
+    content: '\f107';
+    float: right;
+    font-family: "FontAwesome";
+    color: #989a9b;
+    font-size: 1em;
+    margin-top: 0;
+}
+
+/* Submenu */
+
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    /* left: 100%; */
+    left:-75%;
+    margin-top:-6px;
+    margin-left:-1px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+    display:block;
+}
+.dropdown-submenu>a:after {
+    display: inline-block;
+    content: '+';
+    font-family: "FontAwesome";
+    color: #989a9b;
+    width:10px;
+    height:10px;
+    float: right;
+}
+.dropdown-submenu:hover>a:after {
+    border-left-color:#ffffff;
+}
+.dropdown-submenu.pull-left {
+    float:none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left:-100%;
+    margin-left:10px;
+}
+
+/* Slideshow */
+
+.flexslider {
+    margin: 0;
+}
+
+.slides a {
+    color: #fff;
+}
+
+.flex-direction-nav .flex-next {
+    right: 0;
+}
+.flex-direction-nav .flex-prev {
+    left: 0;
+}
+
+.flex-direction-nav a:before {
+    font-family: 'FontAwesome';
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+.flex-direction-nav a.flex-prev:before {
+    content:'\f104';
+}
+.flex-direction-nav a.flex-next:before {
+    content:'\f105';
+}
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    z-index: 2;
+}
+
+.flex-control-paging li a {
+    width: 6px;
+    height: 6px;
+    display: block;
+    background: #666;
+    background: rgba(255,255,255,.5);
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    transition: background 500ms ease;
+}
+
+.flex-control-paging li a.flex-active {
+    background: #fff;
+    background: rgba(255,255,255,.95);
+    cursor: default;
+}
+
+.flexslider-caption {
+    position: absolute;
+    top: 15%;
+    right: 20%;
+    left: 60%;
+}
+
+.features_carousel .slides li {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 15px;
+    min-height: 120px;
+    height: 145px;
+}
+
+#gallery .containers {
+    height: 648px;
+}
+
+.features_carousel .slides.features_navigation_list li {
+    min-height: none;
+    height: auto;
+}
+
+.features_carousel .flex-direction-nav a {
+    color: rgb(51, 157, 219);
+    opacity: 1;
+}
+
+.features_carousel .flex-direction-nav .flex-prev {
+    left: -30px;
+}
+
+.features_carousel .flex-direction-nav .flex-next {
+    right: -30px;
+}
+
+#linkCarousel h2 {
+    margin: 0;
+}
+
+.isDesktop [data-module-type="showroom-features"] img {
+    max-width: none;
+}
+
+/* Buttons */
+
+.button,
+.button-link {
+    padding: 15px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.button-link {
+    padding: 10px;
+    margin: 0;
+}
+
+.button-fw {
+    width: 100%;
+    text-align: center;
+}
+
+.button:hover {
+    opacity: 0.95;
+}
+
+.button i {
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+.button i.entypo {
+    font-size: 3em;
+    line-height: 0;
+}
+
+.button.blue {
+    background: #0099fe;
+    color: #fff;
+}
+
+.button.gray {
+    background: #627586;
+    color: #fff;
+}
+
+.button.white {
+    background: #fefeff;
+    color: #050606;
+}
+
+.button.button-plug {
+    display: block;
+}
+
+/* General Classes */
+.container-fluid {
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex.flex-stretch {
+    align-items: stretch;
+}
+
+.flex.flex-stretch > div {
+    align-self: stretch;
+}
+
+/* Homepage */
+
+/* Welcome */
+
+#welcome {
+    padding: 15px 0;
+}
+
+#welcome .button {
+    border-radius: 0;
+    width: 100%;
+}
+
+#welcome h2 {
+    color: #fff;
+    font-size: 30px;
+    margin: 20px 0 10px;
+}
+
+#welcome p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+/* Latest Mazda */
+
+#latest-mazda h2 {
+    float: left;
+}
+
+.car {
+    margin-bottom: 30px;
+}
+
+.car .information {
+    padding: 0 15px 15px;
+    display: inline-block;
+    width: 100%;
+    align-self: flex-end;;
+}
+
+.car .link {
+    display: inline-block;
+    width: 100%;
+    color: #202428;
+    background: rgba(255,255,255,1);
+    transition: all ease 400ms;
+    box-shadow: none;
+}
+
+.car .link:hover,
+.car .link:focus {
+    box-shadow: 1px 0px 10px rgba(0,0,0,0.2);
+}
+
+.car .name {
+    font-size: 1.4em;
+}
+
+.car .year-miles {
+    color: #ddd;
+}
+
+.car .year {
+    color: #627586;
+}
+
+.car .miles {
+    color: #627586;
+}
+
+.car .prices {
+    float: right;
+}
+
+.car .current-price {
+    color: #0099fe;
+    float: right;
+    margin-left: 10px;
+    font-size: 1.1em;
+    line-height: 1.1em;
+}
+
+.car .original-price {
+    color: #ccc;
+    text-decoration: line-through;
+    font-size: 0.9em;
+}
+
+
+/* Contact page */
+
+#map {
+    width: 100%;
+    min-height: 570px;
+    transition: min-height ease 400ms;
+}
+
+#map img {
+    max-width: none !important;
+}
+
+#map .information {
+    height: auto;
+    width: 320px;
+    display: block;
+    float: left;
+    font-size: 1.2em;
+}
+
+#map h2 {
+    font-size: 1.4em;
+}
+
+#map .address {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#map .phonenr,
+#map .email{
+    width: 100%;
+    display: inline-block;
+}
+
+#map .email {
+    margin-bottom: 10px;
+}
+
+#map .button:last-of-type {
+    margin-left: 10px;
+}
+
+
+/* Embedded Content */
+#embedded-content {
+    padding: 0;
+}
+#embedded-content > .container-fluid,
+#embedded-content > .container-fluid > .col-xs-12 {
+    padding: 0;
+}
+
+#embedded-content iframe {
+    height: 600px;
+    width: 100%;
+    border: none;
+}
+
+#embedded-content #main * {
+    display: block !important;
+}
+
+/* Mazda's grid system */
+
+.grid-12 { width: 100%; }
+.grid-12 .grid-12 { width: 100%; }
+.grid-12 .grid-11 { width: 91.6666%; }
+.grid-12 .grid-10 { width: 83.3333%; }
+.grid-12 .grid-9 { width: 75%; }
+.grid-12 .grid-8 { width: 66.6666%; }
+.grid-12 .grid-7 { width: 58.3333%; }
+.grid-12 .grid-6 { width: 50%; }
+.grid-12 .grid-5 { width: 41.6666%; }
+.grid-12 .grid-4 { width: 33.3333%; }
+.grid-12 .grid-3 { width: 25%; }
+.grid-12 .grid-2 { width: 16.6666%; }
+.grid-12 .grid-1 { width: 8.3333%; }
+.grid-11 { width: 91.6666%; }
+.grid-11 .grid-11 { width: 100%; }
+.grid-11 .grid-10 { width: 90.9090%; }
+.grid-11 .grid-9 { width: 81.8181%; }
+.grid-11 .grid-8 { width: 72.7272%; }
+.grid-11 .grid-7 { width: 63.6363%; }
+.grid-11 .grid-6 { width: 54.5454%; }
+.grid-11 .grid-5 { width: 45.4545%; }
+.grid-11 .grid-4 { width: 36.3636%; }
+.grid-11 .grid-3 { width: 27.2727%; }
+.grid-11 .grid-2 { width: 18.1818%; }
+.grid-11 .grid-1 { width: 9.0909%; }
+.grid-10 { width: 83.3333%; }
+.grid-10 .grid-10 { width: 100%; }
+.grid-10 .grid-9 { width: 90%; }
+.grid-10 .grid-8 { width: 80%; }
+.grid-10 .grid-7 { width: 70%; }
+.grid-10 .grid-6 { width: 60%; }
+.grid-10 .grid-5 { width: 50%; }
+.grid-10 .grid-4 { width: 40%; }
+.grid-10 .grid-3 { width: 30%; }
+.grid-10 .grid-2 { width: 20%; }
+.grid-10 .grid-1 { width: 10%; }
+.grid-9 { width: 75%; }
+.grid-9 .grid-9 { width: 100%; }
+.grid-9 .grid-8 { width: 88.8888%; }
+.grid-9 .grid-7 { width: 77.7777%; }
+.grid-9 .grid-6 { width: 66.6666%; }
+.grid-9 .grid-5 { width: 55.5555%; }
+.grid-9 .grid-4 { width: 44.4444%; }
+.grid-9 .grid-3 { width: 33.3333%; }
+.grid-9 .grid-2 { width: 22.2222%; }
+.grid-9 .grid-1 { width: 11.1111%; }
+.grid-8 { width: 66.6666%; }
+.grid-8 .grid-8 { width: 100%; }
+.grid-8 .grid-7 { width: 87.5%; }
+.grid-8 .grid-6 { width: 75%; }
+.grid-8 .grid-5 { width: 62.5%; }
+.grid-8 .grid-4 { width: 50%; }
+.grid-8 .grid-3 { width: 37.5%; }
+.grid-8 .grid-2 { width: 25%; }
+.grid-8 .grid-1 { width: 12.5%; }
+.grid-7 { width: 58.3333%; }
+.grid-7 .grid-7 { width: 100%; }
+.grid-7 .grid-6 { width: 85.7142%; }
+.grid-7 .grid-5 { width: 71.4285%; }
+.grid-7 .grid-4 { width: 57.1428%; }
+.grid-7 .grid-3 { width: 42.8571%; }
+.grid-7 .grid-2 { width: 28.5714%; }
+.grid-7 .grid-1 { width: 14.2857%; }
+.grid-6 { width: 50%; }
+.grid-6 .grid-6 { width: 100%; }
+.grid-6 .grid-5 { width: 83.3333%; }
+.grid-6 .grid-4 { width: 66.6666%; }
+.grid-6 .grid-3 { width: 50%; }
+.grid-6 .grid-2 { width: 33.3333%; }
+.grid-6 .grid-1 { width: 16.6666%; }
+.grid-5 { width: 41.6666%; }
+.grid-5 .grid-5 { width: 100%; }
+.grid-5 .grid-4 { width: 80%; }
+.grid-5 .grid-3 { width: 60%; }
+.grid-5 .grid-2 { width: 40%; }
+.grid-5 .grid-1 { width: 20%; }
+.grid-4 { width: 33.3333%; }
+.grid-4 .grid-4 { width: 100%; }
+.grid-4 .grid-3 { width: 75%; }
+.grid-4 .grid-2 { width: 50%; }
+.grid-4 .grid-1 { width: 25%; }
+.grid-3 { width: 25%; }
+.grid-3 .grid-3 { width: 100%; }
+.grid-3 .grid-2 { width: 66.6666%; }
+.grid-3 .grid-1 { width: 33.3333%; }
+.grid-2 { width: 14.5833%; }
+.grid-2 .grid-2 { width: 100%; }
+.grid-2 .grid-1 { width: 50%; }
+.grid-1 { width: 8.3333%; }
+.grid-1 .grid-1 { width: 100%; }
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 { float: left; }
+
+.row .row_content {
+    max-width: 960px;
+    width: 100%;
+}
+
+.column {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 12px;
+}
+
+/* Slideshow */
+.section-block {
+    display: block;
+    width: 100%;
+}
+
+.slideshow-image {
+    max-height: 425px;
+}
+
+.full .slideshow-image {
+    max-height: 690px;
+}
+
+.container-fluid.full {
+    max-width: none;
+    padding: 0;
+}
+
+.container-fluid.full > div,
+.row-wrapper.full > div {
+    padding: 0;
+}
+
+.flexslider {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0px;
+    background: transparent;
+}
+
+.caption, .caption-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    -webkit-transition: all ease-in 500ms;
+    transition: all ease-in 500ms;
+}
+
+.vertical-align-wrapper {
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: table;
+    padding: 15px;
+}
+
+.vertical-align {
+    display: table-cell;
+}
+
+.vertical-align.top,
+.vertical-align.top-left,
+.vertical-align.top-right {
+    vertical-align: top;
+}
+
+.vertical-align.bottom,
+.vertical-align.bottom-left,
+.vertical-align.bottom-right {
+    vertical-align: bottom;
+}
+
+.vertical-align.center,
+.vertical-align.left,
+.vertical-align.right {
+    vertical-align: middle;
+}
+
+.horizontal-align {
+    float: none;
+    display: table;
+}
+
+.vertical-align.left .horizontal-align,
+.vertical-align.top-left .horizontal-align,
+.vertical-align.bottom-left .horizontal-align {
+    float: left;
+}
+
+.vertical-align.right .horizontal-align,
+.vertical-align.top-right .horizontal-align,
+.vertical-align.bottom-right .horizontal-align {
+    float: right;
+}
+
+.vertical-align.top .horizontal-align,
+.vertical-align.center .horizontal-align,
+.vertical-align.bottom .horizontal-align {
+    float: none;
+    margin: 0 auto;
+    display: table;
+}
+
+.caption-contents {
+    padding: 45px;
+}
+
+.caption-contents h1 {
+    margin: 0.3em 0;
+    font-size: 3em;
+}
+
+.caption-contents .caption-text {
+    margin: 15px 0;
+}
+
+.caption-contents p strong {
+    font-family: 'DefaultRegular', 'InterstateMazda-Regular', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+}
+
+/* Mazda */
+h1,
+h2 {
+    color: #666;
+    font-size: 25px;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+.buttons a {
+    background-position-y: -135px;
+    background-size: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.buttons a .base {
+    background-position-y: -187px;
+    background-size: cover;
+}
+
+.hero-text-wrapper {
+    text-shadow: 1px 1px 1px #000;
+}
+
+.hero-text-wrapper h1,
+.hero-text-wrapper h2 {
+    color: #fff;
+}
+
+.dark-grey ul.video_category_list li {
+    margin: 0 0 12px;
+}
+
+.title a span {
+    font-size: 15px;
+}
+
+.titleblue a,
+.titleblue a span {
+    font-size: 13.5px;
+    line-height: 20px;
+}
+
+.richtext p span {
+    font-size: 13.5px !important;
+    line-height: 20px !important;
+}
+
+.richtext h2 span {
+    font-size: 24px !important;
+}
+
+.editCompareSpec h2 {
+    font-size: 30px;
+}
+
+.editCompareSpec li p {
+    font-size: 14.5px;
+}
+
+.editCompareSpec li p strong span {
+    font-size: 23px;
+}
+
+.specComparison h3 {
+    margin: 0;
+}
+
+.specComparison .specAccordion {
+    background: none;
+}
+
+.specAccordion .accordionContent div {
+    font-size: 13.5px;
+}
+
+.specAccordion .accordionContent li p,
+.specAccordion .accordionContent li div.column {
+    padding: 0 10px;
+}
+
+.view.box.column {
+    max-width: 222px;
+}
+
+.row .showroom-custom-bullet-list tr th,
+.row .showroom-custom-bullet-list tr td {
+    padding: 6px;
+}
+
+#gallery p {
+    font-size: 12px;
+}
+
+.carousel-bullets a {
+    height: 17px;
+    width: 15px;
+}
+
+.buying .wrap .owning {
+    width: 239px;
+}
+
+.buying .wrap .owning h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+#buying-slider .grid-12 .grid-8 {
+    width: 66.6666%;
+}
+
+#buying-slider .grid-12 .grid-3 {
+    padding-left: 20px;
+    width: 25%;
+}
+
+#buying-slider h2 {
+    color: #666;
+}
+
+#buying-slider span {
+    font-size: 13.5px !important;
+    line-height: 20px !important;
+}
+
+ul.features_navigation_list .descr_text_and_bg .title {
+    font-size: 12.5px;
+}
+
+#mobileSubMenu {
+    margin: 15px 0;
+}
+
+#mazdaParts li {
+    background-position: -30px -90px;
+}
+
+#mazdaParts li.current,
+#mazdaParts li:hover {
+    background-position: -30px 0;
+}
+
+ul.features_navigation_list li {
+    padding: 0;
+}
+
+.editSpec {
+    margin: 0 !important;
+    max-width: 960px !important;
+    width: 100% !important;
+}
+
+.editSpec .wrap {
+    background: none;
+}
+
+#carColorator img {
+    max-width: none;
+}
+
+#wrapper, .wrap {
+    max-width: 960px;
+    width: 100%;
+}
+
+.secondaryCarNav .spanTitle {
+    font-size: 43px;
+    padding: 14px 30px 4px 0;
+}
+
+.secondaryCarNav li a {
+    font-size: 14px;
+}
+
+.secondaryCarNav .secondRow {
+    min-height: 49px;
+}
+
+.secondaryCarNav .secondRow li a {
+    font-size: 14px;
+}
+
+.secondaryCarNav .thirdRow li a,
+.secondaryCarNav .thirdRow li.current a {
+    font-size: 14px;
+}
+
+#mobileGallerySlides {
+    background: #050606;
+}
+
+#mobileGallerySlides p {
+    color: #fff;
+    padding: 10px;
+}
+
+#mobileBuying p {
+    line-height: 20px;
+}
+
+#mobileBuying p span {
+    font-family: 'DefaultLight' !important;
+    font-size: 13.5px !important;
+    line-height: 20px !important;
+}
+
+#mobileBuying li {
+    border-bottom: 1px solid #ccc;
+    margin-top: 25px;
+    padding-bottom: 25px;
+}
+
+#mobileBuying li:last-child {
+    border-bottom: 0;
+}
+
+#mobileBuying .grid-8 {
+    text-align: center;
+}
+
+#mobileBuying h2 {
+    margin-top: 15px;
+}
+
+.features_navigation {
+    max-width: 960px !important;
+    width: 100% !important;
+}
+
+.video_container {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.boxvid .boxdown {
+    display: none;
+}
+
+/* Testdrive form */
+#content div.wpcf7 {
+    max-width: 984px;
+    margin: 30px auto 0;
+    padding: 0 0 20px;
+    width: 100%;
+}
+
+.wpcf7 .form-header {
+    background: url(http://www.mazda.se/content/images/forms/step-breadcrumb-repeat.png) repeat-x;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 50px;
+}
+
+.wpcf7 .form-header h1 {
+    margin: 0;
+    padding: 0 20px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.wpcf7 .form-wrapper {
+    background: #e3ebf0;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 18px 0;
+}
+
+.wpcf7 .form-left,
+.wpcf7 .form-right {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.wpcf7 .form-left {
+    background: #c4d1d9;
+}
+
+.wpcf7 .form-right {
+    background: #edf3f5;
+}
+
+.wpcf7 .margin20 {
+    margin: 20px 0;
+}
+
+.wpcf7 input[type=submit] {
+    border-radius: 4px;
+}
+
+.wpcf7 p.disclaimer {
+    color: #999;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.wpcf7 .form-left li {
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.wpcf7 .form-left li:last-child {
+    margin-bottom: 0;
+}
+
+.wpcf7 .form-left li:hover {
+    background: #e6eef4;
+}
+
+.wpcf7 .form-left li.selected {
+    background: #f4f7f9;
+}
+
+.wpcf7 .form-left img {
+    max-width: 100%;
+}
+
+.wpcf7 p.mazda-models {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.wpcf7 li label {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.wpcf7 li label img {
+    display: block;
+    margin: 0 auto;
+}
+
+.wpcf7 li label div {
+    margin-top: 5px;
+}
+
+.wpcf7 li label input[type=checkbox] {
+    position: absolute;
+}
+
+.wpcf7 li label h3 {
+    font-size: 14px;
+    margin: 0;
+    line-height: 22px;
+    float: left;
+    margin-left: 17px;
+}
+
+.wpcf7 div.wpcf7-response-output {
+    margin: 1em 0.5em;
+}
+
+.wpcf7-form.sent .margin20,
+.wpcf7-form.invalid .margin20 {
+    margin: 20px 0 0;
+}
+
+/* Mazda gallery */
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tab-navigation"] {
+    margin-right: -12px;
+    margin-left: -12px;
+    color: #666;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tab-navigation"] ul li.selected {
+    border-bottom: 2px solid #0086d3;
+}
+
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tab-navigation"] ul li {
+    display: inline-block;
+    margin: 0 12px;
+    padding: 5px 0;
+    cursor: pointer;
+    font-family: 'DefaultRegular';
+    font-size: 16px;
+}
+
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tabs"] {
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tabs"] a {
+    position: relative;
+    display: inline-block;
+    margin: 12px;
+    float: left;
+}
+
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tabs"] a span.showroom-gallery-marker {
+    background: url('http://www.mazda.se/Canvas/showroom_2015/Shared/assets/plus-circle.png') no-repeat;
+    width: 25px;
+    height: 25px;
+    top: 25px;
+    right: 25px;
+    position: absolute;
+}
+
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tab-navigation"],
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tabs"] {
+    display: block;
+}
+
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tab-navigation"],
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-tabs"] {
+    display: block;
+}
+
+.isMobile [data-module-type="showroom-gallery"] [data-module-section="gallery-mobile"] {
+    display: none;
+}
+
+/* Media hack */
+
+.media-check {
+    visibility: hidden;
+    display: none;
+    height: 0;
+    width: 0;
+    margin: 0;
+    position: absolute;
+    left: 9999px;
+}
+
+.assortment-header {
+    font-size: 2.2em;
+    margin-top: 30px;
+}
+
+.button {
+    border-radius: 0 !important;
+}
+
+/* X-Small devices*/
+@media (max-width:767px) {
+
+    .media-check {
+        margin: 1px;
+    }
+
+    /* General Elements */
+
+    #latest-mazda h2 {
+        float: none;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+    /* Menu */
+    .navbar .container-fluid {
+        padding: 0;
+    }
+
+    .navbar-brand.af {
+        padding: 7.5px 0;
+    }
+
+    .navbar-brand img {
+        max-height: 55px;
+    }
+
+    .navbar-offcanvas {
+        width: 280px;
+    }
+
+    .navbar-offcanvas .navmenu-brand:first-of-type {
+        margin-bottom: 0;
+    }
+
+    .navbar-offcanvas .navmenu-brand:last-of-type {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+    }
+
+    .navbar-offcanvas .nav>li>a:link, .navbar-offcanvas .nav>li>a:visited {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        background: #f7f7f7;
+    }
+
+    .navbar-nav .open .dropdown-menu .dropdown-menu {
+        background: #fff;
+        padding-left: 5px;
+        font-size: 0.95em;
+    }
+
+    .container-fluid .col-xs-12 {
+        padding: 0;
+    }
+
+    .button {
+        margin: 7.5px 0;
+    }
+
+    /* Slideshow */
+
+    .flexslider {
+        background: #050606;
+    }
+
+    .flexslider-caption {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        display: inline-block;
+        padding: 0 15px;
+    }
+
+    .flex-direction-nav,
+    .flex-control-nav {
+        display: none;
+
+    }
+
+    /* Map */
+    #map {
+        min-height: 240px;
+    }
+
+    #map .information {
+        height: auto;
+        width: 100%;
+        display: block;
+        float: left;
+        font-size: 1.1em;
+    }
+
+    #map h2 {
+        font-size: 1.1em;
+        margin: 5px 0 0;
+    }
+
+    #map .button {
+        display: none;
+    }
+
+    /* Mazda's grid system */
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6,
+    .grid-7,
+    .grid-8,
+    .grid-9,
+    .grid-10,
+    .grid-11,
+    .grid-12 {
+        float: none !important;
+        width: 100% !important;
+    }
+
+    /* Mazda general styling */
+    .secondaryCarNav .secondRow {
+        display: none;
+    }
+
+    #carColorator {
+        display: none;
+    }
+
+    .editSpec li {
+        float: none;
+        width: 100%;
+    }
+
+    .editSpec input {
+        float: none;
+    }
+
+    .editSpec label {
+        float: none;
+        width: auto;
+    }
+
+    [data-module-type="showroom-features"] [data-module-section="feature-detail"] {
+        display: none;
+    }
+
+    .isDesktop [data-module-type="showroom-features"] [data-module-section="feature-navigation"] .selected .line {
+        border-bottom: 0;
+    }
+
+    #featuresCarousel {
+        display: none;
+    }
+
+    .column {
+        display: block;
+    }
+
+    .row {
+        float: none;
+    }
+
+    .row .row_content h2 {
+        padding: 0 10px;
+    }
+
+    [data-module-section="divider"] {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    section.module-gallery {
+        padding: 0 5px;
+    }
+
+    [data-module-type="Module360View"] .model-details .description {
+        font-size: 12px;
+    }
+
+    .module-360-view {
+        padding: 0 10px;
+    }
+
+    .isMobile [data-module-section="feature-navigation"] [data-feature-trigger] .show-more .mobile-trigger {
+        padding: 10px 0;
+    }
+
+    /* Submenu */
+    .secondaryCarNav .firstRow {
+        padding: 0 10px;
+    }
+
+    .firstRow .spanTitle {
+        font-size: 26px;
+        line-height: 49px;
+        padding: 14px 10px 4px 0;
+    }
+
+    .secondaryCarNav .imgWrap {
+        padding: 10px 0;
+    }
+
+}
+
+/* Small devices */
+@media (max-width:992px) and (min-width: 768px) {
+    /* Mazda */
+    #featuresCarousel {
+        display: none;
+    }
+
+    #carColorator {
+        display: none;
+    }
+
+    #mobileBuying [class*="grid-"] {
+        float: none;
+        width: 100%;
+    }
+
+    /* Menu */
+
+    .navbar-brand img {
+        max-height: 55px;
+    }
+
+    .nav>li>a:link, .nav>li>a:visited {
+        font-size: 1em;
+        padding: 15px 10px;
+    }
+
+    /* Object */
+
+    .car .information {
+        text-align: center;
+    }
+
+    .car .name {
+        font-size: 1em;
+    }
+
+    .car .year-miles {
+    }
+
+    .car .year,
+    .car .miles {
+    }
+
+    .car .prices {
+        float: none;
+    }
+
+    .car .original-price,
+    .car .current-price {
+        float: none;
+    }
+
+    .car .original-price {
+        width: 100%;
+        display: inline-block;
+    }
+
+    /* Map */
+    #map {
+        min-height: 320px;
+    }
+
+    /* Submenu */
+    .secondaryCarNav .firstRow {
+        padding: 0 20px;
+    }
+
+}
+
+/* Medium devices */
+@media (max-width:1199px) and (min-width: 993px) {
+
+    /* Map */
+    #map {
+        min-height: 460px;
+    }
+}
+
+/* Large Devices */
+@media (min-width: 1200px) {
+}
+
+

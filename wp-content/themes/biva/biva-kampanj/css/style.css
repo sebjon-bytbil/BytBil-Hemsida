@@ -1,0 +1,501 @@
+/* CSS Document */
+@import '../fonts/antenna/stylesheet.css';
+
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden !important;
+}
+
+body {
+    font-family: 'Antenna';
+    color: #fff;
+    padding: 0;
+}
+
+#wrapper div {
+}
+
+#wrapper {
+    width: 980px;
+    height: 600px;
+    display: block;
+    position: absolute;
+}
+
+.year-60s {
+    background-image: url(../images/bg-60-tal.jpg);
+    background-position: 60% 60%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+body.page {
+    background-image: none;
+    background: #fff;
+    color: #000;
+}
+
+a.full-size-link {
+}
+
+.biva-badge, .tv-slider, .read-more, .movie {
+}
+
+.read-more, .tv-slider, .movie {
+    width: 100%;
+    height: 210px;
+    float: right;
+}
+
+.biva-badge {
+    padding-top: 50px;
+    text-align: left;
+}
+
+.biva-badge img {
+    max-width: 200px;
+}
+
+.slider {
+    padding-right: 10px;
+}
+
+.slider .flexslider, .flexslider {
+    margin: 0;
+    margin-top: 75px;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.8);
+}
+
+.flex-direction-nav a:before {
+    font-family: "FontAwesome" !important;
+    content: "\f104" !important;
+}
+
+.flex-direction-nav a.flex-next:before {
+    content: "\f105" !important;
+}
+
+.read-more {
+    float: left;
+    margin-top: 110px;
+    font-size: 28px;
+    padding-left: 20px;
+    text-shadow: 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.read-more h1 {
+    font-size: 58px;
+    line-height: 105%;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.read-more .read-more-link {
+    font-family: 'Antenna-Light';
+    color: #fff;
+    text-decoration: none;
+    line-height: 100%;
+}
+
+.placeholder {
+    max-width: 355px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.8);
+}
+
+.placeholder:hover {
+    cursor: pointer;
+}
+
+.movie {
+    margin-top: 55px;
+    padding-right: 20px;
+}
+
+.movie iframe {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.8);
+    background: #000 url(../images/movie-placeholder.jpg);
+    background-size: contain;
+
+}
+
+/* PAGE */
+
+.page #start h1 {
+    font-size: 36px;
+    color: #f95522;
+    margin-bottom: 0;
+    padding-right: 20%;
+}
+
+.page #start h2 {
+    font-size: 20px;
+    line-height: 120%;
+    margin-top: 5px;
+}
+
+.page #start {
+    padding: 30px 40px 40px 10px;
+}
+
+.page .biva-badge {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.page .biva-badge img {
+    max-width: 160px;
+}
+
+.page .blocks-wrapper {
+    background: #fff;
+    width: 100%;
+    margin-top: 20px;
+    float: left;
+}
+
+.page .block {
+    display: block;
+    floaT: left;
+    width: 165px;
+    height: 165px;
+    text-align: center;
+    font-family: "Antenna";
+}
+
+.page .block.double {
+    width: 330px;
+    height: 165px;
+}
+
+.page .block img {
+    max-width: 100%;
+}
+
+.page .block .title {
+    font-size: 24px;
+    padding: 21px 10px;
+    float: left;
+    width: 100%;
+}
+
+.page .slide .title {
+    padding: 0;
+}
+
+.slide .flexslider {
+    margin-bottom: 0 !important;
+    box-shadow: none !important;
+}
+
+.page .flexslider {
+    box-shadow: none !Important;
+}
+
+.page .block .title.big {
+    font-size: 26px;
+    padding: 44px 10px;
+}
+
+.page ul.list {
+    font-size: 15px;
+}
+
+.page span.disclaimer-text {
+    position: absolute;
+    bottom: 89px;
+    right: 55px;
+    font-size: 13px;
+    color: #000;
+}
+
+.block {
+    line-height: 210%;
+}
+
+.block.white {
+    background: #fff;
+    color: #000;
+}
+
+.block.md-gray {
+    background: #eceded;
+    color: #000;
+}
+
+.block.olja {
+    background: #f4f4f4 url(../images/erbjudanden/olja.jpg) !important;
+    background-size: contain !important;
+    color: #000;
+}
+
+.block.lt-gray {
+    background: #f4f4f4;
+    color: #000;
+}
+
+.block.dk-gray {
+    background: #707172;
+    color: #fff;
+}
+
+.block.orange {
+    background: #f95522;
+    color: #fff;
+}
+
+.page .block.dk-gray .title {
+    padding-top: 15px;
+    line-height: 130%;
+}
+
+.block a {
+    color: inherit !important;
+}
+
+.page .block.lt-gray .title.big {
+    padding-right: 49px;
+    font-size: 24px;
+}
+
+.block .title.medium {
+    font-size: 12px !important;
+    line-height: 14px;
+    padding: 0;
+    margin-top: -18px;
+}
+
+.block span.small {
+    font-size: 0.6em;
+    line-height: 140%;
+}
+
+.block.car {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    width: 100%;
+    background: #f0a;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+}
+
+nav ul > li {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+nav ul > li > a {
+    color: #000;
+    font-size: 22px;
+    text-align: left;
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #e0e0e0;
+    padding: 8px 20px;
+    border-bottom: 1px solid #fff;
+}
+
+nav ul > li > a:hover {
+    color: #444;
+    text-decoration: none;
+}
+
+nav ul > li.current > a {
+    background: #f95522;
+    color: #fff;
+}
+
+nav ul > li.current > a:hover {
+    color: #fff;
+}
+
+ul.submenu {
+    margin-top: 0;
+}
+
+ul.submenu > li > a {
+    font-size: 16px;
+    padding: 8px 20px;
+}
+
+/* Sharing 
+
+#at4-share {
+	top: auto;
+	bottom: 0px;
+	min-width: 260px;
+}
+.at4-arrow {
+	margin-top: 10px;
+	marign-lefT: 5px;
+}
+
+.at-share-close-control {
+	width: 20px !important;
+	float: left;
+	margin-top: 13px;
+}
+*/
+
+.at-share-close-control, .at4-arrow {
+    display: none;
+}
+
+.fb-like {
+    position: absolute !important;
+    right: 30px;
+    top: 50%;
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .biva-badge {
+        padding-top: 70px;
+        text-align: center;
+    }
+
+    .biva-badge img {
+        max-width: 100%;
+    }
+
+    .year-60s {
+        background-position: bottom center;
+        background-size: cover;
+    }
+
+    .year-60s > .container-fluid {
+        padding: 0;
+    }
+
+    .year-60s > div > div:nth-of-type(3) {
+        padding: 0;
+    }
+
+    .tv-slider {
+        padding-top: 0;
+    }
+
+    .tv-slider .tv-mask {
+        right: 0px;
+    }
+
+    .tv-slider .slider-wrapper {
+        margin-top: 37px;
+        margin-right: 65px;
+    }
+
+    .read-more, .movie {
+        margin-top: 0;
+        height: auto;
+        padding: 0;
+    }
+
+    .read-more {
+        margin-top: 75px;
+        margin-bottom: 20px;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .read-more, .read-more h1 {
+        font-size: 30px;
+        text-align: center;
+        padding-right: 40px;
+        padding-bottom: 10px;
+    }
+
+    .read-more-link {
+        font-size: 18px;
+        float: right;
+        position: relative;
+        margin-right: -30px;
+        margin-top: -50px;
+    }
+
+    .movie {
+        padding-bottom: 40px;
+    }
+
+    .movie iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .page > #wrapper > .container-fluid {
+        padding: 0;
+    }
+
+    .page #start {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page #start h1 {
+        padding: 0;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .page #start h2 {
+        padding: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .page .block {
+        width: 140px;
+        height: 140px;
+    }
+
+    .page .block .title {
+        font-size: 24px;
+    }
+
+    .page .block .title.big {
+        font-size: 26px;
+        padding-top: 42px;
+    }
+
+    .page .block {
+        width: 165px;
+        height: 165px;
+        margin: 0px 22% 10px 22% !important;
+    }
+
+    .placeholder {
+        max-width: 100%;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.8);
+    }
+
+    .disclaimer-text {
+        position: absolute;
+        top: 9px !important;
+        left: 23px !important;
+        right: 0 !important;
+        font-size: 13px !important;
+        color: #000 !important;
+    }
+
+}
+
+@media (max-width: 992px) {
+    #wrapper {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 992px) {
+}

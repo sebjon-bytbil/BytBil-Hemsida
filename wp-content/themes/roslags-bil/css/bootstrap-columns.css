@@ -1,0 +1,57 @@
+/*
+ * bootstrap-columns.css
+ * Detta stylesheet ser till så att man kan ha 2 spans i bredd på mobila vyn
+ */
+
+.row, .row-fluid {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.flush {
+    margin-left: 0 !important;
+}
+
+@media (max-width: 890px) {
+    .navbar {
+        padding: 0px !important;
+        font-size: 92% !important;
+    }
+
+    .navbar-nav > li > a {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .col2.margin, .col1.margin {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .col2 {
+        float: left !important;
+        width: 47.58620689655172% !important;
+    }
+
+    .col2:nth-child(even) {
+        margin-left: 4.82758620689655% !important;
+    }
+
+    /* Använd col1 ifall ni har rutor som ska ligga själv i samma row som col2 rutor */
+    .col1 {
+        float: left !important;
+        width: 100%;
+    }
+
+    /* Override ifall Nth-child strular */
+    .col2.even {
+        margin-left: 4.82758620689655% !important;
+    }
+
+    .col2.odd {
+        margin-left: 0 !important;
+    }
+
+}

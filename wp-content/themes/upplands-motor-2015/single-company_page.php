@@ -1,5 +1,4 @@
 <?php
-
 get_header();
 $company_post = $post;
 $user_role = IntranetHandler::get_current_user_role();
@@ -12,7 +11,6 @@ if($company_post != null){
 <main>
     
 <?php
-   
 if($user_role == 'null' || $user_role == null) {
     ?>
     <section class="section-block padded-block white" style="background: #fff;">
@@ -70,19 +68,21 @@ if($user_role == 'null' || $user_role == null) {
     <?php
 }
 else {
-    if($post) {
+    if($company_post) {
         ?>
 
-        <?php if($user_role == 'foretagsadmin' || $user_role == 'foretagsanvandare' ||  $user_role == 'administrator'){ 
-
-        bytbil_content_loop_old($scroll, true);
-
+        <?php if($user_role == 'foretagsadmin' || $user_role == 'foretagsanvandare' || $user_role == 'administrator'){ 
+            
+        ?>
+        <?php bytbil_content_loop($scroll, true); ?>
+    
+        <?php
         }
 
         ?>
         <?php
         if ($register_form) { ?>
-            <?php if($user_role == 'foretagsadmin' || 'administrator') { ?>
+            <?php if($user_role == 'foretagsadmin' || $user_role == 'administrator') { ?>
             <section class="section-block dark scroll" style="background: #fff ;" name="register-company-users">
                 <div class="container-fluid wrapper default-padding">
                     <div class="col-xs-12 col-sm-5">
@@ -140,7 +140,7 @@ else {
     }
     
     .scroll-menu {
-        margin-bottom: 150px;
+/*        margin-bottom: 150px;*/
     
     }
     .scroll-menu .submenu-wrapper.affix .company-logo-wrapper {

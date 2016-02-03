@@ -894,7 +894,7 @@ function get_employee_vehicle_list_item($vehicle)
                 $price_label = get_the_title($price_id);
                 ?>
                 
-                <?php if($price_type){ ?>
+                <?php if($price_type && $price_value) { ?>
                 
                 <hr>
                 <span class="offer-price-label style-<?php echo get_price_style($vehicle['vehicle-price-type-ev']->ID); ?>" >
@@ -908,17 +908,11 @@ function get_employee_vehicle_list_item($vehicle)
         
                 
                 <?php } ?>
-                
-                
-                        
-
-                
-                
             </div>
-            <?php if ($vehicle_link !== 'none') : ?>
+            <?php if ($vehicle_link !== 'none' && $vehicle['vehicle-more-text']) : ?>
             <div class="vehicle-list-buttons">
                 <br>
-                <a href="<?php echo $url; ?>" target="<?php echo $target; ?>" class="button red">Läs mer</a>
+                <a href="<?php echo $url; ?>" target="<?php echo $target; ?>" class="button red"><?php echo $vehicle['vehicle-more-text']; ?></a>
             </div>
             <?php endif; ?>
     </div>

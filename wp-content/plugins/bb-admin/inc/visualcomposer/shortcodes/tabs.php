@@ -4,15 +4,21 @@ require_once('shortcode.base.php');
 /**
  * Tabbar
  */
-class TabsShortcode extends ShortcodeBase
+class TabbarShortcode extends ShortcodeBase
 {
     function __construct($vcMap)
     {
         parent::__construct($vcMap);
     }
+
+    function processData($atts)
+    {
+        $atts['tabs'] = vc_param_group_parse_atts($atts['tabs']);
+        return $atts;
+    }
 }
 
-function bb_init_tabs_shortcode()
+function vc_init_tabs_shortcode()
 {
     // Map array
     $map = array(
@@ -25,13 +31,26 @@ function bb_init_tabs_shortcode()
         'category' => 'Innehåll',
         'params' => array(
             array(
-              'type' => 'textfield',
-              'holder' => 'h2',
-              'class' => '',
-              'heading' => 'Rubrik',
-              'param_name' => 'headline',
-              'value' => '',
-              'description' => 'skriv in en rubrik'
+                'type' => 'param_group',
+                'value' => '',
+                'param_name' => 'tabs',
+                'save_always' => 'true',
+                'params' => array(
+                    array(
+                        'type' => 'textfield',
+                        'value' => '',
+                        'heading' => 'Rubrik',
+                        'param_name' => 'headline',
+                        'description' => 'Tabbens rubrik.'
+                    ),
+                    array(
+                        'type' => 'wysiwyg',
+                        'value' => '',
+                        'heading' => 'Innehåll',
+                        'param_name' => 'tabs_content',
+                        'description' => 'Tabbens innehåll.'
+                    )
+                )
             )
         )
     );
@@ -39,8 +58,8 @@ function bb_init_tabs_shortcode()
     // Alter params filter
     $map['params'] = apply_filters('bb_alter_tabs_params', $map['params']);
 
-    $vcTabs = new TabsShortcode($map);
+    $vcTabbar = new TabbarShortcode($map);
 }
-add_action('after_setup_theme', 'bb_init_tabs_shortcode');
+add_action('after_setup_theme', 'vc_init_tabs_shortcode');
 
 ?>

@@ -16,7 +16,7 @@ get_header(); ?>
             <?php if (have_posts()) : ?>
 
                 <header class="page-header">
-                    <h2 class="entry-title" style="margin-top: 40px; margin-bottom: 20px; padding-bottom: 40px; font-size: 6em; text-align: center; border-bottom: 1px solid #ccc;"><?php printf(__('Search Results for: %s', 'twentythirteen'), get_search_query()); ?></h2>
+                    <h2 class="page-title"><?php printf(__('Search Results for: %s', 'twentythirteen'), get_search_query()); ?></h2>
                 </header>
 
                 <?php /* The loop */ ?>

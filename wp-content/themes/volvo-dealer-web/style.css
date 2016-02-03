@@ -39,7 +39,6 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: rgb(0,48,87);
 }
 
 a:active,
@@ -55,10 +54,6 @@ img {
 
 form {
     margin: 0;
-}
-
-.full-width {
-    max-width: none !important;
 }
 
 .navbar {
@@ -429,19 +424,6 @@ div.nav-menu > ul {
     background-position: 88% 50%;
     box-shadow: 0px 1px 1px #444;
     line-height: normal !important;
-    background: rgb(0,48,87);
-    box-shadow: none;
-    padding: 10px 15px;
-}
-
-.background-container .background-readmore:after {
-    content: '\f429';
-    width: 30px;
-    height: auto;
-    display: inline-block;
-    float: right;
-    font-family: 'Genericons';
-    font-size: 1.2em;
 }
 
 .background-container .background-title-div, .background-container .background-description-div, .background-container .readmore-wrapper {
@@ -548,16 +530,14 @@ div.nav-menu > ul {
     vertical-align: top;
     display: block;
     float: right;
-    max-width: 72%;
-    text-align: center;
+    max-width: 768px;
+    text-align: right;
     padding-bottom: 42px;
-    padding: 40px;
-    background: #FFF;
 }
 
-.right-column {
-    /*max-width: 370px;*/
-    font-size: 16px;
+.kopbil .right-column {
+    max-width: 370px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -572,8 +552,7 @@ div.nav-menu > ul {
 }
 
 .right-column p {
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 18px;
 }
 
 .right-column div > ol {
@@ -606,12 +585,12 @@ div.nav-menu > ul {
     /* max-width: 320px; */
 }
 
-.right-column.full-width {
+.right-column.block-page {
     width: 100%;
     padding-bottom: 120px;
 }
 
-.right-column.full-width div {
+.right-column.block-page div {
     max-width: 100%;
 }
 
@@ -630,106 +609,6 @@ div.nav-menu > ul {
     /*text-shadow: 0 1px 1px rgba(0,0,0,0.3);*/
 }
 
-#mobileMenu {
-    background-color: #151515;
-    color: #fff !important;
-    display: none;
-}
-
-#mobileMenu .mobile-logo {
-    text-align: center;
-}
-
-#mobileMenu .mobile-logo > img {
-    display: inline-block;
-    margin: 15px 0px;
-    max-height: 75px;
-}
-
-.kop-bil-column {
-    display: none;
-}
-
-
-#content {
-    float: left;
-    display: block;
-    width: 100%;
-    margin-bottom: 100px;
-}
-
-
-
-#mobileMenu .accordion-header {
-    color: #fff !important;
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 15px 10px;
-    text-transform: uppercase;
-}
-
-#mobileMenu .accordion {
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: all .4s ease-out;
-    transition: all .4s ease-out;
-}
-
-#mobileMenu .accordion-open {
-    max-height: 750px;
-    -webkit-transition: all .75s ease-in;
-    transition: all .75s ease-in;
-}
-
-#mobileMenu ul.accordion > li {
-    padding-left: 10px;
-    margin: 15px 0 !important;
-    text-transform: uppercase;
-}
-
-#mobileMenu ul.accordion > li > a {
-    color: #fff !important;
-}
-
-#mobileMenu .page-menu {
-    margin-bottom: 20px;
-    padding-top: 1px;
-    padding-bottom: 15px;
-    background: rgb(0,48,87);
-}
-
-#mobileMenu .page-menu .current_page_item {
-    background: rgba(0,0,0,0.15);
-}
-#mobileMenu .page-menu h4 {
-    font-size: 2em;
-    font-weight: normal;
-    /*padding-left: 20px;*/
-    padding-bottom: 20px;
-    padding-top: 20px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-    text-align: center;
-    background: rgba(0,0,0,0.15);
-    font-family: 'VolvoBroad';
-
-}
-#mobileMenu .page-menu li a {
-    color: #fff !important;
-    font-size: 0.9em;
-    padding: 7.5px 20px;
-    text-align: center;
-}
-
-a.build-volvo:link,
-a.build-volvo:visited {
-    color: #fff !important;
-    border: 1px solid #fff !important;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 .white-menu ul li {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
     -moz-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -752,7 +631,6 @@ a.build-volvo:visited {
     padding: 0 17px 0 0;
     display: inline-block;
     background-image: url(images/pil.png);
-    width: 100%;
 }
 
 .left-column #menu-bottom-buy li, #menu-bilmeny li {
@@ -765,11 +643,6 @@ a.build-volvo:visited {
 
 .page-template-single-bilar-php .left-column #menu-bottom-buy li a, .page-template-single-bilar-php .left-column #menu-bottom-services li /*, .page-template-single-bilar-php #menu-bilmeny li a*/  {
     font-size: 13px !important;
-}
-
-.single-bilar-slideshow-image {
-    display: block;
-    max-width: 100%;
 }
 
 .side-menu-container ul.side-menu-small li {
@@ -998,7 +871,7 @@ a.btn span {
 }
 
 .kop-bil.right-column div {
-   /* max-width: 460px;*/
+    max-width: 460px;
 }
 
 .kop-bil.right-column h1 {
@@ -1029,26 +902,6 @@ a.btn span {
     border: 0 !important;
 }
 
-.left-column {
-    width: 25%;
-    float: left;
-}
-
-.right-column,
-.right-column#utrustning{
-    width: 72%;
-    float: right;
-}
-
-.left-column {
-    background: #fff;
-    color: #000;
-    padding: 20px;
-}
-
-.white-menu.left-column {
-    background: #151515;
-}
 .white-page a, .white-page h1, .white-page h2, .white-page h3, .white-page p {
     color: #fff !important;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 8);
@@ -1297,27 +1150,6 @@ a.btn span {
     float: right;
 }
 
-
-.search-results .wrapper {
-    padding: 30px;
-    background: #fff;
-}
-
-.search-results .entry-meta {
-    display: none;
-}
-
-.search-results article {
-    border-bottom: 1px solid #ccc;
-    padding: 20px 0;
-}
-
-.search-results h1 {
-    margin-bottom: 0;
-}
-.search-results p {
-    margin-top: 0;
-}
 .search-container .subject {
     font-weight: bold;
     margin: 0 5px 4px 0px;
@@ -2079,17 +1911,13 @@ input.ninja-forms-field, .checkbox-wrap label {
     float: right;
 }
 
-.car-gallery-link {
-    float: left;
-    max-width: 33%;
-}
 .gallery-span {
     background-size: cover;
     background-position: center center;
     display: inline-block;
-    max-width: 100%;
-    width: 100em;
-    height: 200px;
+    width: 183px;
+    height: 118px;
+    margin: 6px;
     box-shadow: 2px 2px 8px #333333;
     -moz-box-shadow: 2px 2px 8px #333333;
     -webkit-box-shadow: 2px 2px 8px #333333;
@@ -2101,28 +1929,16 @@ a {
 }
 
 .responsive-menu-button {
-    bottom: 0;
     position: absolute;
     left: 100%;
+    top: 102px;
     width: 52px;
-    height: 52px;
+    height: 36px;
     background-image: url(images/submenu-expander.png);
     background-repeat: no-repeat;
     background-size: 100%;
     display: none;
     cursor: pointer;
-    background: #151515;
-    color: #fff;
-    padding: 9px;
-}
-
-.responsive-menu-button:after {
-    display: block;
-    content: '\f419';
-    font-family: 'Genericons';
-    width: 100%;
-    height: 100%;
-    font-size: 32px;
 }
 
 .expandable > span {
@@ -2166,9 +1982,9 @@ a {
 }
 
 .modelinfo-top {
-    /*background-image: url(images/modelinfo-top.png);
+    background-image: url(images/modelinfo-top.png);
     background-repeat: no-repeat;
-    background-position: top left;*/
+    background-position: top left;
     height: 180px;
     font-size: 36px;
     color: #7f7f7f;
@@ -2184,7 +2000,6 @@ a {
     padding-bottom: 0px;
     width: 50%;
     text-align: left;
-    padding: 15px;
 }
 
 .modelinfo-top-left .model {
@@ -2198,7 +2013,7 @@ a {
 #utrustning {
     position: relative;
     margin: -10px;
-    margin-top: 0px;
+    margin-top: 20px;
     background-color: #fff;
     font-size: 15px;
     color: #353535;
@@ -2909,24 +2724,5 @@ li.bygg-din-volvo a span.arrow {
 
     .modelinfo-top-left {
         width: 100%;
-    }
-}
-
-
-/* FIxes from 2015 09 14 */
-
-
-@media (max-width: 767px) {
-    .hidden-xs {
-        display: none !important;
-    }
-    .visible-xs {
-        display: block !important;
-    }
-}
-
-@media (min-width: 768px){
-    .visible-xs {
-        display: none !important;
     }
 }

@@ -62,9 +62,7 @@ $ids = get_post_ancestors($post);
                     </header>
                     <!-- .entry-header -->
 
-                    <?php include 'mobile-menu.php'; ?>
-
-                    <div class="side-menu-container side-menu-old">
+                    <div class="side-menu-container">
                         <ul class="side-menu-large">
                             <?php
                             new_volvo_menu('bottom-buy'); ?>

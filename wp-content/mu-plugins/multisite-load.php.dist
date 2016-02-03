@@ -1,0 +1,4 @@
+<?php 
+	include 'blogtemplates/blogtemplates.php';
+	include 'wp-multi-network/wpmn-loader.php';
+?>

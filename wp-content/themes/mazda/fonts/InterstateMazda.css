@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'InterstateMazda-Regular';
+    src: url('InterstateMazda-Regular.eot');
+    src: local('☺'), url('InterstateMazda-Regular.woff') format('woff'), url('InterstateMazda-Regular.ttf') format('truetype'), url('InterstateMazda-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DefaultRegular';
+    src: url('InterstateMazda-Regular.eot');
+    src: local('☺'), url('InterstateMazda-Regular.woff') format('woff'), url('InterstateMazda-Regular.ttf') format('truetype'), url('InterstateMazda-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterstateMazda-Light';
+    src: url('InterstateMazda-Light.eot');
+    src: local('☺'), url('InterstateMazda-Light.woff') format('woff'), url('InterstateMazda-Light.ttf') format('truetype'), url('InterstateMazda-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DefaultLight';
+    src: url('InterstateMazda-Light.eot');
+    src: local('☺'), url('InterstateMazda-Light.woff') format('woff'), url('InterstateMazda-Light.ttf') format('truetype'), url('InterstateMazda-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterstateMazda-Bold';
+    src: url('InterstateMazda-Bold.eot');
+    src: local('☺'), url('InterstateMazda-Bold.woff') format('woff'), url('InterstateMazda-Bold.ttf') format('truetype'), url('InterstateMazda-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DefaultBold';
+    src: url('InterstateMazda-Bold.eot');
+    src: local('☺'), url('InterstateMazda-Bold.woff') format('woff'), url('InterstateMazda-Bold.ttf') format('truetype'), url('InterstateMazda-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

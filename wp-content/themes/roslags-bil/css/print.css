@@ -1,0 +1,25 @@
+@media print {
+    .no-print, .no-print * {
+        display: none !important;
+    }
+
+    .slides {
+        max-width: 100% !important;
+        -webkit-transform: none !important;
+        page-break-after: always;
+    }
+
+    .slides li,
+    .flex-control-nav {
+        display: none !important;
+    }
+
+    .slides li.flex-active-slide {
+        display: block !important;
+        width: 700px !important;
+    }
+
+    .price-overlay {
+        top: -55px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv" style="padding: 0; margin: 0;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biva - 50 år</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/colorbox.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body style="background: transparent url(./images/biva-bg.png) no-repeat top center; padding: 0; margin: 0;">
+
+<div id="wrapper">
+    <a class="colorbox-trigger hide" href="http://biva.se/wp-content/themes/biva/biva-kampanj/kampanj.html">Öppna
+        Lightbox</a>
+    <a class="mobile-trigger hide" target="self" href="http://biva.se/wp-content/themes/biva/biva-kampanj/kampanj.html">Öppna
+        i mobil</a>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+
+<script>
+
+    $(document).ready(function (e) {
+        $(".colorbox-trigger").colorbox({iframe: true, width: "980px", height: "600px", opacity: "0.8"});
+
+        var width = $(window).width();
+
+        if (width >= 768) {
+            $(".colorbox-trigger").click();
+        }
+        if (width <= 767) {
+            window.open("mobile-view.html", "_self")
+        }
+
+    });
+
+</script>
+</body>
+</html>

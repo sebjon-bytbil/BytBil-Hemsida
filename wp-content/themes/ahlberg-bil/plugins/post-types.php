@@ -1,6 +1,5 @@
 <?php
 add_action( 'init', 'cptui_register_my_cpts' );
-
 function cptui_register_my_cpts() {
 	$labels = array(
 		"name" => "Anläggningar",
@@ -37,40 +36,6 @@ function cptui_register_my_cpts() {
 	register_post_type( "facility", $args );
 
 	$labels = array(
-		"name" => "Erbjudanden",
-		"singular_name" => "Erbjudande",
-		"menu_name" => "Erbjudanden",
-		"all_items" => "Alla erbjudanden",
-		"add_new" => "Lägg till erbjudande",
-		"add_new_item" => "Lägg till erbjudande",
-		"edit" => "Redigera",
-		"edit_item" => "Redigera erbjudande",
-		"new_item" => "Nytt erbjudande",
-		"view" => "Visa",
-		"view_item" => "Visa erbjudande",
-		"search_items" => "Sök erbjudanden",
-		"not_found" => "Inga erbjudanden hittade",
-		"not_found_in_trash" => "Inga erbjudanden i papperskorgen",
-		"parent" => "Erbjudandets förälder",
-		);
-
-	$args = array(
-		"labels" => $labels,
-		"description" => "",
-		"public" => true,
-		"show_ui" => true,
-		"has_archive" => false,
-		"show_in_menu" => true,
-		"exclude_from_search" => false,
-		"capability_type" => "post",
-		"map_meta_cap" => true,
-		"hierarchical" => false,
-		"rewrite" => array( "slug" => "offer", "with_front" => true ),
-		"query_var" => true,
-						"supports" => array( "title", "editor", "revisions", "thumbnail" ),			);
-	register_post_type( "offer", $args );
-
-	$labels = array(
 		"name" => "Puffar",
 		"singular_name" => "Puff",
 		);
@@ -92,8 +57,50 @@ function cptui_register_my_cpts() {
 	register_post_type( "plug", $args );
 
 	$labels = array(
-		"name" => "Fordonsurval",
-		"singular_name" => "Fordonsurval",
+		"name" => "Personal",
+		"singular_name" => "Personal",
+		);
+
+	$args = array(
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"show_ui" => true,
+		"has_archive" => false,
+		"show_in_menu" => "edit.php?post_type=facility",
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "employee", "with_front" => true ),
+		"query_var" => true,
+									);
+	register_post_type( "employee", $args );
+
+	$labels = array(
+		"name" => "Personallista",
+		"singular_name" => "Personallista",
+		);
+
+	$args = array(
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"show_ui" => true,
+		"has_archive" => false,
+		"show_in_menu" => "edit.php?post_type=facility",
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "employee-list", "with_front" => true ),
+		"query_var" => true,
+									);
+	register_post_type( "employee-list", $args );
+    
+    	$labels = array(
+		"name" => "Blogg",
+		"singular_name" => "Blogg",
 		);
 
 	$args = array(
@@ -107,13 +114,11 @@ function cptui_register_my_cpts() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"rewrite" => array( "slug" => "assortment", "with_front" => true ),
+		"rewrite" => array( "slug" => "blog", "with_front" => true ),
 		"query_var" => true,
 									);
-	register_post_type( "assortment", $args );
+	register_post_type( "blog", $args );
 
 // End of cptui_register_my_cpts()
 }
-
-
 ?>

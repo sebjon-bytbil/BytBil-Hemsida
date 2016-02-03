@@ -2,9 +2,9 @@
 function brabil_wysiwyg_styles()
 {
     $urls = array(
-        '/wp-content/themes/brabil-2015/assets/styles/theme/brabil.css',
-        '/wp-content/themes/brabil-2015/assets/styles/theme/buttons.css',
-        '/wp-content/themes/brabil-2015/assets/styles/vendor/ionicons.css'
+        '/wp-content/themes/brabil/assets/styles/theme/brabil.css',
+        '/wp-content/themes/brabil/assets/styles/theme/buttons.css',
+        '/wp-content/themes/brabil/assets/styles/vendor/ionicons.css'
     );
 
     return $urls;

@@ -1,0 +1,38 @@
+/*==========  Volvo Broad  ==========*/
+@font-face {
+	font-family: 'Volvo Broad Small';
+	src: url("VolvoBroadSmallWeb.eot");
+	src: url("VolvoBroadSmallWeb.eot?#iefix") format('embedded-opentype'), url("VolvoBroadSmallWeb.woff") format('woff'), url("VolvoBroadSmallWeb.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Volvo Broad Medium';
+	src: url("VolvoBroadMediumWeb.eot");
+	src: url("VolvoBroadMediumWeb.eot?#iefix") format('embedded-opentype'), url("VolvoBroadMediumWeb.woff") format('woff'), url("VolvoBroadMediumWeb.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Volvo Broad';
+	src: url("VolvoBroadWeb.eot");
+	src: url("VolvoBroadWeb.eot?#iefix") format('embedded-opentype'), url("VolvoBroadWeb.woff") format('woff'), url("VolvoBroadWeb.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Volvo Sans Medium';
+	src: url("VolvoSansWeb-Medium.eot");
+	src: url("VolvoSansWeb-Medium.eot?#iefix") format('embedded-opentype'), url("VolvoSansWeb-Medium.woff") format('woff'), url("VolvoSansWeb-Medium.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+@font-face {
+	font-family: 'Volvo Sans Regular';
+	src: url("VolvoSansWeb-Regular.eot");
+	src: url("VolvoSansWeb-Regular.eot?#iefix") format('embedded-opentype'), url("VolvoSansWeb-Regular.woff") format('woff'), url("VolvoSansWeb-Regular.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal; }
+
+
+

@@ -8,20 +8,26 @@
 		// show/hide search area
 		var toggleSearch = function (evt) {
 			// return if open and the input gets focused
+            var windowH = window.innerHeight;
+            var height = windowH - 40;
+
+            
 			if (evt.type.toLowerCase() === 'focus' && isOpen){ return false; }
 
 			//var offsets = morphsearch.getBoundingClientRect();
 			if (isOpen) {
 				//classie.remove(morphSearch, 'open');
 				$(morphSearch).removeClass('open');
+                 $(morphSearch).attr('style', "");
                 $('.overlay').removeClass('show');
                                $('body').removeClass('search-open');
 			} else {
 				// classie.add(morphSearch, 'open');
                 $(morphSearch).addClass('open');
+                $(morphSearch).css({'min-height': height + 'px', 'max-height': height + 'px'});
 				document.getElementById('search-input').focus();
 				$('.overlay').addClass('show');
-                               $('body').addClass('search-open');
+                $('body').addClass('search-open');
 			}
 			isOpen = !isOpen;
 		};

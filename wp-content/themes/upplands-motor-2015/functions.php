@@ -7,8 +7,17 @@ function exists($var) {
     return false;
 }
 
-
-require_once('plugins/BBCore/BBCore.php');
+/* Vendor */
+include plugin_dir_path(__FILE__) . '../../mu-plugins/acf-repeater-collapser/acf_repeater_collapser.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/advanced-custom-fields/acf.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/acf-repeater/acf-repeater.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/advanced-custom-fields-code-area-field/acf-code_area.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/advanced-custom-fields-font-awesome/acf-font-awesome.php';
+//include plugin_dir_path(__FILE__) . '../../mu-plugins/google-analytics-dashboard-for-wp/gadwp.php';
+include plugin_dir_path(__FILE__) . '../../mu-plugins/mce-table-buttons/mce_table_buttons.php';
+/* BytBil */
+include plugin_dir_path(__FILE__) . '../../mu-plugins/bytbilcms-admin/bytbilcms-admin.php';
+require_once(plugin_dir_path(__FILE__) . "../../mu-plugins/BBCore/BBCore.php");
 /* Registrera plugins */
 include_once('plugins/AccessApi.php');
 include_once('plugins/wp_bootstrap_navwalker.php');
@@ -34,12 +43,10 @@ function register_upplandsmotor_scripts() {
      wp_localize_script( 'jquery', 'bbfavorites',
               array( 'ajax_url' => admin_url( 'admin-ajax.php' )) );
     wp_enqueue_script( 'jquery' );
-}
 
-function set_options_test() {
-    $option_fields = get_fields('options');
+   
+
 }
-add_action( 'after_theme_setup', 'test' );
 
 function um_color_picker()
 {

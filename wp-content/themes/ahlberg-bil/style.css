@@ -96,16 +96,20 @@ nav,
 .border-bottom-yellow { border-color: #ff9e06; }
 
 .white-text,
-.white-text:link { color: #fff; }
+.white-text:link,
+.white-text:visited { color: #fff; }
 
 .black-text,
-.black-text:link { color: #333; }
+.black-text:link,
+.black-text:visited { color: #333; }
 
 .grey-text,
-.grey-text:link { color: #aaa; }
+.grey-text:link,
+.grey-text:visited { color: #aaa; }
 
 .blue-text,
-.blue-text:link { color: #3661bd; }
+.blue-text:link,
+.blue-text:visited { color: #3661bd; }
 
 .outer-shadow {
     box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 9px 0px;
@@ -269,6 +273,8 @@ textarea ~ span.wpcf7-not-valid-tip {
 }
     
 
+
+
 /* Header */
 
 .top-header {
@@ -290,8 +296,14 @@ textarea ~ span.wpcf7-not-valid-tip {
 
 .brands img {
     display: inline-block;
-    max-height: 48px;
-    margin-right: 15px;
+    max-height: 45px;
+    margin-right: 30px;
+    max-width: 110px;
+}
+
+.brands .navbar-button {
+    font-size: 1em;
+    padding: 4px 10px;
 }
 
 /* Navigation */
@@ -366,6 +378,10 @@ textarea ~ span.wpcf7-not-valid-tip {
     .navbar-nav>li:last-child {
         float: right;
     }
+    .navbar-nav>li:last-child >a {
+        background: #3661bd;
+    }
+    
 }
 
 @media screen and (max-width: 1198px){
@@ -494,6 +510,9 @@ textarea ~ span.wpcf7-not-valid-tip {
     margin-bottom: 30px;
 }
 
+.side-menu .sub-menu {
+    display: none;
+}
 
 /* Slideshow */
 
@@ -647,6 +666,11 @@ textarea ~ span.wpcf7-not-valid-tip {
 }
 
 
+/* Employees */
+
+.employee-wrapper {
+    margin-bottom: 30px;
+}
 
 /* Content */
 
@@ -662,6 +686,10 @@ footer a:visited {
     color: #fff;
 }
 
+footer .col-sm-3 {
+    margin-bottom: 30px;
+}
+
 /* Various Classes */
 
 
@@ -669,14 +697,6 @@ footer a:visited {
 
 
 /* CMS Styling */
-
-#wpadminbar {
-    background-position-x: 15px;
-}
-
-#wpadminbar .quicklinks {
-    margin-left: 100px;
-}
 
 #wp-admin-bar-updates,
 #wp-admin-bar-comments,

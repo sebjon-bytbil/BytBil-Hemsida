@@ -364,6 +364,10 @@ body.wp-admin #wpwrap #qm {
     display: none;
 }
 
+.update-nag {
+    display: none;
+}
+
 
 /* Visual Composer */
 
@@ -371,7 +375,6 @@ body.wp-admin #wpwrap #qm {
 .vc_col-sm-4 > .col-sm-4 {
     width: 100%;
 }
-
 
 .vc_col-sm-6 > .col-sm-6 {
     width: 100%;
@@ -382,6 +385,10 @@ body.wp-admin #wpwrap #qm {
 }
 .vc_col-sm-3 > .col-sm-3 {
     width: 100%;
+}
+
+div.wpb_row {
+    margin-bottom: 0;
 }
 /* IConsFor Elements */
 

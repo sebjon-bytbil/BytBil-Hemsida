@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php
 checkRedirect(get_the_ID());
-global $option_fields;
 ?>
 <html lang="en"
     <?php if (is_user_logged_in()) {
@@ -9,7 +8,7 @@ global $option_fields;
     } ?>>
 
     <head>
-        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta charset="<?php bloginfo('charset'); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="fragment" content="!" />
@@ -22,8 +21,12 @@ global $option_fields;
         <?php if (isset($_GET['object']) && $_GET['object'] == 1) : ?>
             <?php get_object_meta_data(); ?>
         <?php elseif (get_post_type() === 'offer') : ?>
-            <?php get_offer_meta_data(get_the_ID()); ?>
-            <meta property="og:image" content="<?php echo $url ?>" />
+            <?php if (is_null($url)) : ?>
+                <?php get_offer_meta_data(get_the_id(), true); ?>
+            <?php else : ?>
+                <?php get_offer_meta_data(get_the_id(), false); ?>
+                <meta property="og:image" content="<?php echo $url; ?>" />
+            <?php endif; ?>
             <meta property="og:url" content="<?php echo get_permalink(); ?>" />
         <?php else : ?>
             <?php if (get_field('pagesettings-title-tag')) : ?>
@@ -62,8 +65,12 @@ global $option_fields;
         get_touch_icons();
         ?>
 
+      
 
-        <link href="/wp-content/themes/upplands-motor-2015/minified/css/style.min.css?ver=gQKsHz5LgumdKuze3CGz" rel="stylesheet">
+        
+
+
+        <link href="/wp-content/themes/upplands-motor-2015/minified/css/style.min.css?ver=jklPXVo7l74YYEp0VwfH" rel="stylesheet">
     
 
         <!--[if IE]>
@@ -78,7 +85,8 @@ global $option_fields;
         <![endif]-->
 
         <!--Google Maps / Anläggningar -->
-        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQAh825x3dRxn8w6zRUuCvtBOu-1FdgTU"></script>
+
         <?php echo get_settings_code('css'); ?>
         
 
@@ -100,7 +108,11 @@ global $option_fields;
                             </button>
 
                             <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                                <img class="logotype" src="<?php echo get_logotype('png'); ?>" title="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>" alt="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>">
+                                <img class="logotype"
+                                     src="<?php echo get_logotype('svg'); ?>"
+                                     onerror="this.onerror=null; this.src='<?php echo get_logotype('png'); ?>'"
+                                     alt="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>"
+                                     title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
                             </a>
 
                             <button type="button" class="search-toggle visible-xs visible-sm" onclick="toggleSearch();">
@@ -122,7 +134,10 @@ global $option_fields;
                         </div>
                         <div class="navbar-offcanvas offcanvas navmenu-fixed-left canvas-slid" style="">
                             <a class="navmenu-brand" href="<?php echo home_url(); ?>">
-                                <img class="logotype" src="<?php echo get_logotype('png'); ?>" title="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>" alt="<?php bloginfo('name'); ?> | <?php bloginfo('description'); ?>">
+                                <img src="<?php echo get_logotype('svg'); ?>"
+                                     onerror="this.onerror=null; this.src='<?php echo get_logotype('png'); ?>'"
+                                     alt="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>"
+                                     title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
                             </a>
                             
                             <div id="main-menu">
@@ -221,8 +236,7 @@ global $option_fields;
 
                             <ul id="brands" class="nav navbar-nav pull-right">
                             <?php
-                                
-                                $header_brands_keys = $option_fields['settings-brands'];
+                                $header_brands_keys = get_field('settings-brands', 'options');
 
                                 if ($header_brands_keys) {
                                     foreach($header_brands_keys as $key => $var){
@@ -240,7 +254,8 @@ global $option_fields;
                             ?>
                             </ul>
                             <?php
-                                $contact_phone = $option_fields['settings-contact-phonenumber'];
+                                $contact_phone = get_field('settings-contact-phonenumber','options');
+                                /*$service_phone = get_field('settings-contact-phonenumber-service','options');*/
                             ?>
                             <div class="header-contact-wrapper visible-xs">
                             <a href="tel:<?php echo $contact_phone; ?>" title="Ring oss på: <?php echo $contact_phone; ?>" class="header-contact button green button-fw fullwidth"><i class="icon icon-phone"></i> Växel</a>
@@ -268,4 +283,3 @@ global $option_fields;
             </div>
             
         </header>
-        <?php flush(); ?>

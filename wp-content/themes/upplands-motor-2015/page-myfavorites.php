@@ -59,7 +59,7 @@ $email = $matches[1];
         <meta property="og:url" content="http://upplandsmotor.se/mina-favoriter/?h=<?php echo $hash; ?>">
         <meta property="og:image" content="http://upplandsmotor.se/wp-content/themes/upplands-motor-2015/images/upplands-motor-logotype-fb.jpg">
         <title>Upplands Motor | Mina favoriter</title>
-        <link href="/wp-content/themes/upplands-motor-2015/minified/css/style.min.css?ver=gQKsHz5LgumdKuze3CGz" rel="stylesheet">
+        <link href="/wp-content/themes/upplands-motor-2015/minified/css/style.min.css?ver=jklPXVo7l74YYEp0VwfH" rel="stylesheet">
     </head>
 
     <body <?php body_class(); ?>>
@@ -204,7 +204,7 @@ $email = $matches[1];
 
                             <ul id="brands" class="nav navbar-nav pull-right">
                             <?php
-                                $header_brands_keys = $option_fields['settings-brands'];
+                                $header_brands_keys = get_field('settings-brands', 'options');
 
                                 if ($header_brands_keys) {
                                     foreach($header_brands_keys as $key => $var){

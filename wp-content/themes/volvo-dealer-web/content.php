@@ -22,21 +22,7 @@
             <h1 class="entry-title"><?php the_title(); ?></h1>
         <?php else : ?>
             <h1 class="entry-title">
-                <a href="<?php the_permalink(); ?>" rel="bookmark">
-                <?php
-                    $page_template = basename(get_page_template());
-                    if($page_template=='single-bilar.php'){
-                        $pre_title = 'Modell:';
-                    }
-                    if($page_template=='erbjudanden-json.php'){
-                        $pre_title = 'Erbjudande:';
-                    }
-                    if($page_template=='single_blocks.php'){
-                        $pre_title = 'Sida:';
-                    }
-                ?>
-                <?php echo $pre_title; ?> <?php the_title(); ?>
-                </a>
+                <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
             </h1>
         <?php endif; // is_single() ?>
 
@@ -50,7 +36,6 @@
 
     <?php if (is_search()) : // Only display Excerpts for Search ?>
         <div class="entry-summary">
-            
             <?php the_excerpt(); ?>
         </div><!-- .entry-summary -->
     <?php else : ?>

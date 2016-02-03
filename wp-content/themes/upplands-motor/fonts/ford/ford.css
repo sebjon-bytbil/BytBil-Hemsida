@@ -1,0 +1,30 @@
+@font-face {
+font-family: "FordAntennaRegular";
+src: url("./FordAntenna-Regular.eot");
+src: url("./FordAntenna-Regular.eot?") format("embedded-opentype"),
+url("./FordAntenna-Regular.woff") format("woff"),
+url("./FordAntenna-Regular.ttf") format("truetype"),
+url('./FordAntenna-Regular.svg') format('svg');
+font-style: normal;
+font-weight: normal;
+}
+@font-face {
+font-family: "FordAntennaBold";
+src: url("./FordAntenna-Bold.eot");
+src: url("./FordAntenna-Bold.eot?") format("embedded-opentype"),
+url("./FordAntenna-Bold.woff") format("woff"),
+url("./FordAntenna-Bold.ttf") format("truetype"),
+url('./FordAntenna-Bold.svg') format('svg');
+font-style: normal;
+font-weight: bold;
+}
+@font-face {
+font-family: "FordAntennaLight";
+src: url("./FordAntenna-Light.eot");
+src: url("./FordAntenna-Light.eot?") format("embedded-opentype"),
+url("./FordAntenna-Light.woff") format("woff"),
+url("./FordAntenna-Light.ttf") format("truetype"),
+url('./FordAntenna-Light.svg') format('svg');
+font-style: normal;
+font-weight: normal;
+}

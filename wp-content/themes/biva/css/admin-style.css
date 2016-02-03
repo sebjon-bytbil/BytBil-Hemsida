@@ -1,0 +1,31 @@
+#acf-start_slider tr {
+    width: 100% !important;
+}
+
+#acf-start_slider .acf_input-wrap tr td {
+    width: 74% !important;
+}
+
+#acf-start_slider .acf_input-wrap tr td.label {
+    width: 24% !important;
+}
+
+#acf-start_slider .acf_input-wrap tr, #acf-start_slider .acf_input-wrap table, #acf-start_slider .acf_input-wrap td, #acf-slideduration, #acf-controlnav {
+    float: none;
+}
+
+#acf-start_slider .acf-input-table td.acf_input-wrap {
+    min-width: 800px !important;
+    display: table-cell !important;
+    width: 100% !important
+}
+
+#acf-start_slider .acf_input-wrap td.label {
+    background: #F9F9F9;
+    border-top: 1px solid #f0f0f0;
+    border-right: 1px solid #E1E1E1;
+}
+
+#adminmenu #menu-posts-lightbox .wp-menu-image::before {
+    content: "\f15b";
+}

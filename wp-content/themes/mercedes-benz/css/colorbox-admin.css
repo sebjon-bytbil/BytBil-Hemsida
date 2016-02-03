@@ -1,0 +1,24 @@
+#colorbox {
+    overflow: hidden;
+    z-index: 99999;
+}
+
+#colorbox iframe {
+    width: 100% !important;
+    min-height: 100% !important;
+}
+
+#cboxOverlay {
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: #000;
+}
+
+[data-field_name="assortment-generate-criteria"] {
+    padding: 0 !important;
+    border: 0 !important;
+}

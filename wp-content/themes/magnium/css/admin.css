@@ -1,0 +1,54 @@
+.vc_element-icon.vc_mgt_promo_block,
+.vc_element-icon.vc_mgt_header_block,
+.vc_element-icon.vc_mgt_category_list,
+.vc_element-icon.vc_mgt_icon_box,
+.vc_element-icon.vc_mgt_post_list,
+.vc_element-icon.vc_mgt_recent_products_wp,
+.vc_element-icon.vc_mgt_featured_products_wp,
+.vc_element-icon.vc_mgt_products_by_category_wp,
+.vc_element-icon.vc_mgt_products_by_attribute_wp,
+.vc_element-icon.vc_mgt_products_wp,
+.vc_element-icon.vc_mgt_sale_products_wp,
+.vc_element-icon.vc_mgt_top_rated_products_wp,
+.vc_element-icon.vc_mgt_best_selling_products_wp,
+.vc_element-icon.vc_mgt_button,
+.vc_element-icon.vc_mgt_cta_block,
+.vc_element-icon.vc_mgt_mmm_menu_wp,
+.vc_element-icon.vc_mgt_signup_block,
+.vc_element-icon.vc_mgt_messagebox,
+.vc_element-icon.vc_mgt_counter,
+.vc_element-icon.vc_mgt_clients_reviews,
+.vc_element-icon.vc_mgt_portfolio_grid,
+.vc_element-icon.vc_mgt_countdown {
+    background-image: url("../img/admin/vc_mgt_default_icon.png");
+    background-position: center center;
+}
+.mgt-promo-block-content-html {
+	text-align: center;
+}
+/* Composer bug fix */
+option.fade,
+select.fade,
+input.fade {
+	opacity: 1;
+}
+.hide_in_vc_editor {
+    display: none;
+}
+/* Mega Menu */
+.fontawesome-select,
+.fontawesome-select option {
+	font-family: "fontawesome", "Open sans";
+}
+.button.upload-menu-item-bg,
+.button.remove-menu-item-bg {
+    position: relative;
+    top: -2px;
+    width: 100px;
+}
+.button.remove-menu-item-bg {
+	color: red;
+}
+.wpadminbar-coming-soon-active {
+    background: red!important;
+}

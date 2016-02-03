@@ -1,0 +1,48 @@
+body.is_child_site #menu-posts-model,
+body.is_child_site #acf-af_can_hide,
+body.is_child_site #acf-af_can_edit {
+  display: none !important; }
+
+body.is_child_site.pushed_post #acf-menu-items .add-row-end,
+body.is_child_site.pushed_post .field_key-field_affardolja0y0hq0f8heq,
+body.is_child_site.pushed_post .field_key-field_affardoljasub0y0hq0f8heq,
+body.is_child_site.pushed_post td.remove,
+body.is_child_site.pushed_post .field_key-field_544512a421fb6,
+body.is_child_site.pushed_post .field_key-field_5445154b21fba,
+body.is_child_site.pushed_post .field_key-field_5445174561a04,
+body.is_child_site.pushed_post .field_key-field_54460ee433881,
+body.is_child_site.pushed_post .field_key-field_54460f2d33884,
+body.is_child_site.pushed_post #acf-mb-slideshow_image-text,
+body.is_child_site.pushed_post #acf-mb-slideshow_buttons,
+body.is_child_site.pushed_post #acf_acf_menyinstallningar > .inside > .acf-tab-wrap,
+body.is_child_site.pushed_post #acf-redirect_custom-text,
+body.is_child_site.pushed_post #acf-mb-slideshow_image div.has-image > div,
+body.is_child_site.pushed_post #acf-offer_date-start,
+body.is_child_site.pushed_post #acf-offer_date-stop,
+body.is_child_site.pushed_post #acf-offer_date-facility,
+body.is_child_site.pushed_post #acf-offer_links,
+body.is_child_site.pushed_post #acf-offer_image ul.bl
+#acf-offer_image ul.bl {
+  display: none !important; }
+
+body.is_child_site:not(.pushed_post) .field_key-field_affardoljasub0y0hq0f8heq,
+body.is_child_site:not(.pushed_post) .field_key-field_afhardoltsub0asdh08an0f8g,
+body.is_child_site:not(.pushed_post) .field_key-field_affardolja0y0hq0f8heq,
+body.is_child_site:not(.pushed_post) .field_key-field_afhardolt0asdh08an0f8g,
+body.is_child_site:not(.pushed_post) #acf-menu-items-af,
+body.is_child_site:not(.pushed_post) #acf_acf_menyinstallningar > .inside > .acf-tab-wrap,
+body.is_child_site:not(.pushed_post) #acf_acf_ga-installningar {
+  display: none !important; }
+
+body.is_child_site:not(.hideable_post) #acf_acf_ga-installningar {
+  display: none !important; }
+
+body.is_child_site.pushed_post.editable_post #acf-redirect_custom-text {
+  display: block !important; }
+
+body.bbcms_master_site .field_key-field_afhardoltsub0asdh08an0f8g,
+body.bbcms_master_site .field_key-field_afhardolt0asdh08an0f8g,
+body.bbcms_master_site #acf-menu-items-af {
+  display: none !important; }
+
+/*# sourceMappingURL=mercedes-menus-always.css.map */

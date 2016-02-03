@@ -1,0 +1,24 @@
+#toplevel_page_nav-menus {
+    display: none;
+}
+
+#adminmenu #menu-posts-menus div.wp-menu-image:before {
+    content: "\f0c9";
+}
+
+#adminmenu #menu-posts-model div.wp-menu-image:before {
+    content: "\f1ba";
+}
+
+#adminmenu #menu-posts-mb_slideshow div.wp-menu-image:before,
+#adminmenu #menu-posts-af_slideshow div.wp-menu-image:before {
+    content: "\f03e";
+}
+
+#adminmenu #menu-posts-shortlink div.wp-menu-image:before {
+    content: "\f0c1";
+}
+
+#copier-meta-box {
+    position: inherit;
+}

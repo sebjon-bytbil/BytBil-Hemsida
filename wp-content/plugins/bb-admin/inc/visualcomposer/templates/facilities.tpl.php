@@ -1,4 +1,4 @@
-<div class="bb-facilities">
+<div class="bb-facilities <?php echo $css_classes; ?>">
 
     <h2><?php echo $headline ?></h2>
 

@@ -817,12 +817,55 @@
     };
 
     if (typeof wpcf7forms !== 'undefined') {
-        for (var id in wpcf7forms) {
-            if (wpcf7forms.hasOwnProperty(id)) {
-                new UMForm(id);
+        setFormOffsets(wpcf7forms);
+
+        $(window).on('scroll touchmove', function() {
+            if (this.scrolling) {
+                clearTimeout(this.scrolling);
+            }
+            this.scrolling = setTimeout(function() {
+                $(this).trigger('scrollDone');
+            }, 500);
+        });
+
+        initFormsInView();
+    }
+
+    // Event fires when user is done scrolling
+    $(window).on('scrollDone', function() {
+        initFormsInView();
+    });
+
+    function initFormsInView() {
+        var top = $(window).scrollTop();
+        var bottom = top + $(window).height();
+        var formOffsets = window.formOffsets;
+
+        for (var key in formOffsets) {
+            // Init the form based on the id if this is true
+            if ((formOffsets[key].bottom <= bottom) && (formOffsets[key].top >= top) && !$('#' + formOffsets[key].id).hasClass('form-initialized')) {
+                $('#' + formOffsets[key].id).addClass('form-initialized');
+                new UMForm(formOffsets[key].id);
             }
         }
     }
 
-})(jQuery);
+    function setFormOffsets(ids) {
+        var formOffsets = [];
 
+        for (var id in ids) {
+            if (ids.hasOwnProperty(id)) {
+                var $elem = $('#' + id);
+                var obj = {
+                    id: id,
+                    top: $elem.offset().top,
+                    height: $elem.height(),
+                    bottom: $elem.offset().top + $elem.height()
+                };
+                formOffsets.push(obj);
+            }
+        }
+
+        window.formOffsets = formOffsets;
+    }
+})(jQuery);

@@ -1,0 +1,172 @@
+<?php
+/*
+Template Name: Startsida
+*/
+
+get_header();
+$init_map = false;
+?>  
+   
+     <div id="content">
+
+        <div class="container-fluid">
+        
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                <!-- Om Sidebar är i bockat printa ut main mindre -->
+                <?php if(get_field('setting-use-sidebar')==true){ ?>
+                	<div class="col-xs-12 col-sm-8 col-lg-9" id="main">
+                <?php } ?>
+                
+					<?php if(get_field('setting-hide-page-header')==false){ ?>
+                        <div class="col-xs-12">
+                            <h1><?php the_title(); ?></h1>
+                        </div>
+                    <?php } ?>
+                   
+                    <?php if(get_field('contents')) : while( have_rows('contents')) : the_row();
+						
+                        $size = get_sub_field('content-size');
+                        $type = get_sub_field('content-type');
+						$title = get_sub_field('content-title');
+						if(get_sub_field('content-slideshow')) {
+						$slideshow = get_sub_field('content-slideshow');
+						}
+						if(get_sub_field('content-facility-choice')){
+						$facility = get_sub_field('content-facility-choice');
+						}
+						
+						
+                        ?>
+                        
+                        <div class="col-xs-12 col-sm-<?php echo $size . ' ' . $type; ?>">
+							<?php if(get_sub_field('setting-hide-header')==false){ ?>
+                            	<h3><?php echo $title; ?></h3>
+                            <?php } else { ?>
+                            	
+                            <?php } ?>
+                            
+                            <?php
+							
+								if($type=='wysiwyg'){
+								echo get_sub_field('content-wysiwyg');
+								}
+								
+								elseif($type=='slideshow') { ?>
+									<div id="slider">
+                                        <div class="slider-container">
+                                            <?php bytbil_show_slideshow($slideshow->ID); ?>
+                                        </div>
+                                    </div>
+								<?php }
+								
+								elseif($type=='facility') {
+									$facility_infos = get_sub_field('content-facility-information');
+									foreach($facility_infos as $facility_info){
+
+										if($facility_info=='all'){
+											bytbil_show_facility_all($facility->ID);
+											$init_map = true;
+										}
+										elseif($facility_info=='address'){
+											bytbil_show_facility_address($facility->ID);
+										}
+										elseif($facility_info=='phonenumber'){
+											bytbil_show_facility_phonenumbers($facility->ID);
+										}
+										elseif($facility_info=='email'){
+											bytbil_show_facility_emails($facility->ID);
+										}
+										elseif($facility_info=='contact'){
+											bytbil_show_facility_contact($facility->ID);
+										}
+										elseif($facility_info=='openhours'){
+											bytbil_show_facility_openhours($facility->ID);
+										}
+										elseif($facility_info=='map'){
+											bytbil_show_facility_map($facility->ID);
+											$init_map = true;
+										}
+										
+									}
+								}
+								elseif($type=='assortment') {
+									$assortment = get_sub_field('content-assortment');
+									if($assortment=='list'){
+										$assortment_list = get_sub_field('content-assortment-list');
+										bytbil_show_assortment($assortment_list->ID);
+									}
+									elseif($assortment=='object'){
+										$assortment_object = get_sub_field('content-assortment-object');
+										bytbil_show_assortment_object($assortment_object);
+									}
+								}
+								elseif($type=='plugs'){
+									$plugs = get_sub_field('content-plugs');
+									foreach($plugs as $plug){
+										bytbil_show_plug($plug->ID, $size);
+									}
+								}
+								elseif($type=='employees'){
+									$employees_choice = get_sub_field('content-employees');
+									if($employees_choice=='employees'){
+										$employees = get_sub_field('content-employee-employee');
+										foreach($employees as $employee){
+											bytbil_show_employee($employee->ID);
+										}
+									}
+									elseif($employees_choice=='emlpoyee-list'){
+										$employee_lists = get_sub_field('content-employee-lists');
+										foreach($employee_lists as $employee_list){
+											bytbil_show_employee_list($employee_list);
+										}
+									}
+								}
+								elseif($type=='offers'){
+									$offer_choice = get_sub_field('content-offers-choice');
+									if($offer_choice=='specific'){
+										$offer = get_sub_field('content-offer-specific');
+										bytbil_show_offer($offer->ID, $size);
+									}
+									elseif($offer_choice=='brand'){
+										$col_size = get_sub_field('content-offer-col-size');
+										$brand = get_sub_field('content-offer-brand');
+										bytbil_show_offers_brand($brand,$col_size);
+									}
+									elseif($offer_choice=='facility'){
+										$col_size = get_sub_field('content-offer-col-size');
+										$facility = get_sub_field('content-offer-facility');
+										bytbil_show_offers_facility($facility,$col_size);
+									}
+									elseif($offer_choice=='all'){
+										$col_size = get_sub_field('content-offer-col-size');
+										bytbil_show_offers_all($col_size);
+									}
+								}
+								elseif($type=='map'){
+									bytbil_show_map();
+									$init_map = true;
+								}
+								elseif($type=='news'){
+									bytbil_show_news_feed();
+								}
+																
+							?>                            
+                        </div>
+                                    
+                    <?php endwhile; endif; if($init_map==true){bytbil_init_facility_map();} ?>
+                    
+                <!-- Om Side är i bockat printa ut Sidebar -->
+                <?php if(get_field('setting-use-sidebar')==true){ ?>
+                	</div>
+                    <div class="col-xs-12 col-sm-4 col-lg-3" id="sidebar">
+                    	<h1>Sidomeny</h1>
+                    </div>
+                <?php } ?>
+            
+            <?php endwhile; endif; ?>
+
+        </div>
+        
+    </div>
+    
+<?php get_footer(); ?>

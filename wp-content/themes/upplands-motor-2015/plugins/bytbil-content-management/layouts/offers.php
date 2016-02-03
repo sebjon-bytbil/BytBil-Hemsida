@@ -30,9 +30,15 @@
 
                 <?php
                 if (is_array($offers)) {
+                    $todays_date = date('Ymd');
                     foreach($offers as $offer) {
                         $id = $offer->ID;
-                        show_offer_gallery($id, $offer_size);
+                        $offer_start_date = get_field('offer-start-date', $id);
+                        $offer_stop_date = get_field('offer-stop-date', $id);
+
+                        if ($offer_start_date <= $todays_date && $offer_stop_date >= $todays_date) {
+                            show_offer_gallery($id, $offer_size);
+                        }
                     }
                 }
                 ?>
