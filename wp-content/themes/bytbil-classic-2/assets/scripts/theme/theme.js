@@ -1,3 +1,1 @@
-$(document).ready(function(){
-    alert('test');
-});
+/* Custom JS for the Theme */
