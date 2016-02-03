@@ -1,3 +1,5 @@
 wp-content/cache
 wp-content/db.php
 uploads
+node_modules
+gulpbuild

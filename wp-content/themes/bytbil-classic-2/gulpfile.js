@@ -21,7 +21,7 @@ var cssFiles = [
     paths.cssPath + "/**/*.css"
 ];
 var cssFilesCopy = [
-    paths.cssVendorPath + '/icons/ionicons.min.css',
+    paths.cssVendorPath + '/ionicons.min.css',
 ];
 
 var cssFilesVendor = [
@@ -31,6 +31,7 @@ var cssFilesVendor = [
     paths.cssVendorPath + "/bootstrap.offcanvas.min.css",
     paths.cssVendorPath + "/bootstrap-select.min.css",
     paths.cssVendorPath + "/normalize.css",
+    paths.cssVendorPath + "/ionicons.min.css"
 ];
 
 var jsFiles = [
@@ -49,7 +50,7 @@ var jsFilesCopy = [
 ];
 
 //move images
-gulp.task('images', function() {
+gulp.task('images', function(){
     gulp.src([
             "./assets/images/**/*.*"
         ])
@@ -91,12 +92,12 @@ gulp.task('concatCss', ["themeCss", "vendorCss"], function () {
 });
 
 
-gulp.task('copycss', function () {
+gulp.task('copycss', function(){
     gulp.src(cssFilesCopy)
         .pipe(gulp.dest( paths.minified + "/css"));
 });
 
-gulp.task('themejs', function () {
+gulp.task('themejs', function(){
     var stream = gulp.src(jsFiles)
         .pipe(jshint())
         .pipe(jshint.reporter(stylish))
@@ -106,7 +107,7 @@ gulp.task('themejs', function () {
     return stream;
 });
 
-gulp.task('vendorjs', function () {
+gulp.task('vendorjs', function(){
     console.log(jsFilesVendor);
     var stream = gulp.src(jsFilesVendor)
         .pipe(concat('vendor.min.js'))
@@ -114,17 +115,17 @@ gulp.task('vendorjs', function () {
     return stream;
 });
 
-gulp.task('concatjs', ["themejs", "vendorjs"], function () {
+gulp.task('concatjs', ["themejs", "vendorjs"], function(){
     gulp.src([paths.build + "/js/vendor.min.js", paths.build + "/js/theme.min.js"])
         .pipe(concat('scripts.min.js'))
         .pipe(gulp.dest(paths.minified + '/js'));
 });
 gulp.task('copyjs', function(){
     gulp.src(jsFilesCopy)
-        .pipe(gulp.dest(paths.minified + "/js"));
+        .pipe(gulp.dest( paths.minified + "/js"));
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', function(){
     gulp.watch(jsFiles, ['js']);
     gulp.watch(cssFiles, ['css']);
 });
