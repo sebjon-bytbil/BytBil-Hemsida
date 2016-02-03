@@ -93,6 +93,7 @@ function vc_load_custom_admin_css()
     wp_register_style('vc_custom_admin_css', VCADMINURL . 'assets/css/vc_admin.css', false, '1.0.0');
     wp_enqueue_style('vc_custom_admin_css');
 }
+*/
 
 add_action('init', 'setDefaultTemplatePathForVisualComposerTemplates', 1, 1);
 function setDefaultTemplatePathForVisualComposerTemplates($sd)
@@ -101,6 +102,7 @@ function setDefaultTemplatePathForVisualComposerTemplates($sd)
     //error_log(vc_shortcodes_theme_templates_dir('vc-row.php'));
 }
 
+/*
 add_action('init', 'visualcomposeraddrowparams', 1, 1);
 function visualcomposeraddrowparams($sd)
 {

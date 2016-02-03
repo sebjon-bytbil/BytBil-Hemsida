@@ -1,4 +1,6 @@
 <?php
+wp_enqueue_script( 'wpb_composer_front_js' );
+
 /** @var $this WPBakeryShortCode_VC_Row */
 $output = $el_class = $bg_image = $bg_color = $bg_image_repeat = $font_color = $padding = $margin_bottom = $css = $full_width = $el_id = $parallax_image = $parallax = '';
 extract( shortcode_atts( array(
@@ -20,7 +22,6 @@ extract( shortcode_atts( array(
 $parallax_image_id = '';
 $parallax_image_src = '';
 // wp_enqueue_style( 'js_composer_front' );
-wp_enqueue_script( 'wpb_composer_front_js' );
 // wp_enqueue_style('js_composer_custom_css');
 
 $el_class = $this->getExtraClass( $el_class );
