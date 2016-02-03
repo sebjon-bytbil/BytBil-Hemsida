@@ -25,11 +25,11 @@ var cssFilesCopy = [
 ];
 
 var cssFilesVendor = [
-    paths.cssVendorPath + "/bootstrap.min.css",
-    paths.cssVendorPath + "/bootstrap-theme.min.css",
+    //paths.cssVendorPath + "/bootstrap.min.css",
+    //paths.cssVendorPath + "/bootstrap-theme.min.css",
     paths.cssVendorPath + "/flexslider.css",
-    paths.cssVendorPath + "/bootstrap.offcanvas.min.css",
-    paths.cssVendorPath + "/bootstrap-select.min.css",
+    //paths.cssVendorPath + "/bootstrap.offcanvas.min.css",
+    //paths.cssVendorPath + "/bootstrap-select.min.css",
     paths.cssVendorPath + "/normalize.css",
     paths.cssVendorPath + "/ionicons.min.css"
 ];
@@ -40,10 +40,10 @@ var jsFiles = [
 
 var jsFilesVendor = [
     paths.jsVendorPath + '/jquery-1.11.3.min.js',
-    paths.jsVendorPath + '/bootstrap.min.js',
+    //paths.jsVendorPath + '/bootstrap.min.js',
     paths.jsVendorPath + '/jquery.flexslider-min.js',
-    paths.jsVendorPath + '/bootstrap.offcanvas.min.js',
-    paths.jsVendorPath + '/bootstrap-select.min.js'
+    //paths.jsVendorPath + '/bootstrap.offcanvas.min.js',
+    //paths.jsVendorPath + '/bootstrap-select.min.js'
 ];
 var jsFilesCopy = [
     paths.jsVendorPath + '/modernizr.custom.js',
